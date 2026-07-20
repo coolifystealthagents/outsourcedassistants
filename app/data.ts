@@ -62,6 +62,38 @@ export const blogPosts = [
     "minutes": 9
   }
 ] as const;
+export const blogDetails = {
+  'outsourced-assistants-provider-questions': {
+    summary: 'The safest provider calls are boring in a good way. You ask who manages the person, how quality is checked, what happens when access or customer data is involved, and how fast a bad fit gets fixed.',
+    comparisonRows: [
+      { weak: 'We have great assistants.', useful: 'Who screens them, who checks the first week of work, and who replaces a poor fit?' },
+      { weak: 'They can use any tool.', useful: 'Which tools have they used before, and what access limits do you recommend?' },
+      { weak: 'We handle quality.', useful: 'Show me the scorecard, the review rhythm, and one example of a missed-task escalation.' },
+    ],
+    callScript: [
+      'I want one assistant for recurring admin, support, or operations work. What tasks would you start with, and what would you leave with our team?',
+      'Who is responsible for the first 14 days of review: us, your manager, or both?',
+      'If the assistant touches inboxes, customer records, CRM notes, or payment-related systems, what access limits should we set first?',
+      'What report should we expect each week so we can see output, blockers, and quality issues?'
+    ],
+    sourceNotes: [
+      'The SBA advises small businesses to compare vendors by scope, cost, references, and contract terms before signing.',
+      'CISA recommends least-privilege access, especially when outside users need business systems.',
+      'The FTC warns businesses to protect customer data and limit access to what workers need for the job.'
+    ],
+    sources: [
+      { name: 'U.S. Small Business Administration vendor guidance', url: 'https://www.sba.gov/business-guide/manage-your-business/buy-assets-equipment' },
+      { name: 'CISA least privilege guidance', url: 'https://www.cisa.gov/resources-tools/resources/least-privilege' },
+      { name: 'FTC data security guidance for businesses', url: 'https://www.ftc.gov/business-guidance/privacy-security/data-security' }
+    ],
+    faqs: [
+      { question: 'What should I ask before hiring an outsourced assistant?', answer: 'Ask who screens the person, who manages quality, what work is out of scope, how access is handled, and what happens if the first match is wrong.' },
+      { question: 'Should the assistant get full tool access on day one?', answer: 'No. Start with limited access, sample work, and owner approval rules. Add more access only after the first work is reviewed.' },
+      { question: 'How long should the first test run be?', answer: 'A 14-day pilot is usually enough to check communication, output, and fit without turning a bad match into a long problem.' }
+    ]
+  }
+} as const;
+
 export const stats = [{label:'Typical savings target',value:'30-60%',note:'depends on role, management, and local hiring plan'},{label:'Best pilot length',value:'14 days',note:'enough time to test quality before scaling'},{label:'Start with',value:'5-10 tasks',note:'clear recurring tasks beat vague job descriptions'}] as const;
 
 export const stealthOffer = {
