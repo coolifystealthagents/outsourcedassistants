@@ -1,30 +1,161 @@
 import * as data from './data';
-import { Header, Footer, JsonLd } from './components';
-const d=data as any;
-const site=d.site||{};
-const services=(d.services||d.roles||d.industries||[]).slice(0,4);
-const posts=(d.blogPosts||[]).slice(0,3);
-const stats=(d.stats||[]).slice(0,3);
-const offer=d.staffingOffer||{};
-const pretty=(v:any)=>String(v||'virtual assistant support').replace(/\b\w/g,(m)=>m.toUpperCase());
-const title=(x:any)=>typeof x==='string'?x:(x.title||x.name||x.label||x.question||'Assistant role');
-const text=(x:any)=>typeof x==='string'?x:(x.desc||x.excerpt||x.note||x.body||(x.bestFor?`Best for ${x.bestFor.join(', ')}`:'Clear tasks, safe access, and review rules.'));
-const slug=(x:any)=>(x.slug||title(x).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''));
-const primary=site.primary||site.brand||'virtual assistant support';
-const rolePhrase=String(primary).toLowerCase()
-  .replace(/^best\s+/,'')
-  .replace(/(company|companies|services|service|provider|providers)/g,'')
-  .replace(/(outsource|outsourced|outsourcing|offshore|overseas)/g,'')
-  .replace(/\s+/g,' ')
-  .trim() || 'business support';
-const roleLabel=pretty(rolePhrase.includes('assistant')?rolePhrase:`${rolePhrase} support`).replace(/\bVa\b/g,'VA');
-const domain=site.domain||site.brand||'Staffing Guide';
-const heroImage=site.heroImage||site.serviceImage||'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80';
-const tagline=site.angle||site.audience||'managed hiring support with clear scope, safe access, onboarding, and quality checks';
-export default function Home(){const schema={'@context':'https://schema.org','@type':'WebSite',name:site.brand,url:`https://${domain}`};return <><Header/><main className="belay"><JsonLd data={schema}/>
-<section className="hero"><div className="container hero-grid"><div className="copy"><p className="eyebrow">Premium staffing match</p><h1>Hire managed {roleLabel} without screening alone.</h1><p className="lead">Get clear communicators, business-hour coverage, and a managed launch plan for {tagline}.</p><div className="actions"><a className="btn primary" href="/contact">Request staffing plan</a><a className="btn secondary" href="#tasks">Get task ideas</a></div><p className="risk">No public rate card. Share the role first, then get a practical scope.</p></div><div className="match-card"><div className="portrait-wrap"><img src={heroImage} alt={site.alt||`${site.brand||roleLabel} managed staffing visual`}/><span className="badge">Top-fit match</span></div><div className="task-note note-a"><b>Daily handoff</b><span>clear owner brief</span></div><div className="task-note note-b"><b>Quality checks</b><span>work reviewed weekly</span></div><div className="task-note note-c"><b>21-day launch</b><span>scope → shadow → live QA</span></div></div></div><div className="container proof-bar"><span>Right role before right hire</span>{stats.length?stats.map((s:any,i:number)=><b key={i}>{s.value||s.label}</b>):['Scope first','7-21 days','5-10 tasks'].map((x,i)=><b key={i}>{x}</b>)}</div></section>
-<section className="container section" id="tasks"><div className="split-head"><div><p className="eyebrow">Task ideas</p><h2>Start with work that repeats every week.</h2></div><p>Inspired by premium VA and outsourcing competitors: make the hire feel human, specific, and low risk before the contact form.</p></div><div className="task-grid">{services.map((s:any,i:number)=><a key={i} href={`/services/${slug(s)}`}><span>{String(i+1).padStart(2,'0')}</span><h3>{title(s)}</h3><p>{text(s)}</p><b>See handoff →</b></a>)}</div></section>
-<section className="relationship"><div className="container rel-grid"><div><p className="eyebrow">Managed, not marketplace</p><h2>Your staffing plan should come with backup, onboarding, and quality checks.</h2></div><div className="rel-list">{(offer.included||['role planning call','candidate matching','onboarding guidance','managed support']).slice(0,4).map((x:string,i:number)=><article key={i}><span>✓</span><p>{x}</p></article>)}</div></div></section>
-<section className="container section guide-row"><div><p className="eyebrow">Before you hire</p><h2>Short guides for safer staffing decisions.</h2></div>{posts.map((p:any,i:number)=><a href={`/blog/${p.slug}`} key={i}><span>{p.minutes||7} min</span><strong>{title(p)}</strong><p>{text(p)}</p></a>)}</section>
-<section className="container final"><h2>Request the staffing plan before you interview.</h2><a className="btn primary" href="/contact">Request staffing plan</a></section>
-</main><Footer/></>}
+import { Footer, Header, JsonLd } from './components';
+
+const services = data.services.slice(0, 4);
+const posts = data.blogPosts.slice(0, 3);
+const process = data.staffingProcess.slice(0, 4);
+
+const taskDetails: Record<string, { tag: string; examples: string }> = {
+  'operations-support': { tag: 'Keep work moving', examples: 'Project updates, vendor follow-up, SOP upkeep' },
+  'customer-support': { tag: 'Protect response time', examples: 'Inbox triage, ticket replies, escalation notes' },
+  'admin-support': { tag: 'Clear the desk', examples: 'Calendar care, data entry, document prep' },
+  'reporting-and-qa': { tag: 'See what happened', examples: 'Weekly summaries, sample checks, issue logs' },
+};
+
+export default function Home() {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: data.site.brand,
+    url: data.site.url,
+  };
+
+  return (
+    <>
+      <Header />
+      <main className="handoff-home">
+        <JsonLd data={schema} />
+
+        <section className="handoff-hero">
+          <div className="handoff-shell handoff-hero-grid">
+            <div className="handoff-copy">
+              <p className="handoff-kicker"><span /> Outsourced assistant planning</p>
+              <h1>Get the work off your desk. Keep the standards.</h1>
+              <p className="handoff-lead">
+                Build a clear assistant role around the tasks already eating your week. We help you sort the scope, handoff rules, and first two weeks before you start interviewing.
+              </p>
+              <div className="handoff-actions">
+                <a className="handoff-button" href="/contact">Request a role plan</a>
+                <a className="handoff-text-link" href="#workload">Sort your workload <span aria-hidden="true">↓</span></a>
+              </div>
+              <p className="handoff-disclosure">No public rate card or mystery package. Start with the work and schedule you need covered.</p>
+            </div>
+
+            <div className="handoff-visual" aria-label="Team planning assistant work">
+              <div className="handoff-photo-frame">
+                <img src="/assistant-team.jpg" alt="A business team reviewing work together at a table" />
+                <div className="handoff-photo-label">
+                  <span>Role brief</span>
+                  <strong>Operations assistant</strong>
+                </div>
+              </div>
+              <article className="handoff-note handoff-note-one">
+                <span className="handoff-note-number">01</span>
+                <div><small>Owner keeps</small><strong>Approvals and exceptions</strong></div>
+              </article>
+              <article className="handoff-note handoff-note-two">
+                <span className="handoff-note-number">02</span>
+                <div><small>Assistant owns</small><strong>Recurring follow-through</strong></div>
+              </article>
+            </div>
+          </div>
+
+          <div className="handoff-shell handoff-planning-strip" aria-label="Suggested starting plan">
+            <p><strong>A sensible starting point</strong><span>Guidance, not a promised outcome</span></p>
+            <p><strong>5–10</strong><span>recurring tasks</span></p>
+            <p><strong>14 days</strong><span>to test the handoff</span></p>
+            <p><strong>1 review</strong><span>every week</span></p>
+          </div>
+        </section>
+
+        <section className="handoff-workload" id="workload">
+          <div className="handoff-shell">
+            <div className="handoff-section-head">
+              <p className="handoff-kicker"><span /> Workload sorter</p>
+              <h2>What keeps landing back on your desk?</h2>
+              <p>Pick the queue that causes the most drag. A useful assistant role usually starts with one kind of work, not a grab bag of everything.</p>
+            </div>
+            <div className="handoff-task-grid">
+              {services.map((service, index) => {
+                const detail = taskDetails[service.slug];
+                return (
+                  <a className="handoff-task-card" href={`/services/${service.slug}`} key={service.slug}>
+                    <div className="handoff-task-top"><span>0{index + 1}</span><small>{detail.tag}</small></div>
+                    <h3>{service.title}</h3>
+                    <p>{detail.examples}</p>
+                    <strong>See the handoff <span aria-hidden="true">↗</span></strong>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        <section className="handoff-boundaries">
+          <div className="handoff-shell handoff-boundaries-grid">
+            <div className="handoff-boundaries-copy">
+              <p className="handoff-kicker light"><span /> A cleaner brief</p>
+              <h2>Write down the line between support and judgment.</h2>
+              <p>An assistant can move quickly when routine decisions are clear. Anything involving money, sensitive data, or an unhappy customer should have an owner and an escalation rule.</p>
+              <a className="handoff-light-link" href="/blog/outsourced-assistants-provider-questions">Use the provider question list <span aria-hidden="true">→</span></a>
+            </div>
+            <div className="handoff-rule-sheet">
+              <div className="handoff-sheet-head"><span>Handoff sheet / 01</span><span>Draft</span></div>
+              <div className="handoff-rule-row"><span>Can handle</span><p>Routine replies based on approved examples</p></div>
+              <div className="handoff-rule-row"><span>Needs approval</span><p>Refunds, contract changes, and new access</p></div>
+              <div className="handoff-rule-row"><span>Escalate now</span><p>Security concerns or a frustrated customer</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section className="handoff-process">
+          <div className="handoff-shell">
+            <div className="handoff-section-head compact">
+              <p className="handoff-kicker"><span /> The first two weeks</p>
+              <h2>A handoff you can inspect.</h2>
+            </div>
+            <div className="handoff-timeline">
+              {process.map((item) => (
+                <article key={item.step}>
+                  <span>{item.step.padStart(2, '0')}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="handoff-guides">
+          <div className="handoff-shell handoff-guides-grid">
+            <div className="handoff-guides-intro">
+              <p className="handoff-kicker"><span /> Field notes</p>
+              <h2>Read this before the provider call.</h2>
+              <p>Short, practical guides for scoping the role and spotting vague answers.</p>
+              <a className="handoff-text-link" href="/blog">Browse all guides <span aria-hidden="true">→</span></a>
+            </div>
+            <div className="handoff-guide-list">
+              {posts.map((post, index) => (
+                <a href={`/blog/${post.slug}`} key={post.slug}>
+                  <span>0{index + 1}</span>
+                  <div><small>{post.minutes} minute guide</small><strong>{post.title.replace('Outsourced Assistants: ', '')}</strong></div>
+                  <b aria-hidden="true">↗</b>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="handoff-final">
+          <div className="handoff-shell handoff-final-inner">
+            <p className="handoff-kicker light"><span /> Start with the role</p>
+            <h2>Bring the messy task list. Leave with a clearer brief.</h2>
+            <p>Tell us what repeats, what keeps slipping, and which systems the assistant would touch.</p>
+            <a className="handoff-button pale" href="/contact">Request a role plan</a>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
