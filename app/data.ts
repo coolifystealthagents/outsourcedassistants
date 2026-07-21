@@ -4,7 +4,7 @@ export const site = {
   "slug": "outsourcedassistants",
   "brand": "Outsourced Assistants",
   "primary": "outsourced assistants",
-  "audience": "busy teams hiring outsourced assistants for admin, support, and operations",
+  "audience": "busy teams hiring Filipino assistants for admin, support, and operations",
   "angle": "assistant roles, SOPs, onboarding, staffing details, and weekly scorecards",
   "style": "Assistant concierge",
   "dark": "#282006",
@@ -19,22 +19,22 @@ export const services = [
   {
     "slug": "operations-support",
     "title": "Operations Support",
-    "desc": "Operations Support for teams using outsourced assistants with clear SOPs, weekly review, and measurable handoffs."
+    "desc": "Operations support from Filipino assistants working with clear SOPs, weekly review, and measurable handoffs."
   },
   {
     "slug": "customer-support",
     "title": "Customer Support",
-    "desc": "Customer Support for teams using outsourced assistants with clear SOPs, weekly review, and measurable handoffs."
+    "desc": "Customer support from Filipino assistants working with clear SOPs, weekly review, and measurable handoffs."
   },
   {
     "slug": "admin-support",
     "title": "Admin Support",
-    "desc": "Admin Support for teams using outsourced assistants with clear SOPs, weekly review, and measurable handoffs."
+    "desc": "Admin support from Filipino assistants working with clear SOPs, weekly review, and measurable handoffs."
   },
   {
     "slug": "reporting-and-qa",
     "title": "Reporting and QA",
-    "desc": "Reporting and QA for teams using outsourced assistants with clear SOPs, weekly review, and measurable handoffs."
+    "desc": "Reporting and QA from Filipino assistants working with clear SOPs, weekly review, and measurable handoffs."
   }
 ] as const;
 export const blogPosts = [
@@ -96,12 +96,12 @@ export const blogDetails = {
 } as const;
 
 export const staffingOffer = {
-  partner: 'our staffing team',
-  promise: 'Get a managed offshore staffing plan built around the work you need removed from your plate.',
+  partner: 'our Philippines staffing team',
+  promise: 'Get a managed staffing plan for Filipino talent, built around the work you need removed from your plate.',
   fit: [
-    'business owners who need reliable remote staff but do not want to screen alone',
+    'business owners who want reliable Filipino staff without screening alone',
     'teams that want trained support, backup coverage, and a clear manager path',
-    'companies that need help with admin, operations, customer support, calls, bookkeeping, development, or marketing work',
+    'companies that need Filipino talent for admin, operations, customer support, calls, bookkeeping, development, or marketing work',
   ],
   included: [
     'role planning call to turn your task list into a clear staffing scope',
@@ -127,9 +127,9 @@ export const leadQuestions = [
 
 export const staffingProcess = [
   { step: '1', title: 'Map the role', body: 'We turn messy tasks into one clear role with outcomes, tools, limits, and a first-week checklist.' },
-  { step: '2', title: 'Match the staff', body: 'Our staffing team can help match remote staff to the work, schedule, communication style, and skill level you need.' },
+  { step: '2', title: 'Match the person', body: 'Our Philippines staffing team matches Filipino talent to the work, schedule, communication style, and skill level you need.' },
   { step: '3', title: 'Launch with control', body: 'Start with SOPs, sample work, limited access, daily review, and a simple scorecard so quality is easy to see.' },
   { step: '4', title: 'Scale what works', body: 'Once the first tasks are stable, add more work, better reporting, and clearer delegation rules.' },
 ] as const;
 
-export const staffingFitNote = 'Every staffing plan depends on role scope, schedule, skills, tools, and management needs. Send the role details and our staffing team can guide the best fit.';
+export const staffingFitNote = 'Every Philippines staffing plan depends on the role, schedule, skills, tools, and management needs. Send the details and our team will help you judge the fit.';

@@ -45,7 +45,7 @@ The buyer is not shopping for software or a freelance directory. They want a com
 
 **Primary inspiration: Remote CoWorker.** It had the strongest niche fit because the first screen shows a person doing assistant work and supports the image with lightweight workflow cues. Its warm palette also feels more approachable than the blue SaaS look used by most VA providers.
 
-The original direction for Outsourced Assistants is an **assistant handoff desk**: warm paper tones, dark plum type, tomato-red actions, editorial serif headlines, a real team image, and compact task briefs styled like notes passed between an owner and an assistant. The homepage focuses on choosing the first workload, setting access rules, and reviewing the first two weeks.
+The original direction for Outsourced Assistants is an **assistant handoff desk**: warm paper tones, dark plum type, tomato-red actions, editorial serif headlines, a locally stored team-planning image, and compact task briefs styled like notes passed between an owner and an assistant. The photo is the site's existing Unsplash-derived asset from commit `f0fc7f4`; it shows two professionals reviewing work at a table, includes no location claim, and is paired with explicit Philippines-only copy rather than an inferred identity. The homepage focuses on choosing the first workload, setting access rules, and reviewing the first two weeks.
 
 ## Patterns to reuse
 

@@ -23,16 +23,16 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="handoff-home">
+      <main className="handoff-home" data-design="philippines-handoff-desk-2026-07">
         <JsonLd data={schema} />
 
         <section className="handoff-hero">
           <div className="handoff-shell handoff-hero-grid">
             <div className="handoff-copy">
-              <p className="handoff-kicker"><span /> Outsourced assistant planning</p>
-              <h1>Get the work off your desk. Keep the standards.</h1>
+              <p className="handoff-kicker"><span /> Filipino assistant planning</p>
+              <h1>Get the work off your desk with a Filipino assistant.</h1>
               <p className="handoff-lead">
-                Build a clear assistant role around the tasks already eating your week. We help you sort the scope, handoff rules, and first two weeks before you start interviewing.
+                Build one clear role around the tasks already eating your week. We help you sort the scope, handoff rules, and first two weeks before you interview talent in the Philippines.
               </p>
               <div className="handoff-actions">
                 <a className="handoff-button" href="/contact">Request a role plan</a>
@@ -45,8 +45,8 @@ export default function Home() {
               <div className="handoff-photo-frame">
                 <img src="/assistant-team.jpg" alt="A business team reviewing work together at a table" />
                 <div className="handoff-photo-label">
-                  <span>Role brief</span>
-                  <strong>Operations assistant</strong>
+                  <span>Philippines-only</span>
+                  <strong>Operations role</strong>
                 </div>
               </div>
               <article className="handoff-note handoff-note-one">
