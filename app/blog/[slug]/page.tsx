@@ -1,5 +1,5 @@
 import { Header, Footer, CTA, JsonLd } from '../../components';
-import { blogDetails, blogPosts, site } from '../../data';
+import { blogDetails, blogFallbacks, blogPosts, site } from '../../data';
 
 const siteUrl = 'https://outsourcedassistants.com';
 
@@ -19,6 +19,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const p = blogPosts.find((x) => x.slug === slug) || blogPosts[0];
   const detail = blogDetails[p.slug as BlogSlug];
+  const fallback = blogFallbacks[p.slug as keyof typeof blogFallbacks];
   const pageUrl = `${siteUrl}/blog/${p.slug}`;
   const faqs = detail?.faqs || [
     { question: 'What should I prepare before hiring?', answer: 'Prepare task examples, access rules, a review owner, and a short first-week checklist.' },
@@ -56,5 +57,5 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     ],
   };
 
-  return <><Header /><main className="section"><JsonLd data={schema} /><article className="container" style={{ maxWidth: 920 }}><p className="eyebrow">{site.brand} guide</p><h1>{p.title}</h1><p className="lead">{p.excerpt}</p>{detail ? <div className="card"><h2>The short answer</h2><p>{detail.summary}</p><h2>Weak answers vs useful answers</h2><div className="cards">{detail.comparisonRows.map((row) => <div className="card" key={row.weak}><p className="eyebrow">Weak answer</p><p>{row.weak}</p><p className="eyebrow">Useful follow-up</p><p>{row.useful}</p></div>)}</div><h2>Copy-ready provider call questions</h2><ol>{detail.callScript.map((line) => <li key={line}>{line}</li>)}</ol><h2>Source notes</h2><ul>{detail.sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul><h2>Sources</h2><ul>{detail.sources.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul><h2>FAQ</h2>{detail.faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}</div> : <div className="card"><h2>The short answer</h2><p>Start with one role, a short task list, and a weekly scorecard. Do not outsource a messy process until examples and rules are clear.</p><h2>What to prepare</h2><ul><li>Task examples and sample replies</li><li>Tool access and permission rules</li><li>Daily output target</li><li>Escalation rules for anything sensitive</li></ul><h2>Questions to ask</h2><ul><li>Who screens the worker?</li><li>Who checks quality?</li><li>What happens if fit is poor?</li><li>How are passwords and customer data handled?</li></ul></div>}</article><CTA /></main><Footer /></>;
+  return <><Header /><main className="section"><JsonLd data={schema} /><article className="container" style={{ maxWidth: 920 }}><p className="eyebrow">{site.brand} guide</p><h1>{p.title}</h1><p className="lead">{p.excerpt}</p>{detail ? <div className="card"><h2>The short answer</h2><p>{detail.summary}</p><h2>Weak answers vs useful answers</h2><div className="cards">{detail.comparisonRows.map((row) => <div className="card" key={row.weak}><p className="eyebrow">Weak answer</p><p>{row.weak}</p><p className="eyebrow">Useful follow-up</p><p>{row.useful}</p></div>)}</div><h2>Questions for the provider call</h2><ol>{detail.callScript.map((line) => <li key={line}>{line}</li>)}</ol><h2>What the sources say</h2><ul>{detail.sourceNotes.map((note) => <li key={note}>{note}</li>)}</ul><h2>Sources</h2><ul>{detail.sources.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul><h2>FAQ</h2>{detail.faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}</div> : fallback ? <div className="card"><h2>The short answer</h2><p>{fallback.answer}</p><h2>{fallback.sectionTitle}</h2><ul>{fallback.items.map((item)=><li key={item}>{item}</li>)}</ul><h2>{fallback.questionTitle}</h2><ul>{fallback.questions.map((item)=><li key={item}>{item}</li>)}</ul></div> : null}</article><CTA /></main><Footer /></>;
 }
