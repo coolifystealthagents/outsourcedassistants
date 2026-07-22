@@ -77,7 +77,10 @@ export default function Home() {
             </div>
             <div className="handoff-task-grid">
               {services.map((service, index) => {
-                const detail = taskDetails[service.slug];
+                const detail = taskDetails[service.slug] || {
+                  tag: 'Assistant support',
+                  examples: service.desc,
+                };
                 return (
                   <a className="handoff-task-card" href={`/services/${service.slug}`} key={service.slug}>
                     <div className="handoff-task-top"><span>0{index + 1}</span><small>{detail.tag}</small></div>

@@ -16,26 +16,18 @@ export const site = {
   "badge": "Assistant team"
 } as const;
 export const services = [
-  {
-    "slug": "operations-support",
-    "title": "Operations Support",
-    "desc": "A Filipino operations assistant can keep project notes current, chase routine updates, and maintain the SOPs your team already uses."
-  },
-  {
-    "slug": "customer-support",
-    "title": "Customer Support",
-    "desc": "A Filipino customer support assistant can sort the inbox, answer from approved examples, and flag the cases that need your team."
-  },
-  {
-    "slug": "admin-support",
-    "title": "Admin Support",
-    "desc": "A Filipino admin assistant can look after calendars, prepare documents, and keep routine records from piling up."
-  },
-  {
-    "slug": "reporting-and-qa",
-    "title": "Reporting and QA",
-    "desc": "A Filipino reporting assistant can assemble weekly summaries, check samples, and keep an issue log for the review owner."
-  }
+  { slug: "executive-calendar-management", title: "Executive Calendar Management", desc: "Filipino assistant specialists can handle executive calendar management with documented workflows, approval limits, and owner review." },
+  { slug: "inbox-triage", title: "Inbox Triage", desc: "Filipino assistant specialists can handle inbox triage with documented workflows, approval limits, and owner review." },
+  { slug: "travel-planning-support", title: "Travel Planning Support", desc: "Filipino assistant specialists can handle travel planning support with documented workflows, approval limits, and owner review." },
+  { slug: "meeting-preparation", title: "Meeting Preparation", desc: "Filipino assistant specialists can handle meeting preparation with documented workflows, approval limits, and owner review." },
+  { slug: "crm-administration", title: "CRM Administration", desc: "Filipino assistant specialists can handle crm administration with documented workflows, approval limits, and owner review." },
+  { slug: "research-assistance", title: "Research Assistance", desc: "Filipino assistant specialists can handle research assistance with documented workflows, approval limits, and owner review." },
+  { slug: "document-formatting", title: "Document Formatting", desc: "Filipino assistant specialists can handle document formatting with documented workflows, approval limits, and owner review." },
+  { slug: "project-coordination", title: "Project Coordination", desc: "Filipino assistant specialists can handle project coordination with documented workflows, approval limits, and owner review." },
+  { slug: "expense-administration", title: "Expense Administration", desc: "Filipino assistant specialists can handle expense administration with documented workflows, approval limits, and owner review." },
+  { slug: "recruitment-scheduling", title: "Recruitment Scheduling", desc: "Filipino assistant specialists can handle recruitment scheduling with documented workflows, approval limits, and owner review." },
+  { slug: "customer-follow-up", title: "Customer Follow-Up", desc: "Filipino assistant specialists can handle customer follow-up with documented workflows, approval limits, and owner review." },
+  { slug: "operations-reporting", title: "Operations Reporting", desc: "Filipino assistant specialists can handle operations reporting with documented workflows, approval limits, and owner review." },
 ] as const;
 export const serviceDetails = {
   'operations-support': {
@@ -178,3 +170,6 @@ export const staffingProcess = [
 ] as const;
 
 export const staffingFitNote = 'Every Philippines staffing plan depends on the role, schedule, skills, tools, and management needs. Send the details and our team will help you judge the fit.';
+
+
+export const researchPosts: Array<{ slug: string; title: string; excerpt: string; body: string[] }> = [];
