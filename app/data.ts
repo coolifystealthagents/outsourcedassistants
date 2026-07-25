@@ -53,6 +53,12 @@ export const serviceDetails = {
 } as const;
 export const blogPosts = [
   {
+    "slug": "outsource-virtual-assistant-philippines",
+    "title": "Outsource Virtual Assistant Philippines: A Secure Hiring Guide",
+    "excerpt": "Use national data as context, then check the person, connection, work sample, access plan, and first-week review before you hire. The individual check matters more than a broad country claim.",
+    "minutes": 12
+  },
+  {
     "slug": "outsourced-assistants-planning",
     "title": "Outsourced Assistants: What to plan before hiring",
     "excerpt": "Write the role, schedule, access rules, and review owner down before you start interviewing.",
@@ -101,6 +107,124 @@ export const blogFallbacks = {
   },
 } as const;
 export const blogDetails = {
+  'outsource-virtual-assistant-philippines': {
+    kind: 'evidenceGuide',
+    summary: [
+      'If you want to outsource a virtual assistant in the Philippines, start with one clear work lane. Check the individual assistant, not a story about the whole country, then open access in small steps after real work has been reviewed.',
+      'The Philippines has a real digital-services base, but national figures cannot tell you whether one person has a quiet workspace, a steady connection, or sound security habits. A short paid work sample, a live connection check, and a written access plan will tell you far more.'
+    ],
+    stats: [
+      { value: '67.3%', label: 'of people used the internet', note: 'Philippines, 2024', source: 1 },
+      { value: '7.14', label: 'fixed broadband subscriptions per 100 people', note: 'Philippines, 2024', source: 2 },
+      { value: '16.0%', label: 'of service exports came from ICT services', note: 'Philippines, 2024', source: 3 },
+    ],
+    sections: [
+      {
+        id: 'read-the-data',
+        title: 'Read the country data without overselling it',
+        paragraphs: [
+          'World Bank data put internet use in the Philippines at about 67.3% of the population in 2024. That is useful country context, but it does not prove that a candidate can keep a video call stable or work through a local outage.',
+          'The same dataset reports 7.14 fixed broadband subscriptions per 100 people in 2024. This is a subscription-density measure, not the share of people with broadband, so ask each candidate to show the connection they will actually use and explain the backup plan.',
+          'ICT services made up about 16.0% of Philippine service exports in 2024. That figure shows the country already takes part in cross-border digital work, but it is not a count of assistants and says nothing about one applicant’s skill.'
+        ]
+      },
+      {
+        id: 'define-the-lane',
+        title: 'Define one work lane before you recruit',
+        paragraphs: [
+          'A vague request for "general help" is hard to hire for and even harder to review. Write down the queue, the tools, the expected finish, the hours that matter, and the decisions that must stay with your team.',
+          'Choose work that repeats and leaves a visible trail. A candidate can demonstrate calendar cleanup, inbox sorting, CRM notes, research, or document prep far more clearly than a broad promise to "take ownership."'
+        ],
+        links: [
+          { href: '/services/executive-calendar-management', label: 'See the executive calendar management lane' },
+          { href: '/services/inbox-triage', label: 'See the inbox triage lane' },
+        ]
+      },
+      {
+        id: 'verify-the-person',
+        title: 'Verify the person, setup, and backup plan',
+        paragraphs: [
+          'Run a short live call from the place where the assistant expects to work. Ask the person to share a screen, open a sample document, and explain what happens if the main connection or power fails.',
+          'Do not grade polish alone. Listen for a clear answer about privacy, device updates, backup connectivity, noise, working hours, and when the person would tell you that a task is blocked.'
+        ]
+      },
+      {
+        id: 'work-sample',
+        title: 'Use a small work sample with a clear finish line',
+        paragraphs: [
+          'Give every finalist the same small task with safe sample data. Include one normal item, one unclear item, and one item that should be escalated so you can see whether the person follows rules instead of guessing.',
+          'Score the result against a simple sheet: accuracy, questions asked, file naming, timing, and escalation. Keep the sample small enough that you can review every part and explain your decision fairly.'
+        ]
+      },
+      {
+        id: 'safe-access',
+        title: 'Open business access in small steps',
+        paragraphs: [
+          'NIST’s remote-work guide says that company devices and bring-your-own devices should be secured against expected threats. Decide which device is allowed, create a separate user identity, and give the assistant only the systems needed for the first work queue.',
+          'Never send a shared master password in chat. Use your password manager, turn on multi-factor authentication, record who owns each account, and keep approvals for money, account changes, and unusual customer cases with an internal owner.'
+        ]
+      },
+      {
+        id: 'first-week',
+        title: 'Keep the first week small enough to inspect',
+        paragraphs: [
+          'Start with one queue and a named reviewer. Check the first few completed items each day, answer questions while they are fresh, and fix the written rule when two people could read it in different ways.',
+          'At the end of the week, separate person problems from instruction problems. A missed rule may mean the candidate needs more practice, but it may also mean your example or approval boundary was never clear.'
+        ],
+        links: [
+          { href: '/blog/outsourced-assistants-onboarding-checklist', label: 'Use the first-week onboarding checklist' },
+        ]
+      },
+      {
+        id: 'review-and-exit',
+        title: 'Review the role and plan the exit before day one',
+        paragraphs: [
+          'Set a review date before work begins. Look at completed work, avoidable errors, blocked items, response to feedback, and whether the queue still matches the role you hired for.',
+          'Write the exit steps at the same time as the onboarding steps. Your team should be able to disable the user, close active sessions, move files, change shared secrets, recover business records, and tell the right people without relying on the departing assistant.'
+        ]
+      }
+    ],
+    decisionTable: [
+      { check: 'Role', evidence: 'One queue, examples, finish rule, and an internal decision owner', warning: 'The brief asks for help with everything' },
+      { check: 'Connection', evidence: 'Live test from the work location plus a realistic backup plan', warning: 'Only a speed-test image is provided' },
+      { check: 'Work sample', evidence: 'Same safe task and score sheet for each finalist', warning: 'Selection rests on an interview alone' },
+      { check: 'Access', evidence: 'Separate identity, limited permissions, and multi-factor authentication', warning: 'Shared logins or full admin access on day one' },
+      { check: 'Review', evidence: 'Named reviewer, first-week checks, and a written review date', warning: 'Nobody owns feedback or exceptions' },
+      { check: 'Exit', evidence: 'Account, session, file, secret, and handoff checklist', warning: 'Access removal depends on memory' },
+    ],
+    chart: {
+      title: 'Three 2024 indicators, kept in their own units',
+      methods: 'Values come from three World Bank indicators for the Philippines in 2024. The bars use separate scales because percentages and subscriptions per 100 people are different measures; they are shown for context, not combined into a score.'
+    },
+    graphic: {
+      title: 'A six-check hiring path',
+      steps: ['Scope one queue', 'Check the setup', 'Run a sample', 'Limit access', 'Review week one', 'Close access cleanly'],
+      note: 'The path moves from the work itself to the person, then to access and review. Each step creates something your team can inspect before the next one begins.'
+    },
+    quote: {
+      text: 'Many of us know that enabling multi-factor authentication is the single most important thing Americans can do to stay safe online.',
+      attribution: 'Jen Easterly, Director of CISA, published October 18, 2022',
+      source: 5
+    },
+    banners: [
+      { eyebrow: 'Start with the work', title: 'Turn a loose task list into one role you can test.', body: 'Use one queue, one finish rule, and one review owner. This makes the sample fair and the first week easier to inspect.', href: '/contact', label: 'Map the role' },
+      { eyebrow: 'Protect the first handoff', title: 'Set the access rules before an account is opened.', body: 'List the tools, permissions, internal approvals, and offboarding owner. Small access is easier to widen than broad access is to repair.', href: '/services', label: 'Review assistant work lanes' },
+      { eyebrow: 'Ready for a real brief?', title: 'Bring the tasks, schedule, tools, and approval limits.', body: 'The staffing intake turns those details into a clear Philippines hiring brief. You keep the final hiring and access decisions.', href: '/contact', label: 'Start the staffing brief' },
+    ],
+    sources: [
+      { number: 1, name: 'World Bank: Individuals using the Internet (% of population), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.USER.ZS?format=json&date=2024' },
+      { number: 2, name: 'World Bank: Fixed broadband subscriptions (per 100 people), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.BBND.P2?format=json&date=2024' },
+      { number: 3, name: 'World Bank: ICT service exports (% of service exports, BoP), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/BX.GSR.CCIS.ZS?format=json&date=2024' },
+      { number: 4, name: 'NIST SP 800-46 Rev. 2: Guide to Enterprise Telework, Remote Access, and BYOD Security, July 2016', url: 'https://csrc.nist.gov/pubs/sp/800/46/r2/final' },
+      { number: 5, name: 'CISA: Next Level MFA: FIDO Authentication, October 18, 2022', url: 'https://www.cisa.gov/news-events/news/next-level-mfa-fido-authentication' },
+    ],
+    faqs: [
+      { question: 'What should I outsource to a virtual assistant in the Philippines first?', answer: 'Start with a recurring queue that has safe examples and a clear finish point. Calendar updates, inbox sorting, document prep, and approved CRM updates are easier to test than a broad request for general help.' },
+      { question: 'Does country data prove that a Filipino assistant has reliable internet?', answer: 'No. Country indicators describe national conditions, not one person’s home or office, so run a live test from the work location and ask the candidate to explain the backup plan.' },
+      { question: 'What access should a new assistant receive?', answer: 'Create a separate user and open only the tools needed for the first queue. Turn on multi-factor authentication, keep sensitive approvals inside your team, and widen access only after reviewed work shows a need.' },
+      { question: 'How should I judge the first week?', answer: 'Review a small sample each day and record errors, questions, blocked items, and instruction gaps. End the week by deciding what can continue, what needs a better rule, and what should remain with your team.' },
+    ]
+  },
   'outsourced-assistants-provider-questions': {
     summary: 'The safest provider calls are boring in a good way. You ask who manages the person, how quality is checked, what happens when access or customer data is involved, and how fast a bad fit gets fixed.',
     comparisonRows: [
