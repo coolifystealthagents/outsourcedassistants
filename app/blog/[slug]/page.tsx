@@ -54,6 +54,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
+  const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
   const pageUrl = `${siteUrl}/blog/${post.slug}`;
   const faqs = detail?.faqs ?? [
     { question: 'What should I prepare before hiring?', answer: 'Prepare task examples, access rules, a review owner, and a short first-week checklist.' },
@@ -67,7 +68,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         about: 'Hiring and managing Filipino assistants',
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
-        ...(post.slug === 'outsource-virtual-assistant-philippines' ? { datePublished: '2026-07-25', dateModified: '2026-07-25' } : {}),
+        ...(isEvidenceGuide ? { datePublished: '2026-07-25', dateModified: '2026-07-25' } : {}),
         ...(detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
@@ -81,7 +82,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   return (
     <>
-      {post.slug === 'outsource-virtual-assistant-philippines' ? <ArticleHeader /> : <Header />}
+      {isEvidenceGuide ? <ArticleHeader /> : <Header />}
       <main className="section">
         <JsonLd data={schema} />
         <article className="container guide-article">
@@ -112,6 +113,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
               <figure className="article-chart" aria-labelledby="indicator-chart-title">
                 <figcaption id="indicator-chart-title"><strong>{detail.chart.title}</strong></figcaption>
+                <span className="scroll-cue">Swipe sideways to see the full chart →</span>
                 <svg viewBox="0 0 760 360" role="img" aria-labelledby="indicator-chart-title indicator-chart-desc">
                   <desc id="indicator-chart-desc">Three separately scaled horizontal bars show 67.3 percent internet use, 7.14 fixed broadband subscriptions per 100 people, and 16.0 percent of service exports from ICT services in the Philippines in 2024.</desc>
                   <g className="chart-grid"><line x1="245" y1="58" x2="245" y2="306" /><line x1="475" y1="58" x2="475" y2="306" /><line x1="705" y1="58" x2="705" y2="306" /></g>
@@ -128,7 +130,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               <section aria-labelledby="buyer-checks">
                 <h2 id="buyer-checks">What to check before you hire</h2>
                 <p>Use the same checks for every candidate so the decision rests on evidence. A good process should also show you where your own brief or access plan is still weak.</p>
-                <div className="article-table-wrap"><table><thead><tr><th>Check</th><th>Useful evidence</th><th>Warning sign</th></tr></thead><tbody>{detail.decisionTable.map((row) => <tr key={row.check}><th>{row.check}</th><td>{row.evidence}</td><td>{row.warning}</td></tr>)}</tbody></table></div>
+                <div className="article-table-wrap"><span className="scroll-cue">Swipe sideways to see all columns →</span><table><thead><tr><th>Check</th><th>Useful evidence</th><th>Warning sign</th></tr></thead><tbody>{detail.decisionTable.map((row) => <tr key={row.check}><th>{row.check}</th><td>{row.evidence}</td><td>{row.warning}</td></tr>)}</tbody></table></div>
               </section>
 
               <aside className="article-banner article-banner-alt" data-article-banner="2">
@@ -142,6 +144,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
               <figure className="hiring-path" aria-labelledby="hiring-path-title">
                 <figcaption id="hiring-path-title"><strong>{detail.graphic.title}</strong></figcaption>
+                <span className="scroll-cue">Swipe sideways to see every step →</span>
                 <svg viewBox="0 0 900 300" role="img" aria-labelledby="hiring-path-title hiring-path-desc">
                   <desc id="hiring-path-desc">A six-step path moves from scoping one queue through setup checks, a work sample, limited access, week-one review, and clean access closure.</desc><path d="M90 145 H810" />
                   {detail.graphic.steps.map((step, index) => { const x = 90 + index * 144; return <g key={step}><circle cx={x} cy="145" r="38" /><text className="path-number" x={x} y="153">{index + 1}</text><text className="path-label" x={x} y={index % 2 === 0 ? 78 : 230}>{step}</text></g>; })}
@@ -172,9 +175,9 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <div className="card"><h2>The short answer</h2><p>{fallback.answer}</p><h2>{fallback.sectionTitle}</h2><ul>{fallback.items.map((item) => <li key={item}>{item}</li>)}</ul><h2>{fallback.questionTitle}</h2><ul>{fallback.questions.map((item) => <li key={item}>{item}</li>)}</ul><h2>Common questions</h2>{faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}</div>
           ) : null}
         </article>
-        {post.slug === 'outsource-virtual-assistant-philippines' ? null : <CTA />}
+        {isEvidenceGuide ? null : <CTA />}
       </main>
-      {post.slug === 'outsource-virtual-assistant-philippines' ? <ArticleFooter /> : <Footer />}
+      {isEvidenceGuide ? <ArticleFooter /> : <Footer />}
     </>
   );
 }

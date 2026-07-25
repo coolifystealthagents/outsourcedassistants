@@ -53,6 +53,12 @@ export const serviceDetails = {
 } as const;
 export const blogPosts = [
   {
+    "slug": "philippines-executive-assistant-onboarding-plan",
+    "title": "Philippines Executive Assistant Onboarding Plan: First 30 Days",
+    "excerpt": "Use a 30-day plan to teach one work lane at a time, protect company access, and make feedback easy to act on. This guide shows what to prepare before day one and what to review each week.",
+    "minutes": 13
+  },
+  {
     "slug": "outsource-virtual-assistant-philippines",
     "title": "Outsource Virtual Assistant Philippines: A Secure Hiring Guide",
     "excerpt": "Use national data as context, then check the person, connection, work sample, access plan, and first-week review before you hire. The individual check matters more than a broad country claim.",
@@ -107,6 +113,126 @@ export const blogFallbacks = {
   },
 } as const;
 export const blogDetails = {
+  'philippines-executive-assistant-onboarding-plan': {
+    kind: 'evidenceGuide',
+    summary: [
+      'A Philippines executive assistant onboarding plan should begin before the first login. Pick one recurring work lane, name the person who will review it, and write down the decisions that must stay with your team.',
+      'The first 30 days are for teaching context and checking real work, not handing over every inbox, calendar, and account at once. Give access in small steps, review a sample each day, and widen the role only when the assistant can follow the rule and spot the exception.'
+    ],
+    stats: [
+      { value: '67.3%', label: 'of people used the internet', note: 'Philippines, 2024', source: 1 },
+      { value: '7.14', label: 'fixed broadband subscriptions per 100 people', note: 'Philippines, 2024', source: 2 },
+      { value: '16.0%', label: 'of service exports came from ICT services', note: 'Philippines, 2024', source: 3 },
+    ],
+    sections: [
+      {
+        id: 'prepare-before-day-one',
+        title: 'Prepare the desk before day one',
+        paragraphs: [
+          'Start with a one-page role brief that names the first queue, the normal working hours, the tools involved, and the expected finish. Add three real examples so the new assistant can see what good work looks like without guessing from a job title.',
+          'Choose one internal owner who can answer questions and review the first week. If several managers give different instructions, the assistant will spend more time sorting out your team than completing the work.',
+          'Create a safe practice folder with sample contacts, old calendar requests, and made-up customer details. The assistant can learn naming rules and escalation steps there before touching a live record.'
+        ]
+      },
+      {
+        id: 'read-the-country-data',
+        title: 'Use country data as context, not a hiring promise',
+        paragraphs: [
+          'World Bank data says 67.3% of people in the Philippines used the internet in 2024. That national figure helps describe the setting, but it cannot tell you whether one assistant has a steady connection in the room where the work will happen.',
+          'The World Bank also reports 7.14 fixed broadband subscriptions per 100 people in 2024. This counts subscriptions rather than connected people, so ask the assistant to run a live call from the usual work location and explain the power and connection backup.',
+          'ICT services made up 16.0% of Philippine service exports in 2024. The number confirms that cross-border digital work is part of the economy, but you still need a work sample to judge writing, judgment, accuracy, and follow-through.'
+        ],
+        links: [
+          { href: '/services/executive-calendar-management', label: 'Review the executive calendar work lane' },
+          { href: '/services/meeting-preparation', label: 'Review the meeting preparation work lane' },
+        ]
+      },
+      {
+        id: 'week-one',
+        title: 'Week one: teach one queue and the stop rules',
+        paragraphs: [
+          'Use the first morning to explain who the assistant supports, how the company speaks to customers, and which matters are private. Then walk through one queue from start to finish while the assistant takes notes in the shared checklist.',
+          'For an executive calendar, the first queue might be sorting meeting requests and drafting options without sending a reply. For meeting support, it might be building an agenda from approved notes while leaving sensitive decisions with the executive.',
+          'Write the stop rules beside the normal steps. The assistant should know when to pause for a conflict, a money request, a legal message, a suspicious link, or a request that exposes private employee or customer information.',
+          'Review the first five items together and point to the rule behind each correction. A short note such as "wrong" does not teach the assistant how to handle the next request.'
+        ]
+      },
+      {
+        id: 'week-two',
+        title: 'Week two: check judgment before adding speed',
+        paragraphs: [
+          'Keep the same queue in week two, but mix in a few unclear cases. Ask the assistant to state what is known, what is missing, and who should decide instead of filling the gap with an assumption.',
+          'Score a small sample for accuracy, correct escalation, clear notes, and on-time completion. Speed matters only after the assistant can protect the rules, because a fast wrong answer creates more work for the manager.',
+          'Hold one short review at a fixed time each day. Group repeated questions into the checklist so the assistant has a better reference and the manager does not need to answer the same question again.',
+          'Check the work location again during a normal shift rather than relying on an interview-day speed image. A real call can show whether audio, video, background noise, and backup connectivity are good enough for the role.'
+        ]
+      },
+      {
+        id: 'weeks-three-four',
+        title: 'Weeks three and four: widen the role carefully',
+        paragraphs: [
+          'Add a second work lane only when the first one is stable for several days. A calendar assistant might add meeting prep next, while an inbox assistant might add approved follow-up after sorting and escalation are reliable.',
+          'Do not add a new tool and a new type of decision on the same day. Change one part at a time so you can tell whether an error came from the tool, the written rule, or the assistant’s understanding.',
+          'In week four, ask the assistant to run the documented queue while the reviewer checks a smaller sample. The assistant should also flag an outdated instruction and suggest a plain correction, since real work changes faster than a static handbook.',
+          'End day 30 with a written review of completed work, avoidable errors, blocked items, questions, and access used. Decide what can continue, what needs another week of practice, and what should stay inside the company.'
+        ]
+      },
+      {
+        id: 'access-and-exit',
+        title: 'Treat access and exit as part of onboarding',
+        paragraphs: [
+          'NIST’s remote-work guide says organizations should secure both company devices and bring-your-own devices against expected threats. Decide which device the assistant may use, require current updates, and create a separate account instead of sharing a manager login.',
+          'Turn on multi-factor authentication and grant only the permissions needed for the current queue. Keep payments, user administration, contract approval, and unusual customer exceptions with a named person inside your business.',
+          'Write the exit list before day one because access is easiest to remove when every account has an owner. The list should cover account disabling, active sessions, shared secrets, files, open tasks, equipment, and the person who confirms that each step is done.',
+          'Good onboarding leaves a trail that another manager can inspect. The role brief, access list, daily sample, correction log, and day-30 review should tell the story without relying on anyone’s memory.'
+        ],
+        links: [
+          { href: '/services/inbox-triage', label: 'See the inbox triage work lane' },
+          { href: '/blog/outsourced-assistants-onboarding-checklist', label: 'Use the first-week onboarding checklist' },
+        ]
+      }
+    ],
+    decisionTable: [
+      { check: 'Role brief', evidence: 'One queue, real examples, hours, finish rule, and internal owner', warning: 'The role asks for general help with everything' },
+      { check: 'Work setup', evidence: 'Live call from the normal desk plus a stated power and connection backup', warning: 'The check stops at a saved speed-test image' },
+      { check: 'Practice', evidence: 'Safe sample records and the same score sheet for each task', warning: 'The first lesson happens in a live customer account' },
+      { check: 'Access', evidence: 'Separate identity, small permissions, and multi-factor authentication', warning: 'A shared login or administrator role is used on day one' },
+      { check: 'Review', evidence: 'Daily samples, written corrections, and a day-30 decision', warning: 'Feedback arrives only when something breaks' },
+      { check: 'Exit', evidence: 'Named owners for accounts, sessions, files, secrets, and open work', warning: 'Nobody can list every system the assistant uses' },
+    ],
+    chart: {
+      title: 'Three Philippines digital-work indicators from 2024',
+      methods: 'The values come from separate World Bank indicators for the Philippines in 2024. Each bar keeps its own unit and scale, so the chart gives context rather than a combined readiness score.'
+    },
+    graphic: {
+      title: 'The 30-day onboarding path',
+      steps: ['Prepare the desk', 'Teach one queue', 'Check judgment', 'Widen one step', 'Review day 30', 'Close access cleanly'],
+      note: 'Each stage should leave a record the manager can check before the next stage begins. If the evidence is weak, keep the role narrow and fix the instruction first.'
+    },
+    quote: {
+      text: 'Many of us know that enabling multi-factor authentication is the single most important thing Americans can do to stay safe online.',
+      attribution: 'Jen Easterly, Director of CISA, published October 18, 2022',
+      source: 5
+    },
+    banners: [
+      { eyebrow: 'Before day one', title: 'Turn the task list into one queue the assistant can learn.', body: 'Bring the examples, tools, hours, and stop rules. A clear first lane makes the daily review useful.', href: '/contact', label: 'Map the first work lane' },
+      { eyebrow: 'Keep access small', title: 'Match each account to the work being taught this week.', body: 'Start with a separate identity and narrow permissions. Add access only after reviewed work shows a real need.', href: '/services', label: 'Review assistant work lanes' },
+      { eyebrow: 'Plan the first 30 days', title: 'Build a brief your manager and new assistant can both follow.', body: 'Share the role, schedule, tools, examples, and approval limits. Your team keeps the final hiring and access decisions.', href: '/contact', label: 'Start the onboarding brief' },
+    ],
+    sources: [
+      { number: 1, name: 'World Bank: Individuals using the Internet (% of population), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.USER.ZS?format=json&date=2024' },
+      { number: 2, name: 'World Bank: Fixed broadband subscriptions (per 100 people), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.BBND.P2?format=json&date=2024' },
+      { number: 3, name: 'World Bank: ICT service exports (% of service exports, BoP), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/BX.GSR.CCIS.ZS?format=json&date=2024' },
+      { number: 4, name: 'NIST SP 800-46 Rev. 2: Guide to Enterprise Telework, Remote Access, and BYOD Security, July 2016', url: 'https://csrc.nist.gov/pubs/sp/800/46/r2/final' },
+      { number: 5, name: 'CISA: Next Level MFA: FIDO Authentication, October 18, 2022', url: 'https://www.cisa.gov/news-events/news/next-level-mfa-fido-authentication' },
+    ],
+    faqs: [
+      { question: 'What should a Philippines executive assistant learn first?', answer: 'Start with one recurring queue that has real examples and a clear stopping point. Calendar sorting, meeting prep, inbox sorting, or approved follow-up are easier to teach and inspect than a broad executive support role.' },
+      { question: 'Should a new assistant get every tool on day one?', answer: 'No, create a separate identity and open only the tools needed for the first queue. Add another permission when reviewed work shows why it is needed and an internal owner approves it.' },
+      { question: 'How often should the manager review work?', answer: 'Review a small sample every day during the first week, then reduce the sample as the work becomes steady. Keep a fixed weekly review for errors, blocked items, questions, and changes to the written rule.' },
+      { question: 'What should happen at the 30-day review?', answer: 'Compare completed work with the role brief and look at accuracy, escalation, access use, and response to feedback. Decide which work can continue, which lane needs more practice, and which decisions must stay with your team.' },
+    ]
+  },
   'outsource-virtual-assistant-philippines': {
     kind: 'evidenceGuide',
     summary: [
