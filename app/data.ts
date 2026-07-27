@@ -63,32 +63,7 @@ export const blogPosts = [
     "title": "Outsource Virtual Assistant Philippines: A Secure Hiring Guide",
     "excerpt": "Use national data as context, then check the person, connection, work sample, access plan, and first-week review before you hire. The individual check matters more than a broad country claim.",
     "minutes": 12
-  },
-  {
-    "slug": "outsourced-assistants-planning",
-    "title": "Outsourced Assistants: What to plan before hiring",
-    "excerpt": "Write the role, schedule, access rules, and review owner down before you start interviewing.",
-    "minutes": 6
-  },
-  {
-    "slug": "outsourced-assistants-tasks-to-outsource",
-    "title": "Outsourced Assistants: What tasks should you outsource first?",
-    "excerpt": "Start with recurring work that has examples and clear review rules.",
-    "minutes": 7
-  },
-  {
-    "slug": "outsourced-assistants-provider-questions",
-    "title": "Outsourced Assistants: Questions to ask before hiring",
-    "excerpt": "Use these questions before you sign with a provider or freelancer.",
-    "minutes": 8
-  },
-  {
-    "slug": "outsourced-assistants-onboarding-checklist",
-    "title": "Outsourced Assistants: First week onboarding checklist",
-    "excerpt": "A simple checklist for tools, SOPs, sample work, review, and reporting.",
-    "minutes": 9
-  }
-] as const;
+  },] as const;
 export const blogFallbacks = {
   'outsourced-assistants-planning': {
     answer: 'Start with the work, not a broad job title. List what repeats, which tools the assistant needs, what good work looks like, and who makes the decisions that should stay inside your company.',
@@ -188,7 +163,7 @@ export const blogDetails = {
         ],
         links: [
           { href: '/services/inbox-triage', label: 'See the inbox triage work lane' },
-          { href: '/blog/outsourced-assistants-onboarding-checklist', label: 'Use the first-week onboarding checklist' },
+          { href: '/blog', label: 'Use the first-week onboarding checklist' },
         ]
       }
     ],
@@ -298,7 +273,7 @@ export const blogDetails = {
           'At the end of the week, separate person problems from instruction problems. A missed rule may mean the candidate needs more practice, but it may also mean your example or approval boundary was never clear.'
         ],
         links: [
-          { href: '/blog/outsourced-assistants-onboarding-checklist', label: 'Use the first-week onboarding checklist' },
+          { href: '/blog', label: 'Use the first-week onboarding checklist' },
         ]
       },
       {

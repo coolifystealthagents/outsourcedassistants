@@ -100,7 +100,7 @@ export default function Home() {
               <p className="handoff-kicker light"><span /> A cleaner brief</p>
               <h2>Write down the line between support and judgment.</h2>
               <p>An assistant can move quickly when routine decisions are clear. Anything involving money, sensitive data, or an unhappy customer should have an owner and an escalation rule.</p>
-              <a className="handoff-light-link" href="/blog/outsourced-assistants-provider-questions">Use the provider question list <span aria-hidden="true">→</span></a>
+              <a className="handoff-light-link" href="/blog">Use the provider question list <span aria-hidden="true">→</span></a>
             </div>
             <div className="handoff-rule-sheet">
               <div className="handoff-sheet-head"><span>Handoff sheet / 01</span><span>Draft</span></div>
