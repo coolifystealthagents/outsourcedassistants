@@ -55,6 +55,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
   const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
+  const publicationDate = detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25';
+  const publicationLabel = detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026';
   const pageUrl = `${siteUrl}/blog/${post.slug}`;
   const faqs = detail?.faqs ?? [
     { question: 'What should I prepare before hiring?', answer: 'Prepare task examples, access rules, a review owner, and a short first-week checklist.' },
@@ -68,7 +70,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         about: 'Hiring and managing Filipino assistants',
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
-        ...(isEvidenceGuide ? { datePublished: '2026-07-25', dateModified: '2026-07-25' } : {}),
+        ...(isEvidenceGuide ? { datePublished: publicationDate, dateModified: publicationDate } : {}),
         ...(detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
@@ -92,7 +94,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
           {detail && 'kind' in detail && detail.kind === 'evidenceGuide' ? (
             <div className="evidence-guide">
-              <p className="article-date">Published July 25, 2026 · {post.minutes} minute read</p>
+              <p className="article-date">Published {publicationLabel} · {post.minutes} minute read</p>
               <section className="article-answer" aria-labelledby="short-answer">
                 <h2 id="short-answer">The short answer</h2>
                 {detail.summary.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
@@ -111,16 +113,18 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 </div>
               </section>
 
-              <figure className="article-chart" aria-labelledby="indicator-chart-title">
+              <figure className="article-chart" aria-labelledby="indicator-chart-title" aria-label={'ariaLabel' in detail.chart ? detail.chart.ariaLabel : 'Scrollable Philippines indicator chart'} tabIndex={0} data-visual={'marker' in detail.chart ? detail.chart.marker : 'philippines-digital-context-chart'}>
                 <figcaption id="indicator-chart-title"><strong>{detail.chart.title}</strong></figcaption>
                 <span className="scroll-cue">Swipe sideways to see the full chart →</span>
-                <svg viewBox="0 0 760 360" role="img" aria-labelledby="indicator-chart-title indicator-chart-desc">
-                  <desc id="indicator-chart-desc">Three separately scaled horizontal bars show 67.3 percent internet use, 7.14 fixed broadband subscriptions per 100 people, and 16.0 percent of service exports from ICT services in the Philippines in 2024.</desc>
-                  <g className="chart-grid"><line x1="245" y1="58" x2="245" y2="306" /><line x1="475" y1="58" x2="475" y2="306" /><line x1="705" y1="58" x2="705" y2="306" /></g>
-                  <text x="20" y="93">Internet users</text><rect x="245" y="68" width="310" height="34" rx="8" /><text x="568" y="92">67.3%</text>
-                  <text x="20" y="183">Fixed broadband</text><rect x="245" y="158" width="328" height="34" rx="8" /><text x="586" y="182">7.14 per 100</text>
-                  <text x="20" y="273">ICT service exports</text><rect x="245" y="248" width="368" height="34" rx="8" /><text x="626" y="272">16.0%</text>
-                  <text className="chart-scale" x="245" y="330">Each bar uses its own stated unit and scale</text>
+                <svg viewBox="0 0 760 430" role="img" aria-labelledby="indicator-chart-title indicator-chart-desc">
+                  <desc id="indicator-chart-desc">{'description' in detail.chart ? detail.chart.description : 'Three separately scaled horizontal bars show 67.3 percent internet use, 7.14 fixed broadband subscriptions per 100 people, and 16.0 percent of service exports from ICT services in the Philippines in 2024.'}</desc>
+                  <rect className="chart-panel" x="230" y="20" width="500" height="105" rx="12" />
+                  <text x="20" y="67">Internet users</text><text className="chart-axis" x="245" y="108">0</text><text className="chart-axis chart-axis-end" x="705" y="108">100%</text><rect className="chart-bar" x="245" y="48" width="310" height="34" rx="8" /><text x="568" y="72">67.3%</text>
+                  <rect className="chart-panel" x="230" y="145" width="500" height="105" rx="12" />
+                  <text x="20" y="192">Fixed broadband</text><text className="chart-axis" x="245" y="233">0</text><text className="chart-axis chart-axis-end" x="705" y="233">10 per 100</text><rect className="chart-bar" x="245" y="173" width="328" height="34" rx="8" /><text x="586" y="197">7.14 per 100</text>
+                  <rect className="chart-panel" x="230" y="270" width="500" height="105" rx="12" />
+                  <text x="20" y="317">ICT service exports</text><text className="chart-axis" x="245" y="358">0</text><text className="chart-axis chart-axis-end" x="705" y="358">20%</text><rect className="chart-bar" x="245" y="298" width="368" height="34" rx="8" /><text x="626" y="322">16.0%</text>
+                  <text className="chart-scale" x="245" y="410">Separate labeled scale for each indicator</text>
                 </svg>
                 <p className="methods-note"><strong>Methods note.</strong> {detail.chart.methods}</p>
               </figure>
@@ -128,9 +132,9 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               {detail.sections.slice(0, 2).map((section) => <section id={section.id} key={section.id}><h2>{section.title}</h2>{section.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}{'links' in section && section.links ? <div className="article-links">{section.links.map((link) => <a href={link.href} key={link.href}>{link.label}</a>)}</div> : null}</section>)}
 
               <section aria-labelledby="buyer-checks">
-                <h2 id="buyer-checks">What to check before you hire</h2>
-                <p>Use the same checks for every candidate so the decision rests on evidence. A good process should also show you where your own brief or access plan is still weak.</p>
-                <div className="article-table-wrap"><span className="scroll-cue">Swipe sideways to see all columns →</span><table><thead><tr><th>Check</th><th>Useful evidence</th><th>Warning sign</th></tr></thead><tbody>{detail.decisionTable.map((row) => <tr key={row.check}><th>{row.check}</th><td>{row.evidence}</td><td>{row.warning}</td></tr>)}</tbody></table></div>
+                <h2 id="buyer-checks">{'tableTitle' in detail ? detail.tableTitle : 'What to check before you hire'}</h2>
+                <p>{'tableIntro' in detail ? detail.tableIntro : 'Use the same checks for every candidate so the decision rests on evidence. A good process should also show you where your own brief or access plan is still weak.'}</p>
+                <div className="article-table-wrap" role="region" aria-label={'tableAriaLabel' in detail ? detail.tableAriaLabel : 'Scrollable hiring checks table'} tabIndex={0}><span className="scroll-cue">Swipe sideways to see all columns →</span><table><thead><tr><th>Check</th><th>Useful evidence</th><th>Warning sign</th></tr></thead><tbody>{detail.decisionTable.map((row) => <tr key={row.check}><th>{row.check}</th><td>{row.evidence}</td><td>{row.warning}</td></tr>)}</tbody></table></div>
               </section>
 
               <aside className="article-banner article-banner-alt" data-article-banner="2">
@@ -142,11 +146,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
               <blockquote className="expert-quote"><p>&quot;{detail.quote.text}&quot;</p><cite>{detail.quote.attribution} <a href={`#source-${detail.quote.source}`}>[{detail.quote.source}]</a></cite></blockquote>
 
-              <figure className="hiring-path" aria-labelledby="hiring-path-title">
+              <figure className="hiring-path" aria-labelledby="hiring-path-title" aria-label={'ariaLabel' in detail.graphic ? detail.graphic.ariaLabel : 'Scrollable assistant hiring path graphic'} tabIndex={0} data-visual={'marker' in detail.graphic ? detail.graphic.marker : 'assistant-hiring-path'}>
                 <figcaption id="hiring-path-title"><strong>{detail.graphic.title}</strong></figcaption>
                 <span className="scroll-cue">Swipe sideways to see every step →</span>
                 <svg viewBox="0 0 900 300" role="img" aria-labelledby="hiring-path-title hiring-path-desc">
-                  <desc id="hiring-path-desc">A six-step path moves from scoping one queue through setup checks, a work sample, limited access, week-one review, and clean access closure.</desc><path d="M90 145 H810" />
+                  <desc id="hiring-path-desc">{'description' in detail.graphic ? detail.graphic.description : 'A six-step path moves from scoping one queue through setup checks, a work sample, limited access, week-one review, and clean access closure.'}</desc><path d="M90 145 H810" />
                   {detail.graphic.steps.map((step, index) => { const x = 90 + index * 144; return <g key={step}><circle cx={x} cy="145" r="38" /><text className="path-number" x={x} y="153">{index + 1}</text><text className="path-label" x={x} y={index % 2 === 0 ? 78 : 230}>{step}</text></g>; })}
                 </svg>
                 <p>{detail.graphic.note}</p>

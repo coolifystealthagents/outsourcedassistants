@@ -53,6 +53,12 @@ export const serviceDetails = {
 } as const;
 export const blogPosts = [
   {
+    "slug": "philippines-virtual-assistant-weekly-reporting-checklist",
+    "title": "Philippines Virtual Assistant Weekly Reporting Checklist",
+    "excerpt": "A useful weekly report shows completed work, open items, errors, questions, and the decisions your Filipino assistant needs from you. This guide gives managers a plain reporting routine they can check in 20 minutes.",
+    "minutes": 14
+  },
+  {
     "slug": "philippines-executive-assistant-onboarding-plan",
     "title": "Philippines Executive Assistant Onboarding Plan: First 30 Days",
     "excerpt": "Use a 30-day plan to teach one work lane at a time, protect company access, and make feedback easy to act on. This guide shows what to prepare before day one and what to review each week.",
@@ -88,6 +94,132 @@ export const blogFallbacks = {
   },
 } as const;
 export const blogDetails = {
+  'philippines-virtual-assistant-weekly-reporting-checklist': {
+    kind: 'evidenceGuide',
+    published: '2026-07-28',
+    publishedLabel: 'July 28, 2026',
+    summary: [
+      'A Philippines virtual assistant weekly report should help a manager make decisions, not create another pile of updates to read. Use one short page that shows finished work, open items, errors, questions, and the owner needed for each blocked task.',
+      'The report works best when it points back to records your team can inspect. Ask for links to the task board, CRM, inbox label, document, or sample that supports each total, then spend the review on exceptions instead of asking the assistant to retell the whole week.'
+    ],
+    stats: [
+      { value: '67.3%', label: 'of people used the internet', note: 'Philippines, 2024', source: 1 },
+      { value: '7.14', label: 'fixed broadband subscriptions per 100 people', note: 'Philippines, 2024', source: 2 },
+      { value: '16.0%', label: 'of service exports came from ICT services', note: 'Philippines, 2024', source: 3 },
+    ],
+    sections: [
+      {
+        id: 'choose-report-purpose',
+        title: 'Decide what the report must help you do',
+        paragraphs: [
+          'Start with the decisions you make each week. You may need to clear a blocked task, approve a customer exception, correct an old instruction, or decide whether the assistant is ready for a larger work queue.',
+          'Write those decisions at the top of the report template before adding totals. A report that cannot lead to a clear manager action is probably collecting detail that belongs in the task system instead.',
+          'Give the report one owner and one due time in the time zone your team uses. The assistant should know who reads it, where it is saved, and what to do when a serious issue cannot wait for the weekly review.'
+        ],
+        links: [
+          { href: '/services/operations-reporting', label: 'Review the operations reporting work lane' },
+          { href: '/services/project-coordination', label: 'Review the project coordination work lane' },
+        ]
+      },
+      {
+        id: 'read-country-data',
+        title: 'Use Philippines data as context, not a quality score',
+        paragraphs: [
+          'World Bank data says 67.3% of people in the Philippines used the internet in 2024. This describes the country, but it cannot tell you whether one assistant submitted a complete report or kept the source records current.',
+          'The World Bank also reports 7.14 fixed broadband subscriptions per 100 people in 2024. That measure counts subscriptions, not connected workers, so check the assistant’s normal work location and backup connection before making a reporting deadline depend on a live call.',
+          'ICT services made up 16.0% of Philippine service exports in 2024. Cross-border digital work is clearly part of the economy, but a national figure does not replace a work sample, a clear report template, or a manager who checks the evidence behind the numbers.'
+        ]
+      },
+      {
+        id: 'build-five-part-report',
+        title: 'Build the report around five useful parts',
+        paragraphs: [
+          'Open with a two-sentence summary that states whether the week was normal and names the one issue that needs attention first. The assistant should write this after the rest of the report so the summary matches the records below it.',
+          'List completed work with a count, a short label, and a link to the source record. If the assistant says 42 customer records were updated, the manager should be able to open the saved view or change log and inspect a sample.',
+          'Follow with open work, avoidable errors, questions, and decisions needed from the manager. Every open item should have an owner and next date, while every error should name the correction and whether the written rule also needs a change.'
+        ]
+      },
+      {
+        id: 'check-evidence',
+        title: 'Check a small sample instead of trusting totals',
+        paragraphs: [
+          'Choose a sample rule before the week begins so the review does not change with your mood. You might check the first five completed records, every high-risk item, and two ordinary items chosen at random from the source list.',
+          'Compare the report with the actual record rather than a screenshot pasted into a document. A live link shows whether the task was finished in the right place, named correctly, and left with enough notes for another person to understand it.',
+          'Record the result in plain words: correct, needs a fix, or needs a manager decision. If the same miss appears twice, pause the push for more output and repair the example, checklist, or approval rule that led to it.'
+        ]
+      },
+      {
+        id: 'protect-report-access',
+        title: 'Keep report access as small as the job allows',
+        paragraphs: [
+          'A weekly report can expose customer names, employee matters, private inboxes, and links to business systems. Keep sensitive details in the approved source tool and use the report to point to the record instead of copying private information into a second file.',
+          'NIST’s remote-work guide says organizations should secure company devices and bring-your-own devices against expected threats. Give the assistant a separate identity, require current device protections, and open only the folders and systems needed for the reporting work.',
+          'Use multi-factor authentication and keep user administration, payments, legal decisions, and unusual customer actions with named people inside your company. If a report link asks for broader access than the assistant’s normal work requires, fix the sharing rule rather than opening the whole system.'
+        ],
+        links: [
+          { href: '/services/meeting-preparation', label: 'See the meeting preparation work lane' },
+        ]
+      },
+      {
+        id: 'run-review-meeting',
+        title: 'Run a short review that ends with owners and dates',
+        paragraphs: [
+          'Read the report before the call and mark only the points that need a decision or correction. During the meeting, start with blocked work, then review errors and questions before looking at ordinary completed totals.',
+          'For each decision, write the owner, the answer, and the date the assistant should act on it. This keeps the next report from repeating the same question and gives both people a record when priorities change later.',
+          'End by choosing one small improvement for the next week, such as a clearer source link or a better stop rule. Do not redesign the full report every Friday, because a stable format makes missing information and week-to-week changes easier to spot.'
+        ]
+      }
+    ],
+    decisionTable: [
+      { check: 'Completed work', evidence: 'Count, plain label, and live source link for a manager sample', warning: 'A total appears without records that support it' },
+      { check: 'Open work', evidence: 'Current owner, next action, and a real next date', warning: 'Old tasks stay on the list with no owner or date' },
+      { check: 'Errors', evidence: 'What happened, what was fixed, and which rule may need repair', warning: 'Mistakes are hidden inside a general progress note' },
+      { check: 'Questions', evidence: 'The missing fact and the person who can answer it', warning: 'The assistant guesses or waits without telling anyone' },
+      { check: 'Decisions', evidence: 'One clear choice, its business owner, and the due date', warning: 'The report asks a broad question with no next step' },
+      { check: 'Access', evidence: 'Links open only for people who need the underlying record', warning: 'Private details are copied into a widely shared file' },
+    ],
+    tableTitle: 'What to check in the weekly report',
+    tableIntro: 'Use the same checks each week so missing records and stuck work are easy to see. The warning column shows where a manager should stop and ask for better evidence before accepting the update.',
+    tableAriaLabel: 'Scrollable weekly reporting checks table',
+    chart: {
+      title: 'Three Philippines digital-work indicators from 2024',
+      methods: 'The values come from three World Bank indicators for the Philippines in 2024. Each bar keeps its own unit and scale, so this is context for remote reporting rather than a combined score or a promise about one worker.',
+      marker: 'philippines-reporting-context-chart',
+      ariaLabel: 'Scrollable Philippines digital-work indicator chart',
+      description: 'Three separately scaled bars show 67.3 percent internet use, 7.14 fixed broadband subscriptions per 100 people, and 16.0 percent of service exports from ICT services in the Philippines in 2024.'
+    },
+    graphic: {
+      title: 'The weekly report review loop',
+      steps: ['Close the week', 'Link the records', 'Check a sample', 'Clear blockers', 'Write decisions', 'Fix one rule'],
+      note: 'The report is not finished when it is sent. It is finished when the manager records the decisions, the assistant knows the next action, and one weak instruction has been repaired for the next week.',
+      marker: 'weekly-report-review-loop',
+      ariaLabel: 'Scrollable weekly report review loop graphic',
+      description: 'A six-step loop moves from closing the work week and linking source records through sampling, blocker review, written decisions, and one instruction fix.'
+    },
+    quote: {
+      text: 'Many of us know that enabling multi-factor authentication is the single most important thing Americans can do to stay safe online.',
+      attribution: 'Jen Easterly, Director of CISA, published October 18, 2022',
+      source: 5
+    },
+    banners: [
+      { eyebrow: 'Before Friday', title: 'Give the weekly report one job and one reader.', body: 'Choose the decisions it should support, the records it should link to, and the time it must arrive. Keep routine detail in the work system.', href: '/services/operations-reporting', label: 'Review reporting support' },
+      { eyebrow: 'Make totals checkable', title: 'Ask for a source link beside every important count.', body: 'A manager should be able to inspect a small sample without asking the assistant to rebuild the week from memory.', href: '/services/project-coordination', label: 'Review coordination support' },
+      { eyebrow: 'Build the first report', title: 'Bring one work queue, its records, and the decisions you keep.', body: 'We can help turn those details into a clear Philippines assistant brief with a report your manager can use.', href: '/contact', label: 'Start the staffing brief' },
+    ],
+    sources: [
+      { number: 1, name: 'World Bank: Individuals using the Internet (% of population), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.USER.ZS?format=json&date=2024' },
+      { number: 2, name: 'World Bank: Fixed broadband subscriptions (per 100 people), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.BBND.P2?format=json&date=2024' },
+      { number: 3, name: 'World Bank: ICT service exports (% of service exports, BoP), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/BX.GSR.CCIS.ZS?format=json&date=2024' },
+      { number: 4, name: 'NIST SP 800-46 Rev. 2: Guide to Enterprise Telework, Remote Access, and BYOD Security, July 2016', url: 'https://csrc.nist.gov/pubs/sp/800/46/r2/final' },
+      { number: 5, name: 'CISA: Next Level MFA: FIDO Authentication, October 18, 2022', url: 'https://www.cisa.gov/news-events/news/next-level-mfa-fido-authentication' },
+    ],
+    faqs: [
+      { question: 'What should a Filipino virtual assistant put in a weekly report?', answer: 'Include a short summary, completed work with source links, open items, errors, questions, and manager decisions. Give each open or blocked item an owner and next date so it can move after the review.' },
+      { question: 'How long should a weekly assistant report be?', answer: 'Keep it short enough for the manager to read before the meeting, usually one clear page plus links to the source records. Move task-by-task history into the work system rather than copying it into the report.' },
+      { question: 'How can a manager check the report without reviewing every task?', answer: 'Set a sample rule before the week starts and inspect the same types of records each time. Check all high-risk items plus a small group of ordinary completed work, then record any repeated miss.' },
+      { question: 'What decisions should stay with the company?', answer: 'Keep payments, user administration, legal choices, hiring decisions, and unusual customer exceptions with named internal owners. The assistant can prepare the facts and track the answer without making those decisions.' },
+    ]
+  },
   'philippines-executive-assistant-onboarding-plan': {
     kind: 'evidenceGuide',
     summary: [
