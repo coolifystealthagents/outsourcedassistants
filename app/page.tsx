@@ -35,7 +35,7 @@ export default function Home() {
                 Build one clear role around the tasks already eating your week. We help you sort the scope, handoff rules, and first two weeks before you interview talent in the Philippines.
               </p>
               <div className="handoff-actions">
-                <a className="handoff-button" href="/contact">Request a role plan</a>
+                <a className="handoff-button" href="/contact-us">Request a role plan</a>
                 <a className="handoff-text-link" href="#workload">Sort your workload <span aria-hidden="true">↓</span></a>
               </div>
               <p className="handoff-disclosure">No public rate card or mystery package. Start with the work and schedule you need covered.</p>
@@ -159,7 +159,7 @@ export default function Home() {
             <p className="handoff-kicker light"><span /> Start with the role</p>
             <h2>Bring the messy task list. Leave with a clearer brief.</h2>
             <p>Tell us what repeats, what keeps slipping, and which systems the assistant would touch.</p>
-            <a className="handoff-button pale" href="/contact">Request a role plan</a>
+            <a className="handoff-button pale" href="/contact-us">Request a role plan</a>
           </div>
         </section>
       </main>

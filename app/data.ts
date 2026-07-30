@@ -204,7 +204,7 @@ export const blogDetails = {
     banners: [
       { eyebrow: 'Before Friday', title: 'Give the weekly report one job and one reader.', body: 'Choose the decisions it should support, the records it should link to, and the time it must arrive. Keep routine detail in the work system.', href: '/services/operations-reporting', label: 'Review reporting support' },
       { eyebrow: 'Make totals checkable', title: 'Ask for a source link beside every important count.', body: 'A manager should be able to inspect a small sample without asking the assistant to rebuild the week from memory.', href: '/services/project-coordination', label: 'Review coordination support' },
-      { eyebrow: 'Build the first report', title: 'Bring one work queue, its records, and the decisions you keep.', body: 'We can help turn those details into a clear Philippines assistant brief with a report your manager can use.', href: '/contact', label: 'Start the staffing brief' },
+      { eyebrow: 'Build the first report', title: 'Bring one work queue, its records, and the decisions you keep.', body: 'We can help turn those details into a clear Philippines assistant brief with a report your manager can use.', href: '/contact-us', label: 'Start the staffing brief' },
     ],
     sources: [
       { number: 1, name: 'World Bank: Individuals using the Internet (% of population), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.USER.ZS?format=json&date=2024' },
@@ -322,9 +322,9 @@ export const blogDetails = {
       source: 5
     },
     banners: [
-      { eyebrow: 'Before day one', title: 'Turn the task list into one queue the assistant can learn.', body: 'Bring the examples, tools, hours, and stop rules. A clear first lane makes the daily review useful.', href: '/contact', label: 'Map the first work lane' },
+      { eyebrow: 'Before day one', title: 'Turn the task list into one queue the assistant can learn.', body: 'Bring the examples, tools, hours, and stop rules. A clear first lane makes the daily review useful.', href: '/contact-us', label: 'Map the first work lane' },
       { eyebrow: 'Keep access small', title: 'Match each account to the work being taught this week.', body: 'Start with a separate identity and narrow permissions. Add access only after reviewed work shows a real need.', href: '/services', label: 'Review assistant work lanes' },
-      { eyebrow: 'Plan the first 30 days', title: 'Build a brief your manager and new assistant can both follow.', body: 'Share the role, schedule, tools, examples, and approval limits. Your team keeps the final hiring and access decisions.', href: '/contact', label: 'Start the onboarding brief' },
+      { eyebrow: 'Plan the first 30 days', title: 'Build a brief your manager and new assistant can both follow.', body: 'Share the role, schedule, tools, examples, and approval limits. Your team keeps the final hiring and access decisions.', href: '/contact-us', label: 'Start the onboarding brief' },
     ],
     sources: [
       { number: 1, name: 'World Bank: Individuals using the Internet (% of population), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.USER.ZS?format=json&date=2024' },
@@ -440,9 +440,9 @@ export const blogDetails = {
       source: 5
     },
     banners: [
-      { eyebrow: 'Start with the work', title: 'Turn a loose task list into one role you can test.', body: 'Use one queue, one finish rule, and one review owner. This makes the sample fair and the first week easier to inspect.', href: '/contact', label: 'Map the role' },
+      { eyebrow: 'Start with the work', title: 'Turn a loose task list into one role you can test.', body: 'Use one queue, one finish rule, and one review owner. This makes the sample fair and the first week easier to inspect.', href: '/contact-us', label: 'Map the role' },
       { eyebrow: 'Protect the first handoff', title: 'Set the access rules before an account is opened.', body: 'List the tools, permissions, internal approvals, and offboarding owner. Small access is easier to widen than broad access is to repair.', href: '/services', label: 'Review assistant work lanes' },
-      { eyebrow: 'Ready for a real brief?', title: 'Bring the tasks, schedule, tools, and approval limits.', body: 'The staffing intake turns those details into a clear Philippines hiring brief. You keep the final hiring and access decisions.', href: '/contact', label: 'Start the staffing brief' },
+      { eyebrow: 'Ready for a real brief?', title: 'Bring the tasks, schedule, tools, and approval limits.', body: 'The staffing intake turns those details into a clear Philippines hiring brief. You keep the final hiring and access decisions.', href: '/contact-us', label: 'Start the staffing brief' },
     ],
     sources: [
       { number: 1, name: 'World Bank: Individuals using the Internet (% of population), Philippines, 2024', url: 'https://api.worldbank.org/v2/country/PHL/indicator/IT.NET.USER.ZS?format=json&date=2024' },
