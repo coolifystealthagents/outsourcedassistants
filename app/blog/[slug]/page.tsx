@@ -13,7 +13,7 @@ function ArticleHeader() {
       <div className="nav-inner">
         <a className="logo" href="/" aria-label={`${site.brand} home`}><LogoMark /></a>
         <nav className="links fleet-links" aria-label="Article navigation">
-          <a href="/services">Services</a><a href="/blog">Blog</a><a href="/contact">Contact Us</a>
+          <a href="/services">Services</a><a href="/blog">Blog</a><a href="/contact-us">Contact Us</a>
         </nav>
       </div>
     </header>
@@ -25,7 +25,7 @@ function ArticleFooter() {
     <footer className="article-footer">
       <div className="container article-footer-inner">
         <div><LogoMark /><p>Philippines-only talent sourcing with clear work and access boundaries.</p></div>
-        <nav aria-label="Article footer navigation"><a href="/services">Services</a><a href="/blog">Blog</a><a href="/contact">Contact Us</a></nav>
+        <nav aria-label="Article footer navigation"><a href="/services">Services</a><a href="/blog">Blog</a><a href="/contact-us">Contact Us</a></nav>
       </div>
     </footer>
   );
@@ -90,7 +90,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <article className="container guide-article">
           <span className="eyebrow">Philippines staffing guide</span>
           <h1>{post.title}</h1>
-          <p className="lead">{post.excerpt}</p>
+          <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
 
           {detail && 'kind' in detail && detail.kind === 'evidenceGuide' ? (
             <div className="evidence-guide">
