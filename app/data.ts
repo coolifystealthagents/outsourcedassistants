@@ -549,4 +549,18 @@ export const staffingProcess = [
 export const staffingFitNote = 'Every Philippines staffing plan depends on the role, schedule, skills, tools, and management needs. Send the details and our team will help you judge the fit.';
 
 
-export const researchPosts: Array<{ slug: string; title: string; excerpt: string; body: string[] }> = [];
+export const researchPosts: Array<{ slug: string; title: string; excerpt: string; body: string[] }> = [
+  {
+    slug: 'assistant-access-review-benchmarks-2026',
+    title: 'Assistant Access Review Benchmarks for 2026',
+    excerpt: 'A practical benchmark for reviewing outsourced assistant access: inventory each account, confirm the owner and business purpose, record the last review, and close access that no longer matches the work.',
+    body: [
+      'Answer first: a useful access review is an owned, dated queue, not a one-time checklist. For every account, record the assistant, system, permission level, business purpose, approving owner, last review date, and next action.',
+      'Use least privilege as the baseline. An assistant should receive only the access needed for the current work lane, with separate identities and multi-factor authentication where the system supports it. Keep payment approval, hiring decisions, security administration, and unusual customer exceptions with the internal owner.',
+      'A workable monthly benchmark is 100% of active assistant accounts mapped to an owner and purpose, 100% of privileged access reviewed before the next cycle, and every exception assigned a due date. These are operating targets for a local queue, not universal industry averages.',
+      'Review evidence should include the identity-provider or application access export, the current role brief, and the owner decision. When access is no longer needed, disable it promptly and record the closure date. When the role changes, update the brief and permissions together.',
+      'Source: NIST SP 800-53 Rev. 5, AC-2 Account Management and AC-6 Least Privilege, https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final. Apply the control language to the specific systems and approval responsibilities in your team.',
+      'Next step: use the access review as a handoff between the staffing manager and the system owner, then keep the next review date visible in the same queue as the assistant’s work scorecard.'
+    ]
+  }
+];
