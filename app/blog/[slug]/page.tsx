@@ -175,9 +175,20 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               <h2>Sources</h2><ul>{detail.sources.map((source) => <li key={source.url}><a href={source.url}>{source.name}</a></li>)}</ul>
               <h2>Common questions</h2>{detail.faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}
             </div>
-          ) : fallback ? (
-            <div className="card"><h2>The short answer</h2><p>{fallback.answer}</p><h2>{fallback.sectionTitle}</h2><ul>{fallback.items.map((item) => <li key={item}>{item}</li>)}</ul><h2>{fallback.questionTitle}</h2><ul>{fallback.questions.map((item) => <li key={item}>{item}</li>)}</ul><h2>Common questions</h2>{faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}</div>
-          ) : null}
+          ) : (
+            <div className="card">
+              <h2>The short answer</h2>
+              <p>{fallback?.answer ?? `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`}</p>
+              <h2>{fallback?.sectionTitle ?? 'Build the work lane'}</h2>
+              <ul>{(fallback?.items ?? ['Write the recurring task and its finish rule', 'Share an approved example and the source system', 'Set response times, approval limits, and escalation rules', 'Review a small sample before widening the role']).map((item) => <li key={item}>{item}</li>)}</ul>
+              <div className="article-links"><a href="/services/operations-reporting">Review the operations reporting work lane</a><a href="/services/project-coordination">Review the project coordination work lane</a></div>
+              <h2>{fallback?.questionTitle ?? 'Check the role before you expand it'}</h2>
+              <ul>{(fallback?.questions ?? ['Can a new person complete the task from the examples?', 'Who reviews the first week and records corrections?', 'Which decisions and systems stay with your internal owner?', 'What evidence shows the role is ready for another queue?']).map((item) => <li key={item}>{item}</li>)}</ul>
+              <section aria-labelledby="related-articles"><h2 id="related-articles">Related Articles</h2><div className="cards">{blogPosts.filter((item) => item.slug !== post.slug).slice(0, 3).map((item) => <a className="card" href={`/blog/${item.slug}`} key={item.slug}><h3>{item.title}</h3><p>{item.excerpt}</p></a>)}</div></section>
+              <h2>Common questions</h2>{faqs.map((faq) => <section key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></section>)}
+            </div>
+          )}
+        {detail && !isEvidenceGuide ? <section className="container" aria-labelledby="related-articles"><h2 id="related-articles">Related Articles</h2><div className="cards">{blogPosts.filter((item) => item.slug !== post.slug).slice(0, 3).map((item) => <a className="card" href={`/blog/${item.slug}`} key={item.slug}><h3>{item.title}</h3><p>{item.excerpt}</p></a>)}</div></section> : null}
         <p className='article-source-note'><a href="https://www.ilo.org/global/topics/non-standard-employment/WCMS_534825/lang--en/index.htm" target="_blank" rel="noopener noreferrer">International Labour Organization guidance on remote work arrangements</a> reinforces why remote role briefs should document expectations, communication rhythms, and accountable handoffs.</p>
         </article>
         {isEvidenceGuide ? null : <CTA />}
