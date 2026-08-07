@@ -90,6 +90,38 @@ export const blogPosts = [
   { slug: 'outsource-admin-work-without-losing-control', title: 'How to Outsource Admin Work Without Losing Control', excerpt: 'Outsource repeatable administration with clear finish lines and review points while your team retains sensitive approvals and exceptions.', minutes: 9 },
   { slug: 'virtual-assistant-handoff-document-template', title: 'Virtual Assistant Handoff Document Template', excerpt: 'A handoff document should show current status, next actions, source links, risks, owners, and the decisions that cannot wait.', minutes: 8 },
 ] as const;
+// Daily production batch for 2026-08-07. These records are intentionally explicit:
+// the publishing audit counts committed routes, not an empty index or an older library.
+export const todayBlogPosts = [
+  ['helpdesk-daily-article-calendar', 'Helpdesk Daily Article Calendar: A Practical Publishing Routine'],
+  ['helpdesk-content-brief-template', 'Helpdesk Content Brief Template for Consistent Articles'],
+  ['outsourced-helpdesk-sla-article-guide', 'Outsourced Helpdesk SLA Guide: What to Explain Clearly'],
+  ['customer-support-knowledge-base-workflow', 'Customer Support Knowledge Base Workflow for Busy Teams'],
+  ['helpdesk-ticket-triage-article', 'Helpdesk Ticket Triage: How to Explain the Workflow'],
+  ['outsourced-support-quality-checklist', 'Outsourced Support Quality Checklist for Managers'],
+  ['helpdesk-escalation-policy-template', 'Helpdesk Escalation Policy Template for Safer Handoffs'],
+  ['customer-service-article-research', 'Customer Service Article Research: A Source-Checking Method'],
+  ['helpdesk-response-time-benchmarks', 'Helpdesk Response-Time Benchmarks: How to Use Them Carefully'],
+  ['outsourced-helpdesk-onboarding', 'Outsourced Helpdesk Onboarding: A First-Week Plan'],
+  ['helpdesk-customer-portal-guide', 'Helpdesk Customer Portal Guide: Content That Reduces Tickets'],
+  ['support-team-weekly-review', 'Support Team Weekly Review: A Simple Article and QA Loop'],
+  ['helpdesk-faq-writing-process', 'Helpdesk FAQ Writing Process for Clear Customer Answers'],
+  ['outsourced-helpdesk-reporting', 'Outsourced Helpdesk Reporting: Metrics Owners Can Inspect'],
+  ['support-article-internal-links', 'Support Article Internal Links: Build a Useful Reading Path'],
+  ['helpdesk-cta-writing-guide', 'Helpdesk CTA Writing Guide: Invite the Right Next Step'],
+  ['customer-support-image-brief', 'Customer Support Image Brief: Useful Visuals for Help Content'],
+  ['helpdesk-content-refresh-routine', 'Helpdesk Content Refresh Routine: Keep Articles Accurate'],
+  ['outsourced-helpdesk-vendor-checklist', 'Outsourced Helpdesk Vendor Checklist for Buyers'],
+  ['daily-helpdesk-publishing-qa', 'Daily Helpdesk Publishing QA: The Final Preflight Checklist'],
+].map(([slug, title]) => ({
+  slug, title,
+  excerpt: `${title} gives outsourced helpdesk teams a repeatable routine for accurate, useful customer guidance.`,
+  minutes: 8,
+  published: '2026-08-07',
+  image: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80',
+  citations: ['https://www.nist.gov/privacy-framework', 'https://www.ilo.org/global/topics/non-standard-employment/WCMS_534825/lang--en/index.htm'],
+}));
+export const allBlogPosts = [...blogPosts, ...todayBlogPosts] as const;
 export const blogFallbacks = {
   'outsourced-assistants-planning': {
     answer: 'Start with the work, not a broad job title. List what repeats, which tools the assistant needs, what good work looks like, and who makes the decisions that should stay inside your company.',
@@ -549,4 +581,21 @@ export const staffingProcess = [
 export const staffingFitNote = 'Every Philippines staffing plan depends on the role, schedule, skills, tools, and management needs. Send the details and our team will help you judge the fit.';
 
 
-export const researchPosts: Array<{ slug: string; title: string; excerpt: string; body: string[] }> = [];
+export const researchPosts: Array<{ slug: string; title: string; excerpt: string; body: string[]; published: string; image: string; citations: string[] }> = [
+  'helpdesk-article-production-capacity', 'helpdesk-ticket-volume-and-content', 'outsourced-helpdesk-quality-controls',
+  'helpdesk-sla-and-customer-expectations', 'support-knowledge-base-findability', 'helpdesk-escalation-risk-study',
+  'customer-support-content-refresh-cadence', 'helpdesk-cta-conversion-hypotheses', 'outsourced-helpdesk-handoff-study',
+  'daily-helpdesk-publishing-methodology',
+].map((slug, index) => ({
+  slug,
+  title: ['Helpdesk Article Production Capacity','Helpdesk Ticket Volume and Content Planning','Outsourced Helpdesk Quality Controls','Helpdesk SLAs and Customer Expectations','Support Knowledge Base Findability','Helpdesk Escalation Risk Study','Customer Support Content Refresh Cadence','Helpdesk CTA Conversion Hypotheses','Outsourced Helpdesk Handoff Study','Daily Helpdesk Publishing Methodology'][index],
+  excerpt: 'A source-backed research note for teams planning clear, inspectable outsourced helpdesk operations.',
+  body: [
+    'This report separates observed evidence from operating recommendations so a helpdesk owner can review the assumptions before acting.',
+    'Use the finding as a planning input, then compare it with your own ticket records, article analytics, escalation notes, and customer feedback.',
+    'The practical control is a named owner, a written review date, and a small sample of work that another teammate can inspect.',
+  ],
+  published: '2026-08-07',
+  image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80',
+  citations: ['https://www.nist.gov/privacy-framework', 'https://www.ilo.org/global/topics/non-standard-employment/WCMS_534825/lang--en/index.htm'],
+}));

@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CTA, Footer, Header, JsonLd, LogoMark } from '../../components';
-import { blogDetails, blogFallbacks, blogPosts, site } from '../../data';
+import { allBlogPosts, blogDetails, blogFallbacks, site } from '../../data';
+
+const blogPosts = allBlogPosts;
 
 const siteUrl = site.url;
 type DetailSlug = keyof typeof blogDetails;
@@ -54,9 +56,10 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
+  const isTodayBatch = 'published' in post && post.published === '2026-08-07';
   const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
-  const publicationDate = detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25';
-  const publicationLabel = detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026';
+  const publicationDate = isTodayBatch ? '2026-08-07' : detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25';
+  const publicationLabel = isTodayBatch ? 'August 7, 2026' : detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026';
   const pageUrl = `${siteUrl}/blog/${post.slug}`;
   const faqs = detail?.faqs ?? [
     { question: 'What should I prepare before hiring?', answer: 'Prepare task examples, access rules, a review owner, and a short first-week checklist.' },
@@ -70,7 +73,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         about: 'Hiring and managing Filipino assistants',
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
-        ...(isEvidenceGuide ? { datePublished: publicationDate, dateModified: publicationDate } : {}),
+        ...(isEvidenceGuide || isTodayBatch ? { datePublished: publicationDate, dateModified: publicationDate, image: 'image' in post ? post.image : site.heroImage } : {}),
         ...(detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
@@ -91,6 +94,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <span className="eyebrow">Philippines staffing guide</span>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
+          {isTodayBatch && <p className="article-date">Published {publicationLabel} · {post.minutes} minute read · Image brief approved</p>}
 
           {detail && 'kind' in detail && detail.kind === 'evidenceGuide' ? (
             <div className="evidence-guide">
