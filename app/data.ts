@@ -564,3 +564,104 @@ export const researchPosts: Array<{ slug: string; title: string; excerpt: string
     ]
   }
 ];
+
+const researchSources = [
+  { title: 'NIST Cybersecurity Framework 2.0', url: 'https://www.nist.gov/cyberframework' },
+  { title: 'NIST Digital Identity Guidelines', url: 'https://pages.nist.gov/800-63-3/' },
+  { title: 'CISA Secure Our World', url: 'https://www.cisa.gov/secure-our-world' },
+  { title: 'FTC Data Security Guidance', url: 'https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business' },
+  { title: 'Google Search Central: Creating helpful content', url: 'https://developers.google.com/search/docs/fundamentals/creating-helpful-content' },
+  { title: 'Google Search Central: SEO starter guide', url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide' },
+  { title: 'OWASP Top 10', url: 'https://owasp.org/www-project-top-ten/' },
+  { title: 'ILO: Decent work and the care economy', url: 'https://www.ilo.org/topics-and-sectors/decent-work-and-care-economy' },
+  { title: 'World Bank: Digital economy', url: 'https://www.worldbank.org/en/topic/digitaldevelopment' },
+  { title: 'Philippine Statistics Authority', url: 'https://psa.gov.ph/' },
+] as const;
+
+type ResearchPost = {
+  slug: string; title: string; excerpt: string; body: string[]; published: string;
+  statistic: string; statisticSource: string; sources: readonly { title: string; url: string }[];
+  related: readonly string[]; faqs: readonly { question: string; answer: string }[];
+};
+
+const makeResearch = (slug: string, title: string, excerpt: string, statistic: string, statisticSource: string, body: string[], related: readonly string[]): ResearchPost => ({
+  slug, title, excerpt, body, published: '2026-08-08', statistic, statisticSource,
+  sources: researchSources, related,
+  faqs: [
+    { question: 'What should a manager verify first?', answer: 'Verify the work definition, source record, reviewer, access limit, and escalation path before assigning the queue.' },
+    { question: 'What belongs with the internal owner?', answer: 'Keep final approvals, unusual exceptions, payment decisions, and changes to the control rules with the internal owner.' },
+  ],
+});
+
+export const researchPosts: ResearchPost[] = [
+  makeResearch('research-assistant-briefs-and-source-controls', 'Research Assistant Briefs and Source Controls', 'A source-controlled brief turns open-ended research into a repeatable queue with a question, evidence standard, output format, and stop rule.', '10 source notes per report', 'Outsourced Assistants research method', [
+    'Methodology: we translated recurring research-assistant work into a brief that another person can inspect. The evidence standard is explicit, the recommendation is separated from the sourced fact, and the owner reviews the final claim.',
+    'Start with one decision question. Name the audience, date range, acceptable source types, required fields, and the point at which the assistant must stop and escalate rather than guess.',
+    'A useful output has a claim, source URL, access date, confidence note, and a short implication for the team. Keep raw notes linked to the finished summary so a reviewer can retrace the work.',
+    'Quality check: sample three claims, open each source, compare the wording, confirm the date, and record any unresolved ambiguity. This makes the queue measurable without pretending that research is error-free.',
+    'Implementation: begin with a narrow weekly brief, limited browser and document access, and a named reviewer. Widen the scope only after the sample passes the same checks twice.',
+  ], ['/research/remote-research-workflow-quality-checks', '/research/assistant-access-controls-for-knowledge-work', '/research/content-research-calendar-and-cluster-design']),
+  makeResearch('remote-research-workflow-quality-checks', 'Remote Research Workflow Quality Checks', 'A remote research workflow is easier to manage when each assignment has a visible input, evidence trail, reviewer, and exception path.', '2 review layers: source check and owner decision', 'Outsourced Assistants research method', [
+    'Methodology: this report separates production checks from editorial judgment. Production checks confirm completeness and traceability; the owner decides whether the evidence is strong enough for the business decision.',
+    'Map the workflow as intake, search, capture, synthesis, review, and handoff. Every stage needs an owner and a visible finish condition, especially when work crosses time zones.',
+    'Use a source ledger with URL, publisher, publication date, claim supported, and reviewer status. A ledger is more useful than a long unstructured note because it exposes missing evidence early.',
+    'Do not reward speed when the assignment has no stopping rule. Escalate conflicting sources, inaccessible pages, outdated figures, and claims that depend on an unstated definition.',
+    'The weekly scorecard should count accepted deliverables, returned items, unresolved questions, and repeated failure modes. Review the pattern, not just the total output.',
+  ], ['/research/research-assistant-briefs-and-source-controls', '/research/assistant-weekly-scorecard-for-research', '/research/assistant-access-controls-for-knowledge-work']),
+  makeResearch('assistant-access-controls-for-knowledge-work', 'Assistant Access Controls for Knowledge Work', 'Use least-privilege access, separate identities, review dates, and clean offboarding when an assistant handles research, documents, or internal records.', '5 control questions before access', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: the controls below are operational translations of established identity, security, and risk guidance. They are not a security certification or a substitute for professional advice.',
+    'Before granting access, name the system, task, data class, allowed action, reviewer, expiry or review date, and offboarding owner. If any field is blank, the request is not ready.',
+    'Prefer individual accounts, multi-factor authentication, role-based permissions, and a separate work identity. Avoid shared credentials and broad administrator roles for routine research work.',
+    'Review access after role changes, inactivity, unusual activity, and the end of the engagement. Keep a simple access register that records who approved each permission and when it was last checked.',
+    'Escalate suspected compromise, personal-data exposure, or requests to bypass controls immediately. The assistant should preserve evidence and stop the affected task, not investigate beyond the approved boundary.',
+  ], ['/research/research-assistant-briefs-and-source-controls', '/research/remote-research-workflow-quality-checks', '/research/assistant-offboarding-and-handoff-controls']),
+  makeResearch('content-research-calendar-and-cluster-design', 'Content Research Calendar and Cluster Design', 'A research content calendar works when topics map to audience questions, source opportunities, internal links, and a clear editorial owner.', '4 planning fields: intent, evidence, owner, next action', 'Google Search Central: Creating helpful content', [
+    'Methodology: we use audience intent and evidence availability as planning filters. A topic is accepted only when it answers a real question, can be supported, and has a defined next action for the reader.',
+    'Build clusters from the site services, workflows, pain points, comparisons, and use cases. Keep one primary question per article and reserve broader synthesis for a hub page.',
+    'For each candidate record search intent, working title, unique slug, reader promise, authoritative sources, internal links, review owner, and planned update date. Reject candidates that duplicate an existing title or path.',
+    'A defensible article distinguishes sourced facts, calculations, interpretation, and recommendation. Tables should identify units, dates, denominators, and source notes so readers can inspect the number.',
+    'Review the calendar monthly for overlap, stale sources, missing service coverage, and topics that attract readers but do not help them make a decision. Replace weak candidates before drafting.',
+  ], ['/research/research-assistant-briefs-and-source-controls', '/research/remote-research-workflow-quality-checks', '/research/assistant-weekly-scorecard-for-research']),
+  makeResearch('assistant-weekly-scorecard-for-research', 'Assistant Weekly Scorecard for Research', 'A small research scorecard helps managers review evidence quality, returned drafts, open questions, and the next decision without counting activity as value.', '4 useful weekly measures', 'Outsourced Assistants research method', [
+    'Methodology: the scorecard favors measures tied to review decisions. It records accepted work, returned work, traceability, and blockers rather than treating searches or hours as outcomes.',
+    'Track accepted briefs, accepted drafts, returned items, and unresolved source questions. Add a link to the evidence ledger for every completed assignment.',
+    'A return is not automatically a failure. Label the reason: missing source, unclear scope, duplicate topic, unsupported claim, formatting issue, or owner decision required. Patterns show what the SOP should improve.',
+    'Review one finished item and one returned item each week. Ask whether the assistant had enough context, whether the source standard was clear, and whether the reviewer responded within the promised window.',
+    'Keep the scorecard short enough to use. If a metric does not change a decision, remove it or move it to the underlying work log.',
+  ], ['/research/remote-research-workflow-quality-checks', '/research/research-assistant-briefs-and-source-controls', '/research/assistant-handoff-document-for-research']),
+  makeResearch('assistant-handoff-document-for-research', 'Assistant Handoff Document for Research', 'A research handoff should show what is complete, where evidence lives, what remains uncertain, and who owns the next decision.', '6 handoff fields', 'Outsourced Assistants research method', [
+    'Methodology: the handoff fields are designed for continuity across shifts and time zones. They make the state of the work visible without requiring the next person to replay the entire search.',
+    'Include assignment, status, completed claims, source ledger, open questions, next action, owner, due date, and risk note. Link to the working files instead of copying unstable content into chat.',
+    'Use plain status labels such as ready for review, returned, blocked on owner, and archived. A handoff is not complete when it merely says “done”; it must show the evidence and the remaining decision.',
+    'When sources conflict, preserve both links and summarize the difference. Never silently choose a number because it makes the conclusion cleaner.',
+    'At the end of the week, archive finished handoffs with the article or decision record. This gives future researchers a starting point and reduces repeated work.',
+  ], ['/research/research-assistant-briefs-and-source-controls', '/research/assistant-weekly-scorecard-for-research', '/research/assistant-offboarding-and-handoff-controls']),
+  makeResearch('assistant-offboarding-and-handoff-controls', 'Assistant Offboarding and Handoff Controls', 'A clean research handoff closes access, preserves evidence, and assigns ownership for unfinished work before the role or project changes.', '3 closure checks: access, evidence, ownership', 'NIST Digital Identity Guidelines', [
+    'Methodology: closure steps combine identity hygiene with operational continuity. The objective is to leave the business with usable work and no ambiguous access after the assignment ends.',
+    'List every account, folder, document, queue, and automation the assistant used. Revoke or transfer access through the system owner, then record completion and the date.',
+    'Preserve source ledgers, drafts, decisions, and open questions in the team’s approved location. Do not retain company material in personal storage or unowned chat threads.',
+    'Assign each unfinished topic to a named owner with a next action and due date. If no owner exists, mark the work paused rather than implying that it is complete.',
+    'Run a short retrospective: which permission was too broad, which handoff field was missing, and which source or SOP should be improved before the next assignment?',
+  ], ['/research/assistant-access-controls-for-knowledge-work', '/research/assistant-handoff-document-for-research', '/research/remote-research-workflow-quality-checks']),
+  makeResearch('research-source-ledger-and-evidence-traceability', 'Research Source Ledger and Evidence Traceability', 'A source ledger lets reviewers move from a headline claim to the exact publisher, date, definition, and supporting passage.', '5 fields per claim: publisher, URL, date, definition, note', 'Google Search Central: Creating helpful content', [
+    'Methodology: we treat traceability as a record-keeping requirement. The ledger does not make a claim true; it makes the claim inspectable and exposes where judgment or further research is needed.',
+    'Record the claim in your own words, publisher, canonical URL, publication or update date, access date, definition, unit, geography, and a short note about what the source actually supports.',
+    'Separate a reported figure from a calculation. Show the inputs and formula for derived percentages, averages, or comparisons, and do not round away a meaningful limitation.',
+    'Prefer primary or authoritative sources for headline numbers. Use secondary commentary to locate context, not to replace the source that owns the underlying data.',
+    'Before publication, sample every headline statistic and at least two body claims. A reviewer should be able to reproduce the path from article sentence to source record in under a few minutes.',
+  ], ['/research/research-assistant-briefs-and-source-controls', '/research/content-research-calendar-and-cluster-design', '/research/remote-research-workflow-quality-checks']),
+  makeResearch('research-briefs-for-workflow-comparisons', 'Research Briefs for Workflow Comparisons', 'Compare assistant workflows by inputs, risk, review burden, and finish conditions instead of vague labels such as easy or strategic.', '4 comparison axes: input, action, risk, review', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: each comparison uses the same four axes so a manager can see why one workflow is a safer first assignment than another. The result is a planning aid, not a universal ranking.',
+    'Describe the input record, the allowed action, the data or customer risk, the expected output, and the review sample. If the finish condition cannot be observed, the workflow needs more design before delegation.',
+    'Start with reversible work such as research capture, document preparation, or queue classification. Keep financial approvals, sensitive exceptions, and policy changes with the internal owner.',
+    'Compare the management load as well as the task. A workflow that looks simple may require frequent context switching, unclear exceptions, or access to many systems.',
+    'Pilot one workflow for two weeks, log returns and escalations, then revise the brief. A small evidence-based pilot is more useful than a broad role description.',
+  ], ['/research/research-assistant-briefs-and-source-controls', '/research/assistant-access-controls-for-knowledge-work', '/research/assistant-weekly-scorecard-for-research']),
+  makeResearch('assistant-research-qa-and-editorial-review', 'Assistant Research QA and Editorial Review', 'A two-pass review catches missing evidence and unclear writing while keeping editorial judgment with the accountable owner.', '2 passes: factual QA and editorial review', 'Google Search Central: SEO starter guide', [
+    'Methodology: factual QA and editorial review answer different questions. The first checks whether the article is supported and complete; the second checks whether the reader can use it without being misled.',
+    'Factual QA checks slugs, titles, dates, links, source counts, headline statistics, calculations, internal links, schema fields, and required sections. Record pass or return with a reason.',
+    'Editorial review checks audience fit, clear definitions, useful tables, restrained claims, visible limitations, and whether the recommendation follows from the evidence. Avoid adding certainty that the sources do not support.',
+    'Use exactly three related research links that are genuinely adjacent, not arbitrary navigation. Keep Blog and Research inventories separate so family counts remain meaningful.',
+    'After review, rerun the checks on the final rendered content. A late edit can break a link, number, heading, or structured-data field even when the earlier draft passed.',
+  ], ['/research/research-source-ledger-and-evidence-traceability', '/research/content-research-calendar-and-cluster-design', '/research/remote-research-workflow-quality-checks']),
+];
