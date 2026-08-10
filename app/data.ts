@@ -568,8 +568,8 @@ type ResearchPost = {
   related: readonly string[]; faqs: readonly { question: string; answer: string }[];
 };
 
-const makeResearch = (slug: string, title: string, excerpt: string, statistic: string, statisticSource: string, body: string[], related: readonly string[]): ResearchPost => ({
-  slug, title, excerpt, body, published: '2026-08-09', statistic, statisticSource,
+const makeResearch = (slug: string, title: string, excerpt: string, statistic: string, statisticSource: string, body: string[], related: readonly string[], published = '2026-08-09'): ResearchPost => ({
+  slug, title, excerpt, body, published, statistic, statisticSource,
   sources: researchSources, related,
   faqs: [
     { question: 'What should a manager verify first?', answer: 'Verify the work definition, source record, reviewer, access limit, and escalation path before assigning the queue.' },
@@ -732,4 +732,82 @@ export const researchPosts: ResearchPost[] = [
     'Run the repository build and any available Research validator after humanization or late edits. A passing draft is not enough if the final file changed.',
     'Record pass, return, or blocker with the exact command and affected path so the next operator can resume without guessing.'
   ], ['/research/assistant-research-qa-and-editorial-review', '/research/research-editorial-handoff-checklist', '/research/research-headline-statistic-verification']),
+  makeResearch('research-service-cluster-opportunity-map', 'Research Service Cluster Opportunity Map', 'Map Research topics to services, reader decisions, and evidence paths so daily publishing supports useful staffing choices.', '6 map fields: service, audience, decision, gap, source, link', 'Google Search Central: Creating helpful content', [
+    'Methodology: this map starts with the Outsourced Assistants service inventory and tests whether each proposed topic has distinct reader intent and a defensible evidence path.',
+    'Record the service, audience, workflow, pain point, comparison or use case, proposed decision, source candidates, and internal Research links before drafting.',
+    'Prioritize topics that clarify a concrete staffing decision and reject broad country claims that cannot be supported at the individual-worker level.',
+    'Review the map after publication so accepted, rejected, and replaced candidates remain distinct in the next daily run.'
+  ], ['/research/research-topic-cluster-gap-analysis', '/research/content-research-calendar-and-cluster-design', '/research/research-intake-queue-for-daily-articles'], '2026-08-10'),
+  makeResearch('research-reader-question-to-evidence-map', 'Reader Question to Evidence Map for Research', 'An evidence map connects a reader question to definitions, authoritative sources, limits, and a practical next action.', '5 evidence fields: question, definition, source, limit, action', 'Google Search Central: Creating helpful content', [
+    'Methodology: the map separates the reader question from the source claim and from the local recommendation a manager may choose to adopt.',
+    'Write one answerable question, define the population and period, identify the source that owns the evidence, and note what the data cannot establish.',
+    'Use the map to plan a table or comparison only when units and denominators are compatible; otherwise explain the difference instead of forcing a ranking.',
+    'End with a reversible workflow check, service link, or owner decision that helps the reader apply the finding.'
+  ], ['/research/research-source-ledger-and-evidence-traceability', '/research/research-fact-versus-recommendation-editing', '/research/research-screenshot-ready-tables'], '2026-08-10'),
+  makeResearch('research-authoritative-source-discovery-workflow', 'Authoritative Source Discovery Workflow', 'A source-discovery workflow helps daily Research publishing find primary evidence before drafting claims or tables.', '4 discovery steps: owner, date, definition, limitation', 'Google Search Central: SEO starter guide', [
+    'Methodology: discovery ranks sources by authority, relevance, currency, and inspectability; it does not treat a high search position as evidence quality.',
+    'Start with the organization that owns the data, standard, study, or policy. Capture the page title, publisher, date, scope, definition, and limitation in the ledger.',
+    'Follow commentary back to its cited primary source before using a headline number. If the original source is unavailable, qualify the claim or return the candidate.',
+    'Keep source discovery separate from synthesis so a reviewer can see which facts were reported and which conclusions were authored locally.'
+  ], ['/research/research-source-quality-triage', '/research/research-headline-statistic-verification', '/research/research-source-ledger-and-evidence-traceability'], '2026-08-10'),
+  makeResearch('research-comparison-framework-for-assistant-workflows', 'Comparison Framework for Assistant Workflows', 'A consistent comparison framework shows the inputs, controls, review burden, and finish condition behind an assistant workflow.', '5 comparison fields: input, action, risk, review, finish', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: each workflow is described with the same fields so the reader can compare management requirements without turning a planning aid into a universal ranking.',
+    'Name the source record, permitted action, data risk, expected output, reviewer, escalation path, and observable finish condition.',
+    'Prefer reversible first assignments such as research capture, document preparation, and queue classification. Keep approvals, payments, and unusual exceptions with the internal owner.',
+    'Pilot the comparison for two weeks and revise the brief from returned items and escalations rather than from activity volume alone.'
+  ], ['/research/research-briefs-for-workflow-comparisons', '/research/research-brief-for-assistant-workflow-pilots', '/research/assistant-weekly-scorecard-for-research'], '2026-08-10'),
+  makeResearch('research-daily-article-source-ledger-template', 'Daily Article Source Ledger Template', 'A daily article source ledger makes each Research headline, body claim, and table value traceable for review.', '8 ledger fields: claim, publisher, URL, date, scope, unit, note, status', 'Google Search Central: Creating helpful content', [
+    'Methodology: the ledger is a compact review record for Research publishing; it exposes missing evidence without claiming that a citation alone proves a conclusion.',
+    'Record the claim, publisher, canonical URL, publication or update date, access date, scope, definition, unit, limitation, and review status.',
+    'Mark whether the entry supports a reported figure, a calculation, context, or a recommendation. Show the inputs and formula for any derived value.',
+    'Before commit, sample every headline statistic and at least two body claims, then preserve the ledger fields in the article’s visible source notes.'
+  ], ['/research/research-source-ledger-and-evidence-traceability', '/research/research-headline-statistic-verification', '/research/research-article-methodology-notes'], '2026-08-10'),
+  makeResearch('research-duplicate-topic-screening-routine', 'Duplicate Topic Screening Routine', 'A duplicate-topic screen protects the Research library from near-identical titles, slugs, search intent, and reader promises.', '4 screening views: slug, title, intent, promise', 'Google Search Central: SEO starter guide', [
+    'Methodology: screening compares candidates against the Research and Blog inventories, indexes, sitemap inputs, and candidates already accepted in the current run.',
+    'Normalize slugs and titles, then compare the underlying question and reader promise. A new wording is not a new topic when the decision and evidence path are the same.',
+    'Reject overlap, stale candidates, unsupported claims, and topics with no useful service or workflow connection. Record the reason so replacements are auditable.',
+    'Generate replacements from audience, workflow, pain point, comparison, use-case, and source gaps until the selected target is met.'
+  ], ['/research/research-topic-cluster-gap-analysis', '/research/research-intake-queue-for-daily-articles', '/research/research-content-calendar-review-cadence'], '2026-08-10'),
+  makeResearch('research-research-article-reviewer-scorecard', 'Research Article Reviewer Scorecard', 'A reviewer scorecard turns Research acceptance into a consistent decision about evidence, structure, links, and reader usefulness.', '7 scorecard dimensions: intent, evidence, limits, structure, links, controls, action', 'Google Search Central: SEO starter guide', [
+    'Methodology: the scorecard separates objective production checks from the owner’s decision about whether the article is useful and appropriately scoped.',
+    'Check unique intent, traceable claims, visible limitations, required Research sections, source notes, internal links, related cards, metadata, schema, and build output.',
+    'Return the article with one concrete reason such as missing definition, duplicate intent, inaccessible source, broken link, or unsupported recommendation.',
+    'Keep reviewer status and next action visible in the handoff so a returned article does not re-enter the queue as an apparently new candidate.'
+  ], ['/research/research-publish-readiness-gate', '/research/assistant-research-qa-and-editorial-review', '/research/research-editorial-handoff-checklist'], '2026-08-10'),
+  makeResearch('research-workflow-risk-and-review-burden', 'Workflow Risk and Review Burden Research', 'Compare assistant workflows by the risk they create, the reversibility of mistakes, and the review burden they place on the owner.', '3 risk lenses: data, reversibility, review burden', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: the framework is an operational planning aid that translates risk into access, approval, sampling, and escalation choices for a specific workflow.',
+    'Describe the data involved, what happens when an error is made, how easily it can be reversed, and which owner must review the output.',
+    'Start with narrow queues, separate identities, least privilege, and small review samples. Increase scope only after repeated passes show the controls work.',
+    'Escalate suspected exposure, payment impact, legal risk, or policy exceptions instead of asking the assistant to make a judgment outside the brief.'
+  ], ['/research/research-briefs-for-workflow-comparisons', '/research/assistant-access-controls-for-knowledge-work', '/research/research-brief-for-assistant-workflow-pilots'], '2026-08-10'),
+  makeResearch('research-internal-linking-and-next-decision-design', 'Internal Linking and Next-Decision Design', 'Research links should move readers from evidence to a related question, workflow control, or concrete staffing decision.', '3 link roles: context, comparison, next decision', 'Google Search Central: SEO starter guide', [
+    'Methodology: links are selected by the reader’s next question and kept within the Research family for Research batch accounting.',
+    'Use contextual links for definitions, comparison links for adjacent choices, and a next-decision link for applying the finding to a workflow or service.',
+    'Confirm every destination exists, use descriptive anchor text, and avoid linking three arbitrary pages merely to fill a navigation requirement.',
+    'Recheck links after slug edits and preserve separate Blog and Research inventories in the validation record.'
+  ], ['/research/research-internal-linking-by-reader-intent', '/research/assistant-research-qa-and-editorial-review', '/research/research-service-cluster-opportunity-map'], '2026-08-10'),
+  makeResearch('research-source-conflict-resolution-protocol', 'Source Conflict Resolution Protocol', 'A conflict protocol keeps competing figures and definitions visible until an owner can choose, qualify, or remove the claim.', '5 conflict fields: claim, source, definition, impact, decision', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: the protocol records uncertainty as an exception and routes material judgment to the accountable owner rather than hiding it in prose.',
+    'Retain both source URLs, compare publisher, date, population, unit, method, and definition, then state which sentence or table is affected.',
+    'Choose the best-supported figure only when the definitions are comparable. Otherwise qualify the difference or remove the comparison.',
+    'Assign an owner and next action, and mark the article returned or blocked until the decision is recorded.'
+  ], ['/research/research-exception-log-for-conflicting-sources', '/research/research-source-quality-triage', '/research/research-headline-statistic-verification'], '2026-08-10'),
+  makeResearch('research-article-update-and-review-calendar', 'Research Article Update and Review Calendar', 'A review calendar keeps published Research articles aligned with source freshness, changing definitions, and the reader decision they promise.', '3 calendar dates: source update, article review, owner check', 'Google Search Central: Creating helpful content', [
+    'Methodology: review dates are evidence metadata and do not replace source authority, clear definitions, or a reasoned editorial decision.',
+    'Record source publication or update date, article publication date, planned review date, and the owner responsible for the check.',
+    'At review, verify links, definitions, headline figures, related Research paths, methodology notes, and whether the recommendation still fits the evidence.',
+    'Return the article to the queue when a material claim cannot be refreshed or qualified; do not preserve stale certainty for the sake of output.'
+  ], ['/research/research-update-dates-and-source-freshness', '/research/research-content-calendar-review-cadence', '/research/research-publish-readiness-gate'], '2026-08-10'),
+  makeResearch('research-evidence-first-article-outline', 'Evidence-First Research Article Outline', 'An evidence-first outline gives each Research article a clear question, source path, methodology note, decision table, and reader next step.', '6 outline blocks: question, method, signal, findings, limits, action', 'Google Search Central: Creating helpful content', [
+    'Methodology: the outline is designed to keep sourced facts, calculations, interpretations, and operating recommendations visibly separate.',
+    'Start with the reader question and headline signal, then state scope and method before presenting multiple findings, tables, limitations, and practical takeaways.',
+    'Attach source notes to material claims, use compatible units and dates in tables, and include contextual internal Research links that answer adjacent questions.',
+    'Finish with FAQs, exactly three related Research cards, a visible Sources section, and the owner action the reader can take next.'
+  ], ['/research/research-article-methodology-notes', '/research/research-screenshot-ready-tables', '/research/research-internal-linking-by-reader-intent'], '2026-08-10'),
+  makeResearch('research-article-source-count-audit', 'Research Article Source Count Audit', 'A source-count audit checks that every daily Research article has enough real, relevant, and traceable sources for its claims.', '3 audit outcomes: pass, return, owner decision', 'Google Search Central: Creating helpful content', [
+    'Methodology: the audit counts distinct sources that materially support the article, while preserving the difference between a source list and evidence for a specific claim.',
+    'Check that sources are real, accessible, relevant to the article question, and recorded in the visible Sources section with publisher and URL.',
+    'Map the headline statistic and material body claims to source entries. Do not count duplicate URLs, generic homepages, or citations that do not support the sentence.',
+    'Return articles with missing or weak evidence and record the exact deficit and replacement action before accepting the batch.'
+  ], ['/research/research-source-quality-triage', '/research/research-publish-readiness-gate', '/research/research-source-ledger-and-evidence-traceability'], '2026-08-10'),
 ];
