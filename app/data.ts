@@ -616,7 +616,25 @@ type ResearchPost = {
   related: readonly string[]; faqs: readonly { question: string; answer: string }[];
 };
 
-const makeResearch = (slug: string, title: string, excerpt: string, statistic: string, statisticSource: string, body: string[], related: readonly string[], published = '2026-08-09'): ResearchPost => ({
+// Explicit source metadata for the frozen August 10 Research batch. Keeping
+// the binding keyed by slug makes the public date auditable per article.
+const august10ResearchPublicationDates: Record<string, string> = {
+  'research-article-source-count-audit': '2026-08-10',
+  'research-article-update-and-review-calendar': '2026-08-10',
+  'research-authoritative-source-discovery-workflow': '2026-08-10',
+  'research-comparison-framework-for-assistant-workflows': '2026-08-10',
+  'research-daily-article-source-ledger-template': '2026-08-10',
+  'research-duplicate-topic-screening-routine': '2026-08-10',
+  'research-evidence-first-article-outline': '2026-08-10',
+  'research-internal-linking-and-next-decision-design': '2026-08-10',
+  'research-reader-question-to-evidence-map': '2026-08-10',
+  'research-research-article-reviewer-scorecard': '2026-08-10',
+  'research-service-cluster-opportunity-map': '2026-08-10',
+  'research-source-conflict-resolution-protocol': '2026-08-10',
+  'research-workflow-risk-and-review-burden': '2026-08-10',
+};
+
+const makeResearch = (slug: string, title: string, excerpt: string, statistic: string, statisticSource: string, body: string[], related: readonly string[], published = august10ResearchPublicationDates[slug] ?? '2026-08-09'): ResearchPost => ({
   slug, title, excerpt, body, published, statistic, statisticSource,
   sources: researchSources, related,
   faqs: [
