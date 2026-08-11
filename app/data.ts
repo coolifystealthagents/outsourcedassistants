@@ -876,6 +876,66 @@ export const researchPosts: ResearchPost[] = [
     'Map the headline statistic and material body claims to source entries. Do not count duplicate URLs, generic homepages, or citations that do not support the sentence.',
     'Return articles with missing or weak evidence and record the exact deficit and replacement action before accepting the batch.'
   ], ['/research/research-source-quality-triage', '/research/research-publish-readiness-gate', '/research/research-source-ledger-and-evidence-traceability'], '2026-08-10'),
+  makeResearch('research-assistant-access-by-workflow-risk', 'Assistant Access by Workflow Risk', 'Match assistant access to the information and consequences involved in a workflow before assigning recurring support work.', '3 access questions: data, action, consequence', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: this analysis uses data sensitivity, permitted action, and consequence of error as separate dimensions rather than treating every support task as equally safe.',
+    'List the records the assistant must read, the changes they may make, and the result of a mistake. A narrow research queue may need documents and browser access but not payment, identity, or administrator privileges.',
+    'Use a separate account, multi-factor authentication, and the smallest practical permission set. Review access when the work changes, not only when a person joins or leaves.',
+    'A manager should sample access decisions alongside work samples. If the role repeatedly needs exceptions, narrow the brief or move the decision to the internal owner instead of expanding access by habit.'
+  ], ['/research/research-workflow-risk-and-review-burden', '/research/research-comparison-framework-for-assistant-workflows', '/research/research-service-cluster-opportunity-map'], '2026-08-11'),
+  makeResearch('research-assistant-handoff-quality-signals', 'Assistant Handoff Quality Signals', 'A strong handoff lets a manager understand status, evidence, next action, and unresolved risk without reconstructing the work.', '4 handoff signals: status, evidence, owner, next date', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: the handoff is evaluated as a decision aid. It should show what changed, where the supporting record lives, and what still needs an owner decision.',
+    'Require a concise status, links to the source records, the next action, a named owner, and a date. Separate completed work from questions so a manager can scan exceptions first.',
+    'For customer, financial, or personal information, link to the approved system rather than copying sensitive details into a second document. Access should follow the original record’s rules.',
+    'Review two ordinary handoffs and one exception each week. Repeated missing fields usually indicate an unclear finish condition, not a need for a longer report.'
+  ], ['/research/research-internal-linking-and-next-decision-design', '/research/research-article-reviewer-scorecard', '/research/research-workflow-risk-and-review-burden'], '2026-08-11'),
+  makeResearch('research-assistant-reversible-work-selection', 'Selecting Reversible Work for Assistant Support', 'Reversible work is a safer starting point when a team is deciding which support tasks to delegate first.', '3 selection tests: recoverability, visibility, approval', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: the framework compares recoverability, visibility of the result, and whether approval is required. It is a planning aid, not a universal ranking of roles.',
+    'Prefer work where an error can be corrected, the source and result are visible, and a named owner can review before an external commitment. Research capture, document preparation, and record classification often meet these tests when scoped carefully.',
+    'Exclude payment decisions, legal conclusions, sensitive exceptions, and irreversible account changes from a first assignment. The owner should define the stop point before work begins.',
+    'After a short pilot, record returned items, corrections, and owner decisions. Use that evidence to narrow the work or improve examples before adding volume.'
+  ], ['/research/research-workflow-risk-and-review-burden', '/research/research-comparison-framework-for-assistant-workflows', '/research/research-assistant-access-by-workflow-risk'], '2026-08-11'),
+  makeResearch('research-assistant-source-note-design', 'Source Note Design for Assistant-Supported Research', 'A source note makes a research finding easier to inspect by connecting the claim, publisher, date, scope, and limitation.', '5 source-note fields: claim, publisher, date, scope, limit', 'Google Search Central: Creating helpful content', [
+    'Methodology: a source note distinguishes reported evidence from local interpretation. The fields are designed for a manager who needs to check a claim quickly.',
+    'Write the claim in the same scope as the source, then record the publisher, canonical URL, publication or update date, geography, population, and definition that matter to the sentence.',
+    'Add one limitation when the source cannot establish the broader conclusion a reader might infer. A national measure, for example, should not be presented as a prediction about one worker or team.',
+    'Keep the note adjacent to the article’s Sources section and link each material statistic to the source that actually supports it. Generic homepages and duplicate links do not improve evidence.'
+  ], ['/research/research-daily-article-source-ledger-template', '/research/research-reader-question-to-evidence-map', '/research/research-authoritative-source-discovery-workflow'], '2026-08-11'),
+  makeResearch('research-assistant-work-sample-signal-design', 'Work-Sample Signals for Assistant Hiring', 'A focused work sample reveals accuracy, questions, written clarity, and escalation judgment more usefully than a broad self-description.', '4 work-sample signals: accuracy, clarity, questions, escalation', 'NIST Digital Identity Guidelines', [
+    'Methodology: the sample tests observable behavior on a small, fictional task. It should not request unnecessary personal information or unpaid production work.',
+    'Give the candidate a short source packet, a clear expected format, and a deadline. Assess whether the result follows the instructions, preserves important details, and makes uncertainty visible.',
+    'Include one ambiguity and one item that should stop for approval. Strong performance includes a useful question or escalation, not confident guessing.',
+    'Use the same rubric for each candidate and keep hiring judgment with the responsible manager. Do not infer quality from nationality, accent, or a broad label for the role.'
+  ], ['/research/research-comparison-framework-for-assistant-workflows', '/research/research-workflow-risk-and-review-burden', '/research/research-assistant-reversible-work-selection'], '2026-08-11'),
+  makeResearch('research-assistant-privacy-boundary-mapping', 'Privacy Boundary Mapping for Assistant Work', 'A privacy boundary map shows which information an assistant needs, where it lives, and when an owner must intervene.', '3 boundary fields: information, access, intervention', 'FTC Data Security Guidance', [
+    'Methodology: the map separates information handled, access required, and intervention triggers. It is intended to make a support role understandable before permissions are granted.',
+    'Classify the information as ordinary business material, personal information, customer content, or a higher-risk record under the company’s policy. Then identify the smallest system and action needed.',
+    'Write stop conditions for requests involving identity, payment, legal matters, account recovery, or unusual disclosure. The assistant should route those cases with context rather than decide them.',
+    'Review the map when a tool, data field, or customer interaction changes. Remove unused access and keep a named owner responsible for exceptions and offboarding.'
+  ], ['/research/research-assistant-access-by-workflow-risk', '/research/research-workflow-risk-and-review-burden', '/research/research-comparison-framework-for-assistant-workflows'], '2026-08-11'),
+  makeResearch('research-assistant-service-fit-evidence-map', 'Service-Fit Evidence Map for Assistant Support', 'Map a reader’s service question to a concrete workflow, evidence boundary, and next decision before recommending support.', '5 map fields: reader, service, workflow, evidence, decision', 'Google Search Central: Creating helpful content', [
+    'Methodology: the map connects an audience question to the site’s service lanes without turning a general claim into a promise about every business or worker.',
+    'Name the reader and the decision first. Then identify the workflow, the records it touches, the source that supports any factual claim, and the owner who approves exceptions.',
+    'A useful service-fit article explains what the support lane includes, what remains with the internal team, and what evidence would show that the lane is working.',
+    'Reject broad claims that cannot be checked. Replace them with a narrower question about a workflow, input, finish condition, or review burden.'
+  ], ['/research/research-service-cluster-opportunity-map', '/research/research-reader-question-to-evidence-map', '/research/research-assistant-reversible-work-selection'], '2026-08-11'),
+  makeResearch('research-assistant-review-sample-sizing', 'Review Sample Design for Assistant Work', 'A review sample should cover ordinary work and higher-consequence exceptions without requiring a manager to inspect every item.', '3 sample groups: ordinary, high-risk, returned', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: the sample is split by consequence and prior signal. This avoids treating a random sample of easy work as proof that every category is safe.',
+    'Review a few ordinary completed items, every item in a defined high-risk category, and returned work until the underlying cause is understood. Record the source, result, and correction.',
+    'Set the sample rule before looking at results, then change it only when the owner records why. A larger sample is not automatically better if the categories and finish conditions remain unclear.',
+    'Use trends to decide whether to improve the brief, narrow permissions, add an example, or keep the current scope. Keep final acceptance with the accountable owner.'
+  ], ['/research/research-workflow-risk-and-review-burden', '/research/research-article-reviewer-scorecard', '/research/research-assistant-handoff-quality-signals'], '2026-08-11'),
+  makeResearch('research-assistant-business-continuity-coverage', 'Business Continuity Coverage for Assistant Work', 'A coverage plan keeps important support work understandable when the usual assistant or manager is unavailable.', '4 coverage fields: current status, access, owner, next action', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: continuity is evaluated through current status, safe access, named ownership, and a next action. The plan does not assume a backup should receive unrestricted access.',
+    'Keep a short current-status note with open items, source links, deadlines, and the decision owner. Use a separate backup identity or temporary permission where possible.',
+    'Mark work that can wait, work that needs an internal decision, and work that should stop. Protect customer, financial, and personal information during the handoff.',
+    'Test the plan on one low-risk absence and record what the backup could not understand. Improve the note and permissions from that evidence rather than adding broad access by default.'
+  ], ['/research/research-assistant-handoff-quality-signals', '/research/research-assistant-privacy-boundary-mapping', '/research/research-assistant-access-by-workflow-risk'], '2026-08-11'),
+  makeResearch('research-assistant-decision-records-for-exceptions', 'Decision Records for Assistant Exceptions', 'A small decision record prevents unusual support requests from becoming undocumented policy changes.', '4 decision fields: issue, evidence, owner, outcome', 'NIST Cybersecurity Framework 2.0', [
+    'Methodology: the record preserves the issue, evidence, decision owner, and outcome. It separates a one-time exception from a change to the standing work definition.',
+    'Describe what happened, link the relevant source record, state the risk or customer impact, and name the person authorized to decide. Avoid copying sensitive details when a controlled link is enough.',
+    'Record whether the result was proceed, return, defer, or change the rule. If the same exception repeats, review the underlying brief rather than letting informal messages become the new standard.',
+    'Keep the decision record with the work history and review it during the next manager check-in. The assistant can surface the question; the accountable owner makes the exception decision.'
+  ], ['/research/research-source-conflict-resolution-protocol', '/research/research-assistant-handoff-quality-signals', '/research/research-workflow-risk-and-review-burden'], '2026-08-11'),
 ];
 const august10ResearchOrder = [
   'research-article-source-count-audit',
@@ -892,9 +952,24 @@ const august10ResearchOrder = [
   'research-source-conflict-resolution-protocol',
   'research-workflow-risk-and-review-burden',
 ] as const;
+const august11ResearchOrder = [
+  'research-assistant-access-by-workflow-risk',
+  'research-assistant-handoff-quality-signals',
+  'research-assistant-reversible-work-selection',
+  'research-assistant-source-note-design',
+  'research-assistant-work-sample-signal-design',
+  'research-assistant-privacy-boundary-mapping',
+  'research-assistant-service-fit-evidence-map',
+  'research-assistant-review-sample-sizing',
+  'research-assistant-business-continuity-coverage',
+  'research-assistant-decision-records-for-exceptions',
+] as const;
 export const researchPostsNewestFirst = [...researchPosts].sort((a, b) => {
   const dateOrder = (b.published ?? '').localeCompare(a.published ?? '');
   if (dateOrder !== 0) return dateOrder;
+  const aNewOrder = august11ResearchOrder.indexOf(a.slug as typeof august11ResearchOrder[number]);
+  const bNewOrder = august11ResearchOrder.indexOf(b.slug as typeof august11ResearchOrder[number]);
+  if (aNewOrder >= 0 || bNewOrder >= 0) return (aNewOrder < 0 ? august11ResearchOrder.length : aNewOrder) - (bNewOrder < 0 ? august11ResearchOrder.length : bNewOrder);
   const aOrder = august10ResearchOrder.indexOf(a.slug as typeof august10ResearchOrder[number]);
   const bOrder = august10ResearchOrder.indexOf(b.slug as typeof august10ResearchOrder[number]);
   return (aOrder < 0 ? august10ResearchOrder.length : aOrder) - (bOrder < 0 ? august10ResearchOrder.length : bOrder);
