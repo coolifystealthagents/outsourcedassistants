@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "contract": "sites3-aug10-public-date-v6",
+  "targetDate": "2026-08-10",
+  "family": "blog",
+  "domain": "outsourcedassistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "minimum": 22,
+  "priorRunId": "7f243081-3600-463c-bec3-9ca47a15a16f",
+  "priorIssueId": "125a7717-eb13-43c9-bd3d-5d634ffc6d80",
+  "validationCommands": [
+    "git diff --check",
+    "npx tsc --noEmit",
+    "npm run build",
+    "node scripts/validate-aug10-blog.mjs"
+  ],
+  "cleanBuildPassed": true,
+  "existingCompliancePassed": true,
+  "indexNewestFirstPassed": true,
+  "entries": [
+    {
+      "slug": "executive-assistant-daily-priorities-workflow",
+      "route": "/blog/executive-assistant-daily-priorities-workflow",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-calendar-conflict-resolution",
+      "route": "/blog/virtual-assistant-calendar-conflict-resolution",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "inbox-zero-assistant-sop",
+      "route": "/blog/inbox-zero-assistant-sop",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-customer-support-escalation",
+      "route": "/blog/virtual-assistant-customer-support-escalation",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "filipino-assistant-content-calendar-workflow",
+      "route": "/blog/filipino-assistant-content-calendar-workflow",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-lead-qualification-checklist",
+      "route": "/blog/virtual-assistant-lead-qualification-checklist",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-invoice-follow-up-process",
+      "route": "/blog/virtual-assistant-invoice-follow-up-process",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "remote-assistant-vendor-coordination-sop",
+      "route": "/blog/remote-assistant-vendor-coordination-sop",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-data-entry-quality-checks",
+      "route": "/blog/virtual-assistant-data-entry-quality-checks",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "filipino-assistant-social-media-scheduling-workflow",
+      "route": "/blog/filipino-assistant-social-media-scheduling-workflow",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-ecommerce-order-support",
+      "route": "/blog/virtual-assistant-ecommerce-order-support",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-real-estate-admin-checklist",
+      "route": "/blog/virtual-assistant-real-estate-admin-checklist",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "assistant-daily-standup-template",
+      "route": "/blog/assistant-daily-standup-template",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-shared-drive-organization",
+      "route": "/blog/virtual-assistant-shared-drive-organization",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "filipino-assistant-email-drafting-guidelines",
+      "route": "/blog/filipino-assistant-email-drafting-guidelines",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-metrics-reporting-template",
+      "route": "/blog/virtual-assistant-metrics-reporting-template",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-appointment-confirmation-sop",
+      "route": "/blog/virtual-assistant-appointment-confirmation-sop",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "remote-assistant-knowledge-base-maintenance",
+      "route": "/blog/remote-assistant-knowledge-base-maintenance",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-project-intake-form",
+      "route": "/blog/virtual-assistant-project-intake-form",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "filipino-assistant-recruiting-coordinator-workflow",
+      "route": "/blog/filipino-assistant-recruiting-coordinator-workflow",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-month-end-close-checklist",
+      "route": "/blog/virtual-assistant-month-end-close-checklist",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    },
+    {
+      "slug": "virtual-assistant-service-business-follow-up",
+      "route": "/blog/virtual-assistant-service-business-follow-up",
+      "sourcePath": "app/data.ts",
+      "provenance": "original-aug10-batch",
+      "introducedByCommit": "f7f61bd6908a64c90d2bb22936d30901e6ad170e",
+      "sourceDateField": "published",
+      "sourceDate": "2026-08-10",
+      "renderedDateFields": [
+        "datePublished",
+        "time[datetime]"
+      ],
+      "renderedDate": "2026-08-10"
+    }
+  ]
+}

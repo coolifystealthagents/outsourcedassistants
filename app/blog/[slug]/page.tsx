@@ -55,8 +55,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
   const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
-  const publicationDate = detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25';
-  const publicationLabel = detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026';
+  const publicationDate = ('published' in post ? post.published : undefined) ?? (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25');
+  const publicationLabel = 'published' in post ? new Date(`${post.published}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026');
   const pageUrl = `${siteUrl}/blog/${post.slug}`;
   const faqs = detail?.faqs ?? [
     { question: 'What should I prepare before hiring?', answer: 'Prepare task examples, access rules, a review owner, and a short first-week checklist.' },
@@ -70,7 +70,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         about: 'Hiring and managing Filipino assistants',
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
-        ...(isEvidenceGuide ? { datePublished: publicationDate, dateModified: publicationDate } : {}),
+        datePublished: publicationDate, dateModified: publicationDate,
         ...(detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
@@ -90,11 +90,10 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <article className="container guide-article">
           <span className="eyebrow">Philippines staffing guide</span>
           <h1>{post.title}</h1>
-          <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
+          <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div><p className='article-date'>Published {publicationLabel} · {post.minutes} minute read</p>
 
           {detail && 'kind' in detail && detail.kind === 'evidenceGuide' ? (
             <div className="evidence-guide">
-              <p className="article-date">Published {publicationLabel} · {post.minutes} minute read</p>
               <section className="article-answer" aria-labelledby="short-answer">
                 <h2 id="short-answer">The short answer</h2>
                 {detail.summary.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
