@@ -859,4 +859,25 @@ export const researchPosts: ResearchPost[] = [
     'Return articles with missing or weak evidence and record the exact deficit and replacement action before accepting the batch.'
   ], ['/research/research-source-quality-triage', '/research/research-publish-readiness-gate', '/research/research-source-ledger-and-evidence-traceability'], '2026-08-10'),
 ];
-export const researchPostsNewestFirst = [...researchPosts].sort((a, b) => (b.published ?? '').localeCompare(a.published ?? ''));
+const august10ResearchOrder = [
+  'research-article-source-count-audit',
+  'research-article-update-and-review-calendar',
+  'research-authoritative-source-discovery-workflow',
+  'research-comparison-framework-for-assistant-workflows',
+  'research-daily-article-source-ledger-template',
+  'research-duplicate-topic-screening-routine',
+  'research-evidence-first-article-outline',
+  'research-internal-linking-and-next-decision-design',
+  'research-reader-question-to-evidence-map',
+  'research-research-article-reviewer-scorecard',
+  'research-service-cluster-opportunity-map',
+  'research-source-conflict-resolution-protocol',
+  'research-workflow-risk-and-review-burden',
+] as const;
+export const researchPostsNewestFirst = [...researchPosts].sort((a, b) => {
+  const dateOrder = (b.published ?? '').localeCompare(a.published ?? '');
+  if (dateOrder !== 0) return dateOrder;
+  const aOrder = august10ResearchOrder.indexOf(a.slug as typeof august10ResearchOrder[number]);
+  const bOrder = august10ResearchOrder.indexOf(b.slug as typeof august10ResearchOrder[number]);
+  return (aOrder < 0 ? august10ResearchOrder.length : aOrder) - (bOrder < 0 ? august10ResearchOrder.length : bOrder);
+});
