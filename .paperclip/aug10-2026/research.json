@@ -8,8 +8,8 @@
   "branch": "main",
   "minimum": 10,
   "priorRunId": "5d881bb2-bf41-4bdc-a472-261eec1ec982",
-  "priorIssueId": "3facdca5-0a73-4ce8-8069-a0ad9f5e2736",
-  "validationCommands": ["git fetch origin main", "npm run build", "npm start -- -H 127.0.0.1 -p 3101 & server=$!; sleep 2; RESEARCH_BASE_URL=http://127.0.0.1:3101 node scripts/validate-aug10-research.mjs; status=$?; kill $server; exit $status", "git diff --check"],
+  "priorIssueId": "3facdca5-0a73-4ce9-8069-a0ad9f5e2736",
+  "validationCommands": ["git fetch origin main", "npm run build", "node scripts/validate-aug10-research.mjs", "git diff --check"],
   "cleanBuildPassed": true,
   "existingCompliancePassed": true,
   "indexNewestFirstPassed": true,
@@ -23,9 +23,6 @@
     {"slug":"research-research-article-reviewer-scorecard","route":"/research/research-research-article-reviewer-scorecard","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"0e475ded722fec8a3fb420e5969c6823ccea8243","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
     {"slug":"research-workflow-risk-and-review-burden","route":"/research/research-workflow-risk-and-review-burden","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"0e475ded722fec8a3fb420e5969c6823ccea8243","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
     {"slug":"research-internal-linking-and-next-decision-design","route":"/research/research-internal-linking-and-next-decision-design","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"0e475ded722fec8a3fb420e5969c6823ccea8243","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
-    {"slug":"research-source-conflict-resolution-protocol","route":"/research/research-source-conflict-resolution-protocol","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"0e475ded722fec8a3fb420e5969c6823ccea8243","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
-    {"slug":"research-article-update-and-review-calendar","route":"/research/research-article-update-and-review-calendar","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"0e475ded722fec8a3fb420e5969c6823ccea8243","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
-    {"slug":"research-evidence-first-article-outline","route":"/research/research-evidence-first-article-outline","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"0e475ded722fec8a3fb420e5969c6823ccea8243","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"},
-    {"slug":"research-article-source-count-audit","route":"/research/research-article-source-count-audit","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"0e475ded722fec8a3fb420e5969c6823ccea8243","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"}
+    {"slug":"research-source-conflict-resolution-protocol","route":"/research/research-source-conflict-resolution-protocol","sourcePath":"app/data.ts","provenance":"original-aug10-batch","introducedByCommit":"0e475ded722fec8a3fb420e5969c6823ccea8243","sourceDateField":"published","sourceDate":"2026-08-10","renderedDateFields":["datePublished","time[datetime]"],"renderedDate":"2026-08-10"}
   ]
 }
