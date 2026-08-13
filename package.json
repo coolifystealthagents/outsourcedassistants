@@ -3,10 +3,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && npm run validate:aug12-blog",
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint",
-    "validate:aug10-blog": "node scripts/validate-aug10-blog.mjs"
+    "validate:aug10-blog": "node scripts/validate-aug10-blog.mjs",
+    "validate:aug12-blog": "node scripts/validate-aug12-blog.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",

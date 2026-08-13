@@ -67,3 +67,13 @@ main>.section>.container.cards>.card li{margin-bottom:9px;line-height:1.55;color
 
 
 .article-source-note{margin:18px 0 26px;color:var(--muted,#5b6575);font-size:15px;line-height:1.6}.article-source-note a{color:var(--accent,#0f8f73);font-weight:900;text-decoration:underline;text-underline-offset:3px}
+
+/* August 12 Blog guides reuse the site's editorial photography and evidence layout. */
+.article-photo{overflow:hidden;border:1px solid #d6cdbf;border-radius:24px;background:#fff;box-shadow:0 18px 44px rgba(23,50,77,.1)}
+.article-photo img{width:100%;aspect-ratio:16/8.5;object-fit:cover}
+.article-photo figcaption{padding:14px 20px;color:#617083;font-size:14px;line-height:1.5}
+.august12-guide .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.august12-guide .cards .card{padding:24px;border:1px solid #d8dfda;border-radius:20px;background:#fff;box-shadow:0 10px 28px rgba(23,50,77,.06)}
+.august12-guide .cards a.card{display:block;text-decoration:none}
+.august12-guide li{margin-bottom:10px}
+@media(max-width:700px){.august12-guide .cards{grid-template-columns:1fr}.article-photo img{aspect-ratio:4/3}}

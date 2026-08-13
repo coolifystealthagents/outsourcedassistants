@@ -2,8 +2,14 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { CTA, Footer, Header, JsonLd, LogoMark } from '../../components';
 import { blogDetails, blogFallbacks, blogPosts, site } from '../../data';
+import { august12BlogDetails } from '../../august12-blog';
 
 const siteUrl = site.url;
+const operationsReferences = [
+  { name: 'NIST SP 800-46 Rev. 2: Guide to Enterprise Telework, Remote Access, and BYOD Security', url: 'https://csrc.nist.gov/pubs/sp/800/46/r2/final' },
+  { name: 'CISA: Require Multifactor Authentication', url: 'https://www.cisa.gov/secure-our-world/require-multifactor-authentication' },
+  { name: 'Philippines National Privacy Commission: Data Privacy Act of 2012', url: 'https://privacy.gov.ph/data-privacy-act/' },
+] as const;
 type DetailSlug = keyof typeof blogDetails;
 type FallbackSlug = keyof typeof blogFallbacks;
 
@@ -43,7 +49,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: post.title },
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: { title: post.title, description: post.excerpt, type: 'article', url: `/blog/${post.slug}` },
+    openGraph: { title: post.title, description: post.excerpt, type: 'article', url: `/blog/${post.slug}`, ...('published' in post ? { publishedTime: post.published, modifiedTime: post.published } : {}) },
   };
 }
 
@@ -54,11 +60,12 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
+  const august12Guide = august12BlogDetails[post.slug];
   const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
   const publicationDate = ('published' in post ? post.published : undefined) ?? (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25');
   const publicationLabel = 'published' in post ? new Date(`${post.published}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026');
   const pageUrl = `${siteUrl}/blog/${post.slug}`;
-  const faqs = detail?.faqs ?? [
+  const faqs = august12Guide?.faqs ?? detail?.faqs ?? [
     { question: 'What should I prepare before hiring?', answer: 'Prepare task examples, access rules, a review owner, and a short first-week checklist.' },
     { question: 'What work should stay with my team?', answer: 'Keep strategy, sensitive approvals, payments, hiring decisions, and customer exceptions with your internal owner.' },
   ];
@@ -71,7 +78,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
         datePublished: publicationDate, dateModified: publicationDate,
-        ...(detail ? { citation: detail.sources.map((source) => source.url) } : {}),
+        ...(august12Guide ? { citation: operationsReferences.map((source) => source.url) } : detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
       { '@type': 'BreadcrumbList', itemListElement: [
@@ -90,9 +97,67 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <article className="container guide-article">
           <span className="eyebrow">Philippines staffing guide</span>
           <h1>{post.title}</h1>
-          <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div><p className='article-date'>Published {publicationLabel} · {post.minutes} minute read</p>
+          <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Practical operating controls</span></div><p className='article-date'>Published <time dateTime={publicationDate}>{publicationLabel}</time> · {post.minutes} minute read</p>
 
-          {detail && 'kind' in detail && detail.kind === 'evidenceGuide' ? (
+          {august12Guide ? (
+            <div className="evidence-guide august12-guide">
+              <section className="article-answer" aria-labelledby="short-answer">
+                <p className="eyebrow">For {august12Guide.audience.toLowerCase()}</p>
+                <h2 id="short-answer">The short answer</h2>
+                <p>{august12Guide.answer}</p>
+              </section>
+
+              <figure className="article-photo">
+                <img src="/assistant-team.jpg" alt="Philippines assistant team reviewing a documented staffing workflow" />
+                <figcaption>Keep the workflow, evidence, and decision owner visible when work crosses teams or time zones.</figcaption>
+              </figure>
+
+              <section aria-labelledby="implementation-plan">
+                <h2 id="implementation-plan">A practical implementation plan</h2>
+                <div className="cards">
+                  {august12Guide.steps.map((step, index) => <div className="card" key={step.title}><span className="eyebrow">Step {index + 1}</span><h3>{step.title}</h3><p>{step.body}</p></div>)}
+                </div>
+              </section>
+
+              <aside className="article-banner" data-article-banner="1">
+                <div><span className="eyebrow">Keep the lane accountable</span><h2>Separate assistant actions from owner decisions.</h2><p>Write the normal path, the stopping point, and the person authorized to resolve each exception before the queue expands.</p></div>
+                <a className="btn primary" href="/services/project-coordination">Review coordination support</a>
+              </aside>
+
+              <section aria-labelledby="decision-controls">
+                <h2 id="decision-controls">Decision and evidence controls</h2>
+                <p>Use this control map as a starting point, then adapt it to the actual systems, policies, and accountable owners in your organization.</p>
+                <div className="article-table-wrap" role="region" aria-label="Scrollable decision and evidence controls table" tabIndex={0}><span className="scroll-cue">Swipe sideways to see all columns →</span><table><thead><tr><th>Decision</th><th>Accountable owner</th><th>Evidence to retain</th></tr></thead><tbody>{august12Guide.controls.map((row) => <tr key={row.decision}><th>{row.decision}</th><td>{row.owner}</td><td>{row.evidence}</td></tr>)}</tbody></table></div>
+              </section>
+
+              <section aria-labelledby="measurement">
+                <h2 id="measurement">What to measure</h2>
+                <p>{august12Guide.measure}</p>
+                <div className="article-links"><a href="/services/operations-reporting">Connect the work lane to operations reporting</a><a href="/blog/philippines-virtual-assistant-weekly-reporting-checklist">Build a checkable weekly report</a></div>
+              </section>
+
+              <section aria-labelledby="avoid">
+                <h2 id="avoid">Common mistakes to avoid</h2>
+                <ul>{august12Guide.pitfalls.map((pitfall) => <li key={pitfall}>{pitfall}</li>)}</ul>
+              </section>
+
+              <aside className="article-banner article-banner-alt" data-article-banner="2">
+                <div><span className="eyebrow">Apply it to one queue</span><h2>Start narrow enough to review the evidence.</h2><p>Choose one recurring queue, one manager, and one review date. Improve the written lane before adding volume or access.</p></div>
+                <a className="btn secondary" href="/services">Explore assistant work lanes</a>
+              </aside>
+
+              <section aria-labelledby="common-questions"><h2 id="common-questions">Common questions</h2>{august12Guide.faqs.map((faq) => <div className="article-faq" key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}</section>
+
+              <section aria-labelledby="operational-references"><h2 id="operational-references">Operational references</h2><p>These primary guidance pages support the access, remote-work security, and data-responsibility controls used across this guide. Apply them with your own policies and qualified advisers.</p><ol className="article-sources">{operationsReferences.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name}</a></li>)}</ol></section>
+
+              <section aria-labelledby="related-articles"><h2 id="related-articles">Related Articles</h2><div className="cards">{blogPosts.filter((item) => item.slug !== post.slug && 'published' in item && item.published === '2026-08-12').slice(0, 3).map((item) => <a className="card" href={`/blog/${item.slug}`} key={item.slug}><h3>{item.title}</h3><p>{item.excerpt}</p></a>)}</div></section>
+
+              <aside className="article-banner" data-article-banner="3">
+                <div><span className="eyebrow">Scope before staffing</span><h2>Turn the workflow into a clear Philippines assistant brief.</h2><p>Bring the queue, schedule, systems, review owner, and decisions that stay with your team.</p></div>
+                <a className="btn primary" href="/contact-us">Contact Us</a>
+              </aside>
+            </div>
+          ) : detail && 'kind' in detail && detail.kind === 'evidenceGuide' ? (
             <div className="evidence-guide">
               <section className="article-answer" aria-labelledby="short-answer">
                 <h2 id="short-answer">The short answer</h2>
