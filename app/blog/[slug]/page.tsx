@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { CTA, Footer, Header, JsonLd, LogoMark } from '../../components';
 import { blogDetails, blogFallbacks, blogPosts, site } from '../../data';
 import { august12BlogDetails } from '../../august12-blog';
+import { aug13BlogDetails } from '../../aug13-blog';
 
 const siteUrl = site.url;
 const operationsReferences = [
@@ -61,11 +62,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
   const august12Guide = august12BlogDetails[post.slug];
+  const aug13Guide = aug13BlogDetails[post.slug];
+  const campaignGuide = aug13Guide ?? august12Guide;
   const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
   const publicationDate = ('published' in post ? post.published : undefined) ?? (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25');
   const publicationLabel = 'published' in post ? new Date(`${post.published}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026');
   const pageUrl = `${siteUrl}/blog/${post.slug}`;
-  const faqs = august12Guide?.faqs ?? detail?.faqs ?? [
+  const faqs = campaignGuide?.faqs ?? detail?.faqs ?? [
     { question: 'What should I prepare before hiring?', answer: 'Prepare task examples, access rules, a review owner, and a short first-week checklist.' },
     { question: 'What work should stay with my team?', answer: 'Keep strategy, sensitive approvals, payments, hiring decisions, and customer exceptions with your internal owner.' },
   ];
@@ -78,7 +81,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
         datePublished: publicationDate, dateModified: publicationDate,
-        ...(august12Guide ? { citation: operationsReferences.map((source) => source.url) } : detail ? { citation: detail.sources.map((source) => source.url) } : {}),
+        ...(campaignGuide ? { citation: operationsReferences.map((source) => source.url) } : detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
       { '@type': 'BreadcrumbList', itemListElement: [
@@ -99,12 +102,12 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Practical operating controls</span></div><p className='article-date'>Published <time dateTime={publicationDate}>{publicationLabel}</time> · {post.minutes} minute read</p>
 
-          {august12Guide ? (
+          {campaignGuide ? (
             <div className="evidence-guide august12-guide">
               <section className="article-answer" aria-labelledby="short-answer">
-                <p className="eyebrow">For {august12Guide.audience.toLowerCase()}</p>
+                <p className="eyebrow">For {campaignGuide.audience.toLowerCase()}</p>
                 <h2 id="short-answer">The short answer</h2>
-                <p>{august12Guide.answer}</p>
+                <p>{campaignGuide.answer}</p>
               </section>
 
               <figure className="article-photo">
@@ -115,7 +118,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               <section aria-labelledby="implementation-plan">
                 <h2 id="implementation-plan">A practical implementation plan</h2>
                 <div className="cards">
-                  {august12Guide.steps.map((step, index) => <div className="card" key={step.title}><span className="eyebrow">Step {index + 1}</span><h3>{step.title}</h3><p>{step.body}</p></div>)}
+                  {campaignGuide.steps.map((step, index) => <div className="card" key={step.title}><span className="eyebrow">Step {index + 1}</span><h3>{step.title}</h3><p>{step.body}</p></div>)}
                 </div>
               </section>
 
@@ -127,18 +130,18 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               <section aria-labelledby="decision-controls">
                 <h2 id="decision-controls">Decision and evidence controls</h2>
                 <p>Use this control map as a starting point, then adapt it to the actual systems, policies, and accountable owners in your organization.</p>
-                <div className="article-table-wrap" role="region" aria-label="Scrollable decision and evidence controls table" tabIndex={0}><span className="scroll-cue">Swipe sideways to see all columns →</span><table><thead><tr><th>Decision</th><th>Accountable owner</th><th>Evidence to retain</th></tr></thead><tbody>{august12Guide.controls.map((row) => <tr key={row.decision}><th>{row.decision}</th><td>{row.owner}</td><td>{row.evidence}</td></tr>)}</tbody></table></div>
+                <div className="article-table-wrap" role="region" aria-label="Scrollable decision and evidence controls table" tabIndex={0}><span className="scroll-cue">Swipe sideways to see all columns →</span><table><thead><tr><th>Decision</th><th>Accountable owner</th><th>Evidence to retain</th></tr></thead><tbody>{campaignGuide.controls.map((row) => <tr key={row.decision}><th>{row.decision}</th><td>{row.owner}</td><td>{row.evidence}</td></tr>)}</tbody></table></div>
               </section>
 
               <section aria-labelledby="measurement">
                 <h2 id="measurement">What to measure</h2>
-                <p>{august12Guide.measure}</p>
+                <p>{campaignGuide.measure}</p>
                 <div className="article-links"><a href="/services/operations-reporting">Connect the work lane to operations reporting</a><a href="/blog/philippines-virtual-assistant-weekly-reporting-checklist">Build a checkable weekly report</a></div>
               </section>
 
               <section aria-labelledby="avoid">
                 <h2 id="avoid">Common mistakes to avoid</h2>
-                <ul>{august12Guide.pitfalls.map((pitfall) => <li key={pitfall}>{pitfall}</li>)}</ul>
+                <ul>{campaignGuide.pitfalls.map((pitfall) => <li key={pitfall}>{pitfall}</li>)}</ul>
               </section>
 
               <aside className="article-banner article-banner-alt" data-article-banner="2">
@@ -146,7 +149,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 <a className="btn secondary" href="/services">Explore assistant work lanes</a>
               </aside>
 
-              <section aria-labelledby="common-questions"><h2 id="common-questions">Common questions</h2>{august12Guide.faqs.map((faq) => <div className="article-faq" key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}</section>
+              <section aria-labelledby="common-questions"><h2 id="common-questions">Common questions</h2>{campaignGuide.faqs.map((faq) => <div className="article-faq" key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}</section>
 
               <section aria-labelledby="operational-references"><h2 id="operational-references">Operational references</h2><p>These primary guidance pages support the access, remote-work security, and data-responsibility controls used across this guide. Apply them with your own policies and qualified advisers.</p><ol className="article-sources">{operationsReferences.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name}</a></li>)}</ol></section>
 

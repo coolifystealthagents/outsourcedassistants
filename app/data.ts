@@ -51,7 +51,7 @@ export const serviceDetails = {
     firstWeek: ['Agree on the report fields', 'Score one old sample together', 'Compare the first report with source records'],
   },
 } as const;
-export const blogPosts = [
+const legacyBlogPosts = [
   // Fresh August 12, 2026 Blog batch. These records are intentionally separate
   // from the frozen August 10 inventory below.
   { slug: 'philippines-assistant-overlap-hours-plan', title: 'How to Plan Overlap Hours With a Philippines Assistant', excerpt: 'Choose overlap hours around decisions and handoffs rather than forcing an entire shift to mirror the manager. This guide maps the meetings, response windows, and written updates that genuinely need shared time.', minutes: 10, published: '2026-08-12' },
@@ -182,8 +182,47 @@ export const blogPosts = [
   { slug: 'virtual-assistant-office-supplies-tracker', title: 'Virtual Assistant Office Supplies Tracker', excerpt: 'Track supply requests, current stock, delivery details, and approval status with a clear boundary around purchasing decisions.', minutes: 7, published: '2026-08-13' },
   { slug: 'assistant-weekly-capacity-check', title: 'Assistant Weekly Capacity Check Guide', excerpt: 'Use a capacity check to compare assigned work, available hours, blockers, and upcoming deadlines before the queue becomes unrealistic.', minutes: 8, published: '2026-08-13' },
   { slug: 'virtual-assistant-privacy-request-routing', title: 'Virtual Assistant Privacy Request Routing', excerpt: 'Route privacy-related requests with identity checks, minimal record handling, deadlines, and an immediate escalation path for sensitive cases.', minutes: 10, published: '2026-08-13' },
+]
+
+// These routes supersede the unaccepted August 13 identities. Keep the replacement
+// batch separate so its direct date bindings remain easy to audit.
+const rejectedAug13Slugs = new Set([
+  'filipino-assistant-client-onboarding-checklist', 'virtual-assistant-email-response-library', 'remote-assistant-document-request-tracker',
+  'filipino-assistant-meeting-follow-up-guide', 'virtual-assistant-help-desk-triage', 'assistant-purchase-request-checklist',
+  'virtual-assistant-calendar-preparation-rules', 'remote-assistant-contact-database-cleanup', 'filipino-assistant-client-portal-maintenance',
+  'virtual-assistant-renewal-reminder-process', 'assistant-inventory-records-workflow', 'virtual-assistant-event-registration-support',
+  'remote-assistant-internal-newsletter-support', 'filipino-assistant-customer-feedback-log', 'virtual-assistant-contract-admin-checklist',
+  'assistant-team-directory-maintenance', 'virtual-assistant-shipping-status-follow-up', 'remote-assistant-training-records-checklist',
+  'filipino-assistant-review-request-process', 'virtual-assistant-office-supplies-tracker', 'assistant-weekly-capacity-check', 'virtual-assistant-privacy-request-routing',
+]);
+
+const aug13ReplacementPosts = [
+  { slug: 'filipino-assistant-calendar-delegation-boundaries', title: 'Filipino Assistant Calendar Delegation Boundaries', excerpt: 'Separate routine scheduling from priority decisions, private events, and commitments that require the owner’s judgment.', minutes: 9, published: '2026-08-13' },
+  { slug: 'remote-assistant-shared-inbox-ownership-map', title: 'Remote Assistant Shared Inbox Ownership Map', excerpt: 'Map inbox categories to response owners, deadlines, and escalation paths so messages do not disappear between teammates.', minutes: 9, published: '2026-08-13' },
+  { slug: 'filipino-assistant-customer-onboarding-records', title: 'Filipino Assistant Customer Onboarding Records', excerpt: 'Capture approved onboarding facts and next steps while keeping scope, commitments, and sensitive interpretation with the service owner.', minutes: 9, published: '2026-08-13' },
+  { slug: 'virtual-assistant-reconciliation-exception-log', title: 'Virtual Assistant Reconciliation Exception Log', excerpt: 'Separate normal matches from differences that need investigation, evidence, and an accountable owner decision.', minutes: 9, published: '2026-08-13' },
+  { slug: 'outsourced-assistant-appointment-intake-guide', title: 'Outsourced Assistant Appointment Intake Guide', excerpt: 'Collect enough context to route appointment requests without promising availability or making a professional decision.', minutes: 8, published: '2026-08-13' },
+  { slug: 'filipino-assistant-file-naming-standard', title: 'Filipino Assistant File Naming Standard', excerpt: 'Create findable shared records with useful naming fields, privacy boundaries, and an owner for ambiguous files.', minutes: 8, published: '2026-08-13' },
+  { slug: 'virtual-assistant-customer-escalation-notes', title: 'Virtual Assistant Customer Escalation Notes', excerpt: 'Write escalation notes that give the owner the concern, evidence, impact, attempted response, and decision needed.', minutes: 9, published: '2026-08-13' },
+  { slug: 'remote-assistant-recurring-task-inventory', title: 'Remote Assistant Recurring Task Inventory', excerpt: 'Make a support role concrete with cadence, inputs, finish conditions, review burden, and decisions outside the lane.', minutes: 9, published: '2026-08-13' },
+  { slug: 'filipino-assistant-approval-matrix-template', title: 'Filipino Assistant Approval Matrix Template', excerpt: 'Turn vague escalation advice into named decisions, evidence requirements, limits, and accountable owners.', minutes: 8, published: '2026-08-13' },
+  { slug: 'virtual-assistant-record-retention-map', title: 'Virtual Assistant Record Retention Map', excerpt: 'Clarify where working records live, why they are kept, who owns deletion, and what must not be copied elsewhere.', minutes: 9, published: '2026-08-13' },
+  { slug: 'outsourced-assistant-queue-priority-rules', title: 'Outsourced Assistant Queue Priority Rules', excerpt: 'Use customer impact, deadline, reversibility, and owner direction to make competing requests clear.', minutes: 9, published: '2026-08-13' },
+  { slug: 'filipino-assistant-call-preparation-checklist', title: 'Filipino Assistant Call Preparation Checklist', excerpt: 'Prepare accurate context for calls while leaving substantive decisions with the meeting owner.', minutes: 8, published: '2026-08-13' },
+  { slug: 'remote-assistant-service-request-tracker', title: 'Remote Assistant Service Request Tracker', excerpt: 'Track incoming requests with source, urgency, owner, next action, and a clear finish condition.', minutes: 8, published: '2026-08-13' },
+  { slug: 'virtual-assistant-meeting-room-logistics', title: 'Virtual Assistant Meeting Room Logistics', excerpt: 'Delegate rooms, links, equipment, and attendee notes while hosts retain responsibility for confidential content and final changes.', minutes: 8, published: '2026-08-13' },
+  { slug: 'filipino-assistant-follow-up-calendar', title: 'Filipino Assistant Follow-Up Calendar', excerpt: 'Make reminders useful without turning them into promises by recording owner, approved message, next date, and stop condition.', minutes: 8, published: '2026-08-13' },
+  { slug: 'outsourced-assistant-access-review-checklist', title: 'Outsourced Assistant Access Review Checklist', excerpt: 'Compare each permission with current work, owner, need, and expiry so old access does not become invisible risk.', minutes: 9, published: '2026-08-13' },
+  { slug: 'remote-assistant-weekly-work-summary', title: 'Remote Assistant Weekly Work Summary', excerpt: 'Connect accepted work, open items, quality signals, blockers, and owner questions to the records behind them.', minutes: 8, published: '2026-08-13' },
+  { slug: 'virtual-assistant-duplicate-record-review', title: 'Virtual Assistant Duplicate Record Review', excerpt: 'Identify possible matches while preserving evidence and leaving merge or deletion decisions with the record owner.', minutes: 9, published: '2026-08-13' },
+  { slug: 'outsourced-assistant-urgent-request-stop-rules', title: 'Outsourced Assistant Urgent Request Stop Rules', excerpt: 'Define when speed must yield to authority, privacy, security, safety, or an internal decision owner.', minutes: 9, published: '2026-08-13' },
+  { slug: 'filipino-assistant-work-sample-review-guide', title: 'Filipino Assistant Work Sample Review Guide', excerpt: 'Evaluate fit for a specific support queue with representative examples, a clear rubric, and bounded conclusions.', minutes: 10, published: '2026-08-13' },
+  { slug: 'virtual-assistant-status-update-template', title: 'Virtual Assistant Status Update Template', excerpt: 'Show what changed, what is next, what is blocked, and who owns the decision without overstating certainty.', minutes: 8, published: '2026-08-13' },
+  { slug: 'remote-assistant-offboarding-checklist', title: 'Remote Assistant Offboarding Checklist', excerpt: 'Close a remote assistant assignment by reconciling open work, materials, access, retention, and successor ownership.', minutes: 9, published: '2026-08-13' },
 ] as const;
-export const blogPostsNewestFirst = [...blogPosts].sort((a, b) => ('published' in b ? b.published : '').localeCompare('published' in a ? a.published : ''));
+
+export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts] as const;
+export const blogPostsNewestFirst = [...blogPosts].sort((a, b) => String('published' in b ? b.published : '').localeCompare(String('published' in a ? a.published : '')));
 export const blogFallbacks = {
   'filipino-assistant-client-onboarding-checklist': { answer: 'Client onboarding is safer when the assistant collects facts and confirms next steps, while the service owner approves scope and commitments.', sectionTitle: 'Checklist for the first handoff', items: ['Record the client contact and preferred channel', 'List the service request and its source', 'Confirm the internal owner and response window', 'Mark missing information and do not guess'], questionTitle: 'Review before work begins', questions: ['Which details are approved to collect?', 'Who approves a change in scope?', 'Where should private documents be stored?', 'What makes the onboarding record complete?'] },
   'virtual-assistant-email-response-library': { answer: 'A response library should reduce repeated drafting without turning every message into a canned reply. Keep examples current and require review when a message creates a commitment.', sectionTitle: 'Build useful examples', items: ['Group examples by request type', 'Show the facts the writer must confirm', 'Mark language that needs owner approval', 'Retire examples after a policy change'], questionTitle: 'Test the library', questions: ['Can the assistant find the right example quickly?', 'Does each example show when to escalate?', 'Are confidential details excluded?', 'Who reviews outdated replies?'] },
