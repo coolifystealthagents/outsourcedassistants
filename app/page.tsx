@@ -71,7 +71,7 @@ export default function Home() {
         <section className="handoff-workload" id="workload">
           <div className="handoff-shell">
             <div className="handoff-section-head">
-              <p className="handoff-kicker"><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt=""/> Workload sorter</p>
+              <p className="handoff-kicker"><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt="Delegated task checklist"/> Workload sorter</p>
               <h2>What keeps landing back on your desk?</h2>
               <p>Pick the queue that causes the most drag. A useful assistant role usually starts with one kind of work, not a grab bag of everything.</p>
             </div>
@@ -97,16 +97,16 @@ export default function Home() {
         <section className="handoff-boundaries">
           <div className="handoff-shell handoff-boundaries-grid">
             <div className="handoff-boundaries-copy">
-              <p className="handoff-kicker light"><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt=""/> A cleaner brief</p>
+              <p className="handoff-kicker light"><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt="Remote assistant workstation"/> A cleaner brief</p>
               <h2>Write down the line between support and judgment.</h2>
               <p>An assistant can move quickly when routine decisions are clear. Anything involving money, sensitive data, or an unhappy customer should have an owner and an escalation rule.</p>
               <a className="handoff-light-link" href="/blog">Use the provider question list <span aria-hidden="true">→</span></a>
             </div>
             <div className="handoff-rule-sheet">
               <div className="handoff-sheet-head"><span>Handoff sheet / 01</span><span>Draft</span></div>
-              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt=""/>Can handle</span><p>Routine replies based on approved examples</p></div>
-              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt=""/>Needs approval</span><p>Refunds, contract changes, and new access</p></div>
-              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt=""/>Escalate now</span><p>Security concerns or a frustrated customer</p></div>
+              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt="Delegated task checklist"/>Can handle</span><p>Routine replies based on approved examples</p></div>
+              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt="Assistant work schedule"/>Needs approval</span><p>Refunds, contract changes, and new access</p></div>
+              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt="Remote assistant workstation"/>Escalate now</span><p>Security concerns or a frustrated customer</p></div>
             </div>
           </div>
         </section>
@@ -114,7 +114,7 @@ export default function Home() {
         <section className="handoff-process">
           <div className="handoff-shell">
             <div className="handoff-section-head compact">
-              <p className="handoff-kicker"><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt=""/> The first two weeks</p>
+              <p className="handoff-kicker"><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt="Assistant work schedule"/> The first two weeks</p>
               <h2>A handoff you can inspect.</h2>
             </div>
             <div className="handoff-timeline">
@@ -130,8 +130,8 @@ export default function Home() {
         </section>
 
         <section className="handoff-shell gi-proof" aria-label="Assistant handoff essentials">
-          <img className="gi-proof-art" src="/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-handoff.svg" alt=""/>
-          <div><p className="handoff-kicker"><span/>A practical role</p><h2>Give recurring work a dependable rhythm.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt=""/>Remote work</span><span><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt=""/>Task list</span><span><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt=""/>Schedule</span></div></div>
+          <img className="gi-proof-art" src="/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-handoff.svg" alt="Owner and assistant reviewing a documented work handoff"/>
+          <div><p className="handoff-kicker"><span/>A practical role</p><h2>Give recurring work a dependable rhythm.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt="Remote assistant workstation"/>Remote work</span><span><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt="Delegated task checklist"/>Task list</span><span><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt="Assistant work schedule"/>Schedule</span></div></div>
         </section>
 
         <section className="handoff-guides">

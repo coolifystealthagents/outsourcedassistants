@@ -2,6 +2,7 @@
   "name": "outsourcedassistants",
   "private": true,
   "scripts": {
+    "test": "node tests/homepage-image-labels.test.mjs",
     "dev": "next dev",
     "build": "next build && npm run validate:aug13-blog",
     "start": "next start -H 0.0.0.0 -p 3000",
