@@ -4,6 +4,7 @@ import { CTA, Footer, Header, JsonLd, LogoMark } from '../../components';
 import { blogDetails, blogFallbacks, blogPosts, site } from '../../data';
 import { august12BlogDetails } from '../../august12-blog';
 import { aug13BlogDetails } from '../../aug13-blog';
+import { aug14BlogDetails } from '../../aug14-blog';
 
 const siteUrl = site.url;
 const operationsReferences = [
@@ -63,7 +64,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const fallback = blogFallbacks[post.slug as FallbackSlug];
   const august12Guide = august12BlogDetails[post.slug];
   const aug13Guide = aug13BlogDetails[post.slug];
-  const campaignGuide = aug13Guide ?? august12Guide;
+  const aug14Guide = aug14BlogDetails[post.slug];
+  const campaignGuide = aug14Guide ?? aug13Guide ?? august12Guide;
   const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
   const publicationDate = ('published' in post ? post.published : undefined) ?? (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25');
   const publicationLabel = 'published' in post ? new Date(`${post.published}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026');
