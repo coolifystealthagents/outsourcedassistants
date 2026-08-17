@@ -221,6 +221,31 @@ const aug13ReplacementPosts = [
   { slug: 'remote-assistant-offboarding-checklist', title: 'Remote Assistant Offboarding Checklist', excerpt: 'Close a remote assistant assignment by reconciling open work, materials, access, retention, and successor ownership.', minutes: 9, published: '2026-08-13' },
 ] as const;
 
+const aug17ReplacementPosts = [
+  { slug: 'filipino-assistant-calendar-conflict-resolution', title: 'Filipino Assistant Calendar Conflict Resolution', excerpt: 'Expose calendar conflicts and prepare bounded options while the executive or meeting owner decides which commitment wins.', minutes: 9, published: '2026-08-17' },
+  { slug: 'remote-assistant-inbox-priority-signals', title: 'Remote Assistant Inbox Priority Signals', excerpt: 'Use observable business signals and owner rules to prioritize shared inbox work without guessing from sender status.', minutes: 9, published: '2026-08-17' },
+  { slug: 'filipino-assistant-travel-change-monitoring', title: 'Filipino Assistant Travel Change Monitoring', excerpt: 'Surface itinerary changes and prepare alternatives while the traveler retains risk acceptance, payment, and final decisions.', minutes: 9, published: '2026-08-17' },
+  { slug: 'virtual-assistant-meeting-brief-assembly', title: 'Virtual Assistant Meeting Brief Assembly', excerpt: 'Assemble source-linked meeting context without turning unverified notes into facts or decisions.', minutes: 9, published: '2026-08-17' },
+  { slug: 'outsourced-assistant-crm-duplicate-review', title: 'Outsourced Assistant CRM Duplicate Review', excerpt: 'Identify likely CRM matches and preserve evidence while authorized owners retain merge and identity decisions.', minutes: 9, published: '2026-08-17' },
+  { slug: 'filipino-assistant-operations-dashboard-variance-notes', title: 'Filipino Assistant Operations Dashboard Variance Notes', excerpt: 'Connect changed measures to source records and owner questions without claiming causes the evidence cannot support.', minutes: 9, published: '2026-08-17' },
+  { slug: 'remote-assistant-customer-onboarding-handoff', title: 'Remote Assistant Customer Onboarding Handoff', excerpt: 'Make approved onboarding facts and next steps visible while service owners control scope and commitments.', minutes: 9, published: '2026-08-17' },
+  { slug: 'virtual-assistant-support-queue-aging-review', title: 'Virtual Assistant Support Queue Aging Review', excerpt: 'Use queue age to identify waiting constraints without closing difficult work just to improve a number.', minutes: 9, published: '2026-08-17' },
+  { slug: 'filipino-assistant-vendor-document-collection', title: 'Filipino Assistant Vendor Document Collection', excerpt: 'Gather vendor evidence with clear checklists while contract interpretation and negotiation stay with owners.', minutes: 9, published: '2026-08-17' },
+  { slug: 'outsourced-assistant-client-follow-up-boundaries', title: 'Outsourced Assistant Client Follow-Up Boundaries', excerpt: 'Preserve approved client promises and ownership without creating new commitments by implication.', minutes: 9, published: '2026-08-17' },
+  { slug: 'remote-assistant-document-retention-review', title: 'Remote Assistant Document Retention Review', excerpt: 'Clarify authoritative records, working copies, and owner decisions before archiving or deleting files.', minutes: 9, published: '2026-08-17' },
+  { slug: 'virtual-assistant-help-desk-escalation-map', title: 'Virtual Assistant Help Desk Escalation Map', excerpt: 'Pair help-desk symptoms with owners and stop conditions without asking assistants to diagnose beyond their role.', minutes: 9, published: '2026-08-17' },
+  { slug: 'filipino-assistant-recruiting-coordination-boundaries', title: 'Filipino Assistant Recruiting Coordination Boundaries', excerpt: 'Reduce interview scheduling friction while candidate assessment and selection remain with the recruiting team.', minutes: 9, published: '2026-08-17' },
+  { slug: 'outsourced-assistant-project-decision-register', title: 'Outsourced Assistant Project Decision Register', excerpt: 'Preserve project questions, options, owners, effective dates, and unresolved impact beyond scattered chat history.', minutes: 9, published: '2026-08-17' },
+  { slug: 'remote-assistant-shared-calendar-time-zone-rules', title: 'Remote Assistant Shared Calendar Time-Zone Rules', excerpt: 'Prevent scheduling errors across time zones, date boundaries, travel, and different working windows.', minutes: 9, published: '2026-08-17' },
+  { slug: 'virtual-assistant-service-request-acceptance-criteria', title: 'Virtual Assistant Service Request Acceptance Criteria', excerpt: 'Turn vague support requests into reviewable outcomes with sources, finish conditions, and stop rules.', minutes: 9, published: '2026-08-17' },
+  { slug: 'filipino-assistant-access-expiry-review', title: 'Filipino Assistant Access Expiry Review', excerpt: 'Compare permissions with current work and expiry rules so role titles do not justify invisible excess access.', minutes: 9, published: '2026-08-17' },
+  { slug: 'virtual-assistant-recurring-work-capacity-plan', title: 'Virtual Assistant Recurring Work Capacity Plan', excerpt: 'Connect arrivals, effort, review load, and coverage before expanding a recurring support queue.', minutes: 9, published: '2026-08-17' },
+  { slug: 'filipino-assistant-weekly-owner-handoff', title: 'Filipino Assistant Weekly Owner Handoff', excerpt: 'Show accepted work, open items, blockers, exceptions, and owner actions with links to evidence.', minutes: 9, published: '2026-08-17' },
+  { slug: 'remote-assistant-workflow-exception-taxonomy', title: 'Remote Assistant Workflow Exception Taxonomy', excerpt: 'Define when a remote assistant continues, asks for context, or routes a decision to another owner.', minutes: 9, published: '2026-08-17' },
+  { slug: 'virtual-assistant-approval-evidence-matrix', title: 'Virtual Assistant Approval Evidence Matrix', excerpt: 'Name decisions, preparation rights, evidence, approvers, and the action that must stop until approval.', minutes: 9, published: '2026-08-17' },
+  { slug: 'outsourced-assistant-offboarding-work-handoff', title: 'Outsourced Assistant Offboarding Work Handoff', excerpt: 'Transfer open work, records, access, and ownership so a support assignment closes without losing continuity.', minutes: 9, published: '2026-08-17' },
+] as const;
+
 const aug14ReplacementPosts = [
   { slug: 'filipino-assistant-vendor-follow-up', title: 'Filipino Assistant Vendor Follow-Up', excerpt: 'Surface vendor status and missing information without letting routine follow-up change terms or make new commitments.', minutes: 9, published: '2026-08-14' },
   { slug: 'remote-assistant-document-version-control', title: 'Remote Assistant Document Version Control', excerpt: 'Keep shared documents findable by showing the current approved file, what changed, and who owns publication.', minutes: 9, published: '2026-08-14' },
@@ -246,12 +271,15 @@ const aug14ReplacementPosts = [
   { slug: 'virtual-assistant-work-request-intake-brief', title: 'Virtual Assistant Work Request Intake Brief', excerpt: 'Give a virtual assistant the outcome, source, deadline, access boundary, and stop rule needed to begin clearly.', minutes: 9, published: '2026-08-14' },
 ] as const;
 
-export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts] as const;
+export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts] as const;
+const august17BlogOrder: readonly string[] = aug17ReplacementPosts.map((post) => post.slug);
 const august14BlogOrder: readonly string[] = aug14ReplacementPosts.map((post) => post.slug);
 const august13BlogOrder: readonly string[] = aug13ReplacementPosts.map((post) => post.slug);
 export const blogPostsNewestFirst = [...blogPosts].sort((a, b) => {
   const dateOrder = String('published' in b ? b.published : '').localeCompare(String('published' in a ? a.published : ''));
   if (dateOrder !== 0) return dateOrder;
+  const aAug17Order = august17BlogOrder.indexOf(a.slug); const bAug17Order = august17BlogOrder.indexOf(b.slug);
+  if (aAug17Order >= 0 || bAug17Order >= 0) return (aAug17Order < 0 ? august17BlogOrder.length : aAug17Order) - (bAug17Order < 0 ? august17BlogOrder.length : bAug17Order);
   const ai = august14BlogOrder.indexOf(a.slug); const bi = august14BlogOrder.indexOf(b.slug);
   if (ai >= 0 || bi >= 0) return (ai < 0 ? august14BlogOrder.length : ai) - (bi < 0 ? august14BlogOrder.length : bi);
   const ac = august13BlogOrder.indexOf(a.slug); const bc = august13BlogOrder.indexOf(b.slug);

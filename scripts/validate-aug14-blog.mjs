@@ -16,9 +16,11 @@ for (const slug of records) {
   if (!html.includes('/assistant-team.jpg')) throw new Error(`Article photo missing: ${slug}`);
   if (/<form\b|<input\b|<textarea\b|<select\b/i.test(html)) throw new Error(`Form control found: ${slug}`);
 }
-const index = fs.readFileSync(path.join(root, '.next/server/app/blog.html'), 'utf8');
-const positions = records.slice(0, 20).map((slug) => index.indexOf(`/blog/${slug}`));
-if (positions.some((p) => p < 0) || positions.some((p, i) => i > 0 && p < positions[i - 1])) throw new Error('August 14 batch is not ordered on the leading blog index');
+const index = [fs.readFileSync(path.join(root, '.next/server/app/blog.html'), 'utf8'), ...Array.from({ length: 10 }, (_, i) => {
+  try { return fs.readFileSync(path.join(root, '.next/server/app/blog/page', `${i + 2}.html`), 'utf8'); } catch { return ''; }
+})].join('');
+const positions = records.map((slug) => index.indexOf(`/blog/${slug}`));
+if (positions.some((p) => p < 0) || positions.some((p, i) => i > 0 && p < positions[i - 1])) throw new Error('August 14 batch is not ordered in complete blog pagination');
 const sitemap = fs.readFileSync(path.join(root, '.next/server/app/sitemap.xml.body'), 'utf8');
 if (records.some((slug) => !sitemap.includes(`/blog/${slug}`))) throw new Error('August 14 route missing from sitemap');
 console.log('PASS: 22 August 14 Blog records; direct bindings, visible and structured dates, canonicals, ordering, sitemap, photo, and zero forms verified');
