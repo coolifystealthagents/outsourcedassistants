@@ -1,3 +1,5 @@
+import {aug18ResearchPosts} from './aug18-research';
+
 export const site = {
   "domain": "OutsourcedAssistants.com",
   "url": "https://outsourcedassistants.com",
@@ -1010,6 +1012,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...aug18ResearchPosts,
   makeResearch('research-assistant-briefs-and-source-controls', 'Research Assistant Briefs and Source Controls', 'A source-controlled brief turns open-ended research into a repeatable queue with a question, evidence standard, output format, and stop rule.', '10 source notes per report', 'Outsourced Assistants research method', [
     'Methodology: we translated recurring research-assistant work into a brief that another person can inspect. The evidence standard is explicit, the recommendation is separated from the sourced fact, and the owner reviews the final claim.',
     'Start with one decision question. Name the audience, date range, acceptable source types, required fields, and the point at which the assistant must stop and escalate rather than guess.',
@@ -1477,9 +1480,27 @@ const august11ResearchOrder = [
   'research-assistant-business-continuity-coverage',
   'research-assistant-decision-records-for-exceptions',
 ] as const;
+const august18ResearchOrder = [
+  'research-daily-article-question-selection',
+  'research-daily-article-evidence-scope',
+  'research-daily-article-originality-screening',
+  'research-daily-article-source-freshness',
+  'research-daily-article-reader-decision-value',
+  'research-daily-article-claim-to-source-mapping',
+  'research-daily-article-methodology-notes',
+  'research-daily-article-limitation-disclosure',
+  'research-daily-article-internal-link-decision-paths',
+  'research-daily-article-accessibility-evidence',
+  'research-daily-article-reviewer-calibration',
+  'research-daily-article-update-trigger-design',
+  'research-daily-article-prohibited-claim-detection',
+] as const;
 export const researchPostsNewestFirst = [...researchPosts].sort((a, b) => {
   const dateOrder = (b.published ?? '').localeCompare(a.published ?? '');
   if (dateOrder !== 0) return dateOrder;
+  const aAug18Order = august18ResearchOrder.indexOf(a.slug as typeof august18ResearchOrder[number]);
+  const bAug18Order = august18ResearchOrder.indexOf(b.slug as typeof august18ResearchOrder[number]);
+  if (aAug18Order >= 0 || bAug18Order >= 0) return (aAug18Order < 0 ? august18ResearchOrder.length : aAug18Order) - (bAug18Order < 0 ? august18ResearchOrder.length : bAug18Order);
   const aAug17Order = august17ResearchOrder.indexOf(a.slug as typeof august17ResearchOrder[number]);
   const bAug17Order = august17ResearchOrder.indexOf(b.slug as typeof august17ResearchOrder[number]);
   if (aAug17Order >= 0 || bAug17Order >= 0) return (aAug17Order < 0 ? august17ResearchOrder.length : aAug17Order) - (bAug17Order < 0 ? august17ResearchOrder.length : bAug17Order);

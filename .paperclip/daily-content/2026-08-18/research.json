@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "campaignDate": "2026-08-18",
+  "family": "research",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "entries": [
+    {"route":"/research/research-daily-article-question-selection","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-evidence-scope","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-originality-screening","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-source-freshness","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-reader-decision-value","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-claim-to-source-mapping","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-methodology-notes","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-limitation-disclosure","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-internal-link-decision-paths","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"},
+    {"route":"/research/research-daily-article-accessibility-evidence","sourcePaths":["app/aug18-research.ts"],"published":"2026-08-18"}
+  ]
+}
