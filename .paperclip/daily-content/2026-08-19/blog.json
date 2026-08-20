@@ -1,0 +1,53 @@
+{
+  "date": "2026-08-19",
+  "articles": [
+    {
+      "route": "/blog/outsourced-assistant-intake-source-register",
+      "source": "content/blog/outsourced-assistant-intake-source-register.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-approval-evidence-matrix",
+      "source": "content/blog/outsourced-assistant-approval-evidence-matrix.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-exception-queue-triage",
+      "source": "content/blog/outsourced-assistant-exception-queue-triage.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-quality-review-cadence",
+      "source": "content/blog/outsourced-assistant-quality-review-cadence.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-handoff-acceptance-log",
+      "source": "content/blog/outsourced-assistant-handoff-acceptance-log.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-access-recertification-review",
+      "source": "content/blog/outsourced-assistant-access-recertification-review.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-weekly-decision-brief",
+      "source": "content/blog/outsourced-assistant-weekly-decision-brief.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-source-of-truth-map",
+      "source": "content/blog/outsourced-assistant-source-of-truth-map.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-change-control-record",
+      "source": "content/blog/outsourced-assistant-change-control-record.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-work-queue-ownership",
+      "source": "content/blog/outsourced-assistant-work-queue-ownership.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-escalation-path-design",
+      "source": "content/blog/outsourced-assistant-escalation-path-design.md"
+    },
+    {
+      "route": "/blog/outsourced-assistant-launch-readiness-review",
+      "source": "content/blog/outsourced-assistant-launch-readiness-review.md"
+    }
+  ]
+}
