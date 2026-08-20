@@ -814,6 +814,7 @@ type ResearchPost = {
   slug: string; title: string; excerpt: string; body: string[]; published: string;
   statistic: string; statisticSource: string; sources: readonly { title: string; url: string }[];
   related: readonly string[]; faqs: readonly { question: string; answer: string }[];
+  nextDecision?: { href: string; label: string; summary: string };
 };
 
 // Explicit source metadata for the frozen August 10 Research batch. Keeping

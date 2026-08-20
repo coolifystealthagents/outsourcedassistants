@@ -246,4 +246,11 @@ export const aug18ResearchPosts = [
     'Limitations: language is contextual, public evidence can be incomplete, and a detector may miss implication or sarcasm. A clean pass does not establish legal compliance or factual completeness. Human review remains necessary, especially for sensitive claims, commercial language, and statements about people. The method is an early warning control, not a substitute for accountable editing.',
     'Conclusion: an assistant can reduce avoidable publication risk by classifying claims into company fact, pricing, proof, and internal-detail categories and routing uncertain sentences to the owner. For daily Research about Filipino assistants, this keeps the copy evidence-led, niche-specific, and bounded. Detection supports review; it does not authorize an assistant to decide what the company may claim publicly.',
   ]),
-].slice(0, 10);
+].slice(0, 10).map((post) => post.slug === 'research-daily-article-internal-link-decision-paths' ? {
+  ...post,
+  nextDecision: {
+    href: '/services/research-assistance',
+    label: 'Review research assistance support',
+    summary: 'Use this service page to see the research-assistance lane before you decide what evidence gathering can be prepared. Keep source judgment, sensitive access, and final conclusions with the accountable owner.',
+  },
+} : post);
