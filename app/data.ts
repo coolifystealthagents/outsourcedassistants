@@ -1,5 +1,6 @@
 import {aug18ResearchPosts} from './aug18-research';
 import {aug20ResearchPosts} from './aug20-research';
+import {aug21ResearchPosts} from './aug21-research';
 export const site = {
   "domain": "OutsourcedAssistants.com",
   "url": "https://outsourcedassistants.com",
@@ -1078,6 +1079,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...aug21ResearchPosts,
   ...aug20ResearchPosts,
   ...aug18ResearchPosts,
   makeResearch('research-assistant-briefs-and-source-controls', 'Research Assistant Briefs and Source Controls', 'A source-controlled brief turns open-ended research into a repeatable queue with a question, evidence standard, output format, and stop rule.', '10 source notes per report', 'Outsourced Assistants research method', [
@@ -1572,6 +1574,9 @@ const august20ResearchOrder = [
 export const researchPostsNewestFirst = [...researchPosts].sort((a, b) => {
   const dateOrder = (b.published ?? '').localeCompare(a.published ?? '');
   if (dateOrder !== 0) return dateOrder;
+  const aAug21Order = aug21ResearchPosts.findIndex(p => p.slug === a.slug);
+  const bAug21Order = aug21ResearchPosts.findIndex(p => p.slug === b.slug);
+  if (aAug21Order >= 0 || bAug21Order >= 0) return (aAug21Order < 0 ? aug21ResearchPosts.length : aAug21Order) - (bAug21Order < 0 ? aug21ResearchPosts.length : bAug21Order);
   const aAug20Order = august20ResearchOrder.indexOf(a.slug as typeof august20ResearchOrder[number]);
   const bAug20Order = august20ResearchOrder.indexOf(b.slug as typeof august20ResearchOrder[number]);
   if (aAug20Order >= 0 || bAug20Order >= 0) return (aAug20Order < 0 ? august20ResearchOrder.length : aAug20Order) - (bAug20Order < 0 ? august20ResearchOrder.length : bAug20Order);

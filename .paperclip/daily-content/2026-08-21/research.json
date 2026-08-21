@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "campaignDate": "2026-08-21",
+  "family": "research",
+  "entries": [
+    {"slug":"research-queue-evidence-map","route":"/research/research-queue-evidence-map","sourcePath":"app/aug21-research.ts","heroPath":"public/aug21-research/research-queue-evidence-map.png"},
+    {"slug":"research-source-triangulation-for-assistant-articles","route":"/research/research-source-triangulation-for-assistant-articles","sourcePath":"app/aug21-research.ts","heroPath":"public/aug21-research/research-source-triangulation.png"},
+    {"slug":"research-article-review-risk-boundaries","route":"/research/research-article-review-risk-boundaries","sourcePath":"app/aug21-research.ts","heroPath":"public/aug21-research/research-review-risk-heatmap.png"},
+    {"slug":"research-assistant-handoff-context-loss","route":"/research/research-assistant-handoff-context-loss","sourcePath":"app/aug21-research.ts","heroPath":"public/aug21-research/research-handoff-context.png"},
+    {"slug":"research-reviewer-calibration-for-assistant-research","route":"/research/research-reviewer-calibration-for-assistant-research","sourcePath":"app/aug21-research.ts","heroPath":"public/aug21-research/research-role-boundary-ladder.png"}
+  ]
+}
