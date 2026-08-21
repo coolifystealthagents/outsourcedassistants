@@ -1,5 +1,4 @@
 import {aug18ResearchPosts} from './aug18-research';
-
 export const site = {
   "domain": "OutsourcedAssistants.com",
   "url": "https://outsourcedassistants.com",
@@ -296,8 +295,23 @@ const aug14ReplacementPosts = [
   { slug: 'filipino-assistant-role-boundary-brief', title: 'Filipino Assistant Role Boundary Brief', excerpt: 'Name the recurring outcome, permitted actions, stop conditions, and decisions that remain with the manager before access is granted.', minutes: 9, published: '2026-08-14' },
   { slug: 'virtual-assistant-work-request-intake-brief', title: 'Virtual Assistant Work Request Intake Brief', excerpt: 'Give a virtual assistant the outcome, source, deadline, access boundary, and stop rule needed to begin clearly.', minutes: 9, published: '2026-08-14' },
 ] as const;
+const aug20ReplacementPosts = [
+  { slug: 'filipino-assistant-content-calendar-operations', title: 'Filipino Assistant Content Calendar Operations', excerpt: 'Maintain a publishing calendar with briefs, sources, owners, approval boundaries, and visible next decisions.', minutes: 11, published: '2026-08-20' },
+  { slug: 'remote-assistant-article-brief-quality-gate', title: 'Remote Assistant Article Brief Quality Gate', excerpt: 'Check the reader question, thesis, sources, and review boundary before a remote assistant begins article drafting.', minutes: 11, published: '2026-08-20' },
+  { slug: 'virtual-assistant-source-led-article-research', title: 'Virtual Assistant Source-Led Article Research', excerpt: 'Connect article research to dated sources, scope limits, conflicts, and the decision each finding supports.', minutes: 11, published: '2026-08-20' },
+  { slug: 'outsourced-assistant-inbox-escalation-map', title: 'Outsourced Assistant Inbox Escalation Map', excerpt: 'Route inbox requests by consequence, minimum necessary context, owner, and safe interim action.', minutes: 11, published: '2026-08-20' },
+  { slug: 'filipino-assistant-calendar-coverage-design', title: 'Filipino Assistant Calendar Coverage Design', excerpt: 'Define time zones, protected periods, backup ownership, and decisions that remain with the calendar owner.', minutes: 11, published: '2026-08-20' },
+  { slug: 'virtual-assistant-crm-change-review', title: 'Virtual Assistant CRM Change Review', excerpt: 'Review CRM updates by field consequence, source hierarchy, reversibility, and owner approval.', minutes: 11, published: '2026-08-20' },
+  { slug: 'outsourced-assistant-project-dependency-register', title: 'Outsourced Assistant Project Dependency Register', excerpt: 'Keep project dependencies actionable with affected work, evidence, owners, and decision dates.', minutes: 11, published: '2026-08-20' },
+  { slug: 'filipino-assistant-weekly-scorecard-review', title: 'Filipino Assistant Weekly Scorecard Review', excerpt: 'Connect assistant work evidence to outcomes, quality samples, exceptions, and one clear next decision.', minutes: 11, published: '2026-08-20' },
+  { slug: 'remote-assistant-document-retention-routine', title: 'Remote Assistant Document Retention Routine', excerpt: 'Delegate document housekeeping while keeping retention meaning, holds, deletion, and access with owners.', minutes: 11, published: '2026-08-20' },
+  { slug: 'virtual-assistant-customer-follow-up-quality-check', title: 'Virtual Assistant Customer Follow-Up Quality Check', excerpt: 'Verify requests, approved next steps, sources, owners, and closure without creating unapproved promises.', minutes: 11, published: '2026-08-20' },
+  { slug: 'outsourced-assistant-supplier-record-review', title: 'Outsourced Assistant Supplier Record Review', excerpt: 'Improve supplier records and surface missing evidence without crossing into payment or contract decisions.', minutes: 11, published: '2026-08-20' },
+  { slug: 'filipino-assistant-handoff-evidence-packet', title: 'Filipino Assistant Handoff Evidence Packet', excerpt: 'Transfer active work with current sources, states, next actions, access boundaries, and escalation routes.', minutes: 11, published: '2026-08-20' },
+] as const;
 
-export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts] as const;
+export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts] as const;
+const august20BlogOrder: readonly string[] = aug20ReplacementPosts.map((post) => post.slug);
 const august18BlogOrder: readonly string[] = aug18ReplacementPosts.map((post) => post.slug);
 const august17BlogOrder: readonly string[] = aug17ReplacementPosts.map((post) => post.slug);
 const august14BlogOrder: readonly string[] = aug14ReplacementPosts.map((post) => post.slug);
@@ -305,6 +319,9 @@ const august13BlogOrder: readonly string[] = aug13ReplacementPosts.map((post) =>
 export const blogPostsNewestFirst = [...blogPosts].sort((a, b) => {
   const dateOrder = String('published' in b ? b.published : '').localeCompare(String('published' in a ? a.published : ''));
   if (dateOrder !== 0) return dateOrder;
+  const aAug20Order = august20BlogOrder.indexOf(a.slug as typeof august20BlogOrder[number]);
+  const bAug20Order = august20BlogOrder.indexOf(b.slug as typeof august20BlogOrder[number]);
+  if (aAug20Order >= 0 || bAug20Order >= 0) return (aAug20Order < 0 ? august20BlogOrder.length : aAug20Order) - (bAug20Order < 0 ? august20BlogOrder.length : bAug20Order);
   const aAug18Order = august18BlogOrder.indexOf(a.slug as typeof august18BlogOrder[number]);
   const bAug18Order = august18BlogOrder.indexOf(b.slug as typeof august18BlogOrder[number]);
   if (aAug18Order >= 0 || bAug18Order >= 0) return (aAug18Order < 0 ? august18BlogOrder.length : aAug18Order) - (bAug18Order < 0 ? august18BlogOrder.length : bAug18Order);

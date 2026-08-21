@@ -4,7 +4,7 @@
   "scripts": {
     "test": "node tests/homepage-image-labels.test.mjs",
     "dev": "next dev",
-    "build": "next build && npm run validate:aug13-blog && npm run validate:aug14-blog && npm run validate:aug17-blog && npm run validate:aug18-blog",
+    "build": "next build && npm run validate:aug13-blog && npm run validate:aug14-blog && npm run validate:aug17-blog && npm run validate:aug18-blog && npm run validate:aug20-blog",
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "next lint",
     "validate:aug10-blog": "node scripts/validate-aug10-blog.mjs",
@@ -12,7 +12,8 @@
     "validate:aug13-blog": "node scripts/validate-aug13-blog.mjs",
     "validate:aug14-blog": "node scripts/validate-aug14-blog.mjs",
     "validate:aug17-blog": "node scripts/validate-aug17-blog.mjs",
-    "validate:aug18-blog": "node scripts/validate-aug18-blog.mjs"
+    "validate:aug18-blog": "node scripts/validate-aug18-blog.mjs",
+    "validate:aug20-blog": "node scripts/validate-aug20-blog.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",
