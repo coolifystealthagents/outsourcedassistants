@@ -10,7 +10,21 @@ export type Aug20BlogGuide = {
   heroImage: string;
 };
 
-const guide = (record: Aug20BlogGuide): Aug20BlogGuide => record;
+const guide = (record: Aug20BlogGuide): Aug20BlogGuide => {
+  const routeSpecificExtension = [
+    `This operating note is part of the August 20, 2026 publishing set (2026-08-20). For ${record.audience.toLowerCase()}, use the guidance as a working boundary rather than as permission to infer facts that are not in the approved record.`,
+    `Begin with the stated outcome: ${record.answer} The person running the lane should be able to point from each completed action to a source, an owner, and the next decision. When one of those links is missing, leave the item visible as an exception and ask a focused question instead of filling the gap with a plausible assumption.`,
+    `A practical review can follow the operating sequence described in the article. ${record.steps.map((step, index) => `Step ${index + 1}, ${step.title.toLowerCase()}, should produce an inspectable result: ${step.body}`).join(' ')}`,
+    `Keep authority explicit throughout the handoff. ${record.controls.map((control) => `${control.owner} owns ${control.decision.toLowerCase()}, with ${control.evidence.toLowerCase()} as the evidence`).join('. ')}. If a request crosses from preparation into interpretation, commitment, access, privacy, payment, or another consequential decision, pause the routine and route it to the named owner.`,
+    `The manager can learn whether the routine is working by reviewing ${record.measure.toLowerCase()} Sample ordinary work as well as exceptions, returned items, and cases that waited for an owner. A low error count is not enough if the queue hides unresolved questions, and a busy activity log is not proof that the intended outcome was achieved.`,
+    `Watch for predictable failure modes: ${record.pitfalls.join('; ')}. Each one should become a visible check in the brief, tracker, or review sample. The purpose is not to make the assistant document every thought. It is to make the few decisions that affect quality, safety, timing, or accountability easy for an authorized person to inspect and correct.`,
+    `For recurring work, retain the approved example and the effective rule together. Revisit the rule when the source changes, the system changes, the queue changes, or the owner notices a repeated exception. The assistant may propose a clearer field, a better link, or a narrower stop condition, but the owner decides whether the operating rule changes. This keeps improvements reversible and prevents an informal workaround from becoming an unreviewed policy.`,
+    `The questions most likely to arise are answered by the same boundary. ${record.faqs.map((faq) => `${faq.question} ${faq.answer}`).join(' ')}`,
+    `Close each cycle with a small record of what moved, what waited, why it waited, and who must decide next. That record supports continuity across time zones and handoffs without exposing unnecessary private information. It also gives the team a fair way to distinguish an unclear instruction, unavailable source, missing access, owner delay, and execution error. In an outsourced assistant workflow, that distinction is the foundation for useful coaching and safe delegation.`,
+  ].join('\n\n');
+
+  return { ...record, sourceText: `${record.sourceText}\n\n${routeSpecificExtension}` };
+};
 
 export const aug20BlogDetails: Record<string, Aug20BlogGuide> = {
   'filipino-assistant-content-calendar-operations': guide({
