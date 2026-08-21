@@ -1,0 +1,211 @@
+export type Aug21BlogGuide = {
+  audience: string;
+  answer: string;
+  steps: readonly { title: string; body: string }[];
+  controls: readonly { decision: string; owner: string; evidence: string }[];
+  measure: string;
+  pitfalls: readonly string[];
+  faqs: readonly { question: string; answer: string }[];
+  sourceText: string;
+  heroImage: string;
+};
+
+const guide = (record: Omit<Aug21BlogGuide, 'sourceText'>): Aug21BlogGuide => ({
+  ...record,
+  sourceText: `August 21, 2026 (2026-08-21). This route-specific guide explains a bounded outsourced assistant work lane. The assistant organizes approved information, checks written rules, records uncertainty, and prepares a useful handoff. The manager keeps interpretation, commitments, sensitive access, payment, policy, and final approval. Every example is hypothetical and should be adapted to the reader's actual sources, tools, and accountable owners. ${record.answer} Review the source, action, evidence, owner, stop condition, and next review date together. If a source is missing, leave the gap visible rather than filling it with a plausible assumption. If the same exception repeats, repair the brief or queue design instead of relying on memory.`,
+});
+
+export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
+  'filipino-assistant-article-brief-intake': guide({
+    audience: 'Editors assigning article brief intake to a Filipino assistant',
+    answer: 'Article brief intake is ready for delegation when the assistant can capture the reader question, approved angle, evidence needs, reviewer, and stop condition without deciding the editorial direction.',
+    steps: [
+      { title: 'Capture the reader decision', body: 'Start with the practical question the article must answer for a manager of Filipino assistants. Record whether the reader needs to choose a scope, reduce a risk, set a review routine, or clarify a role boundary. A keyword alone is not a usable assignment.' },
+      { title: 'Separate proposal from approval', body: 'The assistant may format a proposed title, thesis, outline, and source list. The editor decides whether the angle belongs in the publishing sequence, whether the examples fit the audience, and whether any statement needs a specialist review before drafting.' },
+      { title: 'Build the evidence packet', body: 'Link the relevant service page, approved internal context, and public sources that can support the planned guidance. Note the scope and date of each source. If evidence does not support a claim, mark the gap and ask for a narrower statement.' },
+      { title: 'Set the drafting boundary', body: 'Write what the assistant can research, summarize, and draft, then name what requires owner review. Claims about outcomes, legal obligations, security, privacy, or a particular company should never be inferred from a generic brief.' },
+      { title: 'Accept or return the packet', body: 'Use a short status with a reason: accepted for drafting, revise the question, add a source, or stop. A visible decision prevents the assistant from treating an old chat message or a filled calendar row as current authorization.' },
+    ],
+    controls: [{ decision: 'Collect topic facts and source links', owner: 'Assistant', evidence: 'Intake record and dated source list' }, { decision: 'Approve title and thesis', owner: 'Editor', evidence: 'Accepted brief version' }, { decision: 'Approve sensitive claim', owner: 'Authorized subject owner', evidence: 'Claim-level review note' }],
+    measure: 'Review missing-field rate, first-pass brief acceptance, repeated return reasons, source freshness, and time waiting for editorial decisions. A full intake queue is not evidence of quality if the briefs still make writers guess.',
+    pitfalls: ['Treating search terms as reader questions', 'Letting a source list substitute for an approved thesis', 'Using invented examples that sound like company facts', 'Marking a brief ready without a named reviewer'],
+    faqs: [{ question: 'Can the assistant choose a topic?', answer: 'The assistant can propose a topic from an approved queue, but the editor owns selection and priority.' }, { question: 'What makes intake complete?', answer: 'A reader question, bounded thesis, sources, examples, reviewer, date, and a clear stop condition.' }],
+    heroImage: '/generated/blog/filipino-assistant-article-brief-intake.png',
+  }),
+  'remote-assistant-editorial-queue-triage': guide({
+    audience: 'Editors using a remote assistant to triage an article queue',
+    answer: 'Editorial queue triage should expose which article can move, which lacks evidence, and which needs an owner decision while leaving prioritization and publication approval with the editor.',
+    steps: [
+      { title: 'Define queue states', body: 'Give each status one observable meaning: awaiting brief, source check, drafting, editor review, returned, approved, or published. Avoid labels such as active or nearly done that conceal whether the next action belongs to the assistant or the editor.' },
+      { title: 'Sort by readiness', body: 'The assistant can group records by complete inputs, missing sources, overdue owner decisions, and safe next actions. The editor then chooses the sequence using the approved audience, campaign purpose, and available review capacity.' },
+      { title: 'Keep blocked work honest', body: 'When an article cannot move, record the missing decision and the date it became blocked. Do not silently move a target date, replace the topic, or turn a returned draft into an approved record just to make the queue look current.' },
+      { title: 'Sample the evidence', body: 'For each queue view, open a few records and compare the status with the linked brief, draft, and review note. A triage assistant should point to evidence, not defend a label that the source does not support.' },
+      { title: 'Publish the next-action list', body: 'End the routine with a small list of articles that can move, articles waiting on an owner, and the decisions required. Include the source link and effect of delay so the editor can answer without reconstructing the queue.' },
+    ],
+    controls: [{ decision: 'Maintain statuses and links', owner: 'Assistant', evidence: 'Queue record and source link' }, { decision: 'Set editorial priority', owner: 'Editor', evidence: 'Priority decision with effective date' }, { decision: 'Approve publication', owner: 'Authorized editor', evidence: 'Final review and live URL' }],
+    measure: 'Track queue age by state, missing-source rate, returned drafts, owner decision latency, and the percentage of published articles with a retrievable brief and approval record. Do not use activity volume as the only measure.',
+    pitfalls: ['Changing dates without recording why', 'Using one status for drafts and approved copy', 'Prioritizing by convenience instead of the approved queue', 'Hiding blocked items from the editor'],
+    faqs: [{ question: 'Should the assistant reorder the queue?', answer: 'It may show a proposed order, but the editor decides priority and records the reason.' }, { question: 'How should blocked articles appear?', answer: 'Keep them visible with the missing owner decision, source gap, or access issue and a review point.' }],
+    heroImage: '/generated/blog/remote-assistant-editorial-queue-triage.png',
+  }),
+  'virtual-assistant-article-source-ledger': guide({
+    audience: 'Content managers asking a virtual assistant to maintain article source ledgers',
+    answer: 'A source ledger improves article work when it records what a source supports, its scope, its date, and the claim or decision it informs instead of merely collecting links.',
+    steps: [
+      { title: 'Define a source entry', body: 'Require a title, URL or approved location, access date, relevant passage summary, scope, and the planned claim it supports. This keeps a ledger useful to a reviewer who did not perform the initial research.' },
+      { title: 'Map claims to evidence', body: 'Ask the assistant to connect each material factual statement to one or more sources and to label guidance as guidance. The editor checks whether the source really supports the wording rather than accepting a citation by proximity.' },
+      { title: 'Record conflict and limits', body: 'When sources disagree or describe different populations, dates, or definitions, keep the conflict visible. The assistant can summarize the difference; the editor chooses a bounded conclusion or removes the claim.' },
+      { title: 'Protect source access', body: 'Use approved public or company sources and avoid copying unnecessary private data into the ledger. Record that a restricted source exists only where the reader needs to know that review is pending.' },
+      { title: 'Review before drafting', body: 'Close with a source sufficiency decision: enough for the planned article, narrow the thesis, add research, or stop. A long list of links is not a substitute for an evidence decision.' },
+    ],
+    controls: [{ decision: 'Collect and summarize sources', owner: 'Assistant', evidence: 'Dated ledger entries' }, { decision: 'Resolve claim wording', owner: 'Editor', evidence: 'Claim-to-source review' }, { decision: 'Approve restricted or sensitive material', owner: 'Authorized owner', evidence: 'Access and review record' }],
+    measure: 'Check source coverage, stale entries, unresolved conflicts, returned claims, and the share of article drafts whose material statements can be traced without searching chat history.',
+    pitfalls: ['Collecting links without scope notes', 'Treating a source as support for claims it does not make', 'Deleting conflicts instead of explaining them', 'Copying restricted details into a broad ledger'],
+    faqs: [{ question: 'Can the assistant decide which source is authoritative?', answer: 'It can propose a hierarchy based on the brief; the editor or subject owner decides what supports the final claim.' }, { question: 'Is one source enough?', answer: 'It is enough only when it covers the specific claim and its limits are understood.' }],
+    heroImage: '/generated/blog/virtual-assistant-article-source-ledger.png',
+  }),
+  'outsourced-assistant-article-revision-log': guide({
+    audience: 'Managers using an outsourced assistant to maintain article revision logs',
+    answer: 'A revision log makes article review safer when it records the requested change, reason, source, owner, and resulting version without turning editorial judgment into an untraceable checklist.',
+    steps: [
+      { title: 'Log the request precisely', body: 'Record the section, requested change, requestor, date, and whether the change concerns clarity, evidence, accessibility, structure, or a factual claim. Avoid vague entries such as improve tone unless an example or rule is attached.' },
+      { title: 'Classify the authority', body: 'The assistant can group and format requested edits. The editor decides whether a change alters the thesis, audience promise, factual meaning, or publication status and therefore needs deliberate approval.' },
+      { title: 'Link the before state', body: 'Connect the request to the current draft or version so the reviewer can see what changed. Do not overwrite the only copy when a revision could affect a claim, date, route, or approved example.' },
+      { title: 'Record disposition', body: 'Use accepted, declined, deferred, or needs clarification with a short reason. This prevents the assistant from reopening old comments as though they were current instructions.' },
+      { title: 'Close the version', body: 'After review, identify the version that is ready for the next owner and any unresolved questions. A revision log should reduce repeated debate while keeping final editorial judgment visible.' },
+    ],
+    controls: [{ decision: 'Enter and organize revision requests', owner: 'Assistant', evidence: 'Request log with source version' }, { decision: 'Accept material copy change', owner: 'Editor', evidence: 'Approved revision disposition' }, { decision: 'Release publication version', owner: 'Authorized editor', evidence: 'Final version and approval record' }],
+    measure: 'Review repeat comments, reopened requests, unresolved edits, time from request to disposition, and whether each published version can be connected to its approved revision state.',
+    pitfalls: ['Treating every comment as an instruction', 'Editing claims without source review', 'Overwriting the draft history', 'Leaving declined changes without a reason'],
+    faqs: [{ question: 'Can an assistant make copy edits directly?', answer: 'Yes for bounded formatting or approved style rules; material meaning and publication changes remain with the editor.' }, { question: 'What belongs in a log?', answer: 'The request, source version, responsible owner, disposition, reason, and next review state.' }],
+    heroImage: '/generated/blog/outsourced-assistant-article-revision-log.png',
+  }),
+  'filipino-assistant-publishing-checklist': guide({
+    audience: 'Publishing managers assigning pre-publication checks to a Filipino assistant',
+    answer: 'A publishing checklist can move routine checks forward when it distinguishes technical verification from editorial approval and records every failed check for an owner to resolve.',
+    steps: [
+      { title: 'Check the approved identity', body: 'Compare title, slug, family, canonical path, and target date with the approved record. The assistant should report mismatches rather than quietly choosing a replacement identity or changing an old route.' },
+      { title: 'Verify the visible page', body: 'Open the built route and confirm that the heading, date, links, image, and structured article information correspond to the approved article. A technical pass does not mean that the editor has approved the claims.' },
+      { title: 'Check the content boundary', body: 'Look for unsupported company facts, public rates, invented outcomes, private process details, or language that turns a hypothetical example into a testimonial. Escalate questionable copy with the exact passage and reason.' },
+      { title: 'Record failed checks', body: 'A failed check should name the route, rule, evidence, owner, and safe next action. Do not mark an item complete because the correction would be inconvenient or because the queue has a same-day target.' },
+      { title: 'Confirm release readiness', body: 'The authorized editor makes the final release decision after reviewing the checklist and unresolved questions. The assistant preserves the evidence and updates the record only after that decision is explicit.' },
+    ],
+    controls: [{ decision: 'Run repeatable page checks', owner: 'Assistant', evidence: 'Checklist with route evidence' }, { decision: 'Approve editorial claims', owner: 'Editor', evidence: 'Copy review record' }, { decision: 'Release the article', owner: 'Authorized editor', evidence: 'Release decision and URL' }],
+    measure: 'Track failed checks by category, repeat defects, time waiting for owners, corrected-route verification, and the percentage of released articles with a complete approval trail.',
+    pitfalls: ['Treating a build pass as editorial approval', 'Changing a route to make a check pass', 'Ignoring date or canonical mismatches', 'Calling unsupported copy a minor issue'],
+    faqs: [{ question: 'Can the assistant publish?', answer: 'Only if the role and access explicitly authorize that action; the checklist itself never grants publication authority.' }, { question: 'What if a check fails late?', answer: 'Keep the item visible, document the effect, and route the exact decision to the named owner.' }],
+    heroImage: '/generated/blog/filipino-assistant-publishing-checklist.png',
+  }),
+  'remote-assistant-content-calendar-capacity': guide({
+    audience: 'Content managers planning article capacity with a remote assistant',
+    answer: 'Article capacity planning should compare available review time with real brief quality, drafting effort, rework, and owner decisions rather than counting titles as equal units.',
+    steps: [
+      { title: 'Count work by stage', body: 'Separate intake, source review, drafting, editing, publishing checks, and follow-up. A queue of ten incomplete briefs creates different work from ten approved drafts awaiting a short technical check.' },
+      { title: 'Estimate from evidence', body: 'Use recent examples to describe effort, rework, and waiting time. Estimates are planning inputs, not promises. The manager should challenge any assumption that treats assistant availability as permission to add sensitive or ambiguous work.' },
+      { title: 'Protect review capacity', body: 'Reserve time for the editor’s decisions, returned work, and source conflicts. If review capacity is full, slow intake or narrow the article scope instead of pushing unreviewed drafts downstream.' },
+      { title: 'Plan exception coverage', body: 'Identify what happens when a source is unavailable, an owner is absent, or a same-day article needs a factual decision. Assign a backup or a pause rule before the exception occurs.' },
+      { title: 'Reforecast visibly', body: 'At each review, compare the plan with completed, returned, waiting, and abandoned work. Explain changes by cause so the next plan improves rather than becoming a new arbitrary target.' },
+    ],
+    controls: [{ decision: 'Maintain workload evidence', owner: 'Assistant', evidence: 'Stage counts and exception notes' }, { decision: 'Set queue capacity and priority', owner: 'Manager', evidence: 'Approved capacity decision' }, { decision: 'Change publication commitment', owner: 'Authorized editor', evidence: 'Updated plan and reason' }],
+    measure: 'Review work by stage, rework hours, owner waiting time, overdue decisions, and the gap between planned and completed articles. Volume without review capacity is not dependable throughput.',
+    pitfalls: ['Counting every title as equal effort', 'Using spare hours to justify unclear work', 'Ignoring editor capacity', 'Moving dates without a cause record'],
+    faqs: [{ question: 'Should capacity be a daily number?', answer: 'Use a view that reflects the actual stages and review windows; a single daily count hides the work mix.' }, { question: 'Who changes the target?', answer: 'The authorized editor or manager changes it and records the reason and affected queue.' }],
+    heroImage: '/generated/blog/remote-assistant-content-calendar-capacity.png',
+  }),
+  'virtual-assistant-article-claim-review': guide({
+    audience: 'Editors asking a virtual assistant to prepare article claim reviews',
+    answer: 'Claim review is useful when the assistant identifies material statements, links their sources, and flags uncertainty while the editor decides what the article may responsibly assert.',
+    steps: [
+      { title: 'Mark material statements', body: 'Highlight claims that could change a reader’s hiring, access, privacy, staffing, or workflow decision. Include numbers, comparisons, promises, descriptions of a country or workforce, and statements that sound like company results.' },
+      { title: 'Attach the source and scope', body: 'For each claim, record the source, publication or update date, relevant scope, and whether the article is giving advice or reporting a fact. This helps a reviewer distinguish evidence from interpretation.' },
+      { title: 'Flag risky wording', body: 'The assistant should surface absolute language, unsupported certainty, invented credentials, and implied testimonials. It can propose a narrower rewrite, but it should not approve its own correction when the meaning changes.' },
+      { title: 'Test the example', body: 'Check whether a scenario is clearly hypothetical and whether it avoids pretending to describe a real customer, employee, result, location, or internal event. Keep examples practical without fabricating proof.' },
+      { title: 'Resolve or remove', body: 'The editor accepts, qualifies, sources, or removes each flagged claim. The final record should make it clear which questions were resolved and which were excluded from the published article.' },
+    ],
+    controls: [{ decision: 'Locate and classify claims', owner: 'Assistant', evidence: 'Claim review sheet' }, { decision: 'Approve wording and caveats', owner: 'Editor', evidence: 'Claim disposition record' }, { decision: 'Approve specialist subject matter', owner: 'Authorized owner', evidence: 'Specialist review note' }],
+    measure: 'Review unsupported-claim findings, repeat language patterns, claims removed before publication, source gaps, and review turnaround. A clean result depends on finding the risky statements before release.',
+    pitfalls: ['Treating a citation as automatic proof', 'Allowing confident language to hide uncertainty', 'Using generic country facts as company evidence', 'Reviewing only numbers and not implied promises'],
+    faqs: [{ question: 'Can the assistant rewrite a claim?', answer: 'It may suggest a bounded rewrite, but the editor approves any change in meaning or certainty.' }, { question: 'What is a material claim?', answer: 'A statement that could affect a reader’s decision, trust, risk assessment, or understanding of the service.' }],
+    heroImage: '/generated/blog/virtual-assistant-article-claim-review.png',
+  }),
+  'outsourced-assistant-blog-update-triggers': guide({
+    audience: 'Outsourced assistant managers defining when a blog article needs review',
+    answer: 'A blog update trigger should connect a change in source, service, process, date, or reader risk to a named review owner without asking the assistant to decide whether an article remains strategically correct.',
+    steps: [
+      { title: 'Name the trigger classes', body: 'List events such as a source becoming outdated, a service changing, a process boundary moving, a broken route appearing, or a reader-facing claim becoming misleading. Keep triggers observable enough to monitor.' },
+      { title: 'Connect triggers to records', body: 'The assistant can maintain a register linking an article to sources, services, dates, and review owners. This turns a broad request to keep the blog current into a queue that can be inspected and acted on.' },
+      { title: 'Set a safe interim state', body: 'When a trigger fires, define whether the article can remain live with a note, should be paused for review, or needs an immediate owner decision. The assistant should not hide a risk by changing a date or wording alone.' },
+      { title: 'Review the reader effect', body: 'The editor decides whether the change affects a recommendation, role boundary, factual claim, or next action. Ask what a manager could misunderstand if the old article remains unchanged.' },
+      { title: 'Close the update', body: 'Record the decision, updated source or article version, effective date, and next review trigger. A closed item should remain traceable so the same uncertainty does not recur next cycle.' },
+    ],
+    controls: [{ decision: 'Monitor records and surface triggers', owner: 'Assistant', evidence: 'Trigger register and source check' }, { decision: 'Assess editorial impact', owner: 'Editor', evidence: 'Review decision and affected sections' }, { decision: 'Approve update or withdrawal', owner: 'Authorized editor', evidence: 'Version, date, and disposition' }],
+    measure: 'Track trigger age, overdue reviews, broken links, repeated update causes, and time from detected change to an owner decision. A trigger system is valuable when it shortens uncertainty.',
+    pitfalls: ['Using a calendar date as the only update trigger', 'Changing copy without recording the source change', 'Leaving the owner unnamed', 'Treating a live URL as proof that guidance is current'],
+    faqs: [{ question: 'Can the assistant decide that an article is outdated?', answer: 'It can identify a trigger and explain the possible effect; the editor decides the disposition.' }, { question: 'What if no trigger is conclusive?', answer: 'Keep the item in review with the uncertainty, source, and next owner decision visible.' }],
+    heroImage: '/generated/blog/outsourced-assistant-blog-update-triggers.png',
+  }),
+  'filipino-assistant-reader-question-map': guide({
+    audience: 'Content teams using a Filipino assistant to map reader questions to article sections',
+    answer: 'A reader-question map keeps an assistant article practical by linking each section to the decision it supports, the evidence it needs, and the point where the reader should seek an owner or specialist.',
+    steps: [
+      { title: 'Start with one decision', body: 'State what the manager should understand or decide after reading: whether a queue is delegable, what access is needed, how to review quality, or when to escalate. One article can answer related questions, but it should not promise to solve every staffing problem.' },
+      { title: 'Map the decision path', body: 'The assistant can propose sections that move from scope to setup, evidence, review, and escalation. The editor checks that the order matches the reader’s uncertainty rather than merely following a keyword outline.' },
+      { title: 'Give each section a job', body: 'Label whether a section defines a role, provides an example, explains a risk, offers a check, or names an owner decision. This makes filler easier to spot and gives the reviewer a reason to keep or remove each passage.' },
+      { title: 'Test the boundaries', body: 'For each reader question, say what the article cannot decide. Hiring, legal, privacy, payment, and sensitive business choices need a qualified owner. A practical boundary improves trust instead of weakening the guidance.' },
+      { title: 'Review the map against the draft', body: 'After drafting, compare the section map with the actual article. Mark questions that remain unanswered, claims that exceed the evidence, and sections that repeat another article’s thesis.' },
+    ],
+    controls: [{ decision: 'Collect and organize reader questions', owner: 'Assistant', evidence: 'Question-to-section map' }, { decision: 'Approve thesis and structure', owner: 'Editor', evidence: 'Accepted outline' }, { decision: 'Approve specialist boundary', owner: 'Authorized owner', evidence: 'Escalation note or approved wording' }],
+    measure: 'Review unanswered primary questions, repeated sections, returned outlines, source gaps, and whether readers can identify the next decision or owner after each guide.',
+    pitfalls: ['Answering several unrelated questions in one article', 'Writing sections without a reader job', 'Using generic advice that ignores Filipino assistant role boundaries', 'Promising certainty where the evidence is conditional'],
+    faqs: [{ question: 'How many questions should an article map?', answer: 'Use one primary decision and only the supporting questions needed to help the reader act safely.' }, { question: 'Can the assistant define the audience?', answer: 'It can describe a proposed audience from the approved brief; the editor confirms the audience and angle.' }],
+    heroImage: '/generated/blog/filipino-assistant-reader-question-map.png',
+  }),
+  'remote-assistant-article-accessibility-check': guide({
+    audience: 'Editors delegating article accessibility checks to a remote assistant',
+    answer: 'An accessibility check should confirm that article structure, links, headings, images, tables, and language are usable while leaving product, policy, and specialist accessibility judgments with the responsible owner.',
+    steps: [
+      { title: 'Check the structure', body: 'Ask the assistant to inspect heading order, descriptive link text, list structure, table labels, and the presence of a clear page title. These repeatable checks help a reader navigate the guidance without relying on visual styling.' },
+      { title: 'Review image meaning', body: 'Confirm that each hero image has an accurate, concise alternative description and that decorative details are not presented as evidence. The assistant can flag missing or misleading text; the editor checks whether the description matches the article’s purpose.' },
+      { title: 'Test links and tables', body: 'Open internal and external links, verify that table headings identify their columns, and check that wide content has an understandable mobile path. Record failures with the exact route and element instead of saying the page feels hard to use.' },
+      { title: 'Check language clarity', body: 'Look for unexplained acronyms, dense instructions, and sentences that hide who decides or what happens next. Plain language is especially important when a manager is turning article advice into a work brief for a Filipino assistant.' },
+      { title: 'Escalate material barriers', body: 'The assistant reports defects and suggests a repair. An authorized owner decides how to handle a material accessibility concern, policy requirement, or specialist review that exceeds the checklist’s routine scope.' },
+    ],
+    controls: [{ decision: 'Run structural and link checks', owner: 'Assistant', evidence: 'Route-specific accessibility checklist' }, { decision: 'Approve clarity and meaning', owner: 'Editor', evidence: 'Reviewed page sample' }, { decision: 'Resolve specialist accessibility issue', owner: 'Authorized owner', evidence: 'Escalation and remediation record' }],
+    measure: 'Track missing alternatives, broken links, heading defects, repeated language issues, and time to remediate. Sample published pages as well as drafts because defects can enter during production.',
+    pitfalls: ['Treating a visual scan as a complete accessibility review', 'Using vague link text', 'Writing alternative text that invents image meaning', 'Ignoring mobile table behavior'],
+    faqs: [{ question: 'Can a checklist guarantee accessibility?', answer: 'No. It covers repeatable checks and surfaces issues; the responsible owner decides when specialist review is needed.' }, { question: 'What should image text say?', answer: 'Describe the useful subject or function accurately and briefly, without adding claims the image cannot support.' }],
+    heroImage: '/generated/blog/remote-assistant-article-accessibility-check.png',
+  }),
+  'virtual-assistant-blog-internal-link-plan': guide({
+    audience: 'Content managers asking a virtual assistant to prepare blog internal-link plans',
+    answer: 'Internal links are useful when they lead a reader from a real question to a relevant next decision, not when they are added to inflate a page or repeat the same service call to action.',
+    steps: [
+      { title: 'Map the reader’s next move', body: 'For each article, identify whether the reader may need a role scope, an access plan, a review routine, or a service explanation next. The assistant can suggest related pages; the editor checks that the path is genuinely useful.' },
+      { title: 'Choose one clear destination', body: 'Link from a sentence that names why the destination matters. Avoid a cluster of generic links that makes the page feel like navigation rather than guidance. Keep the article’s main answer complete even if a reader does not click.' },
+      { title: 'Check family and thesis', body: 'Compare the destination’s family, date, audience, and thesis. Do not link to a Research page as though it were a service promise, or to an older Blog article when a newer article supersedes its operating guidance.' },
+      { title: 'Protect the boundary', body: 'The assistant should never add a pricing call to action, imply a testimonial, or direct a reader to a form as the answer to an unresolved operational question. Escalate any link that changes the page’s commercial or factual meaning.' },
+      { title: 'Review the route set', body: 'After links are added, open each destination and confirm it is live, relevant, and described accurately. Record the link’s purpose and remove links that no longer support the reader’s next decision.' },
+    ],
+    controls: [{ decision: 'Propose relevant destinations', owner: 'Assistant', evidence: 'Link map with reader purpose' }, { decision: 'Approve editorial path', owner: 'Editor', evidence: 'Reviewed link plan' }, { decision: 'Approve commercial or sensitive destination', owner: 'Authorized owner', evidence: 'Destination review note' }],
+    measure: 'Review broken links, irrelevant destinations, repeated anchors, orphan articles, and whether internal links lead to a clear next decision. Link count alone is not a useful quality measure.',
+    pitfalls: ['Adding links without a reader purpose', 'Mixing Research and Blog claims', 'Using the same anchor text everywhere', 'Turning every link into a contact or pricing prompt'],
+    faqs: [{ question: 'How many internal links should an article have?', answer: 'Enough to support the reader’s next decisions, with relevance and clarity more important than a fixed count.' }, { question: 'Can the assistant choose service links?', answer: 'It can propose them from the approved site map; the editor confirms the link fits the article and its boundary.' }],
+    heroImage: '/generated/blog/virtual-assistant-blog-internal-link-plan.png',
+  }),
+  'outsourced-assistant-article-archive-review': guide({
+    audience: 'Managers asking an outsourced assistant to review an article archive',
+    answer: 'Archive review should identify duplicate, stale, broken, or unsupported article records while keeping deletion, redirection, and material rewriting decisions with the authorized site owner.',
+    steps: [
+      { title: 'Inventory the archive', body: 'Record each route, title, family, date, source, canonical, and current status. The assistant should preserve identity and distinguish a live article from a draft, redirect, or record that needs owner review.' },
+      { title: 'Compare by reader problem', body: 'Group articles by the decision or operating problem they address, not just by shared nouns. Two titles may look different while repeating the same thesis; two similar words may serve different audiences and should remain separate.' },
+      { title: 'Check support and currency', body: 'Flag broken links, outdated source references, changed services, unsupported results, and guidance whose role boundary no longer matches the site. The assistant reports evidence; it does not silently rewrite history.' },
+      { title: 'Propose a disposition', body: 'For each flagged record, propose keep, update, redirect, merge, or owner review with the reason and affected routes. The owner decides whether a change is safe and whether a redirect would discard useful identity.' },
+      { title: 'Record the approved action', body: 'After a decision, preserve the old and new identity, effective date, source change, and validation needed. Archive work is complete only when the record explains what happened and why.' },
+    ],
+    controls: [{ decision: 'Inventory and compare records', owner: 'Assistant', evidence: 'Archive register and similarity notes' }, { decision: 'Choose keep, update, or redirect', owner: 'Site owner', evidence: 'Disposition decision' }, { decision: 'Approve material rewrite or deletion', owner: 'Authorized owner', evidence: 'Change record and validation' }],
+    measure: 'Track unresolved archive flags, broken routes, duplicate theses, stale sources, owner decision age, and corrected-route verification. A smaller archive is not automatically a better archive.',
+    pitfalls: ['Treating shared nouns as proof of duplication', 'Deleting records without checking history', 'Re-dating an old article to appear new', 'Changing routes without a measured redirect decision'],
+    faqs: [{ question: 'Should the assistant merge similar articles?', answer: 'It can identify overlap and propose a disposition; the site owner decides whether the theses truly duplicate.' }, { question: 'What belongs in an archive register?', answer: 'Route identity, source, date, family, issue found, proposal, owner decision, and validation evidence.' }],
+    heroImage: '/generated/blog/outsourced-assistant-article-archive-review.png',
+  }),
+};

@@ -8,6 +8,7 @@ import { aug14BlogDetails } from '../../aug14-blog';
 import { aug17BlogDetails } from '../../aug17-blog';
 import { aug18BlogDetails } from '../../aug18-blog';
 import { aug20BlogDetails } from '../../aug20-blog';
+import { aug21BlogDetails } from '../../aug21-blog';
 
 const siteUrl = site.url;
 const operationsReferences = [
@@ -71,7 +72,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const aug17Guide = aug17BlogDetails[post.slug];
   const aug18Guide = aug18BlogDetails[post.slug];
   const aug20Guide = aug20BlogDetails[post.slug];
-  const campaignGuide = aug20Guide ?? aug18Guide ?? aug17Guide ?? aug14Guide ?? aug13Guide ?? august12Guide;
+  const aug21Guide = aug21BlogDetails[post.slug];
+  const campaignGuide = aug21Guide ?? aug20Guide ?? aug18Guide ?? aug17Guide ?? aug14Guide ?? aug13Guide ?? august12Guide;
   const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
   const publicationDate = ('published' in post ? post.published : undefined) ?? (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25');
   const publicationLabel = 'published' in post ? new Date(`${post.published}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }) : (detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026');
@@ -119,7 +121,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
               </section>
 
               <figure className="article-photo">
-                <img src={aug20Guide?.heroImage ?? "/assistant-team.jpg"} alt="Philippines assistant reviewing a documented staffing workflow" />
+                <img src={aug21Guide?.heroImage ?? aug20Guide?.heroImage ?? "/assistant-team.jpg"} alt="Philippines assistant reviewing a documented staffing workflow" />
                 <figcaption>Keep the workflow, evidence, and decision owner visible when work crosses teams or time zones.</figcaption>
               </figure>
 

@@ -310,8 +310,23 @@ const aug20ReplacementPosts = [
   { slug: 'outsourced-assistant-supplier-record-review', title: 'Outsourced Assistant Supplier Record Review', excerpt: 'Improve supplier records and surface missing evidence without crossing into payment or contract decisions.', minutes: 11, published: '2026-08-20' },
   { slug: 'filipino-assistant-handoff-evidence-packet', title: 'Filipino Assistant Handoff Evidence Packet', excerpt: 'Transfer active work with current sources, states, next actions, access boundaries, and escalation routes.', minutes: 11, published: '2026-08-20' },
 ] as const;
+const aug21ReplacementPosts = [
+  { slug: 'filipino-assistant-article-brief-intake', title: 'Filipino Assistant Article Brief Intake', excerpt: 'Turn a reader question, approved angle, source plan, and review boundary into a usable article brief before drafting begins.', minutes: 11, published: '2026-08-21' },
+  { slug: 'remote-assistant-editorial-queue-triage', title: 'Remote Assistant Editorial Queue Triage', excerpt: 'Keep an article queue honest by separating ready work, missing evidence, owner decisions, returned drafts, and publication approval.', minutes: 11, published: '2026-08-21' },
+  { slug: 'virtual-assistant-article-source-ledger', title: 'Virtual Assistant Article Source Ledger', excerpt: 'Connect article claims to dated sources, scope notes, conflicts, and the decision each finding supports.', minutes: 11, published: '2026-08-21' },
+  { slug: 'outsourced-assistant-article-revision-log', title: 'Outsourced Assistant Article Revision Log', excerpt: 'Track requested edits, reasons, source versions, dispositions, and approvals so article changes remain reviewable.', minutes: 11, published: '2026-08-21' },
+  { slug: 'filipino-assistant-publishing-checklist', title: 'Filipino Assistant Publishing Checklist', excerpt: 'Run repeatable route, date, canonical, content, and accessibility checks while keeping final publication approval with the editor.', minutes: 11, published: '2026-08-21' },
+  { slug: 'remote-assistant-content-calendar-capacity', title: 'Remote Assistant Content Calendar Capacity Planning', excerpt: 'Plan article capacity around real drafting, review, rework, and owner decisions instead of counting titles as equal work.', minutes: 11, published: '2026-08-21' },
+  { slug: 'virtual-assistant-article-claim-review', title: 'Virtual Assistant Article Claim Review', excerpt: 'Identify material statements, link evidence, and flag uncertainty before an editor approves the article’s wording.', minutes: 11, published: '2026-08-21' },
+  { slug: 'outsourced-assistant-blog-update-triggers', title: 'Outsourced Assistant Blog Update Triggers', excerpt: 'Connect source, service, process, route, and reader-risk changes to a named article review owner.', minutes: 11, published: '2026-08-21' },
+  { slug: 'filipino-assistant-reader-question-map', title: 'Filipino Assistant Reader Question Map', excerpt: 'Map each article section to the reader decision, evidence, example, and boundary it needs to answer well.', minutes: 11, published: '2026-08-21' },
+  { slug: 'remote-assistant-article-accessibility-check', title: 'Remote Assistant Article Accessibility Check', excerpt: 'Check headings, links, images, tables, and plain language while escalating material accessibility questions to the right owner.', minutes: 11, published: '2026-08-21' },
+  { slug: 'virtual-assistant-blog-internal-link-plan', title: 'Virtual Assistant Blog Internal-Link Plan', excerpt: 'Lead readers to relevant next decisions with contextual links that respect Blog, Research, service, and role boundaries.', minutes: 11, published: '2026-08-21' },
+  { slug: 'outsourced-assistant-article-archive-review', title: 'Outsourced Assistant Article Archive Review', excerpt: 'Find stale, duplicate, broken, or unsupported article records without silently deleting or re-dating existing identities.', minutes: 11, published: '2026-08-21' },
+] as const;
 
-export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts] as const;
+export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts] as const;
+const august21BlogOrder: readonly string[] = aug21ReplacementPosts.map((post) => post.slug);
 const august20BlogOrder: readonly string[] = aug20ReplacementPosts.map((post) => post.slug);
 const august18BlogOrder: readonly string[] = aug18ReplacementPosts.map((post) => post.slug);
 const august17BlogOrder: readonly string[] = aug17ReplacementPosts.map((post) => post.slug);
@@ -320,6 +335,9 @@ const august13BlogOrder: readonly string[] = aug13ReplacementPosts.map((post) =>
 export const blogPostsNewestFirst = [...blogPosts].sort((a, b) => {
   const dateOrder = String('published' in b ? b.published : '').localeCompare(String('published' in a ? a.published : ''));
   if (dateOrder !== 0) return dateOrder;
+  const aAug21Order = august21BlogOrder.indexOf(a.slug as typeof august21BlogOrder[number]);
+  const bAug21Order = august21BlogOrder.indexOf(b.slug as typeof august21BlogOrder[number]);
+  if (aAug21Order >= 0 || bAug21Order >= 0) return (aAug21Order < 0 ? august21BlogOrder.length : aAug21Order) - (bAug21Order < 0 ? august21BlogOrder.length : bAug21Order);
   const aAug20Order = august20BlogOrder.indexOf(a.slug as typeof august20BlogOrder[number]);
   const bAug20Order = august20BlogOrder.indexOf(b.slug as typeof august20BlogOrder[number]);
   if (aAug20Order >= 0 || bAug20Order >= 0) return (aAug20Order < 0 ? august20BlogOrder.length : aAug20Order) - (bAug20Order < 0 ? august20BlogOrder.length : bAug20Order);
