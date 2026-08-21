@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "campaignDate": "2026-08-20",
+  "family": "research",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "entries": [
+    {"route":"/research/research-assistant-article-brief-drift","sourcePaths":["app/aug20-research.ts"],"imagePath":"public/aug20-research/research-assistant-article-brief-drift.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts/research-assistant-article-brief-drift.txt"},
+    {"route":"/research/research-content-calendar-evidence-debt","sourcePaths":["app/aug20-research.ts"],"imagePath":"public/aug20-research/research-content-calendar-evidence-debt.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts/research-content-calendar-evidence-debt.txt"},
+    {"route":"/research/research-assistant-editorial-rework-cost","sourcePaths":["app/aug20-research.ts"],"imagePath":"public/aug20-research/research-assistant-editorial-rework-cost.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts/research-assistant-editorial-rework-cost.txt"},
+    {"route":"/research/research-owner-review-window-for-assistant-articles","sourcePaths":["app/aug20-research.ts"],"imagePath":"public/aug20-research/research-owner-review-window-for-assistant-articles.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts/research-owner-review-window-for-assistant-articles.txt"},
+    {"route":"/research/research-assistant-source-conflict-in-article-drafts","sourcePaths":["app/aug20-research.ts"],"imagePath":"public/aug20-research/research-assistant-source-conflict-in-article-drafts.png","promptReceipt":".paperclip/daily-content/2026-08-20/image-prompts/research-assistant-source-conflict-in-article-drafts.txt"}
+  ]
+}

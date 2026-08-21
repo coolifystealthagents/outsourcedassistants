@@ -1,4 +1,5 @@
 import {aug18ResearchPosts} from './aug18-research';
+import {aug20ResearchPosts} from './aug20-research';
 export const site = {
   "domain": "OutsourcedAssistants.com",
   "url": "https://outsourcedassistants.com",
@@ -832,6 +833,7 @@ type ResearchPost = {
   statistic: string; statisticSource: string; sources: readonly { title: string; url: string }[];
   related: readonly string[]; faqs: readonly { question: string; answer: string }[];
   nextDecision?: { href: string; label: string; summary: string };
+  hero?: string;
 };
 
 // Explicit source metadata for the frozen August 10 Research batch. Keeping
@@ -1058,6 +1060,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...aug20ResearchPosts,
   ...aug18ResearchPosts,
   makeResearch('research-assistant-briefs-and-source-controls', 'Research Assistant Briefs and Source Controls', 'A source-controlled brief turns open-ended research into a repeatable queue with a question, evidence standard, output format, and stop rule.', '10 source notes per report', 'Outsourced Assistants research method', [
     'Methodology: we translated recurring research-assistant work into a brief that another person can inspect. The evidence standard is explicit, the recommendation is separated from the sourced fact, and the owner reviews the final claim.',
@@ -1541,9 +1544,19 @@ const august18ResearchOrder = [
   'research-daily-article-update-trigger-design',
   'research-daily-article-prohibited-claim-detection',
 ] as const;
+const august20ResearchOrder = [
+  'research-assistant-article-brief-drift',
+  'research-content-calendar-evidence-debt',
+  'research-assistant-editorial-rework-cost',
+  'research-owner-review-window-for-assistant-articles',
+  'research-assistant-source-conflict-in-article-drafts',
+] as const;
 export const researchPostsNewestFirst = [...researchPosts].sort((a, b) => {
   const dateOrder = (b.published ?? '').localeCompare(a.published ?? '');
   if (dateOrder !== 0) return dateOrder;
+  const aAug20Order = august20ResearchOrder.indexOf(a.slug as typeof august20ResearchOrder[number]);
+  const bAug20Order = august20ResearchOrder.indexOf(b.slug as typeof august20ResearchOrder[number]);
+  if (aAug20Order >= 0 || bAug20Order >= 0) return (aAug20Order < 0 ? august20ResearchOrder.length : aAug20Order) - (bAug20Order < 0 ? august20ResearchOrder.length : bAug20Order);
   const aAug18Order = august18ResearchOrder.indexOf(a.slug as typeof august18ResearchOrder[number]);
   const bAug18Order = august18ResearchOrder.indexOf(b.slug as typeof august18ResearchOrder[number]);
   if (aAug18Order >= 0 || bAug18Order >= 0) return (aAug18Order < 0 ? august18ResearchOrder.length : aAug18Order) - (bAug18Order < 0 ? august18ResearchOrder.length : bAug18Order);
