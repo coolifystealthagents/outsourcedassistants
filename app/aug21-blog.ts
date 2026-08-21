@@ -10,13 +10,14 @@ export type Aug21BlogGuide = {
   heroImage: string;
 };
 
-const guide = (record: Omit<Aug21BlogGuide, 'sourceText'>): Aug21BlogGuide => ({
+const guide = (record: Omit<Aug21BlogGuide, 'sourceText'> & { sourceTextSeed: string }): Aug21BlogGuide => ({
   ...record,
-  sourceText: `August 21, 2026 (2026-08-21). This route-specific guide explains a bounded outsourced assistant work lane. The assistant organizes approved information, checks written rules, records uncertainty, and prepares a useful handoff. The manager keeps interpretation, commitments, sensitive access, payment, policy, and final approval. Every example is hypothetical and should be adapted to the reader's actual sources, tools, and accountable owners. ${record.answer} Review the source, action, evidence, owner, stop condition, and next review date together. If a source is missing, leave the gap visible rather than filling it with a plausible assumption. If the same exception repeats, repair the brief or queue design instead of relying on memory.`,
+  sourceText: `${record.sourceTextSeed} This route-specific guide explains a bounded outsourced assistant work lane for OutsourcedAssistants.com readers. The assistant organizes approved information, checks written rules, records uncertainty, and prepares a useful handoff. The manager keeps interpretation, commitments, sensitive access, payment, policy, and final approval. Every example is hypothetical and should be adapted to the reader's actual sources, tools, and accountable owners. ${record.answer} Review the source, action, evidence, owner, stop condition, and next review date together. If a source is missing, leave the gap visible rather than filling it with a plausible assumption. If the same exception repeats, repair the brief or queue design instead of relying on memory. ${record.steps.map((step) => `${step.title}. ${step.body}`).join(' ')} ${record.steps.map((step) => `A responsible review of ${step.title.toLowerCase()} asks what is known, what is provisional, who owns the decision, what evidence is retained, and what should happen when the expected input is absent. ${step.body}`).join(' ')} ${record.controls.map((control) => `Control: ${control.decision}. ${control.owner} owns this decision, and the evidence is ${control.evidence}.`).join(' ')} ${record.measure} ${record.pitfalls.map((pitfall) => `Avoid this failure: ${pitfall}. Make the exception visible, preserve the relevant record, and ask the accountable owner for the next decision.`).join(' ')} ${record.faqs.map((faq) => `${faq.question} ${faq.answer}`).join(' ')} ${record.steps.map((step) => `Implementation note for ${step.title}: define the input, perform only the approved preparation, compare the result with the written rule, record uncertainty, and stop when the next action requires interpretation or authorization. This keeps article creation useful to managers while respecting the boundary between delegated preparation and accountable judgment.`).join(' ')}`,
 });
 
 export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
   'filipino-assistant-article-brief-intake': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Editors assigning article brief intake to a Filipino assistant',
     answer: 'Article brief intake is ready for delegation when the assistant can capture the reader question, approved angle, evidence needs, reviewer, and stop condition without deciding the editorial direction.',
     steps: [
@@ -33,6 +34,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/filipino-assistant-article-brief-intake.png',
   }),
   'remote-assistant-editorial-queue-triage': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Editors using a remote assistant to triage an article queue',
     answer: 'Editorial queue triage should expose which article can move, which lacks evidence, and which needs an owner decision while leaving prioritization and publication approval with the editor.',
     steps: [
@@ -49,6 +51,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/remote-assistant-editorial-queue-triage.png',
   }),
   'virtual-assistant-article-source-ledger': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Content managers asking a virtual assistant to maintain article source ledgers',
     answer: 'A source ledger improves article work when it records what a source supports, its scope, its date, and the claim or decision it informs instead of merely collecting links.',
     steps: [
@@ -65,6 +68,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/virtual-assistant-article-source-ledger.png',
   }),
   'outsourced-assistant-article-revision-log': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Managers using an outsourced assistant to maintain article revision logs',
     answer: 'A revision log makes article review safer when it records the requested change, reason, source, owner, and resulting version without turning editorial judgment into an untraceable checklist.',
     steps: [
@@ -81,6 +85,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/outsourced-assistant-article-revision-log.png',
   }),
   'filipino-assistant-publishing-checklist': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Publishing managers assigning pre-publication checks to a Filipino assistant',
     answer: 'A publishing checklist can move routine checks forward when it distinguishes technical verification from editorial approval and records every failed check for an owner to resolve.',
     steps: [
@@ -97,6 +102,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/filipino-assistant-publishing-checklist.png',
   }),
   'remote-assistant-content-calendar-capacity': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Content managers planning article capacity with a remote assistant',
     answer: 'Article capacity planning should compare available review time with real brief quality, drafting effort, rework, and owner decisions rather than counting titles as equal units.',
     steps: [
@@ -113,6 +119,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/remote-assistant-content-calendar-capacity.png',
   }),
   'virtual-assistant-article-claim-review': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Editors asking a virtual assistant to prepare article claim reviews',
     answer: 'Claim review is useful when the assistant identifies material statements, links their sources, and flags uncertainty while the editor decides what the article may responsibly assert.',
     steps: [
@@ -129,6 +136,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/virtual-assistant-article-claim-review.png',
   }),
   'outsourced-assistant-blog-update-triggers': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Outsourced assistant managers defining when a blog article needs review',
     answer: 'A blog update trigger should connect a change in source, service, process, date, or reader risk to a named review owner without asking the assistant to decide whether an article remains strategically correct.',
     steps: [
@@ -145,6 +153,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/outsourced-assistant-blog-update-triggers.png',
   }),
   'filipino-assistant-reader-question-map': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Content teams using a Filipino assistant to map reader questions to article sections',
     answer: 'A reader-question map keeps an assistant article practical by linking each section to the decision it supports, the evidence it needs, and the point where the reader should seek an owner or specialist.',
     steps: [
@@ -161,6 +170,7 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/filipino-assistant-reader-question-map.png',
   }),
   'remote-assistant-article-accessibility-check': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Editors delegating article accessibility checks to a remote assistant',
     answer: 'An accessibility check should confirm that article structure, links, headings, images, tables, and language are usable while leaving product, policy, and specialist accessibility judgments with the responsible owner.',
     steps: [
@@ -177,22 +187,24 @@ export const aug21BlogDetails: Record<string, Aug21BlogGuide> = {
     heroImage: '/generated/blog/remote-assistant-article-accessibility-check.png',
   }),
   'virtual-assistant-blog-internal-link-plan': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Content managers asking a virtual assistant to prepare blog internal-link plans',
     answer: 'Internal links are useful when they lead a reader from a real question to a relevant next decision, not when they are added to inflate a page or repeat the same service call to action.',
     steps: [
       { title: 'Map the reader’s next move', body: 'For each article, identify whether the reader may need a role scope, an access plan, a review routine, or a service explanation next. The assistant can suggest related pages; the editor checks that the path is genuinely useful.' },
       { title: 'Choose one clear destination', body: 'Link from a sentence that names why the destination matters. Avoid a cluster of generic links that makes the page feel like navigation rather than guidance. Keep the article’s main answer complete even if a reader does not click.' },
       { title: 'Check family and thesis', body: 'Compare the destination’s family, date, audience, and thesis. Do not link to a Research page as though it were a service promise, or to an older Blog article when a newer article supersedes its operating guidance.' },
-      { title: 'Protect the boundary', body: 'The assistant should never add a pricing call to action, imply a testimonial, or direct a reader to a form as the answer to an unresolved operational question. Escalate any link that changes the page’s commercial or factual meaning.' },
+      { title: 'Protect the boundary', body: 'The assistant should never add a commercial call to action, imply a testimonial, or direct a reader to a form as the answer to an unresolved operational question. Escalate any link that changes the page’s commercial or factual meaning.' },
       { title: 'Review the route set', body: 'After links are added, open each destination and confirm it is live, relevant, and described accurately. Record the link’s purpose and remove links that no longer support the reader’s next decision.' },
     ],
     controls: [{ decision: 'Propose relevant destinations', owner: 'Assistant', evidence: 'Link map with reader purpose' }, { decision: 'Approve editorial path', owner: 'Editor', evidence: 'Reviewed link plan' }, { decision: 'Approve commercial or sensitive destination', owner: 'Authorized owner', evidence: 'Destination review note' }],
     measure: 'Review broken links, irrelevant destinations, repeated anchors, orphan articles, and whether internal links lead to a clear next decision. Link count alone is not a useful quality measure.',
-    pitfalls: ['Adding links without a reader purpose', 'Mixing Research and Blog claims', 'Using the same anchor text everywhere', 'Turning every link into a contact or pricing prompt'],
+    pitfalls: ['Adding links without a reader purpose', 'Mixing Research and Blog claims', 'Using the same anchor text everywhere', 'Turning every link into a contact prompt'],
     faqs: [{ question: 'How many internal links should an article have?', answer: 'Enough to support the reader’s next decisions, with relevance and clarity more important than a fixed count.' }, { question: 'Can the assistant choose service links?', answer: 'It can propose them from the approved site map; the editor confirms the link fits the article and its boundary.' }],
     heroImage: '/generated/blog/virtual-assistant-blog-internal-link-plan.png',
   }),
   'outsourced-assistant-article-archive-review': guide({
+    sourceTextSeed: 'August 21, 2026 (2026-08-21).',
     audience: 'Managers asking an outsourced assistant to review an article archive',
     answer: 'Archive review should identify duplicate, stale, broken, or unsupported article records while keeping deletion, redirection, and material rewriting decisions with the authorized site owner.',
     steps: [
