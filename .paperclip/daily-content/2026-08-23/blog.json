@@ -7,19 +7,19 @@
   "repository": "coolifystealthagents/outsourcedassistants",
   "branch": "main",
   "requiredCount": 12,
-  "imageStatus": "Gemini unavailable in execution environment; text-complete fallback used; no stock or replacement imagery added.",
+  "imageStatus": "Gemini unavailable in execution environment; text-complete fallback used; existing imagery preserved.",
   "entries": [
-    { "route": "/blog/filipino-assistant-content-brief-version-control", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/remote-assistant-editorial-decision-log", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/virtual-assistant-article-outline-review", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/outsourced-assistant-article-example-library", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/filipino-assistant-article-fact-versus-guidance-review", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/remote-assistant-article-update-watchlist", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/virtual-assistant-article-internal-link-review", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/outsourced-assistant-article-readability-sample", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/filipino-assistant-article-review-sample-design", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/remote-assistant-article-handoff-readback", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/virtual-assistant-article-approval-boundary-map", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
-    { "route": "/blog/outsourced-assistant-article-queue-recovery-plan", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] }
+    { "route": "/blog/filipino-assistant-brief-change-audit", "sourcePaths": ["content/blog/aug23/filipino-assistant-brief-change-audit.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/remote-assistant-editorial-rationale-record", "sourcePaths": ["content/blog/aug23/remote-assistant-editorial-rationale-record.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/virtual-assistant-reader-path-outline", "sourcePaths": ["content/blog/aug23/virtual-assistant-reader-path-outline.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/outsourced-assistant-bounded-scenario-library", "sourcePaths": ["content/blog/aug23/outsourced-assistant-bounded-scenario-library.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/filipino-assistant-claim-strength-check", "sourcePaths": ["content/blog/aug23/filipino-assistant-claim-strength-check.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/remote-assistant-source-change-monitor", "sourcePaths": ["content/blog/aug23/remote-assistant-source-change-monitor.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/virtual-assistant-contextual-link-map", "sourcePaths": ["content/blog/aug23/virtual-assistant-contextual-link-map.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/outsourced-assistant-manager-readthrough", "sourcePaths": ["content/blog/aug23/outsourced-assistant-manager-readthrough.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/filipino-assistant-representative-review", "sourcePaths": ["content/blog/aug23/filipino-assistant-representative-review.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/remote-assistant-editorial-readback", "sourcePaths": ["content/blog/aug23/remote-assistant-editorial-readback.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/virtual-assistant-publishing-authority-map", "sourcePaths": ["content/blog/aug23/virtual-assistant-publishing-authority-map.md", "app/aug23-blog.ts"] },
+    { "route": "/blog/outsourced-assistant-delayed-queue-repair", "sourcePaths": ["content/blog/aug23/outsourced-assistant-delayed-queue-repair.md", "app/aug23-blog.ts"] }
   ]
 }

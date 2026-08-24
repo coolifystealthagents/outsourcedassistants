@@ -120,7 +120,6 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 <p className="eyebrow">For {campaignGuide.audience.toLowerCase()}</p>
                 <h2 id="short-answer">The short answer</h2>
                 <p>{campaignGuide.answer}</p>
-                {aug23Guide ? <p>Use this guidance as a bounded operating starting point. Name the input, permitted action, completion evidence, accountable owner, escalation trigger, and review date before widening the lane. A Filipino assistant can prepare approved information and surface uncertainty; the manager decides meaning, commitments, access, privacy, payment, policy, and publication. Review one ordinary item and one exception so the written rule is tested against real work rather than assumed from a status label.</p> : null}
               </section>
 
               <figure className="article-photo">
