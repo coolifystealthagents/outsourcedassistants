@@ -1,7 +1,7 @@
 import {aug18ResearchPosts} from './aug18-research';
 import {aug20ResearchPosts} from './aug20-research';
 import {aug21ResearchPosts} from './aug21-research';
-import {aug23ResearchPosts} from './aug23-research';
+import {aug23ResearchRepairPosts} from './aug23-research-repair';
 export const site = {
   "domain": "OutsourcedAssistants.com",
   "url": "https://outsourcedassistants.com",
@@ -1098,7 +1098,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
-  ...aug23ResearchPosts,
+  ...aug23ResearchRepairPosts,
   ...aug21ResearchPosts,
   ...aug20ResearchPosts,
   ...aug18ResearchPosts,
@@ -1592,11 +1592,11 @@ const august20ResearchOrder = [
   'research-assistant-source-conflict-in-article-drafts',
 ] as const;
 const august23ResearchOrder = [
-  'research-assistant-calendar-change-control',
-  'research-outsourced-assistant-queue-definition',
-  'research-filipino-assistant-knowledge-retrieval',
-  'research-virtual-assistant-review-sample-bias',
-  'research-outsourced-assistant-source-freshness-window',
+  'research-assistant-article-brief-reversal-cost',
+  'research-outsourced-assistant-evidence-trail-continuity',
+  'research-filipino-assistant-escalation-language',
+  'research-virtual-assistant-queue-representativeness',
+  'research-outsourced-assistant-reader-decision-trace',
 ] as const;
 export const researchPostsNewestFirst = [...researchPosts].sort((a, b) => {
   const dateOrder = (b.published ?? '').localeCompare(a.published ?? '');

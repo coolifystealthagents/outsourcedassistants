@@ -9,10 +9,10 @@
   "requiredCount": 5,
   "imageStatus": "Gemini unavailable in execution environment; text-complete fallback used; existing imagery preserved.",
   "entries": [
-    {"route":"/research/research-assistant-calendar-change-control","sourcePaths":["app/aug23-research.ts","app/data.ts"]},
-    {"route":"/research/research-outsourced-assistant-queue-definition","sourcePaths":["app/aug23-research.ts","app/data.ts"]},
-    {"route":"/research/research-filipino-assistant-knowledge-retrieval","sourcePaths":["app/aug23-research.ts","app/data.ts"]},
-    {"route":"/research/research-virtual-assistant-review-sample-bias","sourcePaths":["app/aug23-research.ts","app/data.ts"]},
-    {"route":"/research/research-outsourced-assistant-source-freshness-window","sourcePaths":["app/aug23-research.ts","app/data.ts"]}
+    {"route":"/research/research-assistant-article-brief-reversal-cost","sourcePaths":["app/aug23-research-repair.ts"]},
+    {"route":"/research/research-outsourced-assistant-evidence-trail-continuity","sourcePaths":["app/aug23-research-repair.ts"]},
+    {"route":"/research/research-filipino-assistant-escalation-language","sourcePaths":["app/aug23-research-repair.ts"]},
+    {"route":"/research/research-virtual-assistant-queue-representativeness","sourcePaths":["app/aug23-research-repair.ts"]},
+    {"route":"/research/research-outsourced-assistant-reader-decision-trace","sourcePaths":["app/aug23-research-repair.ts"]}
   ]
 }
