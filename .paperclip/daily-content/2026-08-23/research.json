@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "contract": "fleet-authoring-contract-v8",
+  "targetDate": "2026-08-23",
+  "family": "research",
+  "domain": "outsourcedassistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "requiredCount": 5,
+  "imageStatus": "Gemini unavailable in execution environment; text-complete fallback used; existing imagery preserved.",
+  "entries": [
+    {"route":"/research/research-assistant-calendar-change-control","sourcePaths":["app/aug23-research.ts","app/data.ts"]},
+    {"route":"/research/research-outsourced-assistant-queue-definition","sourcePaths":["app/aug23-research.ts","app/data.ts"]},
+    {"route":"/research/research-filipino-assistant-knowledge-retrieval","sourcePaths":["app/aug23-research.ts","app/data.ts"]},
+    {"route":"/research/research-virtual-assistant-review-sample-bias","sourcePaths":["app/aug23-research.ts","app/data.ts"]},
+    {"route":"/research/research-outsourced-assistant-source-freshness-window","sourcePaths":["app/aug23-research.ts","app/data.ts"]}
+  ]
+}
