@@ -122,6 +122,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 <p>{campaignGuide.answer}</p>
               </section>
 
+              {'sourceText' in campaignGuide ? <section aria-labelledby="guide-detail">
+                <h2 id="guide-detail">How to apply the routine</h2>
+                {campaignGuide.sourceText.split(/\n\s*\n/).filter(Boolean).map((paragraph, index) => <p key={`${post.slug}-detail-${index}`}>{paragraph}</p>)}
+              </section> : null}
+
               <figure className="article-photo">
                 <img src={aug21Guide?.heroImage ?? aug20Guide?.heroImage ?? "/assistant-team.jpg"} alt="Philippines assistant reviewing a documented staffing workflow" />
                 <figcaption>Keep the workflow, evidence, and decision owner visible when work crosses teams or time zones.</figcaption>
