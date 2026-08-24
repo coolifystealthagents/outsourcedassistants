@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "contract": "fleet-authoring-contract-v8",
+  "targetDate": "2026-08-23",
+  "family": "blog",
+  "domain": "outsourcedassistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "requiredCount": 12,
+  "imageStatus": "Gemini unavailable in execution environment; text-complete fallback used; no stock or replacement imagery added.",
+  "entries": [
+    { "route": "/blog/filipino-assistant-content-brief-version-control", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/remote-assistant-editorial-decision-log", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/virtual-assistant-article-outline-review", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/outsourced-assistant-article-example-library", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/filipino-assistant-article-fact-versus-guidance-review", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/remote-assistant-article-update-watchlist", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/virtual-assistant-article-internal-link-review", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/outsourced-assistant-article-readability-sample", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/filipino-assistant-article-review-sample-design", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/remote-assistant-article-handoff-readback", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/virtual-assistant-article-approval-boundary-map", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] },
+    { "route": "/blog/outsourced-assistant-article-queue-recovery-plan", "sourcePaths": ["app/aug23-blog.ts", "app/data.ts"] }
+  ]
+}
