@@ -52,11 +52,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) return { title: 'Guide not found' };
+  const fallback = blogFallbacks[slug as FallbackSlug];
+  const modified = fallback && 'updated' in fallback ? fallback.updated : undefined;
   return {
     title: { absolute: post.title },
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: { title: post.title, description: post.excerpt, type: 'article', url: `/blog/${post.slug}`, ...('published' in post ? { publishedTime: post.published, modifiedTime: post.published } : {}) },
+    openGraph: { title: post.title, description: post.excerpt, type: 'article', url: `/blog/${post.slug}`, ...('published' in post ? { publishedTime: post.published, modifiedTime: modified ?? post.published } : modified ? { modifiedTime: modified } : {}) },
   };
 }
 
@@ -67,6 +69,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
+  const fallbackUpdated = fallback && 'updated' in fallback ? fallback.updated : undefined;
+  const relatedService = fallback && 'relatedService' in fallback ? fallback.relatedService : undefined;
   const august12Guide = august12BlogDetails[post.slug];
   const aug13Guide = aug13BlogDetails[post.slug];
   const aug14Guide = aug14BlogDetails[post.slug];
@@ -92,7 +96,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         about: 'Hiring and managing Filipino assistants',
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
-        datePublished: publicationDate, dateModified: publicationDate,
+        datePublished: publicationDate, dateModified: fallbackUpdated ?? publicationDate,
         ...(campaignGuide ? { citation: operationsReferences.map((source) => source.url) } : detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
@@ -112,7 +116,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         <article className="container guide-article">
           <span className="eyebrow">Philippines staffing guide</span>
           <h1>{post.title}</h1>
-          <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Practical operating controls</span></div><p className='article-date'>Published <time dateTime={publicationDate}>{publicationLabel}</time> · {post.minutes} minute read</p>
+          <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Practical operating controls</span></div><p className='article-date'>Published <time dateTime={publicationDate}>{publicationLabel}</time>{fallbackUpdated ? <> · Updated <time dateTime={fallbackUpdated}>{new Date(`${fallbackUpdated}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time></> : null} · {post.minutes} minute read</p>
 
           {campaignGuide ? (
             <div className="evidence-guide august12-guide">
@@ -263,6 +267,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             <div className="card">
               <h2>The short answer</h2>
               <p>{fallback?.answer ?? `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`}</p>
+              {relatedService ? <p data-topical-handoff="calendar-management-service">{relatedService.summary} <a href={relatedService.href}>{relatedService.label}</a>. Keep priority choices, exceptions, and meeting commitments with your team.</p> : null}
               <h2>{fallback?.sectionTitle ?? 'Build the work lane'}</h2>
               <ul>{(fallback?.items ?? ['Write the recurring task and its finish rule', 'Share an approved example and the source system', 'Set response times, approval limits, and escalation rules', 'Review a small sample before widening the role']).map((item) => <li key={item}>{item}</li>)}</ul>
               <div className="article-links"><a href="/services/operations-reporting">Review the operations reporting work lane</a><a href="/services/project-coordination">Review the project coordination work lane</a></div>
