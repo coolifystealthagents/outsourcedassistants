@@ -20,8 +20,8 @@ The site already has twelve Philippines-based service routes and matching practi
 
 | Service pillar | Existing service route | Existing supporting guide | Reader question served | Candidate next action |
 | --- | --- | --- | --- | --- |
-| Executive calendar management | `/services/executive-calendar-management` | `/blog/filipino-virtual-assistant-calendar-management` | What can a calendar-support role prepare while the owner keeps final judgment? | If the reader needs this bounded role, link to the service page after the scope and approval discussion. |
-| Inbox triage | `/services/inbox-triage` | `/blog/virtual-assistant-inbox-triage-workflow` | How can a team sort, draft, and escalate messages without handing over sensitive decisions? | Link only after the guide explains the team needs an ongoing triage lane. |
+| Executive calendar management | `/services/executive-calendar-management` | `/blog/filipino-virtual-assistant-calendar-management` | What can a calendar-support role prepare while the owner keeps final judgment? | Delivered in the route-local body. Keep this pair non-duplicable; the existing link follows the scope and approval discussion. |
+| Inbox triage | `/services/inbox-triage` | `/blog/virtual-assistant-inbox-triage-workflow` | How can a team sort, draft, and escalate messages without handing over sensitive decisions? | Next candidate. Add one route-local link only after the guide explains the team needs an ongoing triage lane. |
 | Travel planning support | `/services/travel-planning-support` | `/blog/remote-assistant-travel-planning-checklist` | Which research and handoff tasks can support trip planning before approval or payment? | Link after the checklist distinguishes options from booking approval. |
 | Meeting preparation | `/services/meeting-preparation` | `/blog/meeting-preparation-assistant-sop` | What should a repeatable meeting-prep SOP contain? | Link after the reader has identified a recurring preparation need. |
 | CRM administration | `/services/crm-administration` | `/blog/crm-administration-virtual-assistant-guide` | Which CRM changes can be prepared and reviewed safely? | Link after the field-protection and owner-review boundary. |
@@ -35,9 +35,11 @@ The site already has twelve Philippines-based service routes and matching practi
 
 ## Queue and selection rule
 
-First candidate: `/blog/filipino-virtual-assistant-calendar-management` to `/services/executive-calendar-management`.
+Delivered and non-duplicable: `/blog/filipino-virtual-assistant-calendar-management` to `/services/executive-calendar-management`. The generated route-local body already contains the matching service link after the scope and approval discussion.
 
-Why first: the topic and service share the same named work lane, and the supporting guide already frames approval limits and weekly review. It can answer a reader's next question without a generic CTA. Before any edit, verify that the source body has a natural scope-to-service transition and that it does not already link to this target.
+Next candidate: `/blog/virtual-assistant-inbox-triage-workflow` to `/services/inbox-triage`.
+
+Why next: the topic and service name the same ongoing work lane. The generated source body has no route-local link to that service, so a future edit can answer the reader's next question without adding a generic CTA. Before any edit, confirm that the source still has a natural transition from the triage workflow to ongoing support.
 
 Then move in table order, but skip a pair when the source body lacks a genuine decision transition, the target no longer matches the source, another writer holds a lock, or the worktree is dirty. Record a rejection rather than forcing a link.
 
