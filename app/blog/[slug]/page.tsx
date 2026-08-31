@@ -266,7 +266,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           ) : (
             <div className="card">
               <h2>The short answer</h2>
-              <p>{fallback?.answer ?? `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`}</p>
+              <p>{fallback?.answer ?? ('body' in post ? post.body[0] : `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`)}</p>
+              {'body' in post ? post.body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>) : null}
               {relatedService ? <p data-topical-handoff="calendar-management-service">{relatedService.summary} <a href={relatedService.href}>{relatedService.label}</a>. Keep priority choices, exceptions, and meeting commitments with your team.</p> : null}
               <h2>{fallback?.sectionTitle ?? 'Build the work lane'}</h2>
               <ul>{(fallback?.items ?? ['Write the recurring task and its finish rule', 'Share an approved example and the source system', 'Set response times, approval limits, and escalation rules', 'Review a small sample before widening the role']).map((item) => <li key={item}>{item}</li>)}</ul>
