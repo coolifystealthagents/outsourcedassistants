@@ -56,10 +56,10 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
-  const isTodayBatch = 'published' in post && post.published === '2026-08-07';
+  const isDatedBatch = 'published' in post;
   const isEvidenceGuide = Boolean(detail && 'kind' in detail && detail.kind === 'evidenceGuide');
-  const publicationDate = isTodayBatch ? '2026-08-07' : detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25';
-  const publicationLabel = isTodayBatch ? 'August 7, 2026' : detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026';
+  const publicationDate = isDatedBatch ? post.published : detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'published' in detail ? detail.published : '2026-07-25';
+  const publicationLabel = publicationDate === '2026-08-31' ? 'August 31, 2026' : publicationDate === '2026-08-07' ? 'August 7, 2026' : detail && 'kind' in detail && detail.kind === 'evidenceGuide' && 'publishedLabel' in detail ? detail.publishedLabel : 'July 25, 2026';
   const pageUrl = `${siteUrl}/blog/${post.slug}`;
   const faqs = detail?.faqs ?? [
     { question: 'What should I prepare before hiring?', answer: 'Prepare task examples, access rules, a review owner, and a short first-week checklist.' },
@@ -73,7 +73,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         about: 'Hiring and managing Filipino assistants',
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
-        ...(isEvidenceGuide || isTodayBatch ? { datePublished: publicationDate, dateModified: publicationDate, image: 'image' in post ? post.image : site.heroImage } : {}),
+        ...(isEvidenceGuide || isDatedBatch ? { datePublished: publicationDate, dateModified: publicationDate, image: 'image' in post ? post.image : site.heroImage } : {}),
         ...(detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
@@ -94,7 +94,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           <span className="eyebrow">Philippines staffing guide</span>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Top, middle, and bottom CTAs</span></div>
-          {isTodayBatch && <p className="article-date">Published {publicationLabel} · {post.minutes} minute read · Image brief approved</p>}
+          {isDatedBatch && <p className="article-date">Published {publicationLabel} · {post.minutes} minute read · Image brief approved</p>}
 
           {detail && 'kind' in detail && detail.kind === 'evidenceGuide' ? (
             <div className="evidence-guide">
@@ -182,7 +182,8 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
           ) : (
             <div className="card">
               <h2>The short answer</h2>
-              <p>{fallback?.answer ?? `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`}</p>
+              <p>{fallback?.answer ?? ('body' in post ? post.body[0] : `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`)}</p>
+              {'body' in post ? post.body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>) : null}
               <h2>{fallback?.sectionTitle ?? 'Build the work lane'}</h2>
               <ul>{(fallback?.items ?? ['Write the recurring task and its finish rule', 'Share an approved example and the source system', 'Set response times, approval limits, and escalation rules', 'Review a small sample before widening the role']).map((item) => <li key={item}>{item}</li>)}</ul>
               <div className="article-links"><a href="/services/operations-reporting">Review the operations reporting work lane</a><a href="/services/project-coordination">Review the project coordination work lane</a></div>
