@@ -1,0 +1,27 @@
+{
+  "publicationDate": "2026-09-01",
+  "visibleDate": "September 1, 2026",
+  "blogCount": 12,
+  "researchCount": 5,
+  "blogRoutes": [
+    "/blog/assistant-daily-queue-opening-routine",
+    "/blog/virtual-assistant-recurring-task-trigger-map",
+    "/blog/delegated-research-question-brief",
+    "/blog/assistant-weekly-source-record-check",
+    "/blog/virtual-assistant-meeting-decision-capture",
+    "/blog/assistant-template-library-maintenance",
+    "/blog/outsourced-assistant-vendor-contact-log",
+    "/blog/virtual-assistant-deadline-change-protocol",
+    "/blog/assistant-customer-record-correction-lane",
+    "/blog/remote-assistant-backup-handoff-test",
+    "/blog/virtual-assistant-monthly-routine-retirement",
+    "/blog/assistant-error-correction-feedback-loop"
+  ],
+  "researchRoutes": [
+    "/research/assistant-queue-arrival-pattern-study",
+    "/research/delegated-record-correction-audit-method",
+    "/research/assistant-handoff-completeness-scoring",
+    "/research/virtual-assistant-template-drift-observation",
+    "/research/recurring-assistant-task-value-review"
+  ]
+}
