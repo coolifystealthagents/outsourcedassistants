@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-02",
+  "blogCount": 12,
+  "researchCount": 5,
+  "blogRoutes": [
+    "/blog/assistant-morning-input-readiness-check",
+    "/blog/virtual-assistant-request-intake-fields",
+    "/blog/assistant-recurring-report-cutoff-rule",
+    "/blog/outsourced-assistant-review-queue-design",
+    "/blog/virtual-assistant-calendar-buffer-rules",
+    "/blog/assistant-shared-mailbox-closure-evidence",
+    "/blog/delegated-file-version-control-routine",
+    "/blog/virtual-assistant-no-response-escalation",
+    "/blog/assistant-weekly-access-exception-review",
+    "/blog/outsourced-assistant-customer-promise-boundary",
+    "/blog/virtual-assistant-task-reopen-standard",
+    "/blog/assistant-friday-routine-closeout"
+  ],
+  "researchRoutes": [
+    "/research/assistant-input-readiness-observation-method",
+    "/research/delegated-review-queue-aging-study",
+    "/research/assistant-task-reopen-analysis-framework",
+    "/research/virtual-assistant-follow-up-response-window-study",
+    "/research/assistant-recurring-report-reopen-audit"
+  ]
+}
