@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "contract": "fleet-authoring-contract-v8",
-  "targetDate": "2026-08-24",
+  "targetDate": "2026-08-23",
   "family": "research",
   "domain": "outsourcedassistants.com",
   "repository": "coolifystealthagents/outsourcedassistants",
