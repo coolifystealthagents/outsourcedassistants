@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-09-03",
+  "family": "blog",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "requiredCount": 12,
+  "imageStatus": "Gemini was unavailable in this execution environment; text-complete fallback used without adding stock assets.",
+  "entries": [
+    {"route":"/blog/assistant-daily-content-queue-health-review","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/filipino-assistant-editorial-service-knowledge-map","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/virtual-assistant-article-intent-change-control","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/remote-assistant-publish-ready-definition","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/outsourced-assistant-content-dependency-triage","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/filipino-assistant-editorial-access-boundary","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/virtual-assistant-stale-link-response-plan","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/remote-assistant-content-review-load-balancing","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/outsourced-assistant-article-ownership-transfer","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/filipino-assistant-content-exception-notes","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/virtual-assistant-editorial-calendar-recovery","sourcePath":"app/sep3-content.ts"},
+    {"route":"/blog/remote-assistant-post-publication-checkback","sourcePath":"app/sep3-content.ts"}
+  ]
+}
