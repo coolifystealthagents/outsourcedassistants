@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "contract": "fleet-authoring-contract-v8",
-  "targetDate": "2026-08-24",
+  "targetDate": "2026-08-23",
   "family": "blog",
   "domain": "outsourcedassistants.com",
   "repository": "coolifystealthagents/outsourcedassistants",
   "branch": "main",
   "requiredCount": 12,
-  "imageStatus": "Gemini unavailable in execution environment; text-complete fallback used; existing imagery preserved.",
+  "imageStatus": "Gemini unavailable in execution environment; text-complete fallback used; existing route imagery preserved.",
   "entries": [
     { "route": "/blog/filipino-assistant-brief-change-audit", "sourcePaths": ["content/blog/aug23/filipino-assistant-brief-change-audit.md", "app/aug23-blog.ts"] },
     { "route": "/blog/remote-assistant-editorial-rationale-record", "sourcePaths": ["content/blog/aug23/remote-assistant-editorial-rationale-record.md", "app/aug23-blog.ts"] },

@@ -1,6 +1,6 @@
 # publishing authority
 
-Campaign date: August 24, 2026.
+Campaign date: August 23, 2026.
  
 That small discipline supports clearer coaching, safer handoffs, and more reliable daily publishing decisions.
  
@@ -22,6 +22,6 @@ Blog guidance should remain distinct from Research and service description. It c
 
 Test the guidance on one safe queue before widening it. Use approved examples, limited access, an accountable reviewer, and a stated review date. Compare expected completion evidence with what the work produces. If the result is unclear, repair the rule or handoff before adding volume. If decisions repeatedly escalate, clarify the trigger and owner rather than encouraging silent improvisation. Proper routines create room for skilled assistants to do reliable work while keeping consequential judgment with responsible people.
 
-On August 24, 2026, the recommendation is specific: make publishing authority inspectable, keep the company’s niche central, and preserve the boundary between assistant preparation and owner judgment. This is not a guarantee. It is a practical starting point for a team that wants daily article creation and assistant-supported operations to be understandable, reviewable, and safe to improve.
+On August 23, 2026, the recommendation is specific: make publishing authority inspectable, keep the company’s niche central, and preserve the boundary between assistant preparation and owner judgment. This is not a guarantee. It is a practical starting point for a team that wants daily article creation and assistant-supported operations to be understandable, reviewable, and safe to improve.
 
 A manager can make this decision easier by defining the smallest safe first assignment. State which records are approved inputs, which fields may be changed, what evidence proves completion, and how a question is returned. Do not use access as a substitute for authority. A tool may technically allow an action while the role boundary still reserves it for an owner. Review the first examples together, then revisit the lane after a stated period or after a material change. This keeps daily article creation connected to a real operating routine rather than a queue of titles. It also gives the assistant a fair standard: clear work, usable context, and an escalation route when the request is outside the written scope.
