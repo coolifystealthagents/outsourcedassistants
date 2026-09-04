@@ -3,8 +3,10 @@ import {aug20ResearchPosts} from './aug20-research';
 import {aug21ResearchPosts} from './aug21-research';
 import {aug23ResearchRepairPosts} from './aug23-research-repair';
 import {sep3ResearchPosts} from './sep3-research';
+import {september4ResearchPosts} from './sep4-research';
 import {august31BlogPosts,august31ResearchPosts} from './aug31-content';
 import {september3BlogPosts} from './sep3-content';
+import {september4BlogPosts} from './sep4-content';
 export const site = {
   "domain": "OutsourcedAssistants.com",
   "url": "https://outsourcedassistants.com",
@@ -344,7 +346,7 @@ const aug23ReplacementPosts = [
   { slug: 'outsourced-assistant-delayed-queue-repair', title: 'Outsourced Assistant Delayed Queue Repair', excerpt: 'Recover delayed article work by separating evidence gaps, decisions, rework, and capacity.', minutes: 11, published: '2026-08-23' },
 ] as const;
 
-export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts, ...aug23ReplacementPosts, ...august31BlogPosts, ...september3BlogPosts] as const;
+export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts, ...aug23ReplacementPosts, ...august31BlogPosts, ...september3BlogPosts, ...september4BlogPosts] as const;
 const august23BlogOrder: readonly string[] = aug23ReplacementPosts.map((post) => post.slug);
 const august21BlogOrder: readonly string[] = aug21ReplacementPosts.map((post) => post.slug);
 const august20BlogOrder: readonly string[] = aug20ReplacementPosts.map((post) => post.slug);
@@ -876,6 +878,7 @@ type ResearchPost = {
   related: readonly string[]; faqs: readonly { question: string; answer: string }[];
   nextDecision?: { href: string; label: string; summary: string };
   hero?: string;
+  image?: string;
 };
 
 // Explicit source metadata for the frozen August 10 Research batch. Keeping
@@ -1102,6 +1105,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...september4ResearchPosts,
   ...sep3ResearchPosts,
   ...aug23ResearchRepairPosts,
   ...aug21ResearchPosts,

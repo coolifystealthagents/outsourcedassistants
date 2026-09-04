@@ -96,7 +96,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         about: 'Hiring and managing Filipino assistants',
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
-        datePublished: publicationDate, dateModified: fallbackUpdated ?? publicationDate,
+        datePublished: publicationDate, dateModified: fallbackUpdated ?? publicationDate, image: `${siteUrl}/assistant-team.jpg`,
         ...(campaignGuide ? { citation: operationsReferences.map((source) => source.url) } : detail ? { citation: detail.sources.map((source) => source.url) } : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
@@ -256,6 +256,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             </div>
           ) : detail && !('kind' in detail) ? (
             <div className="card">
+              {'body' in post && 'image' in post ? <figure className="article-photo"><img src={post.image} alt="Filipino assistant reviewing a documented article workflow" /><figcaption>Use an approved, reusable visual while keeping the article record and review boundary clear.</figcaption></figure> : null}
               <h2>The short answer</h2><p>{detail.summary}</p>
               <h2>Weak answers and useful follow-ups</h2><div className="cards">{detail.comparisonRows.map((row) => <div className="card" key={row.weak}><p className="eyebrow">Weak answer</p><p>{row.weak}</p><p className="eyebrow">Ask this next</p><p>{row.useful}</p></div>)}</div>
               <h2>Questions for the provider call</h2><ol>{detail.callScript.map((line) => <li key={line}>{line}</li>)}</ol>

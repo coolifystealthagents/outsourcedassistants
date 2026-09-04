@@ -13,7 +13,8 @@
     "validate:aug14-blog": "node scripts/validate-aug14-blog.mjs",
     "validate:aug17-blog": "node scripts/validate-aug17-blog.mjs",
     "validate:aug18-blog": "node scripts/validate-aug18-blog.mjs",
-    "validate:aug20-blog": "node scripts/validate-aug20-blog.mjs"
+    "validate:aug20-blog": "node scripts/validate-aug20-blog.mjs",
+    "validate:sep4": "node scripts/validate-sep4.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",

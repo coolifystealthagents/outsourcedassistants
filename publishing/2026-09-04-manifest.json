@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "targetDate": "2026-09-04",
+  "domain": "https://outsourcedassistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "image": "/assistant-team.jpg",
+  "blog": [
+    "/blog/virtual-assistant-daily-article-source-packet",
+    "/blog/filipino-assistant-editorial-intake-office-hours",
+    "/blog/outsourced-assistant-draft-return-reason-codes",
+    "/blog/remote-assistant-content-calendar-freeze-window",
+    "/blog/virtual-assistant-article-link-purpose-labels",
+    "/blog/filipino-assistant-publishing-handoff-receipt",
+    "/blog/outsourced-assistant-content-brief-example-bank",
+    "/blog/remote-assistant-article-refresh-candidate-list",
+    "/blog/virtual-assistant-screenshot-alt-text-review",
+    "/blog/filipino-assistant-research-to-blog-boundary",
+    "/blog/outsourced-assistant-editorial-decision-expiry",
+    "/blog/remote-assistant-daily-publishing-retrospective"
+  ],
+  "research": [
+    "/research/research-article-source-packet-completeness",
+    "/research/research-editorial-return-reason-reliability",
+    "/research/research-content-freeze-window-change-burden",
+    "/research/research-internal-link-purpose-audit",
+    "/research/research-post-deployment-route-gate-detection"
+  ]
+}
