@@ -1,0 +1,23 @@
+{
+  "blog": [
+    "/blog/virtual-assistant-morning-article-readiness-check",
+    "/blog/filipino-assistant-editorial-source-version-log",
+    "/blog/outsourced-assistant-draft-claim-inventory",
+    "/blog/remote-assistant-content-review-timebox",
+    "/blog/virtual-assistant-blog-research-crosslink-review",
+    "/blog/filipino-assistant-article-correction-queue",
+    "/blog/outsourced-assistant-article-image-inventory-check",
+    "/blog/remote-assistant-publishing-evidence-folder",
+    "/blog/virtual-assistant-topic-collision-screen",
+    "/blog/filipino-assistant-daily-publishing-backup-owner",
+    "/blog/outsourced-assistant-live-route-spot-check",
+    "/blog/remote-assistant-editorial-week-opening-brief"
+  ],
+  "research": [
+    "/research/research-daily-article-readiness-signal",
+    "/research/research-editorial-review-latency",
+    "/research/research-source-version-change-impact",
+    "/research/research-blog-research-topic-overlap",
+    "/research/research-publishing-gate-failure-patterns"
+  ]
+}

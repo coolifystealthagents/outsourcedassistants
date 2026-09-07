@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: post.title },
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: { title: post.title, description: post.excerpt, type: 'article', url: `/blog/${post.slug}`, ...('published' in post ? { publishedTime: post.published, modifiedTime: modified ?? post.published } : modified ? { modifiedTime: modified } : {}) },
+    openGraph: { title: post.title, description: post.excerpt, type: 'article', url: `/blog/${post.slug}`, images: ['/assistant-team.jpg'], ...('published' in post ? { publishedTime: post.published, modifiedTime: modified ?? post.published } : modified ? { modifiedTime: modified } : {}) },
   };
 }
 
