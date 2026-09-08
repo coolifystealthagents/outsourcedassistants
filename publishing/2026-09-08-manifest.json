@@ -1,0 +1,23 @@
+{
+  "blog": [
+    "/blog/virtual-assistant-article-intake-cutoff",
+    "/blog/filipino-assistant-source-passage-note",
+    "/blog/outsourced-assistant-draft-return-reasons",
+    "/blog/remote-assistant-editorial-question-window",
+    "/blog/virtual-assistant-article-alt-text-review",
+    "/blog/filipino-assistant-article-link-destination-check",
+    "/blog/outsourced-assistant-daily-article-handoff-note",
+    "/blog/remote-assistant-publication-date-check",
+    "/blog/virtual-assistant-research-claim-boundary",
+    "/blog/filipino-assistant-sitemap-release-check",
+    "/blog/outsourced-assistant-editorial-exception-owner",
+    "/blog/remote-assistant-live-page-reading-pass"
+  ],
+  "research": [
+    "/research/research-article-intake-completeness-false-starts",
+    "/research/research-source-passage-notes-review-time",
+    "/research/research-draft-return-reason-consistency",
+    "/research/research-live-reading-pass-defect-yield",
+    "/research/research-sitemap-manifest-route-agreement"
+  ]
+}

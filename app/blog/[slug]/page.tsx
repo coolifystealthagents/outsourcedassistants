@@ -266,7 +266,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             </div>
           ) : (
             <div className="card">
-              {publicationDate === '2026-09-07' && 'image' in post ? <figure className="article-photo"><img src={post.image} alt="Filipino assistant reviewing a documented daily article workflow" /><figcaption>Keep the source, current article record, and next review decision visible throughout the publishing routine.</figcaption></figure> : null}
+              {(publicationDate === '2026-09-07' || publicationDate === '2026-09-08') && 'image' in post ? <figure className="article-photo"><img src={post.image} alt="Filipino assistant reviewing a documented daily article workflow" /><figcaption>Keep the source, current article record, and next review decision visible throughout the publishing routine.</figcaption></figure> : null}
               <h2>The short answer</h2>
               <p>{fallback?.answer ?? ('body' in post ? post.body[0] : `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`)}</p>
               {'body' in post ? post.body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>) : null}
