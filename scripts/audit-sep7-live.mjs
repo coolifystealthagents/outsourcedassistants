@@ -12,10 +12,11 @@ for(const route of routes){
  const json=[...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(x=>x[1]).join('');
  const rendered=[...html.matchAll(/<img[^>]+src="([^"]+)"/g)].map(x=>new URL(x[1],base).href);
  const og=[...html.matchAll(/<meta property="og:image" content="([^"]+)"/g)].map(x=>new URL(x[1],base).href);
- const images=[...new Set([...rendered,...og])]; let imagePass=true;
- for(const url of images){const r=await fetch(url);if(r.status!==200)imagePass=false}
+ let renderedImages=true; let ogImages=true;
+ for(const url of new Set(rendered)){const r=await fetch(url);if(r.status!==200)renderedImages=false}
+ for(const url of new Set(og)){const r=await fetch(url);if(r.status!==200)ogImages=false}
  const body=(html.match(/<article[^>]*>(.*?)<\/article>/s)?.[1]||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
- const checks={http:response.status===200,date:html.includes('September 7, 2026'),structured:json.includes('"datePublished":"2026-09-07"'),canonical:canonical===`${base}${route}`||canonical===`https://outsourcedassistants.com${route}`,family:family==='blog'?json.includes('"@type":"BlogPosting"'):json.includes('"@type":"Article"'),index:indexes[family].includes(`href="${route}"`),sitemap:sitemap.includes(`${route}</loc>`),images:images.length>0&&imagePass,title:Boolean(title)&&!titles.has(title),body:body.length>500&&!bodies.has(body)};
+ const checks={http:response.status===200,date:html.includes('September 7, 2026'),structured:json.includes('"datePublished":"2026-09-07"'),canonical:canonical===`${base}${route}`||canonical===`https://outsourcedassistants.com${route}`,family:family==='blog'?json.includes('"@type":"BlogPosting"'):json.includes('"@type":"Article"'),index:indexes[family].includes(`href="${route}"`),sitemap:sitemap.includes(`${route}</loc>`),renderedImages:rendered.length>0&&renderedImages,ogImages:og.length>0&&ogImages,title:Boolean(title)&&!titles.has(title),body:body.length>500&&!bodies.has(body)};
  titles.add(title); bodies.add(body); rows.push({route,...checks,pass:Object.values(checks).every(Boolean)});
 }
 const counts={blog:rows.filter(x=>x.route.startsWith('/blog/')&&x.pass).length,research:rows.filter(x=>x.route.startsWith('/research/')&&x.pass).length};
