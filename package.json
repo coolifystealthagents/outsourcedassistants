@@ -16,7 +16,8 @@
     "validate:aug20-blog": "node scripts/validate-aug20-blog.mjs",
     "validate:sep4": "node scripts/validate-sep4.mjs",
     "validate:sep7": "node scripts/validate-sep7.mjs",
-    "validate:sep8": "node scripts/validate-sep8.mjs"
+    "validate:sep8": "node scripts/validate-sep8.mjs",
+    "validate:sep9": "node scripts/validate-sep9.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",
