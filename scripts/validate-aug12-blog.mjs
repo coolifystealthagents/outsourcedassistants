@@ -20,13 +20,16 @@ const unique = new Set(slugs);
 if (slugs.length !== 22 || unique.size !== 22) throw new Error(`Expected exactly 22 unique August 12 Blog records; found ${slugs.length}/${unique.size}`);
 if (detailSlugs.length !== 22 || detailSlugs.some((slug) => !unique.has(slug))) throw new Error('August 12 detail inventory does not match source records');
 if (!renderer.includes('<time dateTime={publicationDate}>{publicationLabel}</time>')) throw new Error('Visible semantic time renderer missing');
-if (!renderer.includes('datePublished: publicationDate, dateModified: publicationDate')) throw new Error('Structured publication dates missing');
+if (!renderer.includes('datePublished: publicationDate') || !renderer.includes('dateModified: fallbackUpdated ?? publicationDate')) throw new Error('Structured publication-date fallback contract missing');
 if (!read('app/blog/page.tsx').includes('blogPostsNewestFirst')) throw new Error('Blog index is not newest-first');
 if (!read('app/sitemap.xml/route.ts').includes('blogPosts.map')) throw new Error('Sitemap does not derive Blog routes from blogPosts');
 
-const indexPositions = slugs.slice(0, 20).map((slug) => index.indexOf(`/blog/${slug}`));
-if (indexPositions.some((position) => position < 0) || indexPositions.some((position, i) => i > 0 && position < indexPositions[i - 1])) throw new Error('The 20-route first Blog page is not in source order');
-if (slugs.slice(20).some((slug) => index.includes(`/blog/${slug}`))) throw new Error('Blog index first page exceeds its 20-route pagination contract');
+const indexPagesDirectory = path.join(root, '.next/server/app/blog/page');
+const paginatedIndex = [index, ...fs.readdirSync(indexPagesDirectory).filter((file) => file.endsWith('.html')).map((file) => fs.readFileSync(path.join(indexPagesDirectory, file), 'utf8'))];
+for (const slug of slugs) {
+  const matches = paginatedIndex.filter((html) => html.includes(`href="/blog/${slug}"`)).length;
+  if (matches !== 1) throw new Error(`Blog pagination must expose August 12 route exactly once: ${slug} (${matches})`);
+}
 
 for (const slug of slugs) {
   if (!sitemap.includes(`/blog/${slug}`)) throw new Error(`Sitemap route missing: ${slug}`);
