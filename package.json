@@ -2,7 +2,7 @@
   "name": "outsourcedassistants",
   "private": true,
   "scripts": {
-    "test": "node tests/homepage-image-labels.test.mjs",
+    "test": "node tests/homepage-image-labels.test.mjs && node tests/inbox-triage-service-handoff.test.mjs",
     "dev": "next dev",
     "build": "next build && npm run validate:aug13-blog && npm run validate:aug14-blog && npm run validate:aug17-blog && npm run validate:aug18-blog && npm run validate:aug20-blog",
     "start": "next start -H 0.0.0.0 -p 3000",
