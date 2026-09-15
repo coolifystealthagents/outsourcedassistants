@@ -24,9 +24,18 @@ This is a planning record for the existing Philippines-only service pages. It do
 | Source route | Reader question | Existing destination | Generated article result | Status |
 | --- | --- | --- | --- | --- |
 | `/blog/filipino-virtual-assistant-calendar-management` | How should a team scope recurring calendar preparation? | `/services/executive-calendar-management` | One matching href appears inside `<main>`. | Delivered; do not duplicate. |
+| `/blog/virtual-assistant-inbox-triage-workflow` | How can a team sort, draft, and escalate messages while sensitive decisions stay with the owner? | `/services/inbox-triage` | One matching href appears inside `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 | `/blog/remote-assistant-travel-planning-checklist` | Can an assistant research and coordinate travel while the traveler keeps payment and final approval? | `/services/travel-planning-support` | No matching href appears inside the generated `<main>`. | First candidate. |
 | `/blog/crm-administration-virtual-assistant-guide` | Which CRM maintenance tasks can be delegated without handing over protected changes? | `/services/crm-administration` | No matching href appears inside the generated `<main>`. | Second candidate. |
 
 ## Execution rule
 
 Take one candidate at a time. Store the destination, label, two-sentence scope boundary, and modified date with the source record rather than adding a route exception to a shared renderer. Before release, verify the exact route-local href in generated HTML, source and destination H1/canonical values, and both sitemap entries. The travel candidate must keep booking, payment, risk acceptance, and final itinerary approval with the traveler or authorized owner. The CRM candidate must keep identity, merge, protected-field, and policy decisions with the authorized owner.
+
+## Delivery status — 2026-09-15
+
+- Source delivery completed for `/blog/virtual-assistant-inbox-triage-workflow` to `/services/inbox-triage`.
+- Rendered source: `3b57aa6135d5e0d7ce533e2d9611877af3775920` passed lint, the full source suite, the production build, all declared blog validators, and generated route-local H1/canonical/link/freshness/sitemap checks.
+- Local artifact proof: one route-local `/services/inbox-triage` href; the visible owner boundary; canonical `https://outsourcedassistants.com/blog/virtual-assistant-inbox-triage-workflow`; Open Graph and `BlogPosting` modified date `2026-09-15`; sitemap route present. This sitemap intentionally emits no `<lastmod>`.
+- Public verification is pending: cache-busted apex and `www` route and sitemap requests each returned `403 text/plain`; denied bodies were not parsed. No repository-approved deployment target, configuration, or workflow was found, and no target was inferred or triggered.
+- Preserve rendered-source commit `3b57aa6135d5e0d7ce533e2d9611877af3775920`; this status record does not prove deployment. Classification: `deployment_pending_public_verification / deployment_configuration_unavailable / public_unavailable`.
