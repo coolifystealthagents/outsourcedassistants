@@ -2,7 +2,7 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 
-type Props = { endpoint?: string; encoding?: "json" | "form" };
+type Props = { endpoint?: string; encoding?: "json" | "form"; heading?: string };
 type TrackerWindow = Window & { acrTracker?: { trackLead?: (payload: Record<string, unknown>) => void } };
 
 const companySizes = ["1-5", "5-10", "11-50", "51-250", "251-1k", "1k+"];
@@ -14,7 +14,7 @@ const countryCodes = [
   ["🇲🇽", "+52"], ["🇧🇷", "+55"], ["🇿🇦", "+27"], ["🇩🇪", "+49"], ["🇫🇷", "+33"],
 ];
 
-export default function StandardContactForm({ endpoint = "/api/submit-lead", encoding = "json" }: Props) {
+export default function StandardContactForm({ endpoint = "/api/submit-lead", encoding = "json", heading = "Tell Us About the Support You Need" }: Props) {
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [countryCode, setCountryCode] = useState("+1");
@@ -47,6 +47,7 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
       positions: String(data.get("positions") || ""), positionsToFill: String(data.get("positions") || ""),
       referral: String(data.get("referral") || ""), howTheyHeard: String(data.get("referral") || ""),
       referralSpecify: String(data.get("referralSpecify") || ""), message: String(data.get("message") || ""),
+      preferredContact: String(data.get("preferredContact") || ""), preferredTime: String(data.get("preferredTime") || ""),
       source: "contact-form", formId: "contactPageForm",
     };
     setSubmitting(true);
@@ -75,9 +76,9 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
 
   return (
     <div className="sa-form-card">
-      <h2>Find Growth In Your Business By Hiring Industry Experienced Virtual Assistants</h2>
-      <form onSubmit={submit} id="contactPageForm">
-        <input className="sa-hp" name="website_url" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+      <h2>{heading}</h2>
+      <form action={endpoint} method="post" onSubmit={submit} id="contactPageForm">
+        <input className="sa-hp" name="website_url" type="hidden" tabIndex={-1} autoComplete="off" aria-label="Leave this field empty" />
         <div className="sa-grid">
           <label>First Name *<input name="firstName" required autoComplete="given-name" /></label>
           <label>Last Name *<input name="lastName" required autoComplete="family-name" /></label>
@@ -94,9 +95,13 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
         </div>
         <label>How Did You Hear About Us? *<select name="referral" required value={referral} onChange={(e) => setReferral(e.target.value)}><option value="" disabled>Select...</option>{referrals.map((x) => <option key={x}>{x}</option>)}</select></label>
         {referral === "Other" ? <label>Please Specify *<input name="referralSpecify" required /></label> : null}
-        <label>Message<textarea name="message" rows={4} /></label>
+        <div className="sa-grid">
+          <label>Preferred Contact Method *<select name="preferredContact" required defaultValue=""><option value="" disabled>Select...</option><option>Email</option><option>Phone</option></select></label>
+          <label>Best Time to Reach You *<input name="preferredTime" required placeholder="e.g. Weekdays, 10 AM–2 PM ET" /></label>
+        </div>
+        <label>What would you like your assistant to own? *<textarea name="message" rows={4} required placeholder="Share the recurring tasks, tools, hours, and outcomes you need covered." /></label>
         {error ? <p className="sa-error" role="alert">{error}</p> : null}
-        <button type="submit" disabled={submitting}>{submitting ? "Submitting..." : "Book a Free Consultation"}</button>
+        <button type="submit" disabled={submitting}>{submitting ? "Submitting..." : "Book My Free Consultation"}</button>
       </form>
       <style jsx>{`
         .sa-form-card{width:100%;max-width:876px;margin:0 auto;background:#fff;border:1px solid #e3e8ef;border-radius:22px;padding:34px 48px 48px;box-shadow:0 18px 48px rgba(15,34,58,.16);color:#34415a;text-align:left}
