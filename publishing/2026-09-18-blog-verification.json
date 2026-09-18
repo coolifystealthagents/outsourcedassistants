@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "family": "blog",
+  "requiredCount": 12,
+  "verifiedCount": 12,
+  "publicationDate": "2026-09-18",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "contentCommitSha": "f146eeec7b77d50f572ad52179c9a5c7ac195103",
+  "deploymentUuid": "8p79iu5j39txs26frygiqdb2",
+  "deploymentFinishedAt": "2026-09-18T08:59:51Z",
+  "verifiedAt": "2026-09-18T14:52:56Z",
+  "checks": ["http-200", "unique-title", "visible-date", "datePublished", "self-canonical", "image", "authoritative-sources", "service-cta", "blog-index", "sitemap"],
+  "commonSources": ["https://csrc.nist.gov/pubs/sp/800/46/r2/final", "https://www.cisa.gov/secure-our-world/require-multifactor-authentication", "https://privacy.gov.ph/data-privacy-act/"],
+  "entries": [
+    {"topic":"executive calendar management delegation","slug":"delegate-executive-calendar-management-filipino-assistant","contentHash":"sha256:4c1c56b94dd472598d00ffebdd5332bc97a462a68f80ac55d0000de53301d64b","liveUrl":"https://outsourcedassistants.com/blog/delegate-executive-calendar-management-filipino-assistant"},
+    {"topic":"inbox triage authority rules","slug":"inbox-triage-rules-filipino-assistant","contentHash":"sha256:dceb2e470895562259c3720c01d06ed5182de44fc42e5ac34565dd60fab9d7cb","liveUrl":"https://outsourcedassistants.com/blog/inbox-triage-rules-filipino-assistant"},
+    {"topic":"travel planning brief","slug":"travel-planning-brief-filipino-assistant","contentHash":"sha256:eb300b492846a69c4dfc8ad1fd911aed54a0ace95ccb1015c60ccf88b2249ae7","liveUrl":"https://outsourcedassistants.com/blog/travel-planning-brief-filipino-assistant"},
+    {"topic":"meeting preparation packet","slug":"meeting-preparation-packet-virtual-assistant","contentHash":"sha256:8f9afa36e9fd31ec5a3ac223a9ba811240eaf77d94f85d84d6304b879d95743e","liveUrl":"https://outsourcedassistants.com/blog/meeting-preparation-packet-virtual-assistant"},
+    {"topic":"CRM administration handoff","slug":"crm-administration-handoff-filipino-assistant","contentHash":"sha256:481b7db3f192feb060c92ff9795dd348eb1af57e544631730e59f83462b9e152","liveUrl":"https://outsourcedassistants.com/blog/crm-administration-handoff-filipino-assistant"},
+    {"topic":"research assistance brief","slug":"research-assistance-brief-filipino-assistant","contentHash":"sha256:5de9f36a65a76e87507e3a6fc5cfc03e9aa03dd65b9d5fc830a148ba55cb5ddf","liveUrl":"https://outsourcedassistants.com/blog/research-assistance-brief-filipino-assistant"},
+    {"topic":"document formatting checklist","slug":"document-formatting-checklist-outsourced-assistant","contentHash":"sha256:cb51e5caf0f3d724eb6f836f05f765d351515da653fbbfff39e03b2de21ab889","liveUrl":"https://outsourcedassistants.com/blog/document-formatting-checklist-outsourced-assistant"},
+    {"topic":"project coordination cadence","slug":"project-coordination-cadence-remote-assistant","contentHash":"sha256:ffc5e4599f8aa3cc222194eefade127b7e22380c3d479408afea02cbf4bcf834","liveUrl":"https://outsourcedassistants.com/blog/project-coordination-cadence-remote-assistant"},
+    {"topic":"expense administration workflow","slug":"expense-administration-workflow-virtual-assistant","contentHash":"sha256:48089b055d693b6bf0e5d827d2135069f8af81c50c8b5acd7e87055f97aeb243","liveUrl":"https://outsourcedassistants.com/blog/expense-administration-workflow-virtual-assistant"},
+    {"topic":"recruitment scheduling candidate experience","slug":"recruitment-scheduling-candidate-experience-assistant","contentHash":"sha256:f5333a916319a880be8d1070b36b357f53b79bef121aecc31dbe867b6ddf5f33","liveUrl":"https://outsourcedassistants.com/blog/recruitment-scheduling-candidate-experience-assistant"},
+    {"topic":"customer follow-up escalation","slug":"customer-follow-up-escalation-rules-assistant","contentHash":"sha256:97199c91c41229d4fa76eab7b3e91a6e4e6b43fd7b5e1b3a98335d33f7fd542e","liveUrl":"https://outsourcedassistants.com/blog/customer-follow-up-escalation-rules-assistant"},
+    {"topic":"weekly operations reporting scorecard","slug":"weekly-operations-reporting-assistant-scorecard","contentHash":"sha256:52fa9c25fcaa16f86d919c321d28883d27c30cbab9d4c934800a0b3895db45ad","liveUrl":"https://outsourcedassistants.com/blog/weekly-operations-reporting-assistant-scorecard"}
+  ]
+}
