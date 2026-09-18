@@ -16,7 +16,7 @@ for (const slug of records) {
   if (!html.includes('/assistant-team.jpg')) throw new Error(`Preserved article photo missing: ${slug}`);
   if (/<form\b|<input\b|<textarea\b|<select\b/i.test(html)) throw new Error(`Form control found: ${slug}`);
 }
-const index = [fs.readFileSync(path.join(root, '.next/server/app/blog.html'), 'utf8'), ...Array.from({ length: 10 }, (_, i) => {
+const index = [fs.readFileSync(path.join(root, '.next/server/app/blog.html'), 'utf8'), ...Array.from({ length: 30 }, (_, i) => {
   try { return fs.readFileSync(path.join(root, '.next/server/app/blog/page', `${i + 2}.html`), 'utf8'); } catch { return ''; }
 })].join('');
 const positions = records.slice(0, 20).map((slug) => index.indexOf(`/blog/${slug}`));

@@ -18,6 +18,7 @@ import {september10ResearchPosts} from './sep10-research';
 import {september14BlogPosts} from './sep14-content';
 import {september14ResearchPosts} from './sep14-research';
 import {september18ResearchPosts} from './sep18-research';
+import {september18BlogPosts} from './sep18-content';
 export const site = {
   "domain": "OutsourcedAssistants.com",
   "url": "https://outsourcedassistants.com",
@@ -357,7 +358,7 @@ const aug23ReplacementPosts = [
   { slug: 'outsourced-assistant-delayed-queue-repair', title: 'Outsourced Assistant Delayed Queue Repair', excerpt: 'Recover delayed article work by separating evidence gaps, decisions, rework, and capacity.', minutes: 11, published: '2026-08-23' },
 ] as const;
 
-export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts, ...aug23ReplacementPosts, ...august31BlogPosts, ...september3BlogPosts, ...september4BlogPosts, ...september7BlogPosts, ...september8BlogPosts, ...september9BlogPosts, ...september10BlogPosts, ...september14BlogPosts] as const;
+export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts, ...aug23ReplacementPosts, ...august31BlogPosts, ...september3BlogPosts, ...september4BlogPosts, ...september7BlogPosts, ...september8BlogPosts, ...september9BlogPosts, ...september10BlogPosts, ...september14BlogPosts, ...september18BlogPosts] as const;
 const august23BlogOrder: readonly string[] = aug23ReplacementPosts.map((post) => post.slug);
 const august21BlogOrder: readonly string[] = aug21ReplacementPosts.map((post) => post.slug);
 const august20BlogOrder: readonly string[] = aug20ReplacementPosts.map((post) => post.slug);

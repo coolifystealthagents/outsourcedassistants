@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 2,
+  "targetDate": "2026-09-18",
+  "family": "blog",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "requiredCount": 12,
+  "sourcePath": "app/sep18-content.ts",
+  "entries": [
+    {"route":"/blog/delegate-executive-calendar-management-filipino-assistant","service":"/services/executive-calendar-management"},
+    {"route":"/blog/inbox-triage-rules-filipino-assistant","service":"/services/inbox-triage"},
+    {"route":"/blog/travel-planning-brief-filipino-assistant","service":"/services/travel-planning-support"},
+    {"route":"/blog/meeting-preparation-packet-virtual-assistant","service":"/services/meeting-preparation"},
+    {"route":"/blog/crm-administration-handoff-filipino-assistant","service":"/services/crm-administration"},
+    {"route":"/blog/research-assistance-brief-filipino-assistant","service":"/services/research-assistance"},
+    {"route":"/blog/document-formatting-checklist-outsourced-assistant","service":"/services/document-formatting"},
+    {"route":"/blog/project-coordination-cadence-remote-assistant","service":"/services/project-coordination"},
+    {"route":"/blog/expense-administration-workflow-virtual-assistant","service":"/services/expense-administration"},
+    {"route":"/blog/recruitment-scheduling-candidate-experience-assistant","service":"/services/recruitment-scheduling"},
+    {"route":"/blog/customer-follow-up-escalation-rules-assistant","service":"/services/customer-follow-up"},
+    {"route":"/blog/weekly-operations-reporting-assistant-scorecard","service":"/services/operations-reporting"}
+  ]
+}

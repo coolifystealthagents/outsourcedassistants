@@ -97,7 +97,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         author: { '@type': 'Organization', name: site.brand, url: siteUrl },
         publisher: { '@type': 'Organization', name: site.brand, url: siteUrl },
         datePublished: publicationDate, dateModified: fallbackUpdated ?? publicationDate, image: `${siteUrl}/assistant-team.jpg`,
-        ...(campaignGuide ? { citation: operationsReferences.map((source) => source.url) } : detail ? { citation: detail.sources.map((source) => source.url) } : {}),
+        ...(campaignGuide ? { citation: operationsReferences.map((source) => source.url) } : detail ? { citation: detail.sources.map((source) => source.url) } : 'sources' in post ? {citation: post.sources.map((source) => source.url)} : {}),
       },
       { '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) },
       { '@type': 'BreadcrumbList', itemListElement: [
@@ -266,10 +266,11 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             </div>
           ) : (
             <div className="card">
-              {(publicationDate === '2026-09-07' || publicationDate === '2026-09-08' || publicationDate === '2026-09-09' || publicationDate === '2026-09-10' || publicationDate === '2026-09-14') && 'image' in post ? <figure className="article-photo"><img src={post.image} alt="Filipino assistant reviewing a documented daily article workflow" /><figcaption>Keep the source, current article record, and next review decision visible throughout the publishing routine.</figcaption></figure> : null}
+              {(publicationDate === '2026-09-07' || publicationDate === '2026-09-08' || publicationDate === '2026-09-09' || publicationDate === '2026-09-10' || publicationDate === '2026-09-14' || publicationDate === '2026-09-18') && 'image' in post ? <figure className="article-photo"><img src={post.image} alt="Filipino assistant and manager reviewing a documented work handoff" /><figcaption>Start with a defined work lane, limited access, and review evidence both people can inspect.</figcaption></figure> : null}
               <h2>The short answer</h2>
               <p>{fallback?.answer ?? ('body' in post ? post.body[0] : `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`)}</p>
               {'body' in post ? post.body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>) : null}
+              {'sources' in post ? <section aria-labelledby="authoritative-sources"><h2 id="authoritative-sources">Authoritative sources</h2><p>Use these primary guidance pages with your own policies and qualified advisers where needed.</p><ol className="article-sources">{post.sources.map((source)=><li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.name}</a></li>)}</ol></section> : null}
               {relatedService ? <p data-topical-handoff="calendar-management-service">{relatedService.summary} <a href={relatedService.href}>{relatedService.label}</a>. Keep priority choices, exceptions, and meeting commitments with your team.</p> : null}
               <h2>{fallback?.sectionTitle ?? 'Build the work lane'}</h2>
               <ul>{(fallback?.items ?? ['Write the recurring task and its finish rule', 'Share an approved example and the source system', 'Set response times, approval limits, and escalation rules', 'Review a small sample before widening the role']).map((item) => <li key={item}>{item}</li>)}</ul>
