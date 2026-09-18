@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "family": "research",
+  "required": 5,
+  "publicationDate": "2026-09-18",
+  "domain": "outsourcedassistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "sourceCheckedAt": "2026-09-18T07:00:00Z",
+  "validationCommands": ["npm run lint", "npm run build", "npm run validate:sep18-research"],
+  "entries": [
+    {"family":"research","topic":"personal-data workflow scoping","slug":"outsourced-assistant-personal-data-scope-research","contentHash":"sha256:1e9ae21c8b964fcd4b4e1e6b6c4000abbd63a4851b367ed561d0eab092d2b947","publicationDate":"2026-09-18","liveUrl":"https://outsourcedassistants.com/research/outsourced-assistant-personal-data-scope-research","sources":["privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012","privacy.gov.ph/manage-legal","privacy.gov.ph/pips-and-pics/advisory-opinions","nist.gov/cyberframework","cisa.gov/require-multifactor-authentication"]},
+    {"family":"research","topic":"BYOD access decision","slug":"virtual-assistant-byod-access-decision-research","contentHash":"sha256:d411c9c68eac34affbd370537ad4241ae592695dc22b8a2d5816c218956e6b11","publicationDate":"2026-09-18","liveUrl":"https://outsourcedassistants.com/research/virtual-assistant-byod-access-decision-research","sources":["nist.gov/publications/users-guide-telework-and-bring-your-own-device-byod-security","csrc.nist.gov/pubs/sp/800/46/r2/final","nccoe.nist.gov/mobile-device-security/bring-your-own-device","nist.gov/cyberframework","cisa.gov/require-multifactor-authentication"]},
+    {"family":"research","topic":"MFA lifecycle verification","slug":"remote-assistant-mfa-rollout-research","contentHash":"sha256:ee0dc0bd1f998dd32b61152768568877d863ee04bc607f35851bcd49b5701641","publicationDate":"2026-09-18","liveUrl":"https://outsourcedassistants.com/research/remote-assistant-mfa-rollout-research","sources":["cisa.gov/require-multifactor-authentication","cisa.gov/resources-tools/resources/implementing-phishing-resistant-mfa","pages.nist.gov/800-63-4","nist.gov/cyberframework"]},
+    {"family":"research","topic":"Philippine digital-economy hiring context","slug":"philippines-digital-economy-hiring-context-research","contentHash":"sha256:3cee381fea6083b08edcf6875ecd296687dbe95fcf628f5150eebe4b431c5335","publicationDate":"2026-09-18","liveUrl":"https://outsourcedassistants.com/research/philippines-digital-economy-hiring-context-research","sources":["psa.gov.ph/statistics/digital-economy/node/1684083345","psa.gov.ph/content/philippine-digital-economy-satellite-account-0","psada.psa.gov.ph/catalog/SICT/about"]},
+    {"family":"research","topic":"primary-source verification","slug":"research-assistant-primary-source-verification-research","contentHash":"sha256:afbf454736d7209c9101c3124c3dd444f377834e1531325e22cd3807fecadfbe","publicationDate":"2026-09-18","liveUrl":"https://outsourcedassistants.com/research/research-assistant-primary-source-verification-research","sources":["developers.google.com/search/docs/fundamentals/creating-helpful-content","nist.gov/cyberframework","w3.org/TR/WCAG22","psa.gov.ph/content/philippine-digital-economy-satellite-account-0"]}
+  ]
+}

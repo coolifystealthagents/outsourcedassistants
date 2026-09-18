@@ -17,6 +17,7 @@ import {september10BlogPosts} from './sep10-content';
 import {september10ResearchPosts} from './sep10-research';
 import {september14BlogPosts} from './sep14-content';
 import {september14ResearchPosts} from './sep14-research';
+import {september18ResearchPosts} from './sep18-research';
 export const site = {
   "domain": "OutsourcedAssistants.com",
   "url": "https://outsourcedassistants.com",
@@ -1116,6 +1117,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...september18ResearchPosts,
   ...september7ResearchPosts,
   ...september8ResearchPosts,
   ...september9ResearchPosts,
