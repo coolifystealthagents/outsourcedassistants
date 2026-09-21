@@ -65,7 +65,7 @@ export default function ContactUsPage() {
               </ul>
               <div className={styles.powered}>
                 <span aria-hidden="true">SA</span>
-                <p><strong>Powered by Stealth Agents</strong><br /><a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer">Learn about our staffing partner</a></p>
+                <p><strong>Powered by StealthAgents</strong><br /><a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer">Learn about our staffing partner</a></p>
               </div>
             </div>
             <div id="consultation-form" className={styles.formWrap}>
@@ -131,7 +131,7 @@ export default function ContactUsPage() {
         <section className={styles.about} aria-labelledby="about-title">
           <div className={`${styles.shell} ${styles.aboutInner}`}>
             <div><p className={styles.eyebrow}>Our staffing partner</p><h2 id="about-title">About Stealth Agents</h2></div>
-            <div><p>Stealth Agents works with over 35+ different industries. We&apos;re featured on Forbes as the top rated virtual assistant company.</p><a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer">Powered by Stealth Agents <span aria-hidden="true">↗</span></a></div>
+            <div><p>Stealth Agents works with over 35+ different industries. We&apos;re featured on Forbes as the top rated virtual assistant company.</p><a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer">Powered by StealthAgents <span aria-hidden="true">↗</span></a></div>
           </div>
         </section>
 
