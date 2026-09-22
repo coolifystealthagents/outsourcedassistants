@@ -6,7 +6,10 @@ const previous=fs.readdirSync(path.join(root,'publishing')).filter((n)=>n.endsWi
 if(manifest.entries.length!==12)fail(`Expected 12 Blog entries, got ${manifest.entries.length}`);
 const routes=manifest.entries.map((e)=>e.route);if(new Set(routes).size!==12)fail('September 18 routes are not unique');
 if(!data.includes('...september18BlogPosts'))fail('September 18 collection is not wired into app/data.ts');
-const sitemap=fs.readFileSync(path.join(root,'.next/server/app/sitemap.xml.body'),'utf8'),index=fs.readFileSync(path.join(root,'.next/server/app/blog.html'),'utf8'),hashes=[];
+const sitemap=fs.readFileSync(path.join(root,'.next/server/app/sitemap.xml.body'),'utf8');
+const pageDir=path.join(root,'.next/server/app/blog/page');
+const index=fs.readFileSync(path.join(root,'.next/server/app/blog.html'),'utf8')+(fs.existsSync(pageDir)?fs.readdirSync(pageDir).filter((name)=>name.endsWith('.html')).map((name)=>fs.readFileSync(path.join(pageDir,name),'utf8')).join('\n'):'');
+const hashes=[];
 for(const entry of manifest.entries){const slug=entry.route.split('/').pop();
  if(previous.includes(slug))fail(`Reused prior route: ${slug}`);if(!source.includes(`slug:'${slug}'`))fail(`Missing source record: ${slug}`);
  const html=fs.readFileSync(path.join(root,'.next/server/app/blog',`${slug}.html`),'utf8');const text=html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z#0-9]+;/gi,' ').replace(/\s+/g,' ').trim();
@@ -15,7 +18,7 @@ for(const entry of manifest.entries){const slug=entry.route.split('/').pop();
  if(!html.includes(`https://outsourcedassistants.com${entry.route}`))fail(`Canonical missing: ${slug}`);
  if(!html.includes(entry.service)||!html.includes('/contact-us'))fail(`Conversion links missing: ${slug}`);
  if(!html.includes('Authoritative sources')||!html.includes('privacy.gov.ph'))fail(`Sources missing: ${slug}`);
- if(!sitemap.includes(entry.route))fail(`Sitemap route missing: ${slug}`);if(!index.includes(entry.route))fail(`Leading Blog index route missing: ${slug}`);
+ if(!sitemap.includes(entry.route))fail(`Sitemap route missing: ${slug}`);if(!index.includes(entry.route))fail(`Paginated Blog index route missing: ${slug}`);
  hashes.push(crypto.createHash('sha256').update(text).digest('hex'));
 }
 if(new Set(hashes).size!==12)fail('Duplicate rendered article content detected');

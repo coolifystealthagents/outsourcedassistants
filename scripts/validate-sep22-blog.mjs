@@ -1,0 +1,22 @@
+import fs from 'node:fs';import path from 'node:path';import crypto from 'node:crypto';
+const root=process.cwd(),fail=(m)=>{throw new Error(m)};
+const manifest=JSON.parse(fs.readFileSync(path.join(root,'publishing/2026-09-22-manifest.json'),'utf8'));
+const source=fs.readFileSync(path.join(root,'app/sep22-content.ts'),'utf8'),data=fs.readFileSync(path.join(root,'app/data.ts'),'utf8');
+const previous=fs.readdirSync(path.join(root,'publishing')).filter((n)=>n.endsWith('-manifest.json')&&n!=='2026-09-22-manifest.json').map((n)=>fs.readFileSync(path.join(root,'publishing',n),'utf8')).join('\n');
+if(manifest.entries.length!==12)fail(`Expected 12 Blog entries, got ${manifest.entries.length}`);
+const routes=manifest.entries.map((e)=>e.route);if(new Set(routes).size!==12)fail('September 22 routes are not unique');
+if(!data.includes('...september22BlogPosts'))fail('September 22 collection is not wired into app/data.ts');
+const sitemap=fs.readFileSync(path.join(root,'.next/server/app/sitemap.xml.body'),'utf8'),index=fs.readFileSync(path.join(root,'.next/server/app/blog.html'),'utf8'),hashes=[];
+for(const entry of manifest.entries){const slug=entry.route.split('/').pop();
+ if(previous.includes(slug))fail(`Reused prior route: ${slug}`);if(!source.includes(`slug:'${slug}'`))fail(`Missing source record: ${slug}`);
+ const html=fs.readFileSync(path.join(root,'.next/server/app/blog',`${slug}.html`),'utf8');const text=html.replace(/<script[\s\S]*?<\/script>/gi,' ').replace(/<style[\s\S]*?<\/style>/gi,' ').replace(/<[^>]+>/g,' ').replace(/&[a-z#0-9]+;/gi,' ').replace(/\s+/g,' ').trim();
+ if(text.split(/\s+/).length<900)fail(`Rendered article under 900 words: ${slug}`);
+ if(!html.includes('dateTime="2026-09-22"')||!html.includes('datePublished')||!html.includes('2026-09-22'))fail(`Publication date mismatch: ${slug}`);
+ if(!html.includes(`https://outsourcedassistants.com${entry.route}`))fail(`Canonical missing: ${slug}`);
+ if(!html.includes(`/services/${entry.service}`)||!html.includes('/contact-us'))fail(`Conversion links missing: ${slug}`);
+ if(!html.includes('Authoritative sources')||!html.includes('privacy.gov.ph'))fail(`Sources missing: ${slug}`);
+ if(!sitemap.includes(entry.route))fail(`Sitemap route missing: ${slug}`);if(!index.includes(entry.route))fail(`Leading Blog index route missing: ${slug}`);
+ const hash=crypto.createHash('sha256').update(text).digest('hex');hashes.push(hash);if(entry.contentHash!==`sha256:${hash}`)fail(`Content hash mismatch: ${slug}`);
+}
+if(new Set(hashes).size!==12)fail('Duplicate rendered article content detected');
+console.log('PASS September 22 Blog: 12 unique new routes, 900+ rendered words, exact dates, canonicals, service CTAs, sources, index, sitemap, and content hashes');
