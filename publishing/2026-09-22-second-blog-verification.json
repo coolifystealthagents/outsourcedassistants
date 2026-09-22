@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "runId": "d9d9011f-af51-4d39-872a-9f571e76a28c",
+  "requiredCount": 12,
+  "verifiedCount": 0,
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "productionBranch": "main",
+  "productionBaseSha": "306a2d34d47eb89fd3f398e329440568fa2d64fa",
+  "publicationDate": "2026-09-22",
+  "entries": [
+    {
+      "family": "blog",
+      "topic": "executive focus-time protection",
+      "slug": "executive-calendar-focus-time-protection-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:4c0abff211ff3a222e8cb840ab404f51e9ca2495e4d2deae247fcdf9dc69d454",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/executive-calendar-focus-time-protection-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "shared-inbox duplicate-thread review",
+      "slug": "shared-inbox-duplicate-thread-merge-review",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:e80a96067af0612926abb3133631224f6d9995880012c621e21bfcc04fe78090",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/shared-inbox-duplicate-thread-merge-review",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "travel option-expiry logging",
+      "slug": "travel-booking-option-expiry-log-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:05feba6030a8e7535e3f82aac5caa8bfd01c3dcb0df286838e8da959a60379af",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/travel-booking-option-expiry-log-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "meeting pre-read completeness checking",
+      "slug": "meeting-pre-read-completeness-check-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:c2d269016210824e5f4b7c2ff4902ce0b379f87d500f1b82d0120d15514cbd53",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/meeting-pre-read-completeness-check-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "CRM owner-change request preparation",
+      "slug": "crm-owner-change-request-queue-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:b178bae18b5c8357c42d023e0f942178ed6256258d0a50a73f115e1584b036c6",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/crm-owner-change-request-queue-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "research source-update trigger monitoring",
+      "slug": "research-source-update-trigger-register-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:8f67cc33904b6f2beaa8047f45fd45ca22cdd7b44d2e9d0baf06506a2e35db65",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/research-source-update-trigger-register-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "document template version-drift checking",
+      "slug": "document-template-version-drift-check-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:1c0c3c7e55842add7dd7adf671941f1e92437c36a042c8fe0e0cef51166f926c",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/document-template-version-drift-check-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "project status evidence-cutoff management",
+      "slug": "project-status-evidence-cutoff-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:febe1e4dfd9644eab2bce839dbd36061bbcb0502b98a98d0a6f02a0fcd47ef55",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/project-status-evidence-cutoff-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "expense currency-conversion evidence preparation",
+      "slug": "expense-currency-conversion-evidence-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:4fc62ac4f5f5e6b4aa6e8379ddb111a2fc66ddb7d23f20b6da67e78609ff7c05",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/expense-currency-conversion-evidence-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "interview panel availability reconciliation",
+      "slug": "interview-panel-availability-reconciliation-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:d50e1ddd2b27b0d7701195cb217858478e79403dc4a97f6000187a0128842031",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/interview-panel-availability-reconciliation-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "customer follow-up channel verification",
+      "slug": "customer-follow-up-consent-channel-check-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:207308c013428ad875ca93ec8415705f48f050f60c1d61bb9c261e1f0511a695",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/customer-follow-up-consent-channel-check-assistant",
+      "verificationTime": null
+    },
+    {
+      "family": "blog",
+      "topic": "operations dashboard late-data annotation",
+      "slug": "operations-dashboard-late-data-note-assistant",
+      "sources": [
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.cisa.gov/secure-our-world/require-multifactor-authentication",
+        "https://privacy.gov.ph/data-privacy-act/"
+      ],
+      "contentHash": "sha256:e470c31ea86eca45ca1e0deb4030b896f467d1fb11cbf982751ac6de3685074d",
+      "publicationDate": "2026-09-22",
+      "commitSha": "913e26cb0fac27786612b9ca782954eec6af2de7",
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/operations-dashboard-late-data-note-assistant",
+      "verificationTime": null
+    }
+  ]
+}
