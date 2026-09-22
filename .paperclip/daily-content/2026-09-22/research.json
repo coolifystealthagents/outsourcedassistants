@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-22",
+  "timezone": "Etc/UTC",
+  "family": "research",
+  "required": 5,
+  "slugs": [
+    "outsourced-assistant-inbox-phishing-escalation-research",
+    "recruitment-scheduling-applicant-record-boundaries-research",
+    "expense-assistant-approval-separation-research",
+    "crm-assistant-contact-preference-change-research",
+    "calendar-assistant-external-invite-authority-research"
+  ],
+  "manifest": "publishing/2026-09-22-research-manifest.json"
+}

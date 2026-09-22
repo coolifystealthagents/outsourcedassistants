@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "family": "research",
+  "required": 5,
+  "publicationDate": "2026-09-22",
+  "domain": "outsourcedassistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "sourceCheckedAt": "2026-09-22T16:00:00Z",
+  "validationCommands": ["npm run lint", "npm run build", "npm run validate:sep22-research"],
+  "entries": [
+    {"family":"research","topic":"inbox phishing escalation","slug":"outsourced-assistant-inbox-phishing-escalation-research","contentHash":"sha256:dcbbba0f05ee2ad0c99af4d96347e7ec6ef10b2aa71130fa110c4ca5dda283bd","publicationDate":"2026-09-22","commitSha":null,"deploymentEvidence":null,"liveUrl":"https://outsourcedassistants.com/research/outsourced-assistant-inbox-phishing-escalation-research","verifiedAt":null,"sources":["cisa.gov/secure-our-world/recognize-and-report-phishing","cisa.gov/secure-our-world/require-multifactor-authentication","nist.gov/cyberframework","nist.gov/privacy-framework"]},
+    {"family":"research","topic":"recruitment scheduling applicant records","slug":"recruitment-scheduling-applicant-record-boundaries-research","contentHash":"sha256:79e00f137fd90bd6c5eb1ee80b838ddbdd14837867b320fc19cb7254bd31a046","publicationDate":"2026-09-22","commitSha":null,"deploymentEvidence":null,"liveUrl":"https://outsourcedassistants.com/research/recruitment-scheduling-applicant-record-boundaries-research","verifiedAt":null,"sources":["eeoc.gov/employers/recordkeeping-requirements","eeoc.gov/prohibited-employment-policiespractices","nist.gov/cyberframework","nist.gov/privacy-framework"]},
+    {"family":"research","topic":"expense preparation and approval separation","slug":"expense-assistant-approval-separation-research","contentHash":"sha256:f55b7fcbed58d838163f1336e664e70f4dbecfc140c852401387f66b2c0a61b6","publicationDate":"2026-09-22","commitSha":null,"deploymentEvidence":null,"liveUrl":"https://outsourcedassistants.com/research/expense-assistant-approval-separation-research","verifiedAt":null,"sources":["gao.gov/products/gao-14-704g","nist.gov/cyberframework","consumer.ftc.gov/articles/scams-your-small-business"]},
+    {"family":"research","topic":"CRM contact-preference changes","slug":"crm-assistant-contact-preference-change-research","contentHash":"sha256:bed256fa79d4073edb71daa1b46b522f92a1e2f503e631530192972df8b17589","publicationDate":"2026-09-22","commitSha":null,"deploymentEvidence":null,"liveUrl":"https://outsourcedassistants.com/research/crm-assistant-contact-preference-change-research","verifiedAt":null,"sources":["ftc.gov/business-guidance/resources/can-spam-act-compliance-guide-business","privacy.gov.ph/implementing-rules-regulations-data-privacy-act-2012","nist.gov/cyberframework","nist.gov/privacy-framework"]},
+    {"family":"research","topic":"external calendar invitation authority","slug":"calendar-assistant-external-invite-authority-research","contentHash":"sha256:99b3bbe45b4170dd6f2a192b6cc58dcadd6307c89f58157aab6d89109b0b473f","publicationDate":"2026-09-22","commitSha":null,"deploymentEvidence":null,"liveUrl":"https://outsourcedassistants.com/research/calendar-assistant-external-invite-authority-research","verifiedAt":null,"sources":["rfc-editor.org/rfc/rfc5545","nist.gov/privacy-framework","nist.gov/cyberframework"]}
+  ]
+}
