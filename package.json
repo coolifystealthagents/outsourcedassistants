@@ -21,7 +21,7 @@
     "validate:sep10": "node scripts/validate-sep10.mjs",
     "validate:sep18-blog": "node scripts/validate-sep18-blog.mjs",
     "validate:sep18-research": "node scripts/validate-sep18-research.mjs",
-    "validate:sep22-research": "node scripts/validate-sep22-research.mjs",
+    "validate:sep23-research": "node scripts/validate-sep23-research.mjs",
     "validate:sep22-blog": "node scripts/validate-sep22-blog.mjs",
     "validate:sep22-second-blog": "node scripts/validate-sep22-second-blog.mjs"
   },
