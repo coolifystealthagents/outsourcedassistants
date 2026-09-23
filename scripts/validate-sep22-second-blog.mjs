@@ -17,10 +17,10 @@ for(const [,slug,title] of matches){
  const words=text.trim().split(/\s+/).length;
  if(words<900) throw new Error(`${slug} has ${words} rendered words`);
  if(!html.includes(title)) throw new Error(`Missing title for ${slug}`);
- if(!html.includes('September 22, 2026')) throw new Error(`Missing visible date for ${slug}`);
- if(!html.includes('2026-09-22')) throw new Error(`Missing structured date for ${slug}`);
+ if(!html.includes('September 23, 2026')) throw new Error(`Missing visible date for ${slug}`);
+ if(!html.includes('2026-09-23')) throw new Error(`Missing structured date for ${slug}`);
  if(!html.includes(`https://outsourcedassistants.com/blog/${slug}`)) throw new Error(`Missing canonical for ${slug}`);
  if(!html.includes('/contact-us')) throw new Error(`Missing conversion link for ${slug}`);
  if(!html.includes('/services/')) throw new Error(`Missing service link for ${slug}`);
 }
-console.log('PASS September 22 second Blog batch: 12 unique routes, 900+ rendered words, exact dates, canonicals, service CTAs, sources, index, and sitemap');
+console.log('PASS September 23 Blog batch: 12 unique routes, 900+ rendered words, exact dates, canonicals, service CTAs, sources, index, and sitemap');
