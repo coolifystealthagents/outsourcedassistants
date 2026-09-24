@@ -4,7 +4,7 @@
   "scripts": {
     "test": "node tests/homepage-image-labels.test.mjs && node tests/inbox-triage-service-handoff.test.mjs && node tests/travel-planning-service-handoff.test.mjs && node tests/contact-page-contract.test.mjs",
     "dev": "next dev",
-    "build": "next build && npm run validate:aug13-blog && npm run validate:aug14-blog && npm run validate:aug17-blog && npm run validate:aug18-blog && npm run validate:aug20-blog && npm run validate:sep18-blog",
+    "build": "next build && npm run validate:aug13-blog && npm run validate:aug14-blog && npm run validate:aug17-blog && npm run validate:aug18-blog && npm run validate:aug20-blog && npm run validate:sep18-blog && npm run validate:sep24-research",
     "start": "next start -H 0.0.0.0 -p 3000",
     "lint": "tsc --noEmit",
     "validate:aug10-blog": "node scripts/validate-aug10-blog.mjs",
@@ -22,6 +22,7 @@
     "validate:sep18-blog": "node scripts/validate-sep18-blog.mjs",
     "validate:sep18-research": "node scripts/validate-sep18-research.mjs",
     "validate:sep23-research": "node scripts/validate-sep23-research.mjs",
+    "validate:sep24-research": "node scripts/validate-sep24-research.mjs",
     "validate:sep22-blog": "node scripts/validate-sep22-blog.mjs",
     "validate:sep22-second-blog": "node scripts/validate-sep22-second-blog.mjs",
     "validate:sep24-blog": "node scripts/validate-sep24-blog.mjs"
