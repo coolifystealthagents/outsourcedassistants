@@ -21,6 +21,7 @@ import {september18ResearchPosts} from './sep18-research';
 import {september18BlogPosts} from './sep18-content';
 import {september23ResearchPosts} from './sep23-research';
 import {september24ResearchPosts} from './sep24-research';
+import {september25ResearchPosts} from './sep25-research';
 import {september22BlogPosts} from './sep22-content';
 import {september22SecondBlogPosts} from './sep22-second-blog';
 import {september24BlogPosts} from './sep24-blog';
@@ -1125,6 +1126,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...september25ResearchPosts,
   ...september24ResearchPosts,
   ...september23ResearchPosts,
   ...september18ResearchPosts,
