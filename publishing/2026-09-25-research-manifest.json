@@ -9,6 +9,7 @@
   "repository": "coolifystealthagents/outsourcedassistants",
   "productionBranch": "main",
   "releaseIntegrator": "blog",
+  "stagedResearchCommit": "e2c876203bbcd0dec206467cdc56dd8804408b17",
   "sourceCheckedAt": "2026-09-25T00:00:00Z",
   "validationCommands": ["npm run lint", "npm test", "npm run validate:sep25-research", "npm run build"],
   "entries": [
