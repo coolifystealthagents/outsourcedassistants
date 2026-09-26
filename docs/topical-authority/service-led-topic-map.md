@@ -26,7 +26,7 @@ This is a planning record for the existing Philippines-only service pages. It do
 | `/blog/filipino-virtual-assistant-calendar-management` | How should a team scope recurring calendar preparation? | `/services/executive-calendar-management` | One matching href appears inside `<main>`. | Delivered; do not duplicate. |
 | `/blog/virtual-assistant-inbox-triage-workflow` | How can a team sort, draft, and escalate messages while sensitive decisions stay with the owner? | `/services/inbox-triage` | One matching href appears inside `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 | `/blog/remote-assistant-travel-planning-checklist` | Can an assistant research and coordinate travel while the traveler keeps payment and final approval? | `/services/travel-planning-support` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
-| `/blog/crm-administration-virtual-assistant-guide` | Which CRM maintenance tasks can be delegated without handing over protected changes? | `/services/crm-administration` | No matching href appears inside the generated `<main>`. | Second candidate. |
+| `/blog/crm-administration-virtual-assistant-guide` | Which CRM maintenance tasks can be delegated without handing over protected changes? | `/services/crm-administration` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 
 ## Execution rule
 
@@ -47,3 +47,11 @@ Take one candidate at a time. Store the destination, label, two-sentence scope b
 - Local artifact proof: one route-local `/services/travel-planning-support` href; `review Philippines travel planning support`; the traveler-or-authorized-owner booking, payment, risk, and final-approval boundary; canonical `https://outsourcedassistants.com/blog/remote-assistant-travel-planning-checklist`; `article:modified_time` and `BlogPosting.dateModified` `2026-09-23`; sitemap route present. This sitemap intentionally emits no `<lastmod>`.
 - Public evidence: cache-busted apex and `www` routes each returned `200 text/html` with the expected H1 and canonical, but both lacked the new CTA href, marker, and modified date. The canonical sitemap returned `200 application/xml`, contains the route, and intentionally has no `<lastmod>`.
 - Preserve rendered-source commit `0c896ef48e8cec3aa88d324ccaed3c18dd2a7761`; this status record does not prove deployment. Classification: `deployment_pending_public_verification / deployment_configuration_unavailable / public_stale`.
+
+## Delivery status — 2026-09-26
+
+- Source delivery completed for `/blog/crm-administration-virtual-assistant-guide` to `/services/crm-administration`.
+- Rendered source: `8b528a136e68c111dc700e335575742c4a530925` passed `npm test`, `npm run lint`, the production build, all declared build validators, and generated route-local H1/canonical/link/freshness/sitemap checks.
+- Local artifact proof: one route-local `/services/crm-administration` href; `review Philippines CRM administration support`; the authorized-owner boundary for identity, merges, protected fields, consent, and policy exceptions; canonical `https://outsourcedassistants.com/blog/crm-administration-virtual-assistant-guide`; visible modified date `2026-09-26`; sitemap route present. This sitemap intentionally emits no `<lastmod>`.
+- Public evidence: cache-busted apex and `www` routes each returned `200 text/html` with the expected H1 and canonical, but both lacked the new CTA marker and modified date. The canonical sitemap returned `200 application/xml`, contains the route, and intentionally has no `<lastmod>`. No repository-approved deployment target or workflow was found, and none was inferred or triggered.
+- Preserve rendered-source commit `8b528a136e68c111dc700e335575742c4a530925`; this status record does not prove deployment. Classification: `deployment_pending_public_verification / deployment_configuration_unavailable / public_stale`.
