@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "September 28, 2026 combined release",
+  "family": "research",
+  "required": 5,
+  "date": "2026-09-28",
+  "timezone": "Etc/UTC",
+  "issueId": "4db65777-07dc-49c1-90a1-be898b55e532",
+  "issueIdentifier": "OUTAAAAAAAAA-64",
+  "runId": "75a9b18c-b55a-40f6-9f9f-602dc5e87b80",
+  "baselineSha": "f857630b035d22427e7bdf4bd0fec35892fefb4d",
+  "productionIntegrator": "blog",
+  "pairedIssueIdentifier": "OUTAAAAAAAAA-65",
+  "publicationState": "local-draft-handoff",
+  "slugs": [
+    "travel-planning-assistant-passport-data-minimization-research",
+    "meeting-preparation-assistant-confidential-distribution-research",
+    "project-coordination-assistant-status-evidence-research",
+    "document-formatting-assistant-redaction-verification-research",
+    "research-assistant-primary-source-change-monitoring-study"
+  ]
+}
