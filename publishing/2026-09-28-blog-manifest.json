@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "family": "blog",
+  "requiredCount": 12,
+  "publicationDate": "2026-09-28",
+  "timezone": "Etc/UTC",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "productionBranch": "main",
+  "productionBaseSha": "f857630b035d22427e7bdf4bd0fec35892fefb4d",
+  "entries": [
+    {"slug":"executive-calendar-tentative-hold-expiry-rules","route":"/blog/executive-calendar-tentative-hold-expiry-rules","service":"executive-calendar-management","contentHash":"sha256:6eefb5c01a5b327699360e0dccd4f310341e3fcedc0f8ba8db3423f5e6feab9a","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"shared-inbox-auto-reply-ownership-checklist","route":"/blog/shared-inbox-auto-reply-ownership-checklist","service":"inbox-triage","contentHash":"sha256:643ee90b5350f53cd251151bfcca3b0e1f4917972028fd752631f42bf4e99024","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"travel-profile-change-verification-routine","route":"/blog/travel-profile-change-verification-routine","service":"travel-planning-support","contentHash":"sha256:b90a26bd4e048075ae2e45596706b73b77e34d21e074d5bc5b9d81102f049489","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"meeting-action-item-acceptance-window","route":"/blog/meeting-action-item-acceptance-window","service":"meeting-preparation","contentHash":"sha256:b38ab8edd9a4a5ffd3cc727ec18b9e9348c2ebb030f6563906aec72c245bf71f","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"crm-duplicate-merge-evidence-packet","route":"/blog/crm-duplicate-merge-evidence-packet","service":"crm-administration","contentHash":"sha256:92c035672031703e5abec241ac82d51f46bacfbfe9fceb3eb2350e9e2cd1ba54","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"research-request-assumption-register","route":"/blog/research-request-assumption-register","service":"research-assistance","contentHash":"sha256:914a780d2229c971d73b30a81f9f03cd78427f053e726e3796156ed4a31fe898","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"document-redline-resolution-register","route":"/blog/document-redline-resolution-register","service":"document-formatting","contentHash":"sha256:83840c4db4569c5f3e87ecc5c611435d9abef2efd56e42a524a58a18d16ce233","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"project-status-source-cutoff-rule","route":"/blog/project-status-source-cutoff-rule","service":"project-coordination","contentHash":"sha256:ebfca42ef944e73efb9295dbcd24165f390b7e7f04581c21519a9514fe2d72a8","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"expense-receipt-legibility-escalation-guide","route":"/blog/expense-receipt-legibility-escalation-guide","service":"expense-administration","contentHash":"sha256:923419e5bbb54a7696d5f3c44b5825e1380df9d0dbc0161b2dcc776e8c205501","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"candidate-scheduling-time-zone-confirmation","route":"/blog/candidate-scheduling-time-zone-confirmation","service":"recruitment-scheduling","contentHash":"sha256:1e2793ef0d894c64ddbfc13921d50d5732a967432be9587c92618af16ac69198","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"customer-follow-up-case-reopen-threshold","route":"/blog/customer-follow-up-case-reopen-threshold","service":"customer-follow-up","contentHash":"sha256:1f688b9063aa3f79e92aca6fc9036c2f2e573ccdfeb574a630085c0a19f75722","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"operations-dashboard-definition-change-log","route":"/blog/operations-dashboard-definition-change-log","service":"operations-reporting","contentHash":"sha256:8166f93261eefc00f422525aca0821333396ab975ea004263aabe4addf2b85d7","commitSha":null,"deploymentEvidence":null,"verifiedAt":null}
+  ]
+}
