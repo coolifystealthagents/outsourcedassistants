@@ -8,7 +8,7 @@
   "productionBranch": "main",
   "productionBaseSha": "f857630b035d22427e7bdf4bd0fec35892fefb4d",
   "entries": [
-    {"slug":"executive-calendar-tentative-hold-expiry-rules","route":"/blog/executive-calendar-tentative-hold-expiry-rules","service":"executive-calendar-management","contentHash":"sha256:6eefb5c01a5b327699360e0dccd4f310341e3fcedc0f8ba8db3423f5e6feab9a","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
+    {"slug":"executive-calendar-delegated-attendee-response-deadline","route":"/blog/executive-calendar-delegated-attendee-response-deadline","service":"executive-calendar-management","contentHash":"sha256:736739090336eec543b88cb2423aedd177d52c1d1403f571ca2221397da09b5a","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
     {"slug":"shared-inbox-auto-reply-ownership-checklist","route":"/blog/shared-inbox-auto-reply-ownership-checklist","service":"inbox-triage","contentHash":"sha256:643ee90b5350f53cd251151bfcca3b0e1f4917972028fd752631f42bf4e99024","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
     {"slug":"travel-profile-change-verification-routine","route":"/blog/travel-profile-change-verification-routine","service":"travel-planning-support","contentHash":"sha256:b90a26bd4e048075ae2e45596706b73b77e34d21e074d5bc5b9d81102f049489","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
     {"slug":"meeting-action-item-acceptance-window","route":"/blog/meeting-action-item-acceptance-window","service":"meeting-preparation","contentHash":"sha256:b38ab8edd9a4a5ffd3cc727ec18b9e9348c2ebb030f6563906aec72c245bf71f","commitSha":null,"deploymentEvidence":null,"verifiedAt":null},
