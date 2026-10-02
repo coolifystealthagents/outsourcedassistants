@@ -1,0 +1,650 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-02",
+  "scope": {
+    "blog": 12,
+    "research": 5
+  },
+  "candidateSha": "21e1bd6aae0c438782b74b45c9bbc522acf1e831",
+  "validatedAt": "2026-10-02T16:46:55.759Z",
+  "timezone": "Etc/UTC",
+  "environment": "local production server",
+  "origin": "http://127.0.0.1:3000",
+  "results": [
+    {
+      "family": "blog",
+      "slug": "executive-calendar-hold-expiry-rules",
+      "title": "Set expiry rules for executive calendar holds",
+      "route": "/blog/executive-calendar-hold-expiry-rules",
+      "expectedWords": 913,
+      "bodyNeedle": "A tentative hold solves a real scheduling problem: it protects a possible",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "shared-inbox-forwarding-loop-diagnosis",
+      "title": "Diagnose forwarding loops in a shared inbox",
+      "route": "/blog/shared-inbox-forwarding-loop-diagnosis",
+      "expectedWords": 964,
+      "bodyNeedle": "A forwarding rule can quietly turn one customer email into a stream",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "travel-itinerary-connection-risk-brief",
+      "title": "Compare flight connections with a decision brief",
+      "route": "/blog/travel-itinerary-connection-risk-brief",
+      "expectedWords": 942,
+      "bodyNeedle": "The shortest itinerary is not always the easiest trip. A tight connection",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "meeting-decision-context-pack",
+      "title": "Build a context pack for a decision meeting",
+      "route": "/blog/meeting-decision-context-pack",
+      "expectedWords": 1001,
+      "bodyNeedle": "A crowded pre-read can leave a meeting less prepared, not more. Participants",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "crm-field-change-impact-review",
+      "title": "Review the impact of a CRM field change",
+      "route": "/blog/crm-field-change-impact-review",
+      "expectedWords": 911,
+      "bodyNeedle": "Changing a CRM field can look like a small administrative task. Rename",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "research-survey-question-provenance-check",
+      "title": "Check survey-question provenance before summarizing results",
+      "route": "/blog/research-survey-question-provenance-check",
+      "expectedWords": 913,
+      "bodyNeedle": "A spreadsheet of survey responses can look ready for analysis while hiding",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "document-comment-author-cleanup-review",
+      "title": "Check comment authors and document metadata before external sharing",
+      "route": "/blog/document-comment-author-cleanup-review",
+      "expectedWords": 940,
+      "bodyNeedle": "A document can look finished while still carrying the names of reviewers,",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "project-deliverable-acceptance-evidence-check",
+      "title": "Prove that a project deliverable was accepted",
+      "route": "/blog/project-deliverable-acceptance-evidence-check",
+      "expectedWords": 926,
+      "bodyNeedle": "Uploading a file does not finish a deliverable. Neither does sending a",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "expense-category-policy-conflict-review",
+      "title": "Resolve an expense-category conflict without guessing",
+      "route": "/blog/expense-category-policy-conflict-review",
+      "expectedWords": 949,
+      "bodyNeedle": "A receipt, card feed, and expense policy can describe the same purchase",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "interview-panel-substitution-brief",
+      "title": "Prepare a brief when an interview panelist changes",
+      "route": "/blog/interview-panel-substitution-brief",
+      "expectedWords": 909,
+      "bodyNeedle": "Replacing an unavailable interviewer is not only a calendar edit. The original",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "customer-follow-up-channel-switch-check",
+      "title": "Check before moving a customer follow-up to another channel",
+      "route": "/blog/customer-follow-up-channel-switch-check",
+      "expectedWords": 908,
+      "bodyNeedle": "A customer may start by email, reply through a portal, ask for",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "blog",
+      "slug": "operations-report-provisional-data-labels",
+      "title": "Label provisional data in an operations report",
+      "route": "/blog/operations-report-provisional-data-labels",
+      "expectedWords": 923,
+      "bodyNeedle": "An operations report often has to go out before every source closes.",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "research",
+      "slug": "expense-assistant-duplicate-invoice-detection-research",
+      "title": "Research: Can an Expense Assistant Reliably Detect Duplicate Invoices?",
+      "route": "/research/expense-assistant-duplicate-invoice-detection-research",
+      "expectedWords": 1203,
+      "bodyNeedle": "Research question. Can a Filipino assistant supporting expense administration identify likely duplicate",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "research",
+      "slug": "recruitment-assistant-accommodation-routing-research",
+      "title": "Research: How Should a Recruitment Assistant Route Interview Accommodation Requests?",
+      "route": "/research/recruitment-assistant-accommodation-routing-research",
+      "expectedWords": 1257,
+      "bodyNeedle": "Decision at issue. A candidate asks for a change to participate in",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "research",
+      "slug": "customer-follow-up-assistant-identity-check-research",
+      "title": "Research: What Identity Check Should Precede Account-Specific Customer Follow-Up?",
+      "route": "/research/customer-follow-up-assistant-identity-check-research",
+      "expectedWords": 1237,
+      "bodyNeedle": "Research scope. A customer replies to a reminder or status message and",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "research",
+      "slug": "operations-reporting-metric-restatement-research",
+      "title": "Research: When Should an Assistant Restate an Operations Metric?",
+      "route": "/research/operations-reporting-metric-restatement-research",
+      "expectedWords": 1216,
+      "bodyNeedle": "Question. An assistant prepares a weekly operations report, then a late record,",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    },
+    {
+      "family": "research",
+      "slug": "meeting-assistant-ai-transcript-verification-research",
+      "title": "Research: Can a Meeting Assistant Treat an AI Transcript as the Official Record?",
+      "route": "/research/meeting-assistant-ai-transcript-verification-research",
+      "expectedWords": 1213,
+      "bodyNeedle": "Research question. May an assistant use an automated meeting transcript as the",
+      "status": 200,
+      "images": [
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+          "status": 200
+        },
+        {
+          "imageUrl": "http://127.0.0.1:3000/logo.svg?v=20260730-niche-logo",
+          "status": 200
+        }
+      ],
+      "schemaImage": "https://outsourcedassistants.com/assistant-team.jpg",
+      "schemaImageLocalUrl": "http://127.0.0.1:3000/assistant-team.jpg",
+      "schemaImageStatus": 200,
+      "checks": {
+        "status": true,
+        "title": true,
+        "visibleDate": true,
+        "canonical": true,
+        "schemaDate": true,
+        "substantiveBody": true,
+        "bodyThreshold": true,
+        "imageMarkup": true,
+        "imageHttp": true,
+        "schemaImageHttp": true
+      },
+      "passed": true
+    }
+  ],
+  "collectionChecks": {
+    "blog": {
+      "status": 200,
+      "allRoutes": true
+    },
+    "research": {
+      "status": 200,
+      "allRoutes": true
+    },
+    "sitemap": {
+      "status": 200,
+      "allRoutes": true
+    }
+  },
+  "summary": {
+    "routesChecked": 17,
+    "routesPassed": 17,
+    "collectionsPassed": true,
+    "passed": true
+  }
+}
