@@ -59,7 +59,7 @@ for (const record of records) {
   const imageResults = await Promise.all(imagePaths.map(async (imagePath) => {
     const imageUrl = new URL(imagePath, origin).href;
     const imageResponse = await fetch(imageUrl);
-    return { imageUrl, status: imageResponse.status };
+    return { imageUrl, status: imageResponse.status, contentType: imageResponse.headers.get('content-type') };
   }));
   const schemaImage = html.match(/"image":"([^"]+)"/)?.[1];
   const schemaImageLocalUrl = schemaImage ? new URL(new URL(schemaImage).pathname, origin).href : null;
@@ -74,9 +74,11 @@ for (const record of records) {
     bodyThreshold: record.family === 'blog' ? record.expectedWords >= 900 : record.expectedWords >= 1200,
     imageMarkup: imagePaths.length > 0,
     imageHttp: imageResults.length > 0 && imageResults.every((result) => result.status === 200),
+    imageMime: imageResults.length > 0 && imageResults.every((result) => result.contentType?.startsWith('image/')),
     schemaImageHttp: schemaImageResponse?.status === 200,
+    schemaImageMime: schemaImageResponse?.headers.get('content-type')?.startsWith('image/') || false,
   };
-  results.push({ ...record, status: response.status, images: imageResults, schemaImage, schemaImageLocalUrl, schemaImageStatus: schemaImageResponse?.status || null, checks, passed: Object.values(checks).every(Boolean) });
+  results.push({ ...record, status: response.status, images: imageResults, schemaImage, schemaImageLocalUrl, schemaImageStatus: schemaImageResponse?.status || null, schemaImageContentType: schemaImageResponse?.headers.get('content-type') || null, checks, passed: Object.values(checks).every(Boolean) });
 }
 
 const collectionChecks = {};
