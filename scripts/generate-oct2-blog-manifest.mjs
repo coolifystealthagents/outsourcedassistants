@@ -3,7 +3,7 @@ import crypto from 'node:crypto';
 const plan=JSON.parse(fs.readFileSync('.paperclip/daily-content/2026-10-02/blog-plan.json','utf8'));
 const generated=fs.readFileSync('app/oct2-blog.ts','utf8');
 const urlsFor=slug=>{
-  const start=generated.indexOf(`"slug":"${slug}"`),end=generated.indexOf('"body":',start);
+  const start=generated.indexOf(`slug:"${slug}"`),end=generated.indexOf('body:',start);
   return [...generated.slice(start,end).matchAll(/"url":"([^"]+)"/g)].map(x=>x[1]);
 };
 const words=s=>(s.toLowerCase().match(/[a-z0-9]+/g)||[]);
