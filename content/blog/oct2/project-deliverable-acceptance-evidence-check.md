@@ -58,6 +58,8 @@ Define reopening triggers. A corrupted file, wrong source period, newly discover
 
 Review first-pass acceptance, return reasons, review age, conditional items, reopened deliverables, access failures, and scope changes. Separate time spent producing work from time waiting for review. A completion count without acceptance evidence rewards uploads rather than usable outcomes.
 
+When several deliverables combine into one milestone, preserve acceptance at both levels. One component can pass while the integrated package fails because versions, interfaces, totals, or instructions do not agree. The milestone owner should define the integration test and name the final reviewer. Component acceptance should remain visible rather than being erased by the later package result.
+
 OutsourcedAssistants.com describes project coordination support at /services/project-coordination. A role brief should define deliverable types, finish criteria, reviewers, review windows, systems, reminder authority, access limits, and escalation paths. Use /contact-us after those boundaries are clear.
 
 ## Sources and limits

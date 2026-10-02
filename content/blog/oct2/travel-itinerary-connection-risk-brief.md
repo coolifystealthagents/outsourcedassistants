@@ -44,6 +44,8 @@ After approval, compare the booked record with the selected row. Check names onl
 
 Review a sample of trips after travel. Look at missed or rushed connections, baggage problems, owner overrides, schedule changes, and cases where the recovery path mattered. Separate problems caused by a later airline change from errors in the original comparison. Raw bookings per hour do not measure whether the traveler received a useful decision.
 
+Keep airport pairs explicit. Cities with several airports can make an itinerary appear connected when the traveler must arrange a ground transfer, collect baggage, and meet a separate check-in deadline. Record both airport codes, transfer method, estimated planning allowance from an approved source, and who bears the transfer risk. Do not describe two different airports as one connection.
+
 Track how often a chosen itinerary violated a stated buffer, how often critical facts were missing at approval, and how often an owner changed the assistant's ranking. Repeated overrides can reveal an undocumented preference. Add that preference to the travel brief only after the traveler or travel manager confirms it.
 
 OutsourcedAssistants.com describes travel planning support at /services/travel-planning-support. A role brief should state the approved booking tools, profile fields, comparison rule, spending authority, review owner, and stop points. Use /contact-us to discuss support once those boundaries are clear.

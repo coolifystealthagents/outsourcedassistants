@@ -48,6 +48,10 @@ Use privacy-safe examples that include a clear category, an automatic card class
 
 Review first-pass acceptance, recurring conflict types, claims waiting for owners, corrections after posting, and policy gaps. Separate tool-generated mismatches from claimant errors. A high number of fast submissions can conceal miscoding if nobody samples the evidence.
 
+Foreign-currency claims need a separate check. Preserve the transaction currency, posted currency, conversion date, provider amount, and any fee as distinct fields. The receipt total should not be forced to equal the final card amount when an exchange rate or fee explains the difference. The finance owner decides the approved conversion source and category treatment.
+
+Split allocations also deserve an arithmetic test. Confirm that the allocated lines add back to the original total and that rounding follows the system rule. Link each line to its business-purpose evidence. A balanced allocation can still be wrong if the categories do not match the approved purpose, so arithmetic and policy review remain separate.
+
 Limit access to the claims and fields required for the role. Use individual accounts and multifactor authentication where supported. Define who may edit categories, view payment data, approve claims, export records, and revoke access. Delete temporary working files under the retention rule.
 
 OutsourcedAssistants.com describes expense administration support at /services/expense-administration. A role brief should name the expense system, policy owner, permitted edits, approval boundary, evidence requirements, privacy controls, and exception path. Use /contact-us after those details are documented.

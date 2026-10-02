@@ -60,6 +60,8 @@ If the substitute covered only part of the assessment, do not mark the stage com
 
 Review substitution frequency, notice time, candidate reschedules, unbriefed replacements, duplicated assessment, missing evidence, and owner overrides. Do not evaluate candidates based on administrative disruption. Repeated substitutions may point to weak panel coverage or unrealistic scheduling rather than assistant performance.
 
+Compare candidate treatment across substitutions. Check whether different candidates at the same stage received materially different preparation time, interview length, question coverage, or opportunities to clarify technical problems. The recruiting owner should review any difference that could affect comparability. The assistant records the scheduling facts without ranking candidates or explaining away an inconsistency.
+
 OutsourcedAssistants.com describes recruitment scheduling support at /services/recruitment-scheduling. A role brief should define interview stages, approved substitutes, access limits, communication templates, accommodation routing, and recruiter decisions. Use /contact-us after those rules are documented.
 
 ## Sources and limits

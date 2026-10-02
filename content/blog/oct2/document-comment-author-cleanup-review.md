@@ -54,6 +54,8 @@ After delivery, retain or remove working copies under the records rule. Revoke t
 
 Review defects found after delivery, comments reopened during cleanup, metadata removed, unauthorized changes caught, and external files that differed from approval. Do not reward document count alone. A fast export with leaked review history is a failure.
 
+Add one adversarial check to the review: rename a safe test copy, open it in a second supported viewer, and inspect properties and comments without the editor's usual account context. This can reveal viewer-specific panels, embedded attachments, or cached identities that the normal final view hides. Record the viewer and version so the result is reproducible.
+
 OutsourcedAssistants.com describes document formatting support at /services/document-formatting. A role brief should name the source system, permitted file types, external audiences, cleanup authority, retention owner, and final approver. Use /contact-us when those boundaries are documented.
 
 ## Sources and limits

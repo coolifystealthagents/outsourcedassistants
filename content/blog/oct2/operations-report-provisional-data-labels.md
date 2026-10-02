@@ -52,6 +52,8 @@ Repeated late data may call for a later report cutoff, an earlier source deadlin
 
 Review a sample of final and provisional measures. Reproduce the calculation, verify the source cutoff, inspect the label in every delivery format, and trace the reconciliation. Test cases should include a late source, a corrected source, a missing population, a value that crosses a threshold after reconciliation, and a report that cannot support the scheduled decision.
 
+Keep provisional values out of automated trend alerts unless the alert rule explicitly accounts for incomplete populations. Otherwise a late feed can create a false drop, trigger an unnecessary escalation, and then disappear when the final value replaces it. Record whether alerting was suppressed, delayed, or run with a provisional warning, along with the owner who approved that behavior.
+
 ## Set publication authority
 
 Define who may label a value provisional, who approves its use, who replaces it, and who communicates a material change. An assistant may run the documented checks and prepare the note. They should not decide that incomplete evidence is "close enough" for a consequential claim.
