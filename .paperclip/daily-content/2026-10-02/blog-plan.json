@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-02",
+  "family": "blog",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "productionBranch": "main",
+  "baselineSha": "1004970636020fc02c36cbb1ae70392836f80631",
+  "timezone": "Etc/UTC",
+  "publicationDate": null,
+  "publicationDateRule": "Set immediately before the sole combined push to the expected first-publication date; reconcile again from deployment evidence before live verification.",
+  "required": 12,
+  "pairedResearchIssue": "OUTAAAAAAAAA-66",
+  "releaseIntegratorIssue": "OUTAAAAAAAAA-67",
+  "status": "topics-selected-drafting-pending",
+  "entries": [
+    {"slug":"executive-calendar-hold-expiry-rules","service":"executive-calendar-management","readerDecision":"When should a tentative calendar hold expire, renew, or become an owner decision?","distinctiveTreatment":"A lifecycle guide built around hold states, expiry evidence, and the cost of stale capacity."},
+    {"slug":"shared-inbox-forwarding-loop-diagnosis","service":"inbox-triage","readerDecision":"How can an assistant diagnose duplicate and looping forwarded messages without losing the original thread?","distinctiveTreatment":"A troubleshooting guide using message headers, routing maps, controlled tests, and rollback."},
+    {"slug":"travel-itinerary-connection-risk-brief","service":"travel-planning-support","readerDecision":"What should an assistant show an owner before choosing between a tight connection and a longer itinerary?","distinctiveTreatment":"A comparison method covering airport change, baggage, immigration, disruption recovery, and decision deadlines."},
+    {"slug":"meeting-decision-context-pack","service":"meeting-preparation","readerDecision":"What context belongs in a decision meeting pack, and what should be left in the source system?","distinctiveTreatment":"An information-design guide separating decision facts, alternatives, unresolved questions, and restricted attachments."},
+    {"slug":"crm-field-change-impact-review","service":"crm-administration","readerDecision":"Which downstream records and automations should be checked before changing a CRM field definition?","distinctiveTreatment":"A dependency-led change review spanning forms, reports, workflows, integrations, history, and rollback."},
+    {"slug":"research-claim-recheck-triggers","service":"research-assistance","readerDecision":"Which changes should trigger a claim-level source recheck before a research brief is reused?","distinctiveTreatment":"A volatility framework distinguishing stable definitions from prices, policies, personnel, and market data."},
+    {"slug":"document-table-accessibility-review","service":"document-formatting","readerDecision":"How should an assistant repair a complex table without making its reading order or meaning worse?","distinctiveTreatment":"A worked accessibility review covering headers, merged cells, captions, linearization, and alternate presentation."},
+    {"slug":"project-dependency-confirmation-window","service":"project-coordination","readerDecision":"When must a dependency owner reconfirm a promise before the project plan relies on it?","distinctiveTreatment":"A time-based coordination method linking evidence age, milestone impact, reminders, and forecast confidence."},
+    {"slug":"expense-category-policy-conflict-review","service":"expense-administration","readerDecision":"What should happen when a receipt, card feed, and expense policy point to different categories?","distinctiveTreatment":"An evidence hierarchy and escalation guide that avoids guessing tax or accounting treatment."},
+    {"slug":"interview-panel-substitution-brief","service":"recruitment-scheduling","readerDecision":"What must be checked before replacing an unavailable interviewer?","distinctiveTreatment":"A candidate-centered substitution guide covering stage purpose, conflicts, briefing, permissions, and continuity."},
+    {"slug":"customer-follow-up-channel-switch-check","service":"customer-follow-up","readerDecision":"When is it appropriate to move a customer follow-up from one channel to another?","distinctiveTreatment":"A consent and continuity guide comparing reply context, urgency, identity, accessibility, and audit trail."},
+    {"slug":"operations-report-late-data-disclosure","service":"operations-reporting","readerDecision":"How should a report disclose late data without silently changing an approved reporting window?","distinctiveTreatment":"A reporting guide covering cutoffs, materiality, annotations, restatements, and decision impact."}
+  ]
+}
