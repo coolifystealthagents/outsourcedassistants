@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "October 2, 2026 combined release",
+  "family": "research",
+  "required": 5,
+  "date": "2026-10-02",
+  "timezone": "Etc/UTC",
+  "issueId": "1adc1604-21b9-40ff-a6ec-57a39be44468",
+  "issueIdentifier": "OUTAAAAAAAAA-66",
+  "runId": "42be20eb-7a07-4c50-8c7c-1a50202f7958",
+  "baselineSha": "1004970636020fc02c36cbb1ae70392836f80631",
+  "productionIntegrator": "blog",
+  "pairedIssueId": "bd79a8ab-44dd-45b6-b145-6ca9ca5718da",
+  "pairedIssueIdentifier": "OUTAAAAAAAAA-67",
+  "publicationState": "local-draft-handoff",
+  "slugs": [
+    "expense-assistant-duplicate-invoice-detection-research",
+    "recruitment-assistant-accommodation-routing-research",
+    "customer-follow-up-assistant-identity-check-research",
+    "operations-reporting-metric-restatement-research",
+    "meeting-assistant-ai-transcript-verification-research"
+  ]
+}

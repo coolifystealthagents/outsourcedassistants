@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "family": "research",
+  "required": 5,
+  "publicationDate": "2026-10-02",
+  "timezone": "Etc/UTC",
+  "cycleLabel": "October 2, 2026 combined release",
+  "domain": "outsourcedassistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "productionBranch": "main",
+  "releaseIntegrator": "blog",
+  "baselineSha": "1004970636020fc02c36cbb1ae70392836f80631",
+  "issueId": "1adc1604-21b9-40ff-a6ec-57a39be44468",
+  "issueIdentifier": "OUTAAAAAAAAA-66",
+  "pairedIssueId": "bd79a8ab-44dd-45b6-b145-6ca9ca5718da",
+  "pairedIssueIdentifier": "OUTAAAAAAAAA-67",
+  "stagedResearchCommit": null,
+  "sourceCheckedAt": "2026-10-02T13:10:00Z",
+  "entries": [
+    {
+      "family": "research",
+      "topic": "duplicate-invoice detection controls",
+      "slug": "expense-assistant-duplicate-invoice-detection-research",
+      "contentHash": "sha256:0fc99d1caed58ae19a52f096687b6d39dae73de7d1ef0a7a51e0f58d3889d538",
+      "publicationDate": "2026-10-02",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/research/expense-assistant-duplicate-invoice-detection-research",
+      "verifiedAt": null,
+      "sources": [
+        {
+          "title": "Standards for Internal Control in the Federal Government",
+          "publisher": "U.S. Government Accountability Office",
+          "url": "https://www.gao.gov/products/gao-14-704g",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "Streamlining the Payment Process While Maintaining Effective Internal Control",
+          "publisher": "U.S. Government Accountability Office",
+          "url": "https://www.gao.gov/products/aimd-21.3.2",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "Protecting Personal Information: A Guide for Business",
+          "publisher": "Federal Trade Commission",
+          "url": "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+          "checked": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "family": "research",
+      "topic": "interview accommodation request routing",
+      "slug": "recruitment-assistant-accommodation-routing-research",
+      "contentHash": "sha256:bd9e8ac15b88e734a84d750486393664a053a415214017fe675ebc0bdb298f24",
+      "publicationDate": "2026-10-02",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/research/recruitment-assistant-accommodation-routing-research",
+      "verifiedAt": null,
+      "sources": [
+        {
+          "title": "Job Applicants and the ADA",
+          "publisher": "U.S. Equal Employment Opportunity Commission",
+          "url": "https://www.eeoc.gov/laws/guidance/job-applicants-and-ada",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "Pre-Employment Inquiries and Disability",
+          "publisher": "U.S. Equal Employment Opportunity Commission",
+          "url": "https://www.eeoc.gov/pre-employment-inquiries-and-disability",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "I’m Recruiting, Hiring or Promoting Employees",
+          "publisher": "U.S. Equal Employment Opportunity Commission",
+          "url": "https://www.eeoc.gov/employers/small-business/3-im-recruiting-hiring-or-promoting-employees",
+          "checked": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "family": "research",
+      "topic": "customer identity checks before account-specific follow-up",
+      "slug": "customer-follow-up-assistant-identity-check-research",
+      "contentHash": "sha256:4cfc9b4a443714b260af8c08c81e0f3f4c0ae4cdfdb904e16c52309c9cb63658",
+      "publicationDate": "2026-10-02",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/research/customer-follow-up-assistant-identity-check-research",
+      "verifiedAt": null,
+      "sources": [
+        {
+          "title": "NIST Digital Identity Guidelines",
+          "publisher": "National Institute of Standards and Technology",
+          "url": "https://pages.nist.gov/800-63-4/",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "Security and Privacy Controls for Information Systems and Organizations",
+          "publisher": "National Institute of Standards and Technology",
+          "url": "https://www.nist.gov/publications/security-and-privacy-controls-information-systems-and-organizations-0",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "Protecting Personal Information: A Guide for Business",
+          "publisher": "Federal Trade Commission",
+          "url": "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+          "checked": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "family": "research",
+      "topic": "operations metric restatement and comparability",
+      "slug": "operations-reporting-metric-restatement-research",
+      "contentHash": "sha256:f428b5e0f7ad2fe645fb2a6c9c0d0d4aa65a2517901b193e7070ee79f9ae0a8c",
+      "publicationDate": "2026-10-02",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/research/operations-reporting-metric-restatement-research",
+      "verifiedAt": null,
+      "sources": [
+        {
+          "title": "Standards for Internal Control in the Federal Government",
+          "publisher": "U.S. Government Accountability Office",
+          "url": "https://www.gao.gov/products/gao-14-704g",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "NIST Information Quality Standards",
+          "publisher": "National Institute of Standards and Technology",
+          "url": "https://www.nist.gov/director/nist-information-quality-standards",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "Guidelines for Ensuring and Maximizing Information Quality",
+          "publisher": "Office of Management and Budget",
+          "url": "https://www.federalregister.gov/documents/2002/02/22/R2-59/guidelines-for-ensuring-and-maximizing-the-quality-objectivity-utility-and-integrity-of-information",
+          "checked": "2026-10-02"
+        }
+      ]
+    },
+    {
+      "family": "research",
+      "topic": "AI meeting transcript verification",
+      "slug": "meeting-assistant-ai-transcript-verification-research",
+      "contentHash": "sha256:3cc7ba8adb08c6fae3b8c452f9f484e81f8237b4822931fe9d058922fbdbc831",
+      "publicationDate": "2026-10-02",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/research/meeting-assistant-ai-transcript-verification-research",
+      "verifiedAt": null,
+      "sources": [
+        {
+          "title": "NIST AI Risk Management Framework",
+          "publisher": "National Institute of Standards and Technology",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "NIST Privacy Framework",
+          "publisher": "National Institute of Standards and Technology",
+          "url": "https://www.nist.gov/privacy-framework",
+          "checked": "2026-10-02"
+        },
+        {
+          "title": "Protecting Personal Information: A Guide for Business",
+          "publisher": "Federal Trade Commission",
+          "url": "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+          "checked": "2026-10-02"
+        }
+      ]
+    }
+  ]
+}
