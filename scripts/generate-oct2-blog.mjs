@@ -18,7 +18,7 @@ const specific={
   'document-comment-author-cleanup-review':{name:'W3C: Web Content Accessibility Guidelines 2.2',url:'https://www.w3.org/TR/WCAG22/'},
   'project-deliverable-acceptance-evidence-check':{name:'GAO Green Book',url:'https://www.gao.gov/greenbook'},
   'expense-category-policy-conflict-review':{name:'GAO Green Book',url:'https://www.gao.gov/greenbook'},
-  'interview-panel-substitution-brief':{name:'U.S. EEOC: Employment Guidance',url:'https://www.eeoc.gov/laws/guidance'},
+  'interview-panel-substitution-brief':{name:'U.S. EEOC: Recruiting, Hiring or Promoting Employees',url:'https://www.eeoc.gov/employers/small-business/3-im-recruiting-hiring-or-promoting-employees'},
   'customer-follow-up-channel-switch-check':{name:'NIST Digital Identity Guidelines',url:'https://pages.nist.gov/800-63-4/'},
   'operations-report-provisional-data-labels':{name:'W3C: Web Content Accessibility Guidelines 2.2',url:'https://www.w3.org/TR/WCAG22/'},
 };
