@@ -1,7 +1,7 @@
 # Service-led topical map: Outsourced Assistants
 
 Status: prepared for one-at-a-time implementation
-Checked: 2026-08-23
+Checked: 2026-10-03
 Scope: existing pages only. This is a planning ledger, not reader-facing copy and not a claim about rankings, leads, staffing outcomes, or backlinks.
 
 ## Purpose
@@ -24,20 +24,22 @@ The site already has twelve Philippines-based service routes and matching practi
 | Inbox triage | `/services/inbox-triage` | `/blog/virtual-assistant-inbox-triage-workflow` | How can a team sort, draft, and escalate messages without handing over sensitive decisions? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the ongoing-lane and owner-boundary discussion. |
 | Travel planning support | `/services/travel-planning-support` | `/blog/remote-assistant-travel-planning-checklist` | Which research and handoff tasks can support trip planning before approval or payment? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the checklist's recurring-lane and owner-boundary discussion. |
 | Meeting preparation | `/services/meeting-preparation` | `/blog/meeting-preparation-assistant-sop` | What should a repeatable meeting-prep SOP contain? | Link after the reader has identified a recurring preparation need. |
-| CRM administration | `/services/crm-administration` | `/blog/crm-administration-virtual-assistant-guide` | Which CRM changes can be prepared and reviewed safely? | Link after the field-protection and owner-review boundary. |
-| Research assistance | `/services/research-assistance` | `/blog/research-assistant-brief-template` | What must a research brief contain before work begins? | Link after the brief, source standard, and stop rule are established. |
-| Document formatting | `/services/document-formatting` | `/blog/document-formatting-virtual-assistant-workflow` | How can a team turn formatting into a controlled recurring task? | Link after templates, naming, and review samples are discussed. |
-| Project coordination | `/services/project-coordination` | `/blog/project-coordination-assistant-scorecard` | What makes coordination work visible and reviewable? | Link after the scorecard identifies a recurring coordination lane. |
-| Expense administration | `/services/expense-administration` | `/blog/expense-administration-assistant-controls` | Which expense tasks can be prepared while payment approval stays internal? | Link after the approval boundary, never as a finance-result claim. |
-| Recruitment scheduling | `/services/recruitment-scheduling` | `/blog/recruitment-scheduling-virtual-assistant-process` | How can candidate scheduling reduce back-and-forth while protecting hiring decisions? | Link after the scheduling process and data boundary. |
-| Customer follow-up | `/services/customer-follow-up` | `/blog/customer-follow-up-assistant-playbook` | How can approved messages and escalation rules support a follow-up lane? | Link after the guide clarifies that the owner controls commitments. |
-| Operations reporting | `/services/operations-reporting` | `/blog/philippines-virtual-assistant-weekly-reporting-checklist` | What should a weekly assistant report show an owner? | Link after completed work, blockers, and owner decisions are defined. |
+| CRM administration | `/services/crm-administration` | `/blog/crm-administration-virtual-assistant-guide` | Which CRM changes can be prepared and reviewed safely? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the field-protection and owner-review boundary. |
+| Research assistance | `/services/research-assistance` | `/blog/research-assistant-brief-template` | What must a research brief contain before work begins? | Verified absent from the route-local body. Keep as a later candidate after the brief, source standard, and stop rule are established. |
+| Document formatting | `/services/document-formatting` | `/blog/document-formatting-virtual-assistant-workflow` | How can a team turn formatting into a controlled recurring task? | Verified absent from the route-local body. Keep as a later candidate after templates, naming, and review samples are discussed. |
+| Project coordination | `/services/project-coordination` | `/blog/project-coordination-assistant-scorecard` | What makes coordination work visible and reviewable? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the scorecard's recurring coordination lane. |
+| Expense administration | `/services/expense-administration` | `/blog/expense-administration-assistant-controls` | Which expense tasks can be prepared while payment approval stays internal? | Verified absent from the route-local body. Keep as a later candidate after the approval boundary, never as a finance-result claim. |
+| Recruitment scheduling | `/services/recruitment-scheduling` | `/blog/recruitment-scheduling-virtual-assistant-process` | How can candidate scheduling reduce back-and-forth while protecting hiring decisions? | Verified absent from the route-local body. Keep as a later candidate after the scheduling process and data boundary. |
+| Customer follow-up | `/services/customer-follow-up` | `/blog/customer-follow-up-assistant-playbook` | How can approved messages and escalation rules support a follow-up lane? | Verified absent from the route-local body. Keep as a later candidate after the guide clarifies that the owner controls commitments. |
+| Operations reporting | `/services/operations-reporting` | `/blog/philippines-virtual-assistant-weekly-reporting-checklist` | What should a weekly assistant report show an owner? | Already linked twice in the route-local body; do not add another CTA. A later content review may decide whether both reader contexts remain useful. |
 
 ## Queue and selection rule
 
-Delivered and non-duplicable: `/blog/filipino-virtual-assistant-calendar-management` to `/services/executive-calendar-management`, `/blog/virtual-assistant-inbox-triage-workflow` to `/services/inbox-triage`, and `/blog/remote-assistant-travel-planning-checklist` to `/services/travel-planning-support`. Fresh generated artifacts show each source route has one matching link inside its route-local main content, with self-canonical source and target artifacts plus sitemap locations.
+Delivered and non-duplicable: `/blog/filipino-virtual-assistant-calendar-management` to `/services/executive-calendar-management`, `/blog/virtual-assistant-inbox-triage-workflow` to `/services/inbox-triage`, `/blog/remote-assistant-travel-planning-checklist` to `/services/travel-planning-support`, `/blog/crm-administration-virtual-assistant-guide` to `/services/crm-administration`, and `/blog/project-coordination-assistant-scorecard` to `/services/project-coordination`. Fresh generated artifacts show each source route has one matching link inside its route-local main content, with self-canonical source and target artifacts plus sitemap locations.
 
-Next candidate: `/blog/meeting-preparation-assistant-sop` to `/services/meeting-preparation`.
+`/blog/philippines-virtual-assistant-weekly-reporting-checklist` already has two `/services/operations-reporting` links in its route-local main content. It is non-duplicable until a separate reader-journey review decides whether either existing context should change.
+
+Next candidate: `/blog/meeting-preparation-assistant-sop` to `/services/meeting-preparation`. Fresh generated artifacts confirm both routes are self-canonical and sitemap-listed, while the source route has zero matching links in `<main>`.
 
 Why next: the guide should first establish the repeatable agenda, pre-read, attendee, note, and follow-up preparation lane. Before any edit, confirm that its route-local body has a natural transition from that documented work to the existing Philippines meeting-preparation service without implying that the assistant approves commitments or decisions.
 
