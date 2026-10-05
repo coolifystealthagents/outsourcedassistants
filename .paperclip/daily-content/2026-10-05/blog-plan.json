@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-05",
+  "family": "blog",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "productionBranch": "main",
+  "baselineSha": "b8a1ffc4d47bd96d99e1af19c5c90f3e0a4264e1",
+  "siteTimezone": "Etc/UTC",
+  "publicationDate": null,
+  "required": 12,
+  "status": "drafting",
+  "entries": [
+    {
+      "slug": "executive-calendar-time-zone-rule-change-audit",
+      "title": "Audit an executive calendar after a time-zone rule change",
+      "topic": "How should a Filipino assistant find and repair meetings affected by a changed time-zone rule without silently changing commitments?",
+      "service": "executive-calendar-management",
+      "readerOutcome": "Produce an impact list that separates safe display corrections from owner decisions.",
+      "workedExample": "A recurring New York–Manila review crosses a daylight-saving transition while one attendee travels to Arizona.",
+      "primarySource": "https://www.iana.org/time-zones"
+    },
+    {
+      "slug": "shared-inbox-suspicious-attachment-intake",
+      "title": "Handle a suspicious attachment in a shared inbox",
+      "topic": "What can an inbox assistant record and route when an attachment looks suspicious, and which actions must stay with security owners?",
+      "service": "inbox-triage",
+      "readerOutcome": "Preserve message evidence and keep the queue moving without opening, forwarding, or diagnosing the file.",
+      "workedExample": "A familiar supplier sends an unexpected archive while an invoice deadline is approaching.",
+      "primarySource": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing"
+    },
+    {
+      "slug": "travel-booking-name-match-review",
+      "title": "Check a traveler name before a booking is issued",
+      "topic": "How can a travel-planning assistant compare the approved traveler profile with a booking record while minimizing identity-data exposure?",
+      "service": "travel-planning-support",
+      "readerOutcome": "Catch a name mismatch before ticketing and escalate corrections to the authorized traveler or travel manager.",
+      "workedExample": "A traveler uses a shortened first name internally but the approved profile includes two given names.",
+      "primarySource": "https://travel.state.gov/content/travel/en/passports/passport-help/faqs.html"
+    },
+    {
+      "slug": "meeting-preread-version-freeze",
+      "title": "Freeze the right pre-read version before a meeting",
+      "topic": "What evidence should a meeting-preparation assistant capture when contributors keep editing a pre-read near the distribution deadline?",
+      "service": "meeting-preparation",
+      "readerOutcome": "Distribute one traceable version while preserving late changes for an authorized owner to resolve.",
+      "workedExample": "Finance changes a chart after the chair approved distribution but before two external attendees receive the pack.",
+      "primarySource": "https://www.gao.gov/greenbook"
+    },
+    {
+      "slug": "crm-duplicate-account-merge-evidence",
+      "title": "Prepare evidence before merging duplicate CRM accounts",
+      "topic": "Which fields, relationships, and downstream effects should a CRM assistant compare before an owner approves a duplicate-account merge?",
+      "service": "crm-administration",
+      "readerOutcome": "Build a reversible merge brief without deciding customer identity from a name match alone.",
+      "workedExample": "Two similarly named companies share a domain after an acquisition but retain different contracts and contacts.",
+      "primarySource": "https://www.nist.gov/privacy-framework"
+    },
+    {
+      "slug": "research-source-freshness-decision",
+      "title": "Decide when a research source is too old for the question",
+      "topic": "How should a research assistant evaluate whether an older authoritative source still supports a current operational claim?",
+      "service": "research-assistance",
+      "readerOutcome": "Separate enduring guidance from changeable facts and record a defensible freshness decision.",
+      "workedExample": "A respected five-year-old remote-work report is used beside a current platform-security claim.",
+      "primarySource": "https://www.nist.gov/cyberframework"
+    },
+    {
+      "slug": "document-redaction-release-check",
+      "title": "Check a document redaction before external release",
+      "topic": "What should a document-formatting assistant inspect to confirm that visible masking, metadata, and accessible text do not expose restricted content?",
+      "service": "document-formatting",
+      "readerOutcome": "Prepare a release copy for owner approval without treating a black rectangle as completed redaction.",
+      "workedExample": "A proposal PDF hides customer names visually, but copied text and file properties still contain them.",
+      "primarySource": "https://www.cisa.gov/resources-tools/resources/data-protection"
+    },
+    {
+      "slug": "project-dependency-owner-absence-plan",
+      "title": "Plan for an absent project dependency owner",
+      "topic": "How can a project-coordination assistant surface decisions that will stall during a named owner's absence without inventing delegated authority?",
+      "service": "project-coordination",
+      "readerOutcome": "Create a coverage map for routine updates, approvals, and stop conditions before leave begins.",
+      "workedExample": "A launch depends on a legal sign-off and a vendor credential while both owners overlap on leave.",
+      "primarySource": "https://www.gao.gov/greenbook"
+    },
+    {
+      "slug": "expense-foreign-exchange-source-record",
+      "title": "Record the exchange-rate source for an expense",
+      "topic": "What should an expense assistant preserve when the receipt, card statement, and policy use different currencies or conversion dates?",
+      "service": "expense-administration",
+      "readerOutcome": "Reconcile arithmetic and provenance while leaving accounting-policy choices with the authorized owner.",
+      "workedExample": "A hotel charges euros, the corporate card posts dollars two days later, and the report is reimbursed in pesos.",
+      "primarySource": "https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates"
+    },
+    {
+      "slug": "candidate-reschedule-consistency-review",
+      "title": "Review candidate rescheduling consistently",
+      "topic": "How should a recruitment-scheduling assistant apply a written reschedule rule while preserving exceptions for an authorized hiring owner?",
+      "service": "recruitment-scheduling",
+      "readerOutcome": "Keep scheduling records consistent without making suitability or accommodation decisions.",
+      "workedExample": "Two candidates request a second change for different reasons after the panel calendar is rearranged.",
+      "primarySource": "https://www.eeoc.gov/employers/small-business/3-im-recruiting-hiring-or-promoting-employees"
+    },
+    {
+      "slug": "customer-follow-up-contact-preference-conflict",
+      "title": "Resolve conflicting customer contact preferences",
+      "topic": "What should a follow-up assistant do when the CRM, support ticket, and latest customer message disagree about the preferred channel?",
+      "service": "customer-follow-up",
+      "readerOutcome": "Pause the risky outreach, preserve the newest evidence, and route consent or policy decisions correctly.",
+      "workedExample": "The CRM says phone, a ticket says email only, and the latest reply asks for no calls this week.",
+      "primarySource": "https://www.ftc.gov/business-guidance/privacy-security"
+    },
+    {
+      "slug": "operations-report-metric-definition-drift",
+      "title": "Detect metric-definition drift in an operations report",
+      "topic": "How can a reporting assistant identify when a familiar metric name now counts different events, populations, or time windows?",
+      "service": "operations-reporting",
+      "readerOutcome": "Prevent a misleading trend comparison by reconciling definitions before refreshing the dashboard.",
+      "workedExample": "Response time changes from first human reply to any automated acknowledgement halfway through the quarter.",
+      "primarySource": "https://www.gao.gov/greenbook"
+    }
+  ]
+}
