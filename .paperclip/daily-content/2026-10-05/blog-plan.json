@@ -6,9 +6,9 @@
   "productionBranch": "main",
   "baselineSha": "b8a1ffc4d47bd96d99e1af19c5c90f3e0a4264e1",
   "siteTimezone": "Etc/UTC",
-  "publicationDate": null,
+  "publicationDate": "2026-10-05",
   "required": 12,
-  "status": "drafting",
+  "status": "generated-local",
   "entries": [
     {
       "slug": "executive-calendar-time-zone-rule-change-audit",

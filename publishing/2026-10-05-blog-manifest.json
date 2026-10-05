@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "2026-10-05",
+  "family": "blog",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "productionBranch": "main",
+  "baselineSha": "b8a1ffc4d47bd96d99e1af19c5c90f3e0a4264e1",
+  "timezone": "Etc/UTC",
+  "publicationDate": "2026-10-05",
+  "required": 12,
+  "entries": [
+    {
+      "family": "blog",
+      "topic": "How should a Filipino assistant find and repair meetings affected by a changed time-zone rule without silently changing commitments?",
+      "slug": "executive-calendar-time-zone-rule-change-audit",
+      "route": "/blog/executive-calendar-time-zone-rule-change-audit",
+      "sourcePath": "content/blog/oct5/executive-calendar-time-zone-rule-change-audit.md",
+      "sources": [
+        "https://www.iana.org/time-zones",
+        "https://csrc.nist.gov/pubs/sp/800/46/r2/final",
+        "https://www.nist.gov/cyberframework"
+      ],
+      "substantiveWordCount": 1253,
+      "contentHash": "sha256:e28d2fa6cd5db3614d4fef7fca7c862030413c5e9d0f70c7cb8b7ae780de8d56",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/executive-calendar-time-zone-rule-change-audit",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "What can an inbox assistant record and route when an attachment looks suspicious, and which actions must stay with security owners?",
+      "slug": "shared-inbox-suspicious-attachment-intake",
+      "route": "/blog/shared-inbox-suspicious-attachment-intake",
+      "sourcePath": "content/blog/oct5/shared-inbox-suspicious-attachment-intake.md",
+      "sources": [
+        "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing",
+        "https://www.nist.gov/cyberframework",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"
+      ],
+      "substantiveWordCount": 1085,
+      "contentHash": "sha256:4a3738bf45661730a4c15ef923c2c69bf5aea53dea2940db1adfa686260cc10e",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/shared-inbox-suspicious-attachment-intake",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "How can a travel-planning assistant compare the approved traveler profile with a booking record while minimizing identity-data exposure?",
+      "slug": "travel-booking-name-match-review",
+      "route": "/blog/travel-booking-name-match-review",
+      "sourcePath": "content/blog/oct5/travel-booking-name-match-review.md",
+      "sources": [
+        "https://travel.state.gov/content/travel/en/passports/passport-help/faqs.html",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "substantiveWordCount": 1191,
+      "contentHash": "sha256:030d02d6b667d07a548247b7833d9cedbddf6f875642cebe7c267863f21516f9",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/travel-booking-name-match-review",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "What evidence should a meeting-preparation assistant capture when contributors keep editing a pre-read near the distribution deadline?",
+      "slug": "meeting-preread-version-freeze",
+      "route": "/blog/meeting-preread-version-freeze",
+      "sourcePath": "content/blog/oct5/meeting-preread-version-freeze.md",
+      "sources": [
+        "https://www.gao.gov/greenbook",
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.nist.gov/cyberframework"
+      ],
+      "substantiveWordCount": 1185,
+      "contentHash": "sha256:c5dc6638663d6abf76f6789acb2317f4a78a387854db1280710a9177a0abf3a4",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/meeting-preread-version-freeze",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "Which fields, relationships, and downstream effects should a CRM assistant compare before an owner approves a duplicate-account merge?",
+      "slug": "crm-duplicate-account-merge-evidence",
+      "route": "/blog/crm-duplicate-account-merge-evidence",
+      "sourcePath": "content/blog/oct5/crm-duplicate-account-merge-evidence.md",
+      "sources": [
+        "https://www.nist.gov/privacy-framework",
+        "https://www.nist.gov/cyberframework",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"
+      ],
+      "substantiveWordCount": 1095,
+      "contentHash": "sha256:95a998f2641c8fd4de72a7865dd7eff95dac4ad2534c05df02038769d3b70b13",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/crm-duplicate-account-merge-evidence",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "How should a research assistant evaluate whether an older authoritative source still supports a current operational claim?",
+      "slug": "research-source-freshness-decision",
+      "route": "/blog/research-source-freshness-decision",
+      "sourcePath": "content/blog/oct5/research-source-freshness-decision.md",
+      "sources": [
+        "https://www.nist.gov/director/nist-information-quality-standards",
+        "https://www.nist.gov/cyberframework",
+        "https://www.govinfo.gov/about"
+      ],
+      "substantiveWordCount": 1231,
+      "contentHash": "sha256:2c37a9f921f5e81f8c3b15383d1b457516dee09db77df4b4812fec49dfcc8132",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/research-source-freshness-decision",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "What should a document-formatting assistant inspect to confirm that visible masking, metadata, and accessible text do not expose restricted content?",
+      "slug": "document-redaction-release-check",
+      "route": "/blog/document-redaction-release-check",
+      "sourcePath": "content/blog/oct5/document-redaction-release-check.md",
+      "sources": [
+        "https://www.archives.gov/records-mgmt/policy/redaction-toolkit.pdf",
+        "https://www.w3.org/TR/WCAG22/",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "substantiveWordCount": 1169,
+      "contentHash": "sha256:afd17b0b3282111f6da06bab259444704df3c201a306533909362fe9f605d3d0",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/document-redaction-release-check",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "How can a project-coordination assistant surface decisions that will stall during a named owner's absence without inventing delegated authority?",
+      "slug": "project-dependency-owner-absence-plan",
+      "route": "/blog/project-dependency-owner-absence-plan",
+      "sourcePath": "content/blog/oct5/project-dependency-owner-absence-plan.md",
+      "sources": [
+        "https://www.gao.gov/greenbook",
+        "https://www.nist.gov/cyberframework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"
+      ],
+      "substantiveWordCount": 1104,
+      "contentHash": "sha256:db8f323020042e008fb7f59aad9d3d5f03afc348e1eecb78d577beba96e60894",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/project-dependency-owner-absence-plan",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "What should an expense assistant preserve when the receipt, card statement, and policy use different currencies or conversion dates?",
+      "slug": "expense-foreign-exchange-source-record",
+      "route": "/blog/expense-foreign-exchange-source-record",
+      "sourcePath": "content/blog/oct5/expense-foreign-exchange-source-record.md",
+      "sources": [
+        "https://www.irs.gov/individuals/international-taxpayers/foreign-currency-and-currency-exchange-rates",
+        "https://www.federalreserve.gov/releases/h10/current/",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business"
+      ],
+      "substantiveWordCount": 1096,
+      "contentHash": "sha256:9ac21161261a671759fe3d0ad1fe6427767054d84b5bfa4f75d46d94a6490850",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/expense-foreign-exchange-source-record",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "How should a recruitment-scheduling assistant apply a written reschedule rule while preserving exceptions for an authorized hiring owner?",
+      "slug": "candidate-reschedule-consistency-review",
+      "route": "/blog/candidate-reschedule-consistency-review",
+      "sourcePath": "content/blog/oct5/candidate-reschedule-consistency-review.md",
+      "sources": [
+        "https://www.eeoc.gov/employers/small-business/3-im-recruiting-hiring-or-promoting-employees",
+        "https://www.eeoc.gov/laws/guidance/job-applicants-and-ada",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "substantiveWordCount": 1137,
+      "contentHash": "sha256:ba81189d43dc96d1c6c849cc07c4b242ffc1ff709697f794e07760f2b1d1bdad",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/candidate-reschedule-consistency-review",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "What should a follow-up assistant do when the CRM, support ticket, and latest customer message disagree about the preferred channel?",
+      "slug": "customer-follow-up-contact-preference-conflict",
+      "route": "/blog/customer-follow-up-contact-preference-conflict",
+      "sourcePath": "content/blog/oct5/customer-follow-up-contact-preference-conflict.md",
+      "sources": [
+        "https://www.ftc.gov/business-guidance/privacy-security",
+        "https://www.fcc.gov/consumers/guides/stop-unwanted-robocalls-and-texts",
+        "https://www.nist.gov/privacy-framework"
+      ],
+      "substantiveWordCount": 986,
+      "contentHash": "sha256:8e8be40759f08b8fd97bec85f7f1eb2d58714462115aab1fb468303a65ff9469",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/customer-follow-up-contact-preference-conflict",
+      "verifiedAt": null
+    },
+    {
+      "family": "blog",
+      "topic": "How can a reporting assistant identify when a familiar metric name now counts different events, populations, or time windows?",
+      "slug": "operations-report-metric-definition-drift",
+      "route": "/blog/operations-report-metric-definition-drift",
+      "sourcePath": "content/blog/oct5/operations-report-metric-definition-drift.md",
+      "sources": [
+        "https://www.gao.gov/greenbook",
+        "https://www.nist.gov/director/nist-information-quality-standards",
+        "https://www.fcsm.gov/"
+      ],
+      "substantiveWordCount": 985,
+      "contentHash": "sha256:9f956175a7d56b57d265dfa3f403185e4cc48dbe18824a758afeabfe173b4254",
+      "publicationDate": "2026-10-05",
+      "commitSha": null,
+      "deploymentEvidence": null,
+      "liveUrl": "https://outsourcedassistants.com/blog/operations-report-metric-definition-drift",
+      "verifiedAt": null
+    }
+  ]
+}

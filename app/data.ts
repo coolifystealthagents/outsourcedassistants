@@ -6,6 +6,7 @@ import {sep3ResearchPosts} from './sep3-research';
 import {october2ResearchPosts} from './oct2-research';
 import {october5ResearchPosts} from './oct5-research';
 import {october2BlogPosts} from './oct2-blog';
+import {october5BlogPosts} from './oct5-blog';
 import {september4ResearchPosts} from './sep4-research';
 import {august31BlogPosts,august31ResearchPosts} from './aug31-content';
 import {september3BlogPosts} from './sep3-content';
@@ -370,7 +371,7 @@ const aug23ReplacementPosts = [
   { slug: 'outsourced-assistant-delayed-queue-repair', title: 'Outsourced Assistant Delayed Queue Repair', excerpt: 'Recover delayed article work by separating evidence gaps, decisions, rework, and capacity.', minutes: 11, published: '2026-08-23' },
 ] as const;
 
-export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts, ...aug23ReplacementPosts, ...august31BlogPosts, ...september3BlogPosts, ...september4BlogPosts, ...september7BlogPosts, ...september8BlogPosts, ...september9BlogPosts, ...september10BlogPosts, ...september14BlogPosts, ...september18BlogPosts, ...september22BlogPosts, ...september22SecondBlogPosts, ...september24BlogPosts, ...september25BlogPosts, ...september28BlogPosts, ...october2BlogPosts] as const;
+export const blogPosts = [...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts, ...aug23ReplacementPosts, ...august31BlogPosts, ...september3BlogPosts, ...september4BlogPosts, ...september7BlogPosts, ...september8BlogPosts, ...september9BlogPosts, ...september10BlogPosts, ...september14BlogPosts, ...september18BlogPosts, ...september22BlogPosts, ...september22SecondBlogPosts, ...september24BlogPosts, ...september25BlogPosts, ...september28BlogPosts, ...october2BlogPosts, ...october5BlogPosts] as const;
 const august23BlogOrder: readonly string[] = aug23ReplacementPosts.map((post) => post.slug);
 const august21BlogOrder: readonly string[] = aug21ReplacementPosts.map((post) => post.slug);
 const august20BlogOrder: readonly string[] = aug20ReplacementPosts.map((post) => post.slug);
