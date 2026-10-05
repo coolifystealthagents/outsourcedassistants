@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "family": "research",
+  "required": 5,
+  "publicationDate": "2026-10-05",
+  "timezone": "Etc/UTC",
+  "cycleLabel": "October 5, 2026 combined release",
+  "domain": "outsourcedassistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "productionBranch": "main",
+  "releaseIntegrator": "blog",
+  "baselineSha": "b8a1ffc4d47bd96d99e1af19c5c90f3e0a4264e1",
+  "issueIdentifier": "OUTAAAAAAAAA-69",
+  "stagedResearchCommit": null,
+  "sourceCheckedAt": "2026-10-05T17:20:00Z",
+  "entries": [
+    {
+      "family": "research", "topic": "mailbox forwarding rule reconciliation", "slug": "inbox-assistant-forwarding-rule-review-research", "contentHash": "sha256:532fdce781a3a6429885f3f77e5b093b2d0211e47342139bf506b6f9e003e099", "publicationDate": "2026-10-05", "commitSha": null, "deploymentEvidence": null, "liveUrl": "https://outsourcedassistants.com/research/inbox-assistant-forwarding-rule-review-research", "verifiedAt": null,
+      "sources": [
+        {"title":"NIST Cybersecurity Framework 2.0","publisher":"National Institute of Standards and Technology","url":"https://www.nist.gov/cyberframework","checked":"2026-10-05"},
+        {"title":"Security and Privacy Controls for Information Systems and Organizations","publisher":"National Institute of Standards and Technology","url":"https://www.nist.gov/publications/security-and-privacy-controls-information-systems-and-organizations-0","checked":"2026-10-05"},
+        {"title":"Protecting Personal Information: A Guide for Business","publisher":"Federal Trade Commission","url":"https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business","checked":"2026-10-05"}
+      ]
+    },
+    {
+      "family": "research", "topic": "recurring calendar series change control", "slug": "calendar-assistant-recurring-series-change-research", "contentHash": "sha256:35a5e1138e17cb6ce8d7eb34a1bf6b350caff295a5d3c257b0869df4ebf197b8", "publicationDate": "2026-10-05", "commitSha": null, "deploymentEvidence": null, "liveUrl": "https://outsourcedassistants.com/research/calendar-assistant-recurring-series-change-research", "verifiedAt": null,
+      "sources": [
+        {"title":"IETF RFC 5545: Internet Calendaring and Scheduling Core Object Specification","publisher":"Internet Engineering Task Force","url":"https://www.rfc-editor.org/rfc/rfc5545","checked":"2026-10-05"},
+        {"title":"Daylight Saving Time Rules","publisher":"National Institute of Standards and Technology","url":"https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst","checked":"2026-10-05"},
+        {"title":"NIST Privacy Framework","publisher":"National Institute of Standards and Technology","url":"https://www.nist.gov/privacy-framework","checked":"2026-10-05"}
+      ]
+    },
+    {
+      "family": "research", "topic": "CRM bulk export control", "slug": "crm-assistant-bulk-export-control-research", "contentHash": "sha256:31ed5217b57b5c14aac05d1111838632814cd869c9617edf5b059e5627349982", "publicationDate": "2026-10-05", "commitSha": null, "deploymentEvidence": null, "liveUrl": "https://outsourcedassistants.com/research/crm-assistant-bulk-export-control-research", "verifiedAt": null,
+      "sources": [
+        {"title":"Protecting Personal Information: A Guide for Business","publisher":"Federal Trade Commission","url":"https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business","checked":"2026-10-05"},
+        {"title":"NIST Privacy Framework","publisher":"National Institute of Standards and Technology","url":"https://www.nist.gov/privacy-framework","checked":"2026-10-05"},
+        {"title":"Security and Privacy Controls for Information Systems and Organizations","publisher":"National Institute of Standards and Technology","url":"https://www.nist.gov/publications/security-and-privacy-controls-information-systems-and-organizations-0","checked":"2026-10-05"}
+      ]
+    },
+    {
+      "family": "research", "topic": "travel fare-hold expiry", "slug": "travel-assistant-fare-hold-expiry-research", "contentHash": "sha256:bbb3274588de3bbd27542de78cfe9bbe15a1bd34f297eb93c99565f287e839f1", "publicationDate": "2026-10-05", "commitSha": null, "deploymentEvidence": null, "liveUrl": "https://outsourcedassistants.com/research/travel-assistant-fare-hold-expiry-research", "verifiedAt": null,
+      "sources": [
+        {"title":"Airline Tickets and Reservations","publisher":"U.S. Department of Transportation","url":"https://www.transportation.gov/individuals/aviation-consumer-protection/buying-ticket","checked":"2026-10-05"},
+        {"title":"Refunds","publisher":"U.S. Department of Transportation","url":"https://www.transportation.gov/individuals/aviation-consumer-protection/refunds","checked":"2026-10-05"},
+        {"title":"NIST Information Quality Standards","publisher":"National Institute of Standards and Technology","url":"https://www.nist.gov/director/nist-information-quality-standards","checked":"2026-10-05"}
+      ]
+    },
+    {
+      "family": "research", "topic": "interview time-zone confirmation", "slug": "recruitment-assistant-interview-timezone-confirmation-research", "contentHash": "sha256:915555ecbd359c4f4fea5f4f4ee630f57f4b6d5be0d94174fe5e2f58cf0154e3", "publicationDate": "2026-10-05", "commitSha": null, "deploymentEvidence": null, "liveUrl": "https://outsourcedassistants.com/research/recruitment-assistant-interview-timezone-confirmation-research", "verifiedAt": null,
+      "sources": [
+        {"title":"Daylight Saving Time Rules","publisher":"National Institute of Standards and Technology","url":"https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst","checked":"2026-10-05"},
+        {"title":"IETF RFC 5545: Internet Calendaring and Scheduling Core Object Specification","publisher":"Internet Engineering Task Force","url":"https://www.rfc-editor.org/rfc/rfc5545","checked":"2026-10-05"},
+        {"title":"Job Applicants and the ADA","publisher":"U.S. Equal Employment Opportunity Commission","url":"https://www.eeoc.gov/laws/guidance/job-applicants-and-ada","checked":"2026-10-05"}
+      ]
+    }
+  ]
+}

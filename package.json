@@ -24,6 +24,8 @@
     "validate:sep23-research": "node scripts/validate-sep23-research.mjs",
     "validate:sep24-research": "node scripts/validate-sep24-research.mjs",
     "validate:sep25-research": "node scripts/validate-sep25-research.mjs",
+    "validate:oct5-research-source": "node --experimental-strip-types scripts/validate-oct5-research-source.mjs",
+    "validate:oct5-research-rendered": "node --experimental-strip-types scripts/validate-oct5-research-rendered.mjs",
     "validate:sep22-blog": "node scripts/validate-sep22-blog.mjs",
     "validate:sep22-second-blog": "node scripts/validate-sep22-second-blog.mjs",
     "validate:sep24-blog": "node scripts/validate-sep24-blog.mjs"

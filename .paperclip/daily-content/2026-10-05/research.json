@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "cycleLabel": "October 5, 2026 combined release",
+  "family": "research",
+  "required": 5,
+  "date": "2026-10-05",
+  "timezone": "Etc/UTC",
+  "issueIdentifier": "OUTAAAAAAAAA-69",
+  "baselineSha": "b8a1ffc4d47bd96d99e1af19c5c90f3e0a4264e1",
+  "productionIntegrator": "blog",
+  "publicationState": "local-draft-handoff",
+  "slugs": [
+    "inbox-assistant-forwarding-rule-review-research",
+    "calendar-assistant-recurring-series-change-research",
+    "crm-assistant-bulk-export-control-research",
+    "travel-assistant-fare-hold-expiry-research",
+    "recruitment-assistant-interview-timezone-confirmation-research"
+  ]
+}

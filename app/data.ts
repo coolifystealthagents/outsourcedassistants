@@ -4,6 +4,7 @@ import {aug21ResearchPosts} from './aug21-research';
 import {aug23ResearchRepairPosts} from './aug23-research-repair';
 import {sep3ResearchPosts} from './sep3-research';
 import {october2ResearchPosts} from './oct2-research';
+import {october5ResearchPosts} from './oct5-research';
 import {october2BlogPosts} from './oct2-blog';
 import {september4ResearchPosts} from './sep4-research';
 import {august31BlogPosts,august31ResearchPosts} from './aug31-content';
@@ -1131,6 +1132,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...october5ResearchPosts,
   ...october2ResearchPosts,
   ...september28ResearchPosts,
   ...september25ResearchPosts,
