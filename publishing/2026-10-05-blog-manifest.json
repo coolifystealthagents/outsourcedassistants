@@ -130,7 +130,7 @@
       "route": "/blog/document-redaction-release-check",
       "sourcePath": "content/blog/oct5/document-redaction-release-check.md",
       "sources": [
-        "https://www.archives.gov/records-mgmt/policy/redaction-toolkit.pdf",
+        "https://helpx.adobe.com/acrobat/using/removing-sensitive-content-pdfs.html",
         "https://www.w3.org/TR/WCAG22/",
         "https://www.nist.gov/privacy-framework"
       ],

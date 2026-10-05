@@ -56,7 +56,7 @@ OutsourcedAssistants.com describes [document formatting](/services/document-form
 
 ## Sources and limits
 
-- [National Archives: Redaction Toolkit for Federal Agencies](https://www.archives.gov/records-mgmt/policy/redaction-toolkit.pdf)
+- [Adobe Acrobat: Removing sensitive content from PDFs](https://helpx.adobe.com/acrobat/using/removing-sensitive-content-pdfs.html)
 - [W3C Web Content Accessibility Guidelines 2.2](https://www.w3.org/TR/WCAG22/)
 - [NIST Privacy Framework](https://www.nist.gov/privacy-framework)
 
