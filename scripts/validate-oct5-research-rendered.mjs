@@ -16,7 +16,7 @@ for(const post of posts){
   const body=post.body.map(paragraph=>{if(!renderedParagraphs.includes(paragraph))fail(`missing rendered paragraph ${post.slug}`);return paragraph});
   if(hash(body.join('\n\n'))!==hash(post.body.join('\n\n')))fail(`rendered body hash ${post.slug}`);
   const canonical=`https://outsourcedassistants.com/research/${post.slug}`;
-  if(!html.includes(`<h1>${post.title}</h1>`)||!html.includes(canonical)||!html.includes('datePublished":"2026-10-05')||!html.includes('dateModified":"2026-10-05')||!html.includes('/assistant-team.jpg'))fail(`rendered identity ${post.slug}`);
+  if(!html.includes(`<h1>${post.title}</h1>`)||!html.includes(canonical)||!html.includes('datePublished":"2026-10-06')||!html.includes('dateModified":"2026-10-06')||!html.includes('/assistant-team.jpg'))fail(`rendered identity ${post.slug}`);
   if(!index.includes(`/research/${post.slug}`)||!sitemap.includes(canonical))fail(`discovery ${post.slug}`);
 }
 console.log('Validated five rendered October 5 Research routes: complete source/body paragraph and hash equality, titles, dates, Article metadata, canonicals, shared JPEG signature, Research index, and sitemap.');

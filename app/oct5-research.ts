@@ -10,7 +10,7 @@ export const october5ResearchPosts=[
     slug:'inbox-assistant-forwarding-rule-review-research',
     title:'Research: Should an Inbox Assistant Review Automatic Forwarding Rules?',
     excerpt:'A bounded control model separates visible mailbox housekeeping from security investigation, account administration, and incident response.',
-    published:'2026-10-05',image,
+    published:'2026-10-06',image,
     statistic:'Four states to reconcile: approved, unexplained, disabled, and escalated',
     statisticSource:'OutsourcedAssistants.com decision model',
     body:[
@@ -40,7 +40,7 @@ export const october5ResearchPosts=[
     slug:'calendar-assistant-recurring-series-change-research',
     title:'Research: How Should a Calendar Assistant Change a Recurring Meeting Series?',
     excerpt:'A series-level decision framework prevents one edit from silently changing time, attendees, privacy, or history across many meetings.',
-    published:'2026-10-05',image,
+    published:'2026-10-06',image,
     statistic:'Three edit scopes to distinguish: one occurrence, this-and-future, and entire series',
     statisticSource:'OutsourcedAssistants.com decision model',
     body:[
@@ -71,7 +71,7 @@ export const october5ResearchPosts=[
     slug:'crm-assistant-bulk-export-control-research',
     title:'Research: When Should a CRM Assistant Create a Bulk Contact Export?',
     excerpt:'A data-flow analysis distinguishes approved reporting from unnecessary duplication, uncontrolled sharing, and indefinite local retention.',
-    published:'2026-10-05',image,
+    published:'2026-10-06',image,
     statistic:'Seven export decisions: purpose, fields, population, destination, access, expiry, and deletion',
     statisticSource:'OutsourcedAssistants.com decision model',
     body:[
@@ -102,7 +102,7 @@ export const october5ResearchPosts=[
     slug:'travel-assistant-fare-hold-expiry-research',
     title:'Research: How Should a Travel Assistant Manage Fare-Hold Expiry?',
     excerpt:'A time-bounded option model keeps itinerary research useful without turning a temporary hold into unauthorized purchase or false certainty.',
-    published:'2026-10-05',image,
+    published:'2026-10-06',image,
     statistic:'Two clocks to record: supplier expiry and internal decision deadline',
     statisticSource:'OutsourcedAssistants.com decision model',
     body:[
@@ -133,7 +133,7 @@ export const october5ResearchPosts=[
     slug:'recruitment-assistant-interview-timezone-confirmation-research',
     title:'Research: How Should a Recruitment Assistant Confirm Interview Time Zones?',
     excerpt:'A candidate-facing scheduling method reduces ambiguous local times without collecting unnecessary location or influencing hiring decisions.',
-    published:'2026-10-05',image,
+    published:'2026-10-06',image,
     statistic:'Four values to confirm: date, local time, named zone, and UTC offset',
     statisticSource:'OutsourcedAssistants.com decision model',
     body:[

@@ -10,14 +10,14 @@ const hash=s=>`sha256:${crypto.createHash('sha256').update(s).digest('hex')}`;
 const fail=m=>{throw new Error(m)};
 
 if(posts.length!==5||manifest.required!==5||manifest.entries.length!==5||ledger.required!==5||ledger.slugs.length!==5)fail('inventory mismatch');
-if(manifest.publicationDate!=='2026-10-05'||manifest.timezone!=='Etc/UTC'||ledger.date!=='2026-10-05'||ledger.timezone!=='Etc/UTC')fail('date or timezone mismatch');
+if(manifest.publicationDate!=='2026-10-06'||manifest.timezone!=='Etc/UTC'||ledger.date!=='2026-10-06'||ledger.timezone!=='Etc/UTC')fail('date or timezone mismatch');
 if(new Set(posts.map(x=>x.slug)).size!==5||new Set(ledger.slugs).size!==5)fail('duplicate slug');
 
 const paragraphs=new Map();
 const rows=posts.map(post=>{
   const entry=manifest.entries.find(x=>x.slug===post.slug);
   if(!entry||!ledger.slugs.includes(post.slug))fail(`missing inventory ${post.slug}`);
-  if(post.published!=='2026-10-05'||entry.publicationDate!==post.published)fail(`publication date ${post.slug}`);
+  if(post.published!=='2026-10-06'||entry.publicationDate!==post.published)fail(`publication date ${post.slug}`);
   const body=post.body.join(' '),count=tokens(body).length;
   if(count<1200||post.sources.length<3||post.related.length<3)fail(`quality ${post.slug}`);
   if(hash(post.body.join('\n\n'))!==entry.contentHash)fail(`content hash ${post.slug}`);
