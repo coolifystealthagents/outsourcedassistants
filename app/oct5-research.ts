@@ -158,6 +158,6 @@ export const october5ResearchPosts=[
       {title:'NIST: Daylight Saving Time Rules',url:'https://www.nist.gov/pml/time-and-frequency-division/popular-links/daylight-saving-time-dst'},
       {title:'IETF RFC 5545: Internet Calendaring and Scheduling Core Object Specification',url:'https://www.rfc-editor.org/rfc/rfc5545'},
       {title:'EEOC: Job Applicants and the ADA',url:'https://www.eeoc.gov/laws/guidance/job-applicants-and-ada'},
-    ],faqs,related:['/services/recruitment-scheduling','/research/recruitment-assistant-accommodation-routing-research','/research/research-recruitment-scheduling-candidate-privacy'],
+    ],faqs,related:['/services/recruitment-scheduling','/research/recruitment-assistant-accommodation-routing-research','/research/recruitment-scheduling-applicant-record-boundaries-research'],
   },
 ];
