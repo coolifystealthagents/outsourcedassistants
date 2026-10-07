@@ -27,6 +27,7 @@ This is a planning record for the existing Philippines-only service pages. It do
 | `/blog/virtual-assistant-inbox-triage-workflow` | How can a team sort, draft, and escalate messages while sensitive decisions stay with the owner? | `/services/inbox-triage` | One matching href appears inside `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 | `/blog/remote-assistant-travel-planning-checklist` | Can an assistant research and coordinate travel while the traveler keeps payment and final approval? | `/services/travel-planning-support` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 | `/blog/crm-administration-virtual-assistant-guide` | Which CRM maintenance tasks can be delegated without handing over protected changes? | `/services/crm-administration` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
+| `/blog/meeting-preparation-assistant-sop` | What does a repeatable meeting-preparation lane need before it becomes recurring work? | `/services/meeting-preparation` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 
 ## Execution rule
 
