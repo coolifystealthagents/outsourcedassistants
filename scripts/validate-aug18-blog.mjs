@@ -22,7 +22,7 @@ for (const slug of records) {
   const words = text.trim().split(/\s+/).filter(Boolean).length;
   if (words < 900) throw new Error(`Substantive body under 900 words for ${slug}: ${words}`);
 }
-const index = [fs.readFileSync(path.join(root, '.next/server/app/blog.html'), 'utf8'), ...Array.from({ length: 12 }, (_, i) => {
+const index = [fs.readFileSync(path.join(root, '.next/server/app/blog.html'), 'utf8'), ...Array.from({ length: 30 }, (_, i) => {
   try { return fs.readFileSync(path.join(root, '.next/server/app/blog/page', `${i + 2}.html`), 'utf8'); } catch { return ''; }
 })].join('');
 const positions = records.map((slug) => index.indexOf(`/blog/${slug}`));

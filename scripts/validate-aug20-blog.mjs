@@ -20,7 +20,7 @@ for (const slug of slugs) {
 }
 const sitemap = fs.readFileSync('.next/server/app/sitemap.xml.body', 'utf8');
 if (slugs.some((slug) => !sitemap.includes(`/blog/${slug}`))) throw new Error('August 20 route missing from sitemap');
-const index = ['.next/server/app/blog.html', ...Array.from({ length: 12 }, (_, i) => `.next/server/app/blog/page/${i + 2}.html`)].map((file) => fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '').join('');
+const index = ['.next/server/app/blog.html', ...Array.from({ length: 30 }, (_, i) => `.next/server/app/blog/page/${i + 2}.html`)].map((file) => fs.existsSync(file) ? fs.readFileSync(file, 'utf8') : '').join('');
 const positions = slugs.map((slug) => index.indexOf(`/blog/${slug}`));
 if (positions.some((position) => position < 0) || positions.some((position, indexPosition) => indexPosition > 0 && position < positions[indexPosition - 1])) throw new Error('August 20 batch ordering failed');
 console.log(`PASS: 12 August 20 Blog records; direct bindings, visible and structured dates, canonicals, ${Math.min(...words)}+ rendered words, distinct Gemini assets, ordering, manifest, sitemap, and zero forms verified`);
