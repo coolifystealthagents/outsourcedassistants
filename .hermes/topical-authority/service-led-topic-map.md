@@ -56,3 +56,14 @@ Research articles should remain evidence-first. A Research-to-service handoff is
 - Service route/schema model: `app/services/[slug]/page.tsx`.
 - Research route model and optional next-decision component: `app/research/[slug]/page.tsx`.
 - Sitemap route source: `app/sitemap.xml/route.ts`.
+
+## Research candidate review — 2026-10-10
+
+Reviewed pair: `/research/research-crm-data-quality` to `/services/crm-administration`.
+
+- Fresh production artifacts: source and target each have one self-canonical link, an H1, and a sitemap entry.
+- Route-local count: the research `<main>` has zero `/services/crm-administration` anchors.
+- Reader question: How can a manager improve CRM data quality without letting an assistant decide record ownership, consent, or commercial status?
+- Candidate state: `verified_absent / data-record ownership review required`.
+
+If a later record-level review confirms the data model and renderer position, add one contextual CRM Administration handoff after the source-precedence and duplicate-handling guidance. The assistant may follow approved field definitions, flag likely duplicates, and prepare reviewable corrections. The designated owner keeps merge, deletion, ownership, consent, segmentation, and commercial-status decisions. Do not add a second link if the shared renderer already supplies this destination.
