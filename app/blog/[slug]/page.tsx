@@ -58,7 +58,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: { absolute: post.title },
     description: post.excerpt,
     alternates: { canonical: `/blog/${post.slug}` },
-    openGraph: { title: post.title, description: post.excerpt, type: 'article', url: `/blog/${post.slug}`, images: ['/assistant-team.jpg'], ...('published' in post ? { publishedTime: post.published, modifiedTime: modified ?? post.published } : modified ? { modifiedTime: modified } : {}) },
+    openGraph: { title: post.title, description: post.excerpt, type: 'article', url: `/blog/${post.slug}`, images: ['image' in post ? post.image : '/assistant-team.jpg'], ...('published' in post ? { publishedTime: post.published, modifiedTime: modified ?? post.published } : modified ? { modifiedTime: modified } : {}) },
   };
 }
 
@@ -266,7 +266,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
             </div>
           ) : (
             <div className="card">
-              {(publicationDate === '2026-09-07' || publicationDate === '2026-09-08' || publicationDate === '2026-09-09' || publicationDate === '2026-09-10' || publicationDate === '2026-09-14' || publicationDate === '2026-09-18') && 'image' in post ? <figure className="article-photo"><img src={post.image} alt="Filipino assistant and manager reviewing a documented work handoff" /><figcaption>Start with a defined work lane, limited access, and review evidence both people can inspect.</figcaption></figure> : null}
+              {(publicationDate === '2026-09-07' || publicationDate === '2026-09-08' || publicationDate === '2026-09-09' || publicationDate === '2026-09-10' || publicationDate === '2026-09-14' || publicationDate === '2026-09-18' || publicationDate === '2026-10-12') && 'image' in post ? <figure className="article-photo"><img src={post.image} alt={post.title} /><figcaption>Start with a defined work lane, limited access, and review evidence both people can inspect.</figcaption></figure> : null}
               <h2>The short answer</h2>
               <p>{fallback?.answer ?? ('body' in post ? post.body[0] : `Start with one repeatable ${post.title.toLowerCase()} work lane. Give the Filipino assistant clear examples, a visible finish line, limited access, and a named reviewer before adding more responsibility.`)}</p>
               {'body' in post ? post.body.slice(1).map((paragraph) => <p key={paragraph}>{paragraph}</p>) : null}

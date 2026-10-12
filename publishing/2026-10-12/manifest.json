@@ -1,0 +1,201 @@
+{
+  "site": "OutsourcedAssistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "publicationDate": "2026-10-12",
+  "blog": [
+    {
+      "slug": "executive-briefing-correction-ledger",
+      "title": "Maintain an executive briefing correction ledger",
+      "path": "/blog/executive-briefing-correction-ledger",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/executive-briefing-correction-ledger.webp"
+    },
+    {
+      "slug": "multi-brand-inbox-sender-identity-control",
+      "title": "Control sender identity across a multi-brand shared inbox",
+      "path": "/blog/multi-brand-inbox-sender-identity-control",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/multi-brand-inbox-sender-identity-control.webp"
+    },
+    {
+      "slug": "customer-consent-expiry-outreach-review",
+      "title": "Review customer consent expiry before delegated outreach",
+      "path": "/blog/customer-consent-expiry-outreach-review",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/customer-consent-expiry-outreach-review.webp"
+    },
+    {
+      "slug": "recurring-report-input-cutoff",
+      "title": "Set a recurring report input cutoff that preserves late evidence",
+      "path": "/blog/recurring-report-input-cutoff",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/recurring-report-input-cutoff.webp"
+    },
+    {
+      "slug": "vendor-meeting-action-confirmation",
+      "title": "Confirm vendor meeting actions without inventing commitments",
+      "path": "/blog/vendor-meeting-action-confirmation",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/vendor-meeting-action-confirmation.webp"
+    },
+    {
+      "slug": "crm-merge-candidate-review",
+      "title": "Review CRM merge candidates before records disappear",
+      "path": "/blog/crm-merge-candidate-review",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/crm-merge-candidate-review.webp"
+    },
+    {
+      "slug": "traveler-preference-version-register",
+      "title": "Maintain a traveler preference version register",
+      "path": "/blog/traveler-preference-version-register",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/traveler-preference-version-register.webp"
+    },
+    {
+      "slug": "document-template-retirement-queue",
+      "title": "Retire document templates without reviving obsolete copies",
+      "path": "/blog/document-template-retirement-queue",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/document-template-retirement-queue.webp"
+    },
+    {
+      "slug": "interview-panel-packet-access",
+      "title": "Assemble an interview panel packet with bounded access",
+      "path": "/blog/interview-panel-packet-access",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/interview-panel-packet-access.webp"
+    },
+    {
+      "slug": "expense-receipt-exception-aging",
+      "title": "Age expense receipt exceptions without guessing",
+      "path": "/blog/expense-receipt-exception-aging",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/expense-receipt-exception-aging.webp"
+    },
+    {
+      "slug": "customer-callback-promise-register",
+      "title": "Track customer callback promises to verified closure",
+      "path": "/blog/customer-callback-promise-register",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/customer-callback-promise-register.webp"
+    },
+    {
+      "slug": "project-dependency-evidence-check",
+      "title": "Check project dependency evidence before status reporting",
+      "path": "/blog/project-dependency-evidence-check",
+      "sourcePath": "app/oct12-blog.ts",
+      "thumbnail": "/oct12-heroes/project-dependency-evidence-check.webp"
+    }
+  ],
+  "research": [
+    {
+      "slug": "assistant-evidence-link-decay-research",
+      "title": "Research: How Quickly Do Evidence Links Decay in Assistant Queues?",
+      "path": "/research/assistant-evidence-link-decay-research",
+      "sourcePath": "app/oct12-research.ts",
+      "thumbnail": "/oct12-heroes/assistant-evidence-link-decay-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    },
+    {
+      "slug": "assistant-exception-code-agreement-research",
+      "title": "Research: Do Reviewers Apply Assistant Exception Codes Consistently?",
+      "path": "/research/assistant-exception-code-agreement-research",
+      "sourcePath": "app/oct12-research.ts",
+      "thumbnail": "/oct12-heroes/assistant-exception-code-agreement-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    },
+    {
+      "slug": "approval-withdrawal-propagation-research",
+      "title": "Research: Does Withdrawn Approval Reach Every Assistant Work Surface?",
+      "path": "/research/approval-withdrawal-propagation-research",
+      "sourcePath": "app/oct12-research.ts",
+      "thumbnail": "/oct12-heroes/approval-withdrawal-propagation-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    },
+    {
+      "slug": "assistant-queue-sampling-yield-research",
+      "title": "Research: Which Sample Design Finds More Routine Queue Defects?",
+      "path": "/research/assistant-queue-sampling-yield-research",
+      "sourcePath": "app/oct12-research.ts",
+      "thumbnail": "/oct12-heroes/assistant-queue-sampling-yield-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    },
+    {
+      "slug": "assistant-task-duration-calibration-research",
+      "title": "Research: How Accurate Are Assistant Task Duration Estimates?",
+      "path": "/research/assistant-task-duration-calibration-research",
+      "sourcePath": "app/oct12-research.ts",
+      "thumbnail": "/oct12-heroes/assistant-task-duration-calibration-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    }
+  ],
+  "registries": [
+    "app/data.ts"
+  ],
+  "routes": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexes": [
+    "app/blog/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "sitemap": "app/sitemap.xml/route.ts"
+}
