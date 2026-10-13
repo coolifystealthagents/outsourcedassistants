@@ -1,0 +1,202 @@
+{
+  "site": "OutsourcedAssistants.com",
+  "repository": "coolifystealthagents/outsourcedassistants",
+  "branch": "main",
+  "baseSha": "41a2812048fb2b8e94a2e5e089cf0131cba8f92e",
+  "publicationDate": "2026-10-13",
+  "blog": [
+    {
+      "slug": "executive-meeting-preread-source-register",
+      "title": "Maintain an executive meeting pre-read source register",
+      "path": "/blog/executive-meeting-preread-source-register",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/executive-meeting-preread-source-register.webp"
+    },
+    {
+      "slug": "multi-region-inbox-locale-handoff",
+      "title": "Control locale handoffs across a multi-region shared inbox",
+      "path": "/blog/multi-region-inbox-locale-handoff",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/multi-region-inbox-locale-handoff.webp"
+    },
+    {
+      "slug": "customer-deletion-request-evidence-queue",
+      "title": "Route customer deletion requests through an evidence queue",
+      "path": "/blog/customer-deletion-request-evidence-queue",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/customer-deletion-request-evidence-queue.webp"
+    },
+    {
+      "slug": "monthly-dashboard-late-data-reconciliation",
+      "title": "Reconcile late data in a monthly dashboard without hiding changes",
+      "path": "/blog/monthly-dashboard-late-data-reconciliation",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/monthly-dashboard-late-data-reconciliation.webp"
+    },
+    {
+      "slug": "supplier-qbr-action-acceptance",
+      "title": "Confirm supplier QBR actions through explicit acceptance",
+      "path": "/blog/supplier-qbr-action-acceptance",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/supplier-qbr-action-acceptance.webp"
+    },
+    {
+      "slug": "crm-ownership-transfer-evidence",
+      "title": "Transfer CRM record ownership with traceable evidence",
+      "path": "/blog/crm-ownership-transfer-evidence",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/crm-ownership-transfer-evidence.webp"
+    },
+    {
+      "slug": "traveler-emergency-contact-verification",
+      "title": "Verify traveler emergency contacts without widening access",
+      "path": "/blog/traveler-emergency-contact-verification",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/traveler-emergency-contact-verification.webp"
+    },
+    {
+      "slug": "policy-acknowledgment-supersession",
+      "title": "Supersede policy acknowledgments without losing prior evidence",
+      "path": "/blog/policy-acknowledgment-supersession",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/policy-acknowledgment-supersession.webp"
+    },
+    {
+      "slug": "interview-reschedule-custody",
+      "title": "Maintain interview reschedule custody with bounded access",
+      "path": "/blog/interview-reschedule-custody",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/interview-reschedule-custody.webp"
+    },
+    {
+      "slug": "corporate-card-receipt-escalation",
+      "title": "Escalate corporate card receipt gaps without guessing",
+      "path": "/blog/corporate-card-receipt-escalation",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/corporate-card-receipt-escalation.webp"
+    },
+    {
+      "slug": "customer-escalation-callback-acceptance",
+      "title": "Track customer escalation callbacks to verified acceptance",
+      "path": "/blog/customer-escalation-callback-acceptance",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/customer-escalation-callback-acceptance.webp"
+    },
+    {
+      "slug": "project-milestone-acceptance-proof",
+      "title": "Verify project milestone acceptance before status reporting",
+      "path": "/blog/project-milestone-acceptance-proof",
+      "sourcePath": "app/oct13-blog.ts",
+      "thumbnail": "/oct13-heroes/project-milestone-acceptance-proof.webp"
+    }
+  ],
+  "research": [
+    {
+      "slug": "assistant-source-access-expiry-research",
+      "title": "Research: How Often Does Source Access Expire in Assistant Queues?",
+      "path": "/research/assistant-source-access-expiry-research",
+      "sourcePath": "app/oct13-research.ts",
+      "thumbnail": "/oct13-heroes/assistant-source-access-expiry-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    },
+    {
+      "slug": "assistant-handoff-classification-agreement-research",
+      "title": "Research: Do Reviewers Classify Assistant Handoffs Consistently?",
+      "path": "/research/assistant-handoff-classification-agreement-research",
+      "sourcePath": "app/oct13-research.ts",
+      "thumbnail": "/oct13-heroes/assistant-handoff-classification-agreement-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    },
+    {
+      "slug": "approval-supersession-latency-research",
+      "title": "Research: How Quickly Does Superseded Approval Reach Every Work Surface?",
+      "path": "/research/approval-supersession-latency-research",
+      "sourcePath": "app/oct13-research.ts",
+      "thumbnail": "/oct13-heroes/approval-supersession-latency-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    },
+    {
+      "slug": "assistant-value-versus-random-sampling-research",
+      "title": "Research: How Do Value-Weighted and Random Assistant Samples Differ?",
+      "path": "/research/assistant-value-versus-random-sampling-research",
+      "sourcePath": "app/oct13-research.ts",
+      "thumbnail": "/oct13-heroes/assistant-value-versus-random-sampling-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    },
+    {
+      "slug": "assistant-estimate-revision-calibration-research",
+      "title": "Research: How Accurate Are Revised Assistant Work Estimates?",
+      "path": "/research/assistant-estimate-revision-calibration-research",
+      "sourcePath": "app/oct13-research.ts",
+      "thumbnail": "/oct13-heroes/assistant-estimate-revision-calibration-research.webp",
+      "sources": [
+        "https://www.nist.gov/cyberframework",
+        "https://www.nist.gov/privacy-framework",
+        "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+        "https://www.cisa.gov/resources-tools/resources/zero-trust-maturity-model",
+        "https://www.cisa.gov/resources-tools/resources/cyber-essentials",
+        "https://www.gao.gov/green-book",
+        "https://www.archives.gov/records-mgmt",
+        "https://www.ftc.gov/business-guidance/resources/protecting-personal-information-guide-business",
+        "https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping",
+        "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/memoranda/2004/m04-25.pdf"
+      ]
+    }
+  ],
+  "registries": [
+    "app/data.ts"
+  ],
+  "routes": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexes": [
+    "app/blog/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "sitemap": "app/sitemap.xml/route.ts"
+}
