@@ -910,7 +910,7 @@ const researchSources = [
 ] as const;
 
 type ResearchPost = {
-  slug: string; title: string; excerpt: string; body: string[]; published: string;
+  slug: string; title: string; excerpt: string; body: readonly string[]; published: string;
   statistic: string; statisticSource: string; sources: readonly { title: string; url: string }[];
   related: readonly string[]; faqs: readonly { question: string; answer: string }[];
   nextDecision?: { href: string; label: string; summary: string };
