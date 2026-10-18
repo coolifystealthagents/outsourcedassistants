@@ -1,6 +1,6 @@
 const image='/assistant-team.jpg';
 
-export type DecisionResearchInput={slug:string;title:string;excerpt:string;signal:string;question:string;scope:string;facts:string;application:string;failure:string;pilot:string;sources:{title:string;url:string}[];related:string[];checked?:string};
+export type DecisionResearchInput={slug:string;title:string;excerpt:string;signal:string;question:string;scope:string;facts:string;application:string;failure:string;pilot:string;sources:{title:string;url:string}[];related:string[];checked?:string;updated?:string;nextDecision?:{href:string;label:string;summary:string}};
 
 const checked='September 22, 2026';
 const commonSources=[
