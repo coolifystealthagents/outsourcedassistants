@@ -31,8 +31,8 @@ const grams=text=>{const tokens=words(text),result=new Set();for(let i=0;i<token
 const bodies=[];
 for(const slug of expected){
   const html=fs.readFileSync(`.next/server/app/research/${slug}.html`,'utf8');
-  const start=html.indexOf('Headline signal:');
-  const end=html.indexOf('<h2>Sources</h2>',start);
+  const start=html.indexOf('id="headline-signal"');
+  const end=html.indexOf('id="research-sources"',start);
   if(start<0||end<0)fail(`cannot isolate rendered body ${slug}`);
   const body=html.slice(start,end).replace(/<script[\s\S]*?<\/script>/g,' ').replace(/<[^>]+>/g,' ').replace(/&[^;]+;/g,' ');
   const count=words(body).length;

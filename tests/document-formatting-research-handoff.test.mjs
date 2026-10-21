@@ -14,8 +14,8 @@ assert.match(selected, /nextDecision:\{href:'\/services\/document-formatting',la
 assert.match(selected, /Your owner still approves content, accepts accessibility risks, and releases the final file\./);
 assert.match(selected, /updated:'2026-10-18'/);
 assert.doesNotMatch(selected, /related:\['\/services\/document-formatting'/);
-assert.match(renderer, /modifiedTime:p\.updated\?\?p\.published/);
-assert.match(renderer, /dateModified:p\.updated\?\?p\.published/);
-assert.match(renderer, /Updated: <time dateTime=\{p\.updated\}>\{p\.updated\}<\/time>/);
+assert.match(renderer, /modifiedTime:\s*post\.updated\s*\?\?\s*post\.published/);
+assert.match(renderer, /dateModified:\s*post\.updated\s*\?\?\s*post\.published/);
+assert.match(renderer, /Updated <time dateTime=\{post\.updated\}>\{post\.updated\}<\/time>/);
 
 console.log('PASS: document-formatting research has a data-owned next decision, owner boundary, and modified-date contract');

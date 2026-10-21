@@ -1,169 +1,20 @@
-import * as data from './data';
-import { Footer, Header, JsonLd } from './components';
+import type { Metadata } from 'next';
+import { FinalCta, Footer, Header, JsonLd, ReviewsMarquee } from './components';
+import { commercialServices } from './commercial-data';
+import './home-v3.css';
 
-const services = data.services.slice(0, 4);
-const posts = data.blogPosts.slice(0, 3);
-const process = data.staffingProcess.slice(0, 4);
-
-const taskDetails: Record<string, { tag: string; examples: string }> = {
-  'operations-support': { tag: 'Keep work moving', examples: 'Project updates, vendor follow-up, SOP upkeep' },
-  'customer-support': { tag: 'Protect response time', examples: 'Inbox triage, ticket replies, escalation notes' },
-  'admin-support': { tag: 'Clear the desk', examples: 'Calendar care, data entry, document prep' },
-  'reporting-and-qa': { tag: 'See what happened', examples: 'Weekly summaries, sample checks, issue logs' },
-};
-
-export default function Home() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: data.site.brand,
-    url: data.site.url,
-  };
-
-  return (
-    <>
-      <Header />
-      <main className="handoff-home" data-design="philippines-handoff-desk-2026-07" data-gi-rollout="two-illustration-packs-one-icon-pack">
-        <JsonLd data={schema} />
-
-        <section className="handoff-hero">
-          <div className="handoff-shell handoff-hero-grid">
-            <div className="handoff-copy">
-              <p className="handoff-kicker"><span /> Filipino assistant planning</p>
-              <h1>Get the work off your desk with a Filipino assistant.</h1>
-              <p className="handoff-lead">
-                Build one clear role around the tasks already eating your week. We help you sort the scope, handoff rules, and first two weeks before you interview talent in the Philippines.
-              </p>
-              <div className="handoff-actions">
-                <a className="handoff-button" href="/contact-us">Request a role plan</a>
-                <a className="handoff-text-link" href="#workload">Sort your workload <span aria-hidden="true">↓</span></a>
-              </div>
-              <p className="handoff-disclosure">No public rate card or mystery package. Start with the work and schedule you need covered.</p>
-            </div>
-
-            <div className="handoff-visual" aria-label="Team planning assistant work">
-              <div className="handoff-photo-frame">
-                <img src="/illustrations/getillustrations/humano-scenes-illustrations-svg/filipino-assistant-planning.svg" alt="Illustration of an assistant and team collaborating on a business plan" />
-                <div className="handoff-photo-label">
-                  <span>Philippines-only</span>
-                  <strong>Operations role</strong>
-                </div>
-              </div>
-              <article className="handoff-note handoff-note-one">
-                <span className="handoff-note-number">01</span>
-                <div><small>Owner keeps</small><strong>Approvals and exceptions</strong></div>
-              </article>
-              <article className="handoff-note handoff-note-two">
-                <span className="handoff-note-number">02</span>
-                <div><small>Assistant owns</small><strong>Recurring follow-through</strong></div>
-              </article>
-            </div>
-          </div>
-
-          <div className="handoff-shell handoff-planning-strip" aria-label="Suggested starting plan">
-            <p><strong>A sensible starting point</strong><span>Guidance, not a promised outcome</span></p>
-            <p><strong>5–10</strong><span>recurring tasks</span></p>
-            <p><strong>14 days</strong><span>to test the handoff</span></p>
-            <p><strong>1 review</strong><span>every week</span></p>
-          </div>
-        </section>
-
-        <section className="handoff-workload" id="workload">
-          <div className="handoff-shell">
-            <div className="handoff-section-head">
-              <p className="handoff-kicker"><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt="Delegated task checklist"/> Workload sorter</p>
-              <h2>What keeps landing back on your desk?</h2>
-              <p>Pick the queue that causes the most drag. A useful assistant role usually starts with one kind of work, not a grab bag of everything.</p>
-            </div>
-            <div className="handoff-task-grid">
-              {services.map((service, index) => {
-                const detail = taskDetails[service.slug] || {
-                  tag: 'Assistant support',
-                  examples: service.desc,
-                };
-                return (
-                  <a className="handoff-task-card" href={`/services/${service.slug}`} key={service.slug}>
-                    <div className="handoff-task-top"><span>0{index + 1}</span><small>{detail.tag}</small></div>
-                    <h3>{service.title}</h3>
-                    <p>{detail.examples}</p>
-                    <strong>See the handoff <span aria-hidden="true">↗</span></strong>
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-
-        <section className="handoff-boundaries">
-          <div className="handoff-shell handoff-boundaries-grid">
-            <div className="handoff-boundaries-copy">
-              <p className="handoff-kicker light"><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt="Remote assistant workstation"/> A cleaner brief</p>
-              <h2>Write down the line between support and judgment.</h2>
-              <p>An assistant can move quickly when routine decisions are clear. Anything involving money, sensitive data, or an unhappy customer should have an owner and an escalation rule.</p>
-              <a className="handoff-light-link" href="/blog">Use the provider question list <span aria-hidden="true">→</span></a>
-            </div>
-            <div className="handoff-rule-sheet">
-              <div className="handoff-sheet-head"><span>Handoff sheet / 01</span><span>Draft</span></div>
-              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt="Delegated task checklist"/>Can handle</span><p>Routine replies based on approved examples</p></div>
-              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt="Assistant work schedule"/>Needs approval</span><p>Refunds, contract changes, and new access</p></div>
-              <div className="handoff-rule-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt="Remote assistant workstation"/>Escalate now</span><p>Security concerns or a frustrated customer</p></div>
-            </div>
-          </div>
-        </section>
-
-        <section className="handoff-process">
-          <div className="handoff-shell">
-            <div className="handoff-section-head compact">
-              <p className="handoff-kicker"><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt="Assistant work schedule"/> The first two weeks</p>
-              <h2>A handoff you can inspect.</h2>
-            </div>
-            <div className="handoff-timeline">
-              {process.map((item) => (
-                <article key={item.step}>
-                  <span>{item.step.padStart(2, '0')}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.body}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="handoff-shell gi-proof" aria-label="Assistant handoff essentials">
-          <img className="gi-proof-art" src="/illustrations/getillustrations/goodle-team-illustrations-svg/assistant-handoff.svg" alt="Owner and assistant reviewing a documented work handoff"/>
-          <div><p className="handoff-kicker"><span/>A practical role</p><h2>Give recurring work a dependable rhythm.</h2><div className="gi-icon-row"><span><img src="/icons/getillustrations/sharpie-office-icons-svg/remote-work.svg" alt="Remote assistant workstation"/>Remote work</span><span><img src="/icons/getillustrations/sharpie-office-icons-svg/task-list.svg" alt="Delegated task checklist"/>Task list</span><span><img src="/icons/getillustrations/sharpie-office-icons-svg/schedule.svg" alt="Assistant work schedule"/>Schedule</span></div></div>
-        </section>
-
-        <section className="handoff-guides">
-          <div className="handoff-shell handoff-guides-grid">
-            <div className="handoff-guides-intro">
-              <p className="handoff-kicker"><span /> Field notes</p>
-              <h2>Read this before the provider call.</h2>
-              <p>Short, practical guides for scoping the role and spotting vague answers.</p>
-              <a className="handoff-text-link" href="/blog">Browse all guides <span aria-hidden="true">→</span></a>
-            </div>
-            <div className="handoff-guide-list">
-              {posts.map((post, index) => (
-                <a href={`/blog/${post.slug}`} key={post.slug}>
-                  <span>0{index + 1}</span>
-                  <div><small>{post.minutes} minute guide</small><strong>{post.title.replace('Outsourced Assistants: ', '')}</strong></div>
-                  <b aria-hidden="true">↗</b>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="handoff-final">
-          <div className="handoff-shell handoff-final-inner">
-            <p className="handoff-kicker light"><span /> Start with the role</p>
-            <h2>Bring the messy task list. Leave with a clearer brief.</h2>
-            <p>Tell us what repeats, what keeps slipping, and which systems the assistant would touch.</p>
-            <a className="handoff-button pale" href="/contact-us">Request a role plan</a>
-          </div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
+const description = 'Plan outsourced assistant roles around clear scope, controlled access, documented handoffs, and measurable review.';
+export const metadata: Metadata = { title: 'Outsourced Assistants for Accountable Operations', description, alternates: { canonical: 'https://outsourcedassistants.com/' }, openGraph: { title: 'Outsourced Assistants for Accountable Operations', description, url: 'https://outsourcedassistants.com/', type: 'website', images: [{ url: '/brand/stealth-agents-team-bacolod.jpg', width: 1906, height: 1080, alt: 'Official Stealth Agents team in Bacolod' }] }, twitter: { card: 'summary_large_image', title: 'Outsourced Assistants for Accountable Operations', description, images: ['/brand/stealth-agents-team-bacolod.jpg'] } };
+export default function HomePage() {
+  const featured = commercialServices.slice(0, 6);
+  const schema = { '@context': 'https://schema.org', '@type': 'Organization', name: 'Outsourced Assistants', url: 'https://outsourcedassistants.com/', logo: 'https://outsourcedassistants.com/logo.svg', description, sameAs: ['https://stealthagents.com/'] };
+  return <><Header /><main className="home-v3"><JsonLd data={schema} />
+    <section className="home-hero"><div className="home-shell home-hero-grid"><div className="home-hero-copy"><p className="home-kicker">Remote operating support</p><h1>Build a role around the work—not the other way around.</h1><p className="home-deck">Outsourced Assistants helps operations leaders turn recurring work into a managed assistant role with named inputs, clear outputs, safe permissions, and accountable review.</p><div className="home-actions"><a href="/contact-us">Plan your assistant role</a><a href="/services">Explore the service library</a></div><div className="home-hero-note"><strong>For growing teams</strong><span>Administrative, customer, research, finance, data, and operating support.</span></div></div><figure className="home-hero-figure"><img src="/brand/stealth-agents-team-bacolod.jpg" width="1906" height="1080" alt="Official Stealth Agents team in Bacolod, Philippines" /><figcaption><span>Staffing delivery</span><strong>Powered by StealthAgents</strong></figcaption></figure></div></section>
+    <section className="home-proof"><div className="home-shell"><div className="home-proof-heading"><p className="home-kicker">Approved client record</p><h2>Fourteen perspectives on delegated support.</h2></div><ReviewsMarquee /></div></section>
+    <section className="home-roles"><div className="home-shell"><div className="home-section-head"><div><p className="home-kicker">Service library</p><h2>Start with a real work queue.</h2></div><p>Each guide defines scope, inputs, workflow, deliverables, quality controls, boundaries, and review ownership for a specific operating need.</p></div><div className="home-role-grid">{featured.map((service, index) => <a href={`/services/${service.slug}`} className="home-role" key={service.slug}><span>0{index + 1}</span><img src={service.heroImage} alt={service.heroAlt} /><div><p>Assistant work lane</p><h3>{service.title}</h3><strong>Read the operating guide</strong></div></a>)}</div><a className="home-library-link" href="/services">View all 12 assistant service guides</a></div></section>
+    <section className="home-method"><div className="home-shell home-method-grid"><div className="home-method-intro"><p className="home-kicker">The operating model</p><h2>Delegate through controls, not hope.</h2><p>A useful assistant role is an operating system in miniature. It has an intake method, access boundary, work sequence, output definition, exception path, and owner review.</p></div><ol><li><span>01</span><div><h3>Map the recurring work</h3><p>Separate repeatable tasks from judgment-heavy decisions. Collect examples, systems, volumes, deadlines, and current failure points.</p></div></li><li><span>02</span><div><h3>Define access and acceptance</h3><p>Issue only the permissions required for the role. Document what complete work looks like and when an item needs escalation.</p></div></li><li><span>03</span><div><h3>Launch with a narrow queue</h3><p>Begin with a controlled batch, review the evidence, correct the instructions, and expand only after the workflow is stable.</p></div></li><li><span>04</span><div><h3>Review the operating record</h3><p>Track throughput, rework, aging, exceptions, and unresolved dependencies so management can improve the process.</p></div></li></ol></div></section>
+    <section className="home-boundaries"><div className="home-shell"><div className="home-boundary-copy"><p className="home-kicker">Safe by design</p><h2>Keep consequential judgment with the right owner.</h2><p>Assistants can prepare, organize, research, record, coordinate, and follow documented rules. Your team should retain final authority over regulated advice, material financial movement, contractual commitments, sensitive access, hiring decisions, and unusual exceptions.</p><a href="/blog/outsourced-assistant-crm-field-governance">Read the governance guide</a></div><div className="home-boundary-list"><article><span>Assistant owns</span><h3>Preparation and process</h3><p>Queue monitoring, standard responses, data upkeep, research briefs, scheduling, checklists, and documented handoffs.</p></article><article><span>Internal owner retains</span><h3>Authority and exceptions</h3><p>Policy, approval, risk acceptance, sensitive changes, legal or financial judgment, and non-standard decisions.</p></article></div></div></section>
+    <section className="home-team"><div className="home-shell home-team-grid"><div><p className="home-kicker">Delivery partner</p><h2>Staffing support from a real team in the Philippines.</h2></div><div><p>StealthAgents recruits and hires talent in the Philippines and supports the managed service behind staffing requests made through this site. Outsourced Assistants remains the planning and education layer: helping buyers define the role before adding a person.</p><a href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer"><img src="/brand/stealth-agents-logo.png" width="149" height="50" alt="Stealth Agents" /> Visit the delivery partner</a></div></div></section>
+    <FinalCta title="Define the role before the work piles up." body="Bring one recurring queue, one useful example, and the owner who will review early work." />
+  </main><Footer /></>;
 }

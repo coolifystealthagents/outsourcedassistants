@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
-import { Header, Footer } from '../components';
-import { TestimonialsRail } from '../booking-components';
+import { Header, Footer, ReviewsMarquee } from '../components';
 
 export const metadata: Metadata = {
   title: 'Thank You - Book A Meeting',
@@ -19,7 +18,7 @@ export default function ThankYouPage() {
             <h1>Step 2 - Book A Meeting</h1>
             <p className="sa-booking-lead">No commitment. No risk. Just expert guidance.</p>
             <img className="sa-booking-image" src="/thank-you-hero.png" alt="Stealth Agents team ready to help" width="619" height="402" />
-            <TestimonialsRail />
+            <ReviewsMarquee />
           </div>
           <section className="sa-booking-calendar" aria-labelledby="booking-calendar-title">
             <h2 id="booking-calendar-title">Pick a Time That Works for You</h2>
@@ -35,6 +34,7 @@ export default function ThankYouPage() {
               className="sa-oncehub-frame"
               referrerPolicy="strict-origin-when-cross-origin"
             />
+            <p className="sa-booking-complete">Already booked? <a href="/thanks-whats-next">See what to prepare next</a>.</p>
           </section>
         </div>
       </main>

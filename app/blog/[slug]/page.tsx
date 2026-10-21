@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { CTA, Footer, Header, JsonLd, LogoMark } from '../../components';
+import { CTA, Footer, Header, JsonLd } from '../../components';
+import EditorialToc from '../../EditorialToc';
 import { blogDetails, blogFallbacks, blogPosts, site } from '../../data';
 import { august12BlogDetails } from '../../august12-blog';
 import { aug13BlogDetails } from '../../aug13-blog';
@@ -20,29 +21,6 @@ const operationsReferences = [
 type DetailSlug = keyof typeof blogDetails;
 type FallbackSlug = keyof typeof blogFallbacks;
 
-function ArticleHeader() {
-  return (
-    <header className="nav">
-      <div className="nav-inner">
-        <a className="logo" href="/" aria-label={`${site.brand} home`}><LogoMark /></a>
-        <nav className="links fleet-links" aria-label="Article navigation">
-          <a href="/services">Services</a><a href="/blog">Blog</a><a href="/contact-us">Contact Us</a>
-        </nav>
-      </div>
-    </header>
-  );
-}
-
-function ArticleFooter() {
-  return (
-    <footer className="article-footer">
-      <div className="container article-footer-inner">
-        <div><LogoMark /><p>Philippines-only talent sourcing with clear work and access boundaries.</p></div>
-        <nav aria-label="Article footer navigation"><a href="/services">Services</a><a href="/blog">Blog</a><a href="/contact-us">Contact Us</a></nav>
-      </div>
-    </footer>
-  );
-}
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -110,13 +88,15 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   return (
     <>
-      {isEvidenceGuide ? <ArticleHeader /> : <Header />}
+      <Header />
       <main className="section">
         <JsonLd data={schema} />
         <article className="container guide-article">
           <span className="eyebrow">Philippines staffing guide</span>
           <h1>{post.title}</h1>
           <p className="lead">{post.excerpt}</p><div className='blog-standards-strip' aria-label='Article standards'><span>Source-backed guidance</span><span>Contextual internal links</span><span>Practical operating controls</span></div><p className='article-date'>Published: <time dateTime={publicationDate}>{publicationLabel}</time>{fallbackUpdated ? <> · Updated <time dateTime={fallbackUpdated}>{new Date(`${fallbackUpdated}T00:00:00Z`).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })}</time></> : null} · {post.minutes} minute read</p>
+          <figure className="editorial-hero"><img src={'image' in post ? post.image : '/aug19-heroes/source-of-truth-map.webp'} alt={`${post.title} operational guide`} /><figcaption>Operational guidance works best when the queue, evidence, exception path, and accountable owner are visible together.</figcaption></figure>
+          <EditorialToc />
 
           {campaignGuide ? (
             <div className="evidence-guide august12-guide">
@@ -286,7 +266,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
         </article>
         {isEvidenceGuide ? null : <CTA />}
       </main>
-      {isEvidenceGuide ? <ArticleFooter /> : <Footer />}
+      <Footer />
     </>
   );
 }

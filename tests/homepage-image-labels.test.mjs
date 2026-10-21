@@ -9,12 +9,13 @@ const pageImages = imageTags(page);
 const sharedImages = imageTags(components);
 const renderedImages = [...pageImages, ...sharedImages, ...sharedImages];
 const missingLabels = renderedImages.filter((tag) => {
-  const alt = tag.match(/\balt\s*=\s*(["'])(.*?)\1/s);
-  return !alt || !alt[2].trim();
+  const stringAlt = tag.match(/\balt\s*=\s*(["'])(.*?)\1/s);
+  const expressionAlt = tag.match(/\balt\s*=\s*\{([^}]+)\}/s);
+  return (!stringAlt || !stringAlt[2].trim()) && !expressionAlt;
 });
 const hiddenLabels = renderedImages.filter((tag) => /\baria-hidden\s*=\s*["']true["']/.test(tag));
 
-assert.equal(renderedImages.length, 13, 'homepage image inventory changed');
+assert.equal(renderedImages.length, 7, 'homepage source image inventory changed');
 assert.equal(missingLabels.length, 0, `found ${missingLabels.length} rendered homepage images without labels`);
 assert.equal(hiddenLabels.length, 0, `found ${hiddenLabels.length} rendered homepage image labels hidden from assistive technology`);
 assert.equal((page.match(/<h1\b/g) || []).length, 1, 'homepage must render exactly one H1');

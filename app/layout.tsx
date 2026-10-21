@@ -1,6 +1,20 @@
-import { AcrClient } from './acr-client';
-import Script from 'next/script';
 import './globals.css';
 import type { Metadata } from 'next';
-export const metadata: Metadata = { metadataBase: new URL('https://outsourcedassistants.com'), title: { default: 'Outsourced Assistants | Plan a Filipino assistant role', template: '%s | Outsourced Assistants' }, description: 'Plan a Filipino assistant role around recurring tasks, clear approval rules, safe access, and a two-week handoff.', openGraph: { title: 'Outsourced Assistants | Plan a Filipino assistant role', description: 'Practical role planning and hiring guides for teams working with Filipino assistants.', url: 'https://outsourcedassistants.com', siteName: 'Outsourced Assistants', type:'website' } };
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang='en'><body>{children}<AcrClient/><Script id="acr-tracker-config" strategy="beforeInteractive">{`window.ACR_TRACKER_CONFIG={siteId:'outsourced-assistants',endpoint:'/ingest/track',debug:false,funnelSteps:[{path:'/contact-us',step:1,label:'Form Page',event:'funnel_form_page'},{path:'/contact',step:1,label:'Form Page',event:'funnel_form_page'},{path:'/thank-you',step:2,label:'Form Submitted',event:'funnel_form_submitted'},{path:'/thanks-whats-next',step:3,label:'Booking Confirmed',event:'funnel_booking_confirmed'}]};`}</Script><Script src="https://acrtracking.stealthagents.us/v1/tracker.js" strategy="afterInteractive"/></body></html>}
+import { Inter, Fraunces } from 'next/font/google';
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
+const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', display: 'swap' });
+const siteUrl = 'https://outsourcedassistants.com';
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: { default: 'Outsourced Assistants for Accountable Operations', template: '%s | Outsourced Assistants' },
+  description: 'Plan outsourced assistant roles around clear scope, controlled access, documented handoffs, and measurable review.',
+  applicationName: 'Outsourced Assistants',
+  authors: [{ name: 'Outsourced Assistants' }], creator: 'Outsourced Assistants', publisher: 'Outsourced Assistants',
+  alternates: { canonical: siteUrl },
+  icons: { icon: [{ url: '/favicon.ico' }, { url: '/logo.svg', type: 'image/svg+xml' }], apple: '/logo.svg' },
+  openGraph: { type: 'website', locale: 'en_US', siteName: 'Outsourced Assistants', url: siteUrl, title: 'Outsourced Assistants for Accountable Operations', description: 'Plan outsourced assistant roles around clear scope, controlled access, documented handoffs, and measurable review.', images: [{ url: '/brand/stealth-agents-team-bacolod.jpg', width: 1906, height: 1080, alt: 'Official Stealth Agents team in Bacolod' }] },
+  twitter: { card: 'summary_large_image', title: 'Outsourced Assistants for Accountable Operations', description: 'Plan outsourced assistant roles around clear scope, controlled access, documented handoffs, and measurable review.', images: ['/brand/stealth-agents-team-bacolod.jpg'] },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
+};
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" className={`${inter.variable} ${fraunces.variable}`}><body>{children}</body></html>; }
