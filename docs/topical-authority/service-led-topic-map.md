@@ -28,10 +28,17 @@ This is a planning record for the existing Philippines-only service pages. It do
 | `/blog/remote-assistant-travel-planning-checklist` | Can an assistant research and coordinate travel while the traveler keeps payment and final approval? | `/services/travel-planning-support` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 | `/blog/crm-administration-virtual-assistant-guide` | Which CRM maintenance tasks can be delegated without handing over protected changes? | `/services/crm-administration` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 | `/blog/meeting-preparation-assistant-sop` | What does a repeatable meeting-preparation lane need before it becomes recurring work? | `/services/meeting-preparation` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
+| `/blog/document-formatting-virtual-assistant-workflow` | How can a team turn document formatting into a controlled recurring task? | `/services/document-formatting` | One matching href appears inside the generated `<main>`. | Delivered locally; do not duplicate. This ledger update does not recheck public status. |
 
 ## Execution rule
 
 Take one candidate at a time. Store the destination, label, two-sentence scope boundary, and modified date with the source record rather than adding a route exception to a shared renderer. Before release, verify the exact route-local href in generated HTML, source and destination H1/canonical values, and both sitemap entries. The travel candidate must keep booking, payment, risk acceptance, and final itinerary approval with the traveler or authorized owner. The CRM candidate must keep identity, merge, protected-field, and policy decisions with the authorized owner.
+
+## Ledger reconciliation — 2026-10-23
+
+- Fresh production artifacts confirm `/blog/document-formatting-virtual-assistant-workflow` has one `/services/document-formatting` anchor inside `<main>`; the source H1 is `Document Formatting Virtual Assistant Workflow` and the target H1 is `Document Formatting`.
+- Both artifacts are self-canonical and their exact canonical routes appear once in the generated sitemap. The sitemap intentionally emits no `<lastmod>` for these routes.
+- Preserve rendered-source commit `0d9f51a4e9e77283b48f67046631830a49142e7d`. This Markdown-only reconciliation does not change rendered output, deploy, or reclassify the older source release's public status.
 
 ## Delivery status — 2026-09-15
 

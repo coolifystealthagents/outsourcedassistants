@@ -1,7 +1,7 @@
 # Service-led topical map: Outsourced Assistants
 
 Status: prepared for one-at-a-time implementation
-Checked: 2026-10-03
+Checked: 2026-10-23
 Scope: existing pages only. This is a planning ledger, not reader-facing copy and not a claim about rankings, leads, staffing outcomes, or backlinks.
 
 ## Purpose
@@ -26,7 +26,7 @@ The site already has twelve Philippines-based service routes and matching practi
 | Meeting preparation | `/services/meeting-preparation` | `/blog/meeting-preparation-assistant-sop` | What should a repeatable meeting-prep SOP contain? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the approved materials and meeting-owner boundary. |
 | CRM administration | `/services/crm-administration` | `/blog/crm-administration-virtual-assistant-guide` | Which CRM changes can be prepared and reviewed safely? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the field-protection and owner-review boundary. |
 | Research assistance | `/services/research-assistance` | `/blog/research-assistant-brief-template` | What must a research brief contain before work begins? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the brief's question, source standard, output, and stop-rule boundary. |
-| Document formatting | `/services/document-formatting` | `/blog/document-formatting-virtual-assistant-workflow` | How can a team turn formatting into a controlled recurring task? | Verified absent from the route-local body. Keep as a later candidate after templates, naming, and review samples are discussed. |
+| Document formatting | `/services/document-formatting` | `/blog/document-formatting-virtual-assistant-workflow` | How can a team turn formatting into a controlled recurring task? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the template, naming, review-sample, and owner-boundary discussion. |
 | Project coordination | `/services/project-coordination` | `/blog/project-coordination-assistant-scorecard` | What makes coordination work visible and reviewable? | Delivered in the route-local body. Keep this pair non-duplicable; the link follows the scorecard's recurring coordination lane. |
 | Expense administration | `/services/expense-administration` | `/blog/expense-administration-assistant-controls` | Which expense tasks can be prepared while payment approval stays internal? | Verified absent from the route-local body. Keep as a later candidate after the approval boundary, never as a finance-result claim. |
 | Recruitment scheduling | `/services/recruitment-scheduling` | `/blog/recruitment-scheduling-virtual-assistant-process` | How can candidate scheduling reduce back-and-forth while protecting hiring decisions? | Verified absent from the route-local body. Keep as a later candidate after the scheduling process and data boundary. |
@@ -35,13 +35,15 @@ The site already has twelve Philippines-based service routes and matching practi
 
 ## Queue and selection rule
 
-Delivered and non-duplicable: `/blog/filipino-virtual-assistant-calendar-management` to `/services/executive-calendar-management`, `/blog/virtual-assistant-inbox-triage-workflow` to `/services/inbox-triage`, `/blog/remote-assistant-travel-planning-checklist` to `/services/travel-planning-support`, `/blog/meeting-preparation-assistant-sop` to `/services/meeting-preparation`, `/blog/crm-administration-virtual-assistant-guide` to `/services/crm-administration`, `/blog/research-assistant-brief-template` to `/services/research-assistance`, and `/blog/project-coordination-assistant-scorecard` to `/services/project-coordination`. Fresh generated artifacts show each source route has one matching link inside its route-local main content, with self-canonical source and target artifacts plus sitemap locations.
+Delivered and non-duplicable: `/blog/filipino-virtual-assistant-calendar-management` to `/services/executive-calendar-management`, `/blog/virtual-assistant-inbox-triage-workflow` to `/services/inbox-triage`, `/blog/remote-assistant-travel-planning-checklist` to `/services/travel-planning-support`, `/blog/meeting-preparation-assistant-sop` to `/services/meeting-preparation`, `/blog/crm-administration-virtual-assistant-guide` to `/services/crm-administration`, `/blog/research-assistant-brief-template` to `/services/research-assistance`, `/blog/document-formatting-virtual-assistant-workflow` to `/services/document-formatting`, and `/blog/project-coordination-assistant-scorecard` to `/services/project-coordination`. Fresh generated artifacts show each source route has one matching link inside its route-local main content, with self-canonical source and target artifacts plus sitemap locations.
 
 `/blog/philippines-virtual-assistant-weekly-reporting-checklist` already has two `/services/operations-reporting` links in its route-local main content. It is non-duplicable until a separate reader-journey review decides whether either existing context should change.
 
-Next candidate: `/blog/document-formatting-virtual-assistant-workflow` to `/services/document-formatting`. Before any edit, rebuild and confirm both routes are self-canonical and sitemap-listed while the source route has zero matching links in `<main>`.
+Reconciled document-formatting pair — 2026-10-23: fresh production artifacts show one `/services/document-formatting` anchor in the source route's `<main>`, self-canonical source and target artifacts, and both exact canonical routes in the generated sitemap. The rendered-source commit is `0d9f51a4e9e77283b48f67046631830a49142e7d`; this map correction does not reclassify its public state.
 
-Why next: the guide already covers approved templates, naming rules, review samples, and controlled file access. Add a handoff only if its route-local body can move naturally from that documented workflow to the existing Philippines document-formatting service without implying that the assistant approves source content or access decisions.
+Next candidate: `/blog/expense-administration-assistant-controls` to `/services/expense-administration`. Fresh production artifacts show self-canonical source and target routes, generated sitemap entries, and zero matching destination anchors inside the source route's `<main>`.
+
+Why next: the guide already separates receipt preparation and coding from payment approval. Add a handoff only if its route-local body can lead naturally to the existing Philippines expense-administration service without implying that the assistant approves payment, policy exceptions, or financial treatment.
 
 Then move in table order, but skip a pair when the source body lacks a genuine decision transition, the target no longer matches the source, another writer holds a lock, or the worktree is dirty. Record a rejection rather than forcing a link.
 
