@@ -377,9 +377,12 @@ const aug23ReplacementPosts = [
   { slug: 'outsourced-assistant-delayed-queue-repair', title: 'Outsourced Assistant Delayed Queue Repair', excerpt: 'Recover delayed article work by separating evidence gaps, decisions, rework, and capacity.', minutes: 11, published: '2026-08-23' },
 ] as const;
 
+import {october26BlogPosts} from './oct26-blog';
+import {october26ResearchPosts} from './oct26-research';
 import {october22BlogPosts, october22ResearchPosts} from './oct22-batch';
 
 export const blogPosts = [
+  ...october26BlogPosts,
   ...october22BlogPosts,...october13BlogPosts, ...october12BlogPosts, ...october8BlogPosts, ...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts, ...aug23ReplacementPosts, ...august31BlogPosts, ...september3BlogPosts, ...september4BlogPosts, ...september7BlogPosts, ...september8BlogPosts, ...september9BlogPosts, ...september10BlogPosts, ...september14BlogPosts, ...september18BlogPosts, ...september22BlogPosts, ...september22SecondBlogPosts, ...september24BlogPosts, ...september25BlogPosts, ...september28BlogPosts, ...october2BlogPosts, ...october5BlogPosts] as const;
 const august23BlogOrder: readonly string[] = aug23ReplacementPosts.map((post) => post.slug);
 const august21BlogOrder: readonly string[] = aug21ReplacementPosts.map((post) => post.slug);
