@@ -443,6 +443,1086 @@ export const october22BlogPosts = [
       "Check the current lane's documentation before the pilot. If the procedure is incomplete, the new task will inherit the gap. A short documentation review is cheaper than discovering the gap during a customer deadline. The gate should include the written brief, not only the assistant's confidence.",
       "Set a stop rule for the pilot. If the owner cannot review the first samples within the agreed time, pause the expansion. If the assistant encounters an authority question that the log does not answer, stop and update the log. A pilot without a stop rule becomes an uncontrolled rollout."
     ]
+  },
+  {
+    "slug": "outsourcedassistants-intake-request-triage",
+    "title": "Intake Request Triage for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for intake request triage for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-intake-request-triage.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Intake Request Triage gives Outsourced Assistant teams a bounded way to coordinate intake request triage. The operating risk is that a request can be marked complete without the source, owner, or a usable next action. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for intake request triage in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. Administrative preparation stays separate from the decision reserved to the accountable owner.",
+      "## Capture the evidence before action",
+      "Capture request, source, owner, due time, status, exception reason, and completion evidence. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. Administrative preparation stays separate from the decision reserved to the accountable owner.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for intake request triage by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Sample new, closed, and reopened records and compare the final state with the source. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest intake request triage workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Intake Request Triage",
+        "paragraphs": [
+          "Intake Request Triage gives Outsourced Assistant teams a bounded way to coordinate intake request triage. The operating risk is that a request can be marked complete without the source, owner, or a usable next action. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Administrative preparation stays separate from the decision reserved to the accountable owner."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture request, source, owner, due time, status, exception reason, and completion evidence. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for intake request triage by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Sample new, closed, and reopened records and compare the final state with the source. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-evidence-capture-standard",
+    "title": "Evidence Capture Standard for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for evidence capture standard for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-evidence-capture-standard.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Evidence Capture Standard gives Outsourced Assistant teams a bounded way to coordinate evidence capture. The operating risk is that a later summary can replace the original evidence and hide what was actually known. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for evidence capture in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. Staff may preserve and label evidence but may not invent a rationale or approval.",
+      "## Capture the evidence before action",
+      "Capture request key, source artifact, received time, patient or client reference, owner, decision boundary, and correction history. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. Staff may preserve and label evidence but may not invent a rationale or approval.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for evidence capture by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Trace a sample from the original message to the recorded outcome. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest evidence capture workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Evidence Capture Standard",
+        "paragraphs": [
+          "Evidence Capture Standard gives Outsourced Assistant teams a bounded way to coordinate evidence capture. The operating risk is that a later summary can replace the original evidence and hide what was actually known. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Staff may preserve and label evidence but may not invent a rationale or approval."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture request key, source artifact, received time, patient or client reference, owner, decision boundary, and correction history. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for evidence capture by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Trace a sample from the original message to the recorded outcome. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-owner-handoff-map",
+    "title": "Owner Handoff Map for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for owner handoff map for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-owner-handoff-map.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Owner Handoff Map gives Outsourced Assistant teams a bounded way to coordinate owner handoffs. The operating risk is that two people can each believe the other owns the next step. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for owner handoffs in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. A handoff transfers ownership only when the receiving role acknowledges it.",
+      "## Capture the evidence before action",
+      "Capture record, current owner, receiving owner, handoff reason, acknowledgement, due time, and open question. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. A handoff transfers ownership only when the receiving role acknowledges it.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for owner handoffs by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Inspect handoffs that crossed shifts, teams, or systems. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest owner handoffs workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Owner Handoff Map",
+        "paragraphs": [
+          "Owner Handoff Map gives Outsourced Assistant teams a bounded way to coordinate owner handoffs. The operating risk is that two people can each believe the other owns the next step. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. A handoff transfers ownership only when the receiving role acknowledges it."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture record, current owner, receiving owner, handoff reason, acknowledgement, due time, and open question. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for owner handoffs by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Inspect handoffs that crossed shifts, teams, or systems. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-queue-aging-review",
+    "title": "Queue Aging Review for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for queue aging review for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-queue-aging-review.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Queue Aging Review gives Outsourced Assistant teams a bounded way to coordinate queue aging. The operating risk is that an old item can disappear into an average while a patient or client waits. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for queue aging in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. Age is an administrative signal and does not determine clinical or commercial priority.",
+      "## Capture the evidence before action",
+      "Capture arrival time, priority basis, owner, dependency, last action, age band, and next review time. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. Age is an administrative signal and does not determine clinical or commercial priority.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for queue aging by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Review the oldest open items and the reasons they remain open. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest queue aging workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Queue Aging Review",
+        "paragraphs": [
+          "Queue Aging Review gives Outsourced Assistant teams a bounded way to coordinate queue aging. The operating risk is that an old item can disappear into an average while a patient or client waits. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Age is an administrative signal and does not determine clinical or commercial priority."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture arrival time, priority basis, owner, dependency, last action, age band, and next review time. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for queue aging by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Review the oldest open items and the reasons they remain open. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-exception-escalation-path",
+    "title": "Exception Escalation Path for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for exception escalation path for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-exception-escalation-path.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Exception Escalation Path gives Outsourced Assistant teams a bounded way to coordinate exception escalation. The operating risk is that an unanswered escalation can be mistaken for approval. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for exception escalation in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. The escalation asks for a decision; it does not make the decision.",
+      "## Capture the evidence before action",
+      "Capture exception type, affected record, evidence conflict, action already taken, safe next step, owner, and deadline. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. The escalation asks for a decision; it does not make the decision.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for exception escalation by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Sample exceptions by reason and check whether the right owner responded. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest exception escalation workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Exception Escalation Path",
+        "paragraphs": [
+          "Exception Escalation Path gives Outsourced Assistant teams a bounded way to coordinate exception escalation. The operating risk is that an unanswered escalation can be mistaken for approval. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The escalation asks for a decision; it does not make the decision."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture exception type, affected record, evidence conflict, action already taken, safe next step, owner, and deadline. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for exception escalation by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Sample exceptions by reason and check whether the right owner responded. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-access-permission-review",
+    "title": "Access Permission Review for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for access permission review for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-access-permission-review.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Access Permission Review gives Outsourced Assistant teams a bounded way to coordinate access and permissions. The operating risk is that temporary or inherited access can outlive the task that justified it. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for access and permissions in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. Access to a system is not authorization to make every decision available in it.",
+      "## Capture the evidence before action",
+      "Capture role, system, permitted action, approval source, last review, temporary access, and removal evidence. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. Access to a system is not authorization to make every decision available in it.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for access and permissions by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Compare the current roster with approved roles and remove unexplained access. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest access and permissions workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Access Permission Review",
+        "paragraphs": [
+          "Access Permission Review gives Outsourced Assistant teams a bounded way to coordinate access and permissions. The operating risk is that temporary or inherited access can outlive the task that justified it. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Access to a system is not authorization to make every decision available in it."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture role, system, permitted action, approval source, last review, temporary access, and removal evidence. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for access and permissions by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Compare the current roster with approved roles and remove unexplained access. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-documentation-version-control",
+    "title": "Documentation Version Control for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for documentation version control for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-documentation-version-control.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Documentation Version Control gives Outsourced Assistant teams a bounded way to coordinate documentation version control. The operating risk is that an older script or form can remain in use after the approved version changes. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for documentation version control in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. Staff follow the approved version and route proposed changes to its owner.",
+      "## Capture the evidence before action",
+      "Capture document name, version, owner, effective date, approval, location, and superseded copy. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. Staff follow the approved version and route proposed changes to its owner.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for documentation version control by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Match live documents to the current approved version. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest documentation version control workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Documentation Version Control",
+        "paragraphs": [
+          "Documentation Version Control gives Outsourced Assistant teams a bounded way to coordinate documentation version control. The operating risk is that an older script or form can remain in use after the approved version changes. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Staff follow the approved version and route proposed changes to its owner."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture document name, version, owner, effective date, approval, location, and superseded copy. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for documentation version control by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Match live documents to the current approved version. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-vendor-coordination-ledger",
+    "title": "Vendor Coordination Ledger for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for vendor coordination ledger for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-vendor-coordination-ledger.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Vendor Coordination Ledger gives Outsourced Assistant teams a bounded way to coordinate vendor coordination. The operating risk is that a vendor promise can be treated as a completed service. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for vendor coordination in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. The vendor supplies a service; the accountable owner accepts the result.",
+      "## Capture the evidence before action",
+      "Capture vendor, service, request, commitment, contact, due date, evidence, exception, and closure. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. The vendor supplies a service; the accountable owner accepts the result.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for vendor coordination by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Compare vendor confirmations with the evidence held by the business. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest vendor coordination workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Vendor Coordination Ledger",
+        "paragraphs": [
+          "Vendor Coordination Ledger gives Outsourced Assistant teams a bounded way to coordinate vendor coordination. The operating risk is that a vendor promise can be treated as a completed service. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The vendor supplies a service; the accountable owner accepts the result."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture vendor, service, request, commitment, contact, due date, evidence, exception, and closure. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for vendor coordination by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Compare vendor confirmations with the evidence held by the business. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-reporting-cadence-review",
+    "title": "Reporting Cadence Review for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for reporting cadence review for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-reporting-cadence-review.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Reporting Cadence Review gives Outsourced Assistant teams a bounded way to coordinate reporting cadence. The operating risk is that a recurring report can become a ritual that no one uses to change a decision. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for reporting cadence in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. The report informs an owner; it does not replace judgment.",
+      "## Capture the evidence before action",
+      "Capture metric, definition, source, owner, review date, denominator, exclusion, and action. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. The report informs an owner; it does not replace judgment.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for reporting cadence by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Trace one metric from source to decision and remove unused fields. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest reporting cadence workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Reporting Cadence Review",
+        "paragraphs": [
+          "Reporting Cadence Review gives Outsourced Assistant teams a bounded way to coordinate reporting cadence. The operating risk is that a recurring report can become a ritual that no one uses to change a decision. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The report informs an owner; it does not replace judgment."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture metric, definition, source, owner, review date, denominator, exclusion, and action. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for reporting cadence by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Trace one metric from source to decision and remove unused fields. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-client-onboarding-brief",
+    "title": "Client Onboarding Brief for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for client onboarding brief for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-client-onboarding-brief.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Client Onboarding Brief gives Outsourced Assistant teams a bounded way to coordinate client onboarding. The operating risk is that a new client can begin work before ownership, access, and boundaries are confirmed. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for client onboarding in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. Onboarding prepares the relationship; authorized leaders approve scope and exceptions.",
+      "## Capture the evidence before action",
+      "Capture client, service scope, hours, contacts, escalation path, systems, permissions, and first review. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. Onboarding prepares the relationship; authorized leaders approve scope and exceptions.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for client onboarding by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Compare the first week of work with the signed onboarding record. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest client onboarding workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Client Onboarding Brief",
+        "paragraphs": [
+          "Client Onboarding Brief gives Outsourced Assistant teams a bounded way to coordinate client onboarding. The operating risk is that a new client can begin work before ownership, access, and boundaries are confirmed. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Onboarding prepares the relationship; authorized leaders approve scope and exceptions."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture client, service scope, hours, contacts, escalation path, systems, permissions, and first review. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for client onboarding by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Compare the first week of work with the signed onboarding record. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-quality-sample-review",
+    "title": "Quality Sample Review for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for quality sample review for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-quality-sample-review.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Quality Sample Review gives Outsourced Assistant teams a bounded way to coordinate quality sampling. The operating risk is that a convenient sample can make a queue look better than it is. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for quality sampling in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. Reviewers classify against written criteria and escalate professional questions.",
+      "## Capture the evidence before action",
+      "Capture sample frame, record, reviewer, criteria, result, correction, and retest date. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. Reviewers classify against written criteria and escalate professional questions.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for quality sampling by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Include routine, difficult, reopened, and unresolved records. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest quality sampling workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Quality Sample Review",
+        "paragraphs": [
+          "Quality Sample Review gives Outsourced Assistant teams a bounded way to coordinate quality sampling. The operating risk is that a convenient sample can make a queue look better than it is. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Reviewers classify against written criteria and escalate professional questions."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture sample frame, record, reviewer, criteria, result, correction, and retest date. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for quality sampling by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Include routine, difficult, reopened, and unresolved records. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-closeout-audit",
+    "title": "Closeout Audit for Outsourced Assistant Teams",
+    "excerpt": "A practical Outsourced Assistant workflow for closeout audit for outsourced assistant teams, with evidence, ownership, exceptions, and review.",
+    "service": "assistant-operations",
+    "minutes": 9,
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-closeout-audit.svg",
+    "sources": [
+      {
+        "name": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "name": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "name": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "body": [
+      "Published October 25, 2026.",
+      "Closeout Audit gives Outsourced Assistant teams a bounded way to coordinate closeout audits. The operating risk is that a closed status can be recorded before the evidence or communication is complete. A useful record keeps the request, source, owner, timing, exception state, and completion evidence together without expanding an administrative role into a professional decision.",
+      "## Define the controlled event",
+      "Name the event that creates a record for closeout audits in Outsourced Assistant operations. A record should enter because a specific condition occurred, not because someone remembered to add a task. Define the source system, minimum evidence, accountable owner, and clock start before the queue opens. Closure confirms the administrative record; it does not certify a professional outcome.",
+      "## Capture the evidence before action",
+      "Capture record, required evidence, final owner, completion event, communication, exception, and audit date. Link each consequential value to its source and record the time it was observed. Missing information must remain visibly missing rather than being replaced by a plausible assumption. A later summary is not a substitute for the original message, and a corrected field should retain its prior value, author, reason, and effective time.",
+      "## Separate preparation from judgment",
+      "The support role in Outsourced Assistant may collect, label, route, and draft within approved language. It may not manufacture a rationale, infer an approval, or make a commitment that belongs to an authorized owner. Use proceed, pause for review, and escalate now as operational states. Closure confirms the administrative record; it does not certify a professional outcome.",
+      "## Run the daily queue",
+      "At the start of each work period, sort open items for closeout audits by patient or client impact, external deadline, dependency, and age. Update status only from a verifiable event. Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome.",
+      "## Escalate with a bounded packet",
+      "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, system outage, and changed scope. Do not convert silence into approval.",
+      "## Protect access and corrections",
+      "Give the Outsourced Assistant operator only the systems and information required for the role. Use named accounts, multifactor authentication, approved storage, and prompt removal of temporary access. During an outage, use unique temporary identifiers, restricted storage, action logs, and a reconciliation owner. Test the fallback before a busy period rather than inventing it during disruption.",
+      "## Measure quality with denominators",
+      "Track complete intake, age by dependency, first-pass routing accuracy, reopened records, and closures missing required evidence. Pair each measure with a denominator and inspect the underlying record before assigning cause. High activity may signal repeated work or unclear ownership rather than good service. Review a sample of routine, adverse, and unresolved records.",
+      "## Close and improve",
+      "Close a record only when the completion event, communication, and evidence are present. Sample closed records and verify the completion event and source. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate; test the revision on a bounded sample and keep the prior version for audit.",
+      "## Implementation checklist",
+      "1. Approve the scope, fields, and decision authority.\n2. Configure named states and reason codes.\n3. Assign primary and backup owners.\n4. Test permissions with the actual roles.\n5. Pilot a small sample and inspect ambiguous cases.\n6. Reconcile source evidence with the final state.\n7. Publish the effective date and next review date.",
+      "The strongest closeout audits workflow is not the busiest dashboard. It is a disciplined record that helps the Outsourced Assistant team advance routine work, alerts the correct owner before a commitment is missed, protects sensitive information, and shows how the team reached each result.\n"
+    ],
+    "sections": [
+      {
+        "heading": "Define the outcome for Closeout Audit",
+        "paragraphs": [
+          "Closeout Audit gives Outsourced Assistant teams a bounded way to coordinate closeout audits. The operating risk is that a closed status can be recorded before the evidence or communication is complete. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
+          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Closure confirms the administrative record; it does not certify a professional outcome."
+        ]
+      },
+      {
+        "heading": "Map the inputs and the record",
+        "paragraphs": [
+          "Capture record, required evidence, final owner, completion event, communication, exception, and audit date. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
+          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+        ]
+      },
+      {
+        "heading": "Separate preparation from judgment",
+        "paragraphs": [
+          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
+          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+        ]
+      },
+      {
+        "heading": "Run the daily queue",
+        "paragraphs": [
+          "Sort open items for closeout audits by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
+          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+        ]
+      },
+      {
+        "heading": "Escalate with a bounded packet",
+        "paragraphs": [
+          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
+          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+        ]
+      },
+      {
+        "heading": "Close, review, and improve",
+        "paragraphs": [
+          "Close only when the completion event, communication, and evidence are present. Sample closed records and verify the completion event and source. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
+          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+        ]
+      }
+    ]
   }
 ];
 
@@ -771,5 +1851,600 @@ export const october22ResearchPosts = [
       "label": "Review assistant operations",
       "href": "/contact"
     }
+  },
+  {
+    "slug": "outsourcedassistants-intake-completeness-study",
+    "title": "Outsourced Assistant Intake Completeness Study",
+    "excerpt": "A practical Outsourced Assistant workflow for outsourced assistant intake completeness study, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-intake-completeness-study.svg",
+    "statistic": "One bounded protocol, two independent review paths, and zero provider performance claims",
+    "statisticSource": "Declared OutsourcedAssistants.com research protocol",
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines which required fields and source artifacts are present at the point of assignment across intake records for the defined service in Outsourced Assistant operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is which required fields and source artifacts are present at the point of assignment. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define intake records for the defined service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for field completeness, missing evidence, owner assignment, exception state, and correction time, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for field completeness, missing evidence, owner assignment, exception state, and correction time. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for intake records for the defined service, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The outsourced assistant support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The study cannot determine service quality, legal compliance, or the correctness of a professional decision. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "title": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does this study report provider performance?",
+        "answer": "No. It is a method and decision protocol. It does not report a provider's performance, a universal benchmark, or a legal conclusion."
+      },
+      {
+        "question": "Who owns the final decision?",
+        "answer": "The accountable business owner or adviser. The assistant may prepare evidence, but consequential decisions remain with the named owner."
+      },
+      {
+        "question": "When should the protocol be repeated?",
+        "answer": "After a material change in tools, scope, staffing, policy, or evidence quality, and at the review date recorded in the study packet."
+      }
+    ],
+    "related": [
+      "/research/priority-consistency-method",
+      "/research/delegation-ownership-method",
+      "/research/handover-continuity-method"
+    ],
+    "nextDecision": {
+      "summary": "Use the method to define the evidence, sample, and owner decision before expanding the assistant lane.",
+      "label": "Review assistant operations",
+      "href": "/contact"
+    },
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines which required fields and source artifacts are present at the point of assignment across intake records for the defined service in Outsourced Assistant operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define intake records for the defined service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for field completeness, missing evidence, owner assignment, exception state, and correction time. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for field completeness, missing evidence, owner assignment, exception state, and correction time. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot determine service quality, legal compliance, or the correctness of a professional decision. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for intake records for the defined service, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-handoff-latency-study",
+    "title": "Outsourced Assistant Handoff Latency Study",
+    "excerpt": "A practical Outsourced Assistant workflow for outsourced assistant handoff latency study, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-handoff-latency-study.svg",
+    "statistic": "One bounded protocol, two independent review paths, and zero provider performance claims",
+    "statisticSource": "Declared OutsourcedAssistants.com research protocol",
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines how long each handoff takes and where acknowledgement or context is lost across records that move between two named owners in Outsourced Assistant operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is how long each handoff takes and where acknowledgement or context is lost. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define records that move between two named owners from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for handoff time, acknowledgement, missing context, rework, and unresolved records, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for handoff time, acknowledgement, missing context, rework, and unresolved records. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for records that move between two named owners, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The outsourced assistant support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The study cannot establish causation or whether a shorter handoff produced a better outcome. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "title": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does this study report provider performance?",
+        "answer": "No. It is a method and decision protocol. It does not report a provider's performance, a universal benchmark, or a legal conclusion."
+      },
+      {
+        "question": "Who owns the final decision?",
+        "answer": "The accountable business owner or adviser. The assistant may prepare evidence, but consequential decisions remain with the named owner."
+      },
+      {
+        "question": "When should the protocol be repeated?",
+        "answer": "After a material change in tools, scope, staffing, policy, or evidence quality, and at the review date recorded in the study packet."
+      }
+    ],
+    "related": [
+      "/research/priority-consistency-method",
+      "/research/delegation-ownership-method",
+      "/research/handover-continuity-method"
+    ],
+    "nextDecision": {
+      "summary": "Use the method to define the evidence, sample, and owner decision before expanding the assistant lane.",
+      "label": "Review assistant operations",
+      "href": "/contact"
+    },
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines how long each handoff takes and where acknowledgement or context is lost across records that move between two named owners in Outsourced Assistant operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define records that move between two named owners from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for handoff time, acknowledgement, missing context, rework, and unresolved records. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for handoff time, acknowledgement, missing context, rework, and unresolved records. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot establish causation or whether a shorter handoff produced a better outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for records that move between two named owners, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-exception-pattern-audit",
+    "title": "Outsourced Assistant Exception Pattern Audit",
+    "excerpt": "A practical Outsourced Assistant workflow for outsourced assistant exception pattern audit, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-exception-pattern-audit.svg",
+    "statistic": "One bounded protocol, two independent review paths, and zero provider performance claims",
+    "statisticSource": "Declared OutsourcedAssistants.com research protocol",
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines which exception reasons recur and whether they receive a consistent owner and disposition across exception records from the review window in Outsourced Assistant operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is which exception reasons recur and whether they receive a consistent owner and disposition. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define exception records from the review window from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for reason mix, repeat rate, age, owner, resolution, and reopened exceptions, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for reason mix, repeat rate, age, owner, resolution, and reopened exceptions. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for exception records from the review window, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The outsourced assistant support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The audit describes documented exceptions and cannot infer undocumented causes. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "title": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does this study report provider performance?",
+        "answer": "No. It is a method and decision protocol. It does not report a provider's performance, a universal benchmark, or a legal conclusion."
+      },
+      {
+        "question": "Who owns the final decision?",
+        "answer": "The accountable business owner or adviser. The assistant may prepare evidence, but consequential decisions remain with the named owner."
+      },
+      {
+        "question": "When should the protocol be repeated?",
+        "answer": "After a material change in tools, scope, staffing, policy, or evidence quality, and at the review date recorded in the study packet."
+      }
+    ],
+    "related": [
+      "/research/priority-consistency-method",
+      "/research/delegation-ownership-method",
+      "/research/handover-continuity-method"
+    ],
+    "nextDecision": {
+      "summary": "Use the method to define the evidence, sample, and owner decision before expanding the assistant lane.",
+      "label": "Review assistant operations",
+      "href": "/contact"
+    },
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines which exception reasons recur and whether they receive a consistent owner and disposition across exception records from the review window in Outsourced Assistant operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define exception records from the review window from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for reason mix, repeat rate, age, owner, resolution, and reopened exceptions. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for reason mix, repeat rate, age, owner, resolution, and reopened exceptions. Inspect case narratives behind important differences before assigning a cause.",
+          "The audit describes documented exceptions and cannot infer undocumented causes. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for exception records from the review window, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-evidence-reliability-study",
+    "title": "Outsourced Assistant Evidence Reliability Study",
+    "excerpt": "A practical Outsourced Assistant workflow for outsourced assistant evidence reliability study, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-evidence-reliability-study.svg",
+    "statistic": "One bounded protocol, two independent review paths, and zero provider performance claims",
+    "statisticSource": "Declared OutsourcedAssistants.com research protocol",
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines whether the source is reconstructable and consistent with the recorded final state across records with a source artifact and a later outcome in Outsourced Assistant operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is whether the source is reconstructable and consistent with the recorded final state. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define records with a source artifact and a later outcome from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for source presence, match, missing state, correction, reviewer agreement, and time, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for source presence, match, missing state, correction, reviewer agreement, and time. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for records with a source artifact and a later outcome, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The outsourced assistant support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The study cannot prove that the source is truthful or that the final decision was correct. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "title": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does this study report provider performance?",
+        "answer": "No. It is a method and decision protocol. It does not report a provider's performance, a universal benchmark, or a legal conclusion."
+      },
+      {
+        "question": "Who owns the final decision?",
+        "answer": "The accountable business owner or adviser. The assistant may prepare evidence, but consequential decisions remain with the named owner."
+      },
+      {
+        "question": "When should the protocol be repeated?",
+        "answer": "After a material change in tools, scope, staffing, policy, or evidence quality, and at the review date recorded in the study packet."
+      }
+    ],
+    "related": [
+      "/research/priority-consistency-method",
+      "/research/delegation-ownership-method",
+      "/research/handover-continuity-method"
+    ],
+    "nextDecision": {
+      "summary": "Use the method to define the evidence, sample, and owner decision before expanding the assistant lane.",
+      "label": "Review assistant operations",
+      "href": "/contact"
+    },
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines whether the source is reconstructable and consistent with the recorded final state across records with a source artifact and a later outcome in Outsourced Assistant operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define records with a source artifact and a later outcome from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for source presence, match, missing state, correction, reviewer agreement, and time. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for source presence, match, missing state, correction, reviewer agreement, and time. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot prove that the source is truthful or that the final decision was correct. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for records with a source artifact and a later outcome, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "outsourcedassistants-access-recertification-study",
+    "title": "Outsourced Assistant Access Recertification Study",
+    "excerpt": "A practical Outsourced Assistant workflow for outsourced assistant access recertification study, with evidence, ownership, exceptions, and review.",
+    "published": "2026-10-25",
+    "image": "/oct22-heroes/outsourcedassistants-access-recertification-study.svg",
+    "statistic": "One bounded protocol, two independent review paths, and zero provider performance claims",
+    "statisticSource": "Declared OutsourcedAssistants.com research protocol",
+    "body": [
+      "Published October 25, 2026.",
+      "This protocol examines whether current access matches the approved role and whether removals are evidenced across role-based access records for the service in Outsourced Assistant operations. It evaluates the reliability of the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+      "## Research question and decision use",
+      "The primary question is whether current access matches the approved role and whether removals are evidenced. The unit of observation is one eligible record followed from its triggering evidence to a verified disposition or the end of the observation window. Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not use the result as an automatic ranking of people, clients, patients, or teams.",
+      "## Population and eligibility",
+      "Define role-based access records for the service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count. Freeze a reproducible query or a copy before sampling. A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged.",
+      "## Sampling protocol",
+      "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement. Oversample rare exceptions for learning only when weighted and unweighted results remain separate. Set the sample size before classification and disclose any subgroup too small for a stable, privacy-respecting estimate.",
+      "## Evidence dictionary",
+      "Define each field used for role match, excess access, temporary access age, removal evidence, and reviewer sign-off, including allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable. Those states must remain distinct. Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than silently selecting the cleaner result.",
+      "## Classification rubric",
+      "Score intake completeness, ownership clarity, exception visibility, decision routing, communication evidence, and completion evidence separately as present, partial, absent, or not applicable. Require a source reference and a concise rationale for every partial or absent classification. A completed status without matching evidence is an exception, not proof of completion.",
+      "## Reviewer calibration",
+      "Train two reviewers on a small calibration set. Compare classifications field by field, discuss ambiguous definitions, revise the codebook, and repeat before the main sample. Double-review a prespecified subset and report agreement counts. Preserve initial ratings and adjudications so readers can distinguish genuine agreement from post-review harmonization. Escalate professional questions rather than answering them to complete a classification.",
+      "## Analysis plan",
+      "Report counts, rates, medians, aging bands, denominators, and missingness for role match, excess access, temporary access age, removal evidence, and reviewer sign-off. Use uncertainty intervals when the design supports them and show absolute counts beside rates. Segment only by prespecified operational variables with enough observations. Inspect case narratives behind important differences before assigning a cause. A higher exception rate may reflect stronger detection, a harder case mix, or a new procedure rather than weaker performance.",
+      "## Sensitivity and exception analysis",
+      "Repeat the main calculations under documented alternative clock, missing-data, duplicate, and denominator rules. State whether the practical conclusion changes. Separate reopened from first-pass-complete records while retaining the reason for reopening. New information, changed direction, reviewer correction, and system failure have different implications. List material exceptions rather than forcing them into an average.",
+      "## Privacy and role boundaries",
+      "Use the minimum information needed for role-based access records for the service, limit access, log exports, and apply the retention schedule. Obtain approval before reusing the dataset. Patient or client communication should use neutral language, and population patterns must not become assumptions about an individual. The outsourced assistant support role may coordinate approved administrative steps; authorized professionals retain clinical, legal, financial, employment, and contractual decisions.",
+      "## Limitations",
+      "The study cannot determine legal sufficiency or whether a specific access decision was appropriate. The method observes documentation during a defined period and cannot prove that the workflow caused a later outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings. Public sources provide context and method guidance but do not validate local records or substitute for qualified professional review.",
+      "## Replication package",
+      "Retain the population query, exclusion log, sample seed, codebook, reviewer assignments, source references, classifications, adjudications, calculations, and publication table. A later cycle should use the same definitions or disclose changes before comparison. Replication succeeds when a qualified reviewer can rebuild the sample and results without undocumented oral context.",
+      "## Conclusion",
+      "A defensible result is a transparent measurement system with stable definitions, traceable evidence, visible uncertainty, protected information, and an authorized owner for every action that follows.\n"
+    ],
+    "sources": [
+      {
+        "title": "U.S. GAO, Assessing Data Reliability",
+        "url": "https://www.gao.gov/products/gao-20-283g"
+      },
+      {
+        "title": "NIST Cybersecurity Framework 2.0",
+        "url": "https://www.nist.gov/cyberframework"
+      },
+      {
+        "title": "International Labour Organization, Data",
+        "url": "https://www.ilo.org/data"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does this study report provider performance?",
+        "answer": "No. It is a method and decision protocol. It does not report a provider's performance, a universal benchmark, or a legal conclusion."
+      },
+      {
+        "question": "Who owns the final decision?",
+        "answer": "The accountable business owner or adviser. The assistant may prepare evidence, but consequential decisions remain with the named owner."
+      },
+      {
+        "question": "When should the protocol be repeated?",
+        "answer": "After a material change in tools, scope, staffing, policy, or evidence quality, and at the review date recorded in the study packet."
+      }
+    ],
+    "related": [
+      "/research/priority-consistency-method",
+      "/research/delegation-ownership-method",
+      "/research/handover-continuity-method"
+    ],
+    "nextDecision": {
+      "summary": "Use the method to define the evidence, sample, and owner decision before expanding the assistant lane.",
+      "label": "Review assistant operations",
+      "href": "/contact"
+    },
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines whether current access matches the approved role and whether removals are evidenced across role-based access records for the service in Outsourced Assistant operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define role-based access records for the service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for role match, excess access, temporary access age, removal evidence, and reviewer sign-off. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for role match, excess access, temporary access age, removal evidence, and reviewer sign-off. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot determine legal sufficiency or whether a specific access decision was appropriate. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for role-based access records for the service, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
   }
 ];
