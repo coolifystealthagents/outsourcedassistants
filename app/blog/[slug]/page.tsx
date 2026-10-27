@@ -42,6 +42,29 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 
 const OCT22_HEADINGS=['The operating problem','What to control','A workable routine','Review and evidence'];
+function October27Article({post}:{post:any}){
+  const body: string[] = Array.isArray(post.body)?post.body:[];
+  const slugify=(value:string)=>value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+  const sections:{heading:string;id:string;paragraphs:string[]}[]=[];
+  const intro:string[]=[];
+  let current:{heading:string;id:string;paragraphs:string[]}|null=null;
+  for(const block of body){
+    if(block.startsWith('## ')){
+      current={heading:block.slice(3),id:slugify(block.slice(3)),paragraphs:[]};
+      sections.push(current);
+    }else if(current){
+      current.paragraphs.push(block);
+    }else{
+      intro.push(block);
+    }
+  }
+  const published=new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(`${post.published}T00:00:00Z`));
+  const sources:any[]=Array.isArray(post.sources)?post.sources:[];
+  return <><Header/><main className="section"><article className="container guide-article"><p className="eyebrow">Philippines staffing guide</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p><p className="article-date">Published <time dateTime={post.published}>{published}</time> · {post.minutes} minute read</p><img className="editorial-hero-image" src={post.image} alt={post.title}/>
+  <details className="oct22-mobile-toc"><summary>On this page</summary><nav>{sections.map(section=><a key={section.id} href={`#${section.id}`}>{section.heading}</a>)}<a href="#sources">Sources</a></nav></details>
+  <div className="oct22-layout"><div>{intro.map((paragraph,index)=><p key={`intro-${index}`}>{paragraph}</p>)}{sections.map(section=><section key={section.id}><h2 id={section.id}>{section.heading}</h2>{section.paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}</section>)}<section><h2 id="sources">Sources</h2>{sources.length?<ol>{sources.map((source:any)=><li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a></li>)}</ol>:null}</section></div>
+  <aside className="oct22-side" aria-label="Article sidebar"><nav aria-label="Table of contents"><p className="eyebrow">On this page</p>{sections.map(section=><a key={section.id} href={`#${section.id}`}>{section.heading}</a>)}<a href="#sources">Sources</a></nav></aside></div></article></main><Footer/></>;
+}
 function October22Article({post}:{post:any}){
   const body: string[] = Array.isArray(post.body)?post.body:[];
   const chunk=Math.max(1,Math.ceil(body.length/4));
@@ -60,6 +83,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
+  if ((post as any).published === '2026-10-27' && Array.isArray((post as any).body)) return <October27Article post={post} />;
   if (['2026-10-22','2026-10-26'].includes((post as any).published) && Array.isArray((post as any).body)) return <October22Article post={post} />;
   const fallbackUpdated = fallback && 'updated' in fallback ? fallback.updated : undefined;
   const relatedService = fallback && 'relatedService' in fallback ? fallback.relatedService : undefined;
