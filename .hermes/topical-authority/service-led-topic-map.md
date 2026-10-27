@@ -51,6 +51,14 @@ Then move in table order, but skip a pair when the source body lacks a genuine d
 
 Research articles should remain evidence-first. A Research-to-service handoff is only eligible where the article gives a reader a concrete service-relevant decision and the visible body can state the boundary without turning the report into an advertisement. The nearest existing candidate is Research about queue design or review conditions; it still requires separate source-body and target review. Do not use the repeated Research related-link list as the conversion path.
 
+### SOP coverage research handoff — 2026-10-27
+
+`/research/outsourcedassistants-sop-coverage-audit-oct27` now gives a reader who is comparing a request log with an SOP library one next step: `/services/project-coordination`. The handoff says that the operations owner, not the assistant, decides which procedure changes, approvals, or access rules to adopt.
+
+Rendered source: `5bba7c68427d7f2a5d130559e5b35f848e28349a`. The focused handoff test, full test suite, type check, production build, route-local artifact proof, and source/target sitemap checks passed. The local route has one project-coordination anchor inside `<main>`, its expected H1 and canonical, and Article `dateModified` `2026-10-27`; the generated sitemap has the research route with `2026-10-27T00:00:00.000Z` and the target service route (which intentionally has no lastmod).
+
+Public status: `deployment_pending_public_verification / deployment_configuration_unavailable / public_stale`. No repository-approved deployment target or workflow exists. A cache-busted apex probe returned an HTML 404 with no route-local marker or current metadata; `www` returned a 308 text/plain first hop, so its final HTML state was unobserved. The canonical public sitemap returned 200 XML but omitted the research route. Preserve rendered-source commit: `5bba7c68427d7f2a5d130559e5b35f848e28349a`.
+
 ## Evidence retained
 
 - Service inventory: `app/data.ts`, `services` array.
