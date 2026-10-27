@@ -105,9 +105,9 @@ export const october27ResearchPosts = [
       "/research/outsourcedassistants-escalation-appropriateness-protocol-oct27"
     ],
     "nextDecision": {
-      "summary": "Run the matrix on the five highest-volume request groups first.",
-      "href": "/contact",
-      "label": "Plan a coverage audit"
+      "summary": "Use a project coordination lane to keep the request log, procedure gaps, and review record together. Your operations owner still decides which procedure changes, approvals, or access rules to adopt.",
+      "href": "/services/project-coordination",
+      "label": "Review project coordination support"
     }
   },
   {
