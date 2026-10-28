@@ -381,9 +381,11 @@ import {october26BlogPosts} from './oct26-blog';
 import {october26ResearchPosts} from './oct26-research';
 import {october27BlogPosts} from './oct27-blog';
 import {october27ResearchPosts} from './oct27-research';
+import {october28BlogPosts, october28ResearchPosts} from './oct28-batch';
 import {october22BlogPosts, october22ResearchPosts} from './oct22-batch';
 
 export const blogPosts = [
+  ...october28BlogPosts,
   ...october27BlogPosts,
   ...october26BlogPosts,
   ...october22BlogPosts,...october13BlogPosts, ...october12BlogPosts, ...october8BlogPosts, ...legacyBlogPosts.filter((post) => !rejectedAug13Slugs.has(post.slug)), ...aug13ReplacementPosts, ...aug14ReplacementPosts, ...aug17ReplacementPosts, ...aug18ReplacementPosts, ...aug20ReplacementPosts, ...aug21ReplacementPosts, ...aug23ReplacementPosts, ...august31BlogPosts, ...september3BlogPosts, ...september4BlogPosts, ...september7BlogPosts, ...september8BlogPosts, ...september9BlogPosts, ...september10BlogPosts, ...september14BlogPosts, ...september18BlogPosts, ...september22BlogPosts, ...september22SecondBlogPosts, ...september24BlogPosts, ...september25BlogPosts, ...september28BlogPosts, ...october2BlogPosts, ...october5BlogPosts] as const;
@@ -1152,6 +1154,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...(october28ResearchPosts as unknown as ResearchPost[]),
   ...(october27ResearchPosts as unknown as ResearchPost[]),
   ...(october26ResearchPosts as unknown as ResearchPost[]),
   ...(october22ResearchPosts as unknown as ResearchPost[]),

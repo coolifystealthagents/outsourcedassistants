@@ -83,7 +83,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
 
   const detail = blogDetails[post.slug as DetailSlug];
   const fallback = blogFallbacks[post.slug as FallbackSlug];
-  if ((post as any).published === '2026-10-27' && Array.isArray((post as any).body)) return <October27Article post={post} />;
+  if ((post as any).published >= '2026-10-27' && Array.isArray((post as any).body)) return <October27Article post={post} />;
   if (['2026-10-22','2026-10-26'].includes((post as any).published) && Array.isArray((post as any).body)) return <October22Article post={post} />;
   const fallbackUpdated = fallback && 'updated' in fallback ? fallback.updated : undefined;
   const relatedService = fallback && 'relatedService' in fallback ? fallback.relatedService : undefined;
