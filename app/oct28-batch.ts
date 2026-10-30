@@ -374,11 +374,16 @@ export const october28ResearchPosts = [
    "Change one controlled element at a time: the intake field, the owner, the review cadence, or the stop rule. Recheck the same measure after two cycles."
   ],
   "published": "2026-10-28",
-  "updated": "2026-10-28",
+  "updated": "2026-10-30",
   "statistic": "A local review protocol, not a universal benchmark.",
   "statisticSource": "https://www.nist.gov/",
   "sources": [],
   "related": [],
+  "nextDecision": {
+   "href": "/services/expense-administration",
+   "label": "Plan Philippines expense administration support",
+   "summary": "Use this service page to define who gathers invoice evidence and who reviews an exception. A finance owner keeps payment, accounting treatment, supplier changes, and exception decisions."
+  },
   "faqs": [],
   "image": "/aug19-heroes/outsourcedassistants-invoice-exception-study-oct28.jpg"
  },
