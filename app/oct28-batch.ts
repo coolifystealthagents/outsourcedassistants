@@ -408,11 +408,16 @@ export const october28ResearchPosts = [
    "Change one controlled element at a time: the intake field, the owner, the review cadence, or the stop rule. Recheck the same measure after two cycles."
   ],
   "published": "2026-10-28",
-  "updated": "2026-10-28",
+  "updated": "2026-10-31",
   "statistic": "A local review protocol, not a universal benchmark.",
   "statisticSource": "https://www.nist.gov/",
   "sources": [],
   "related": [],
+  "nextDecision": {
+   "href": "/services/operations-reporting",
+   "label": "Plan Philippines operations reporting support",
+   "summary": "Use this service page to set up a simple quality record for rework, sample results, and open work. An operations owner decides the measures, response, staffing changes, and exceptions."
+  },
   "faqs": [],
   "image": "/aug19-heroes/outsourcedassistants-quality-drift-study-oct28.jpg"
  }
