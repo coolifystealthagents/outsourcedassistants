@@ -29,6 +29,7 @@ This is a planning record for the existing Philippines-only service pages. It do
 | `/blog/crm-administration-virtual-assistant-guide` | Which CRM maintenance tasks can be delegated without handing over protected changes? | `/services/crm-administration` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 | `/blog/meeting-preparation-assistant-sop` | What does a repeatable meeting-preparation lane need before it becomes recurring work? | `/services/meeting-preparation` | One matching href appears inside the generated `<main>`. | Delivered locally; public verification pending. Do not duplicate. |
 | `/blog/document-formatting-virtual-assistant-workflow` | How can a team turn document formatting into a controlled recurring task? | `/services/document-formatting` | One matching href appears inside the generated `<main>`. | Delivered locally; do not duplicate. This ledger update does not recheck public status. |
+| `/research/outsourcedassistants-quality-drift-study-oct28` | How can a team keep evidence visible when volume starts to affect work quality? | `/services/operations-reporting` | One matching href appears inside the generated `<main>`. | Delivered locally; deployment and public verification are policy-owned. Do not duplicate. |
 
 ## Execution rule
 
