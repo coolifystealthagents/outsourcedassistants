@@ -1,0 +1,481 @@
+export const november04BlogPosts = [
+  {
+    "slug": "oa-verify-a-candidate-time-zone-availability-before-placement",
+    "title": "Verify a candidate time-zone availability before placement",
+    "excerpt": "A written control for time-zone availability in outsourced assistant teams.",
+    "service": "assistant-operations",
+    "minutes": 8,
+    "published": "2026-11-04",
+    "image": "/images/november-04/oa-verify-a-candidate-time-zone-availability-before-placement.png",
+    "sources": [],
+    "body": [
+      "## Name the decision and the queue owner",
+      "Start time-zone availability with one bounded case, a named owner, and a written statement of what the reviewer is being asked to decide. Record the queue and the entity so the case cannot drift into another team's work. Separate the request from the decision, because a complete request is not an approval. If the team cannot reproduce the result from the record, the control is not finished. Write the decision in one sentence so the reviewer knows what would count as an answer. The time-zone availability case note should show what the scheduling platform held at the time and who reviewed it.",
+      "## Map the source and the evidence trail",
+      "The evidence set for time-zone availability should join availability form, time-zone note, client schedule, and confirmation on one stable case reference. A case that moves between owners should keep both owner periods visible. Preserve a conflicting value instead of overwriting the first one. The record should show the source, the decision, and the surviving value in one place. Use the same case key in the queue and in the evidence extract. In the time-zone availability queue, an item without a next action is treated as an exception.",
+      "## Set the authority boundary",
+      "A standing instruction for time-zone availability needs a limit and an expiry, and the the scheduling coordinator should confirm it is still current. The next reviewer should not have to ask which document is authoritative. A role change should trigger a review of queue access. Do not let a familiar requester bypass the approval boundary. A clean-looking status is not evidence that the underlying work is correct. The time-zone availability reviewer records confirmation, the owner, and the next action in one place.",
+      "## Run the daily handoff",
+      "A time-zone availability status update should point to a verifiable event in the scheduling platform, not to a feeling about progress. Assign every unowned case before new work begins. Use the same definition across the queue and the review so the counts agree. Keep the original request so a later correction does not erase the reason for the work. The next reviewer should not have to ask which document is authoritative. A sample time-zone availability review checks availability form, time-zone note, and the surviving value in the scheduling platform.",
+      "## Handle exceptions without rewriting history",
+      "The time-zone availability exception record should name the condition, the decision, the releaser, and the time the dependent action resumed. Record who released the dependent action and when. Keep the failed attempt and the correction in the same history. Do not rewrite the earlier record to match the later answer. Name the owner for every open item, including items waiting on someone else. For time-zone availability, compare availability form with the destination value rather than relying on a status label.",
+      "## Close with a verified destination value",
+      "Close time-zone availability only when the destination value in the scheduling platform, the approver, and the time of the final check are all visible. Keep the prior value so the change can be explained. The next reviewer should not have to ask which document is authoritative. A closed status is not proof that the destination changed. A clean-looking status is not evidence that the underlying work is correct. For time-zone availability, the working file keeps availability form and time-zone note beside the decision note.",
+      "## Review the pattern, not only the case",
+      "A useful time-zone availability review ends with one testable change, one owner, and a date to measure whether the change moved the result. Use case-level review to explain an outlier before calling it a trend. The record should show the source, the decision, and the surviving value in one place. Keep the original request so a later correction does not erase the reason for the work. A stable total can hide a growing tail. A time-zone availability exception keeps confirmation attached and routes the question to the scheduling coordinator.",
+      "## Keep the record ready for the next reviewer",
+      "Label availability form and time-zone note with their versions so a later reviewer can tell a stale extract from a current one. Keep the source reference and the coded value in the same row. Write the note so a reviewer can reconstruct the decision without a meeting. The next reviewer should not have to ask which document is authoritative. Avoid a private second version in a personal document. Apply the same time-zone availability test to client schedule and to the value that survives in the scheduling platform."
+    ]
+  },
+  {
+    "slug": "oa-control-a-client-role-change-after-placement",
+    "title": "Control a client role change after placement",
+    "excerpt": "A written control for client role change in outsourced assistant teams.",
+    "service": "assistant-operations",
+    "minutes": 8,
+    "published": "2026-11-04",
+    "image": "/images/november-04/oa-control-a-client-role-change-after-placement.png",
+    "sources": [],
+    "body": [
+      "## Name the decision and the queue owner",
+      "The client role change note should separate the request, the decision that is still open, and the person who can close it. Distinguish a new request from a correction to an earlier one. A short written rule is easier to test than an unwritten habit. State explicitly what is in scope and what is out of scope for the case. Use the same definition across the queue and the review so the counts agree. The client role change record should let a second reviewer rebuild the decision from change request and access note.",
+      "## Map the source and the evidence trail",
+      "Attach role brief and change request to the case, label their versions, and record the time each was observed. Use the same definition across the queue and the review so the counts agree. Record the export time beside any value taken from a system. The next reviewer should not have to ask which document is authoritative. A clean-looking status is not evidence that the underlying work is correct. The client role change case note should show what the placement system held at the time and who reviewed it.",
+      "## Set the authority boundary",
+      "The the placement lead owns the decision in client role change; the preparer may compare, label, and route but may not approve the outcome. When urgency presses against the limit, pause and route the decision. Do not let a deadline expand a role beyond its written limit. Name the backup owner and the coverage window in advance. Do not let a familiar requester bypass the approval boundary. In the client role change queue, an item without a next action is treated as an exception.",
+      "## Run the daily handoff",
+      "End the client role change shift with an owner, a next action, and a due time on every open case. If the team cannot reproduce the result from the record, the control is not finished. Do not let a status update stand in for a verified event. Log the handoff time when a case crosses a shift. Compare arrivals and completions, not only the backlog total. The client role change reviewer records approval, the owner, and the next action in one place.",
+      "## Handle exceptions without rewriting history",
+      "If the role changes but the access review is not repeated, stop the dependent action and log the conflict in the placement system rather than choosing the more convenient value. Route one bounded question to the owner instead of negotiating in the queue. If the exception repeats, give it a reason code. The next reviewer should not have to ask which document is authoritative. A case that moves between owners should keep both owner periods visible. A sample client role change review checks role brief, change request, and the surviving value in the placement system.",
+      "## Close with a verified destination value",
+      "The final client role change check compares approval with the surviving value in the placement system; a status label alone is not a close. Record the approximate value, the approver, and the final check time. Name the owner for every open item, including items waiting on someone else. Do not let a deadline expand a role beyond its written limit. Compare the destination field, not only the activity log. For client role change, compare role brief with the destination value rather than relying on a status label.",
+      "## Review the pattern, not only the case",
+      "Review client role change with a sample drawn from the queue export before the meeting, so the discussion cannot drift to memorable cases. The record should show the source, the decision, and the surviving value in one place. The next reviewer should not have to ask which document is authoritative. Set the next review date before the action begins. A clean-looking status is not evidence that the underlying work is correct. For client role change, the working file keeps role brief and change request beside the decision note.",
+      "## Keep the record ready for the next reviewer",
+      "Store sensitive client role change evidence in the approved repository and keep only the reference and access path in the analysis note. Label the version of every file that can change. If the team cannot reproduce the result from the record, the control is not finished. Name the owner and the date beside each decision. Record event time separately from entry time. A client role change exception keeps approval attached and routes the question to the placement lead."
+    ]
+  },
+  {
+    "slug": "oa-handle-a-candidate-background-check-delay",
+    "title": "Handle a candidate background check delay",
+    "excerpt": "A written control for background check delay in outsourced assistant teams.",
+    "service": "assistant-operations",
+    "minutes": 8,
+    "published": "2026-11-04",
+    "image": "/images/november-04/oa-handle-a-candidate-background-check-delay.png",
+    "sources": [],
+    "body": [
+      "## Name the decision and the queue owner",
+      "Before work begins on background check delay, confirm which entity, period, and queue the case belongs to and who accepts the outcome. Give the case a stable identifier before any document is attached. Record the requester and the promised response time. Separate the request from the decision, because a complete request is not an approval. The record should show the source, the decision, and the surviving value in one place. In this background check delay case, the record points to the screening portal and names the screening lead as the decision owner.",
+      "## Map the source and the evidence trail",
+      "A reviewer should be able to rebuild background check delay from candidate note, start date, and the the screening portal record without asking for a private screenshot. Name the owner for every open item, including items waiting on someone else. A short written rule is easier to test than an unwritten habit. Name the repository where sensitive evidence is held. The record should show the source, the decision, and the surviving value in one place. The background check delay record should let a second reviewer rebuild the decision from vendor status and candidate note.",
+      "## Set the authority boundary",
+      "Write the background check delay authority limit into the case template, including the amount, scope, and end date of any delegation. If the team cannot reproduce the result from the record, the control is not finished. Keep emergency authority narrow and followed by a review note. Record rejected and deferred requests as well as approvals. When urgency presses against the limit, pause and route the decision. The background check delay case note should show what the screening portal held at the time and who reviewed it.",
+      "## Run the daily handoff",
+      "The daily background check delay pass starts with the oldest item, the unassigned handoff, and the case paused for more than two business days. Log the handoff time when a case crosses a shift. Record one next action and one due time per open item. Name the owner for every open item, including items waiting on someone else. Do not let a deadline expand a role beyond its written limit. In the background check delay queue, an item without a next action is treated as an exception.",
+      "## Handle exceptions without rewriting history",
+      "A repeated background check delay exception becomes a reason code in the queue, not a story retold in each thread. Do not close a case just because the requester stopped asking. A short written rule is easier to test than an unwritten habit. Use the same definition across the queue and the review so the counts agree. Separate a data conflict from a policy conflict. The background check delay reviewer records start date, the owner, and the next action in one place.",
+      "## Close with a verified destination value",
+      "If background check delay hands work to another team, keep it open until that team acknowledges receipt and the surviving record is confirmed. Name the owner for every open item, including items waiting on someone else. Tie the close note to the original request and the final evidence. Do not mark complete until the check is repeatable by another reviewer. Verify that the surviving record is the one downstream teams will use. A sample background check delay review checks check request, vendor status, and the surviving value in the screening portal.",
+      "## Review the pattern, not only the case",
+      "The background check delay review should separate the ordinary case, the reopened case, the missing-evidence case, and the cross-owner handoff. Separate what was observed from what the team believes caused it. A stable total can hide a growing tail. A case that moves between owners should keep both owner periods visible. Keep the original request so a later correction does not erase the reason for the work. For background check delay, compare check request with the destination value rather than relying on a status label.",
+      "## Keep the record ready for the next reviewer",
+      "Keep the background check delay record short enough to read during the day and specific enough to survive a later audit. A short written rule is easier to test than an unwritten habit. Do not store credentials or unnecessary personal data in the case. Keep the original request so a later correction does not erase the reason for the work. If the team cannot reproduce the result from the record, the control is not finished. For background check delay, the working file keeps check request and vendor status beside the decision note."
+    ]
+  },
+  {
+    "slug": "oa-keep-a-placement-quality-check-in-schedule",
+    "title": "Keep a placement quality check-in schedule",
+    "excerpt": "A written control for placement check-in in outsourced assistant teams.",
+    "service": "assistant-operations",
+    "minutes": 8,
+    "published": "2026-11-04",
+    "image": "/images/november-04/oa-keep-a-placement-quality-check-in-schedule.png",
+    "sources": [],
+    "body": [
+      "## Name the decision and the queue owner",
+      "For placement check-in, the first step is to write the open decision, the requesting role, and the queue owner before anyone touches the placement system. Name the person who can close the question and the date by which the answer is needed. Record the queue and the entity so the case cannot drift into another team's work. Say which system of record governs if two sources disagree. Record the requester and the promised response time. Every placement check-in handoff names the client success lead and the field in the placement system that will confirm the change.",
+      "## Map the source and the evidence trail",
+      "Map each placement check-in value to its source: check-in calendar for the request, client note for the check, and the placement system for the surviving destination value. Link each value to the field or page that supports it. Do not let a deadline expand a role beyond its written limit. The next reviewer should not have to ask which document is authoritative. Name the repository where sensitive evidence is held. In this placement check-in case, the record points to the placement system and names the client success lead as the decision owner.",
+      "## Set the authority boundary",
+      "When placement check-in changes a record in the placement system, the the client success lead approves and the preparer records the action; the two roles stay separate. Use the same definition across the queue and the review so the counts agree. The next reviewer should not have to ask which document is authoritative. Do not let a familiar requester bypass the approval boundary. A role change should trigger a review of queue access. The placement check-in record should let a second reviewer rebuild the decision from client note and candidate note.",
+      "## Run the daily handoff",
+      "Each morning the team reviews placement check-in arrivals, items waiting on the the client success lead, and items ready for a verified close. Leave the next shift a queue that needs no chat history. The next reviewer should not have to ask which document is authoritative. Do not let a status update stand in for a verified event. If the team cannot reproduce the result from the record, the control is not finished. The placement check-in case note should show what the placement system held at the time and who reviewed it.",
+      "## Handle exceptions without rewriting history",
+      "When the thirty-day check-in is skipped and the client raises the issue later, preserve both versions, record the observation times, and route one answerable question to the the client success lead. Record the stop reason and the release decision together. When access blocks the work, name the system, role, and approver. Record who released the dependent action and when. Route one bounded question to the owner instead of negotiating in the queue. In the placement check-in queue, an item without a next action is treated as an exception.",
+      "## Close with a verified destination value",
+      "Record the placement check-in close reason, the approver, and the surviving evidence reference in the same case note. A case that moves between owners should keep both owner periods visible. A short written rule is easier to test than an unwritten habit. Reopen the case when the destination value is disputed. Name the owner for every open item, including items waiting on someone else. The placement check-in reviewer records action list, the owner, and the next action in one place.",
+      "## Review the pattern, not only the case",
+      "Report placement check-in open cases by age and dependency, not only the total, because a stable total can hide an aging tail. Keep the original request so a later correction does not erase the reason for the work. The next reviewer should not have to ask which document is authoritative. Keep the prior procedure available for comparison. If the team cannot reproduce the result from the record, the control is not finished. A sample placement check-in review checks check-in calendar, client note, and the surviving value in the placement system.",
+      "## Keep the record ready for the next reviewer",
+      "The placement check-in working paper should show the request, the source, the decision, the action, and the surviving value without a private inbox. The record should show the source, the decision, and the surviving value in one place. Do not store credentials or unnecessary personal data in the case. Keep the source reference and the coded value in the same row. Write the note so a reviewer can reconstruct the decision without a meeting. For placement check-in, compare check-in calendar with the destination value rather than relying on a status label."
+    ]
+  },
+  {
+    "slug": "oa-track-a-client-offboarding-request",
+    "title": "Track a client offboarding request",
+    "excerpt": "A written control for client offboarding in outsourced assistant teams.",
+    "service": "assistant-operations",
+    "minutes": 8,
+    "published": "2026-11-04",
+    "image": "/images/november-04/oa-track-a-client-offboarding-request.png",
+    "sources": [],
+    "body": [
+      "## Name the decision and the queue owner",
+      "Start client offboarding with one bounded case, a named owner, and a written statement of what the reviewer is being asked to decide. Name the trigger that brought the case into the queue. Separate the request from the decision, because a complete request is not an approval. Record the requester and the promised response time. A clean-looking status is not evidence that the underlying work is correct. The client offboarding close note cites the client systems, the approver, and the time of the final check.",
+      "## Map the source and the evidence trail",
+      "The evidence set for client offboarding should join offboarding request, access removal, final invoice, and confirmation on one stable case reference. A case that moves between owners should keep both owner periods visible. Keep a version label on every file that can change. Name the owner for every open item, including items waiting on someone else. State whether the evidence is confirmed, inferred, or unavailable. Every client offboarding handoff names the placement lead and the field in the client systems that will confirm the change.",
+      "## Set the authority boundary",
+      "A standing instruction for client offboarding needs a limit and an expiry, and the the placement lead should confirm it is still current. Preparation, comparison, and follow-up may sit with the assistant. Do not let a deadline expand a role beyond its written limit. Approval, payment, records disposition, and policy exceptions stay with the named owner. A clean-looking status is not evidence that the underlying work is correct. In this client offboarding case, the record points to the client systems and names the placement lead as the decision owner.",
+      "## Run the daily handoff",
+      "A client offboarding status update should point to a verifiable event in the client systems, not to a feeling about progress. A short written rule is easier to test than an unwritten habit. Do not let a status update stand in for a verified event. A clean-looking status is not evidence that the underlying work is correct. The record should show the source, the decision, and the surviving value in one place. The client offboarding record should let a second reviewer rebuild the decision from access removal and final invoice.",
+      "## Handle exceptions without rewriting history",
+      "The client offboarding exception record should name the condition, the decision, the releaser, and the time the dependent action resumed. The record should show the source, the decision, and the surviving value in one place. Record the stop reason and the release decision together. Do not close a case just because the requester stopped asking. Route one bounded question to the owner instead of negotiating in the queue. The client offboarding case note should show what the client systems held at the time and who reviewed it.",
+      "## Close with a verified destination value",
+      "Close client offboarding only when the destination value in the client systems, the approver, and the time of the final check are all visible. Record the close reason with the same codes used in the exception queue. A case that moves between owners should keep both owner periods visible. Test one closed case by rebuilding it from the evidence map. Keep the prior value so the change can be explained. In the client offboarding queue, an item without a next action is treated as an exception.",
+      "## Review the pattern, not only the case",
+      "A useful client offboarding review ends with one testable change, one owner, and a date to measure whether the change moved the result. End the review with one change and one measure. Do not let a deadline expand a role beyond its written limit. Choose the sample from the export before the meeting. If the team cannot reproduce the result from the record, the control is not finished. The client offboarding reviewer records confirmation, the owner, and the next action in one place.",
+      "## Keep the record ready for the next reviewer",
+      "Label offboarding request and access removal with their versions so a later reviewer can tell a stale extract from a current one. Use the same definition across the queue and the review so the counts agree. The next reviewer should not have to ask which document is authoritative. Make the handoff readable by the next shift and the next auditor. Keep the original request so a later correction does not erase the reason for the work. A sample client offboarding review checks offboarding request, access removal, and the surviving value in the client systems."
+    ]
+  },
+  {
+    "slug": "oa-standardize-a-candidate-skill-assessment-retake",
+    "title": "Standardize a candidate skill assessment retake",
+    "excerpt": "A written control for skill assessment retake in outsourced assistant teams.",
+    "service": "assistant-operations",
+    "minutes": 8,
+    "published": "2026-11-04",
+    "image": "/images/november-04/oa-standardize-a-candidate-skill-assessment-retake.png",
+    "sources": [],
+    "body": [
+      "## Name the decision and the queue owner",
+      "The skill assessment retake note should separate the request, the decision that is still open, and the person who can close it. The next reviewer should not have to ask which document is authoritative. Name the trigger that brought the case into the queue. Give the case a stable identifier before any document is attached. Say which system of record governs if two sources disagree. Apply the same skill assessment retake test to reviewer note and to the value that survives in the assessment platform.",
+      "## Map the source and the evidence trail",
+      "Attach assessment record and retake request to the case, label their versions, and record the time each was observed. If the team cannot reproduce the result from the record, the control is not finished. Name the owner for every open item, including items waiting on someone else. Record who supplied each document and when it arrived. Name the repository where sensitive evidence is held. The skill assessment retake close note cites the assessment platform, the approver, and the time of the final check.",
+      "## Set the authority boundary",
+      "The the screening lead owns the decision in skill assessment retake; the preparer may compare, label, and route but may not approve the outcome. When urgency presses against the limit, pause and route the decision. Record rejected and deferred requests as well as approvals. Name the backup owner and the coverage window in advance. The record should show the source, the decision, and the surviving value in one place. Every skill assessment retake handoff names the screening lead and the field in the assessment platform that will confirm the change.",
+      "## Run the daily handoff",
+      "End the skill assessment retake shift with an owner, a next action, and a due time on every open case. A case with no next action is an exception even if it says in progress. Use the same definition across the queue and the review so the counts agree. Do not let a deadline expand a role beyond its written limit. The record should show the source, the decision, and the surviving value in one place. In this skill assessment retake case, the record points to the assessment platform and names the screening lead as the decision owner.",
+      "## Handle exceptions without rewriting history",
+      "If the retake uses a different assessment version than the first attempt, stop the dependent action and log the conflict in the assessment platform rather than choosing the more convenient value. A case that moves between owners should keep both owner periods visible. Separate a data conflict from a policy conflict. A clean-looking status is not evidence that the underlying work is correct. Route one bounded question to the owner instead of negotiating in the queue. The skill assessment retake record should let a second reviewer rebuild the decision from retake request and reviewer note.",
+      "## Close with a verified destination value",
+      "The final skill assessment retake check compares decision with the surviving value in the assessment platform; a status label alone is not a close. If the destination is another team, require an acknowledgment. Record the approximate value, the approver, and the final check time. Test one closed case by rebuilding it from the evidence map. Record the close reason with the same codes used in the exception queue. The skill assessment retake case note should show what the assessment platform held at the time and who reviewed it.",
+      "## Review the pattern, not only the case",
+      "Review skill assessment retake with a sample drawn from the queue export before the meeting, so the discussion cannot drift to memorable cases. Record the sample frame, the reviewer, and the criteria. A case that moves between owners should keep both owner periods visible. Use case-level review to explain an outlier before calling it a trend. Report a null result as clearly as a positive one. In the skill assessment retake queue, an item without a next action is treated as an exception.",
+      "## Keep the record ready for the next reviewer",
+      "Store sensitive skill assessment retake evidence in the approved repository and keep only the reference and access path in the analysis note. Avoid a private second version in a personal document. Do not let a deadline expand a role beyond its written limit. Keep the note short enough to read with the case. Keep the source reference and the coded value in the same row. The skill assessment retake reviewer records decision, the owner, and the next action in one place."
+    ]
+  },
+  {
+    "slug": "oa-reconcile-a-placement-fee-credit",
+    "title": "Reconcile a placement fee credit",
+    "excerpt": "A written control for placement fee credit in outsourced assistant teams.",
+    "service": "assistant-operations",
+    "minutes": 8,
+    "published": "2026-11-04",
+    "image": "/images/november-04/oa-reconcile-a-placement-fee-credit.png",
+    "sources": [],
+    "body": [
+      "## Name the decision and the queue owner",
+      "Before work begins on placement fee credit, confirm which entity, period, and queue the case belongs to and who accepts the outcome. Write the decision in one sentence so the reviewer knows what would count as an answer. Say which system of record governs if two sources disagree. Name the person who can close the question and the date by which the answer is needed. Give the case a stable identifier before any document is attached. A placement fee credit exception keeps approval attached and routes the question to the billing coordinator.",
+      "## Map the source and the evidence trail",
+      "A reviewer should be able to rebuild placement fee credit from invoice, approval, and the the billing system record without asking for a private screenshot. Compare the source and the destination values before drawing a conclusion. A short written rule is easier to test than an unwritten habit. The record should show the source, the decision, and the surviving value in one place. Link each value to the field or page that supports it. Apply the same placement fee credit test to invoice and to the value that survives in the billing system.",
+      "## Set the authority boundary",
+      "Write the placement fee credit authority limit into the case template, including the amount, scope, and end date of any delegation. If two roles share a queue, mark which one decides each item. A clean-looking status is not evidence that the underlying work is correct. Approval, payment, records disposition, and policy exceptions stay with the named owner. Keep the original request so a later correction does not erase the reason for the work. The placement fee credit close note cites the billing system, the approver, and the time of the final check.",
+      "## Run the daily handoff",
+      "The daily placement fee credit pass starts with the oldest item, the unassigned handoff, and the case paused for more than two business days. Log the handoff time when a case crosses a shift. Use the same definition across the queue and the review so the counts agree. Name the owner for every open item, including items waiting on someone else. Assign every unowned case before new work begins. Every placement fee credit handoff names the billing coordinator and the field in the billing system that will confirm the change.",
+      "## Handle exceptions without rewriting history",
+      "A repeated placement fee credit exception becomes a reason code in the queue, not a story retold in each thread. Record who released the dependent action and when. Check whether the exception came from a form, a rule, or a permission. The record should show the source, the decision, and the surviving value in one place. When access blocks the work, name the system, role, and approver. In this placement fee credit case, the record points to the billing system and names the billing coordinator as the decision owner.",
+      "## Close with a verified destination value",
+      "If placement fee credit hands work to another team, keep it open until that team acknowledges receipt and the surviving record is confirmed. A clean-looking status is not evidence that the underlying work is correct. Name the owner for every open item, including items waiting on someone else. Verify that the surviving record is the one downstream teams will use. The record should show the source, the decision, and the surviving value in one place. The placement fee credit record should let a second reviewer rebuild the decision from credit note and invoice.",
+      "## Review the pattern, not only the case",
+      "The placement fee credit review should separate the ordinary case, the reopened case, the missing-evidence case, and the cross-owner handoff. Record the sample frame, the reviewer, and the criteria. Use the same definition across the queue and the review so the counts agree. The record should show the source, the decision, and the surviving value in one place. Choose the sample from the export before the meeting. The placement fee credit case note should show what the billing system held at the time and who reviewed it.",
+      "## Keep the record ready for the next reviewer",
+      "Keep the placement fee credit record short enough to read during the day and specific enough to survive a later audit. Archive the extract with the study so it can be repeated. Keep the original request so a later correction does not erase the reason for the work. A case that moves between owners should keep both owner periods visible. If the team cannot reproduce the result from the record, the control is not finished. In the placement fee credit queue, an item without a next action is treated as an exception."
+    ]
+  },
+  {
+    "slug": "oa-audit-a-candidate-communication-log",
+    "title": "Audit a candidate communication log",
+    "excerpt": "A written control for candidate communication log in outsourced assistant teams.",
+    "service": "assistant-operations",
+    "minutes": 8,
+    "published": "2026-11-04",
+    "image": "/images/november-04/oa-audit-a-candidate-communication-log.png",
+    "sources": [],
+    "body": [
+      "## Name the decision and the queue owner",
+      "For candidate communication log, the first step is to write the open decision, the requesting role, and the queue owner before anyone touches the candidate record. Name the trigger that brought the case into the queue. The next reviewer should not have to ask which document is authoritative. State explicitly what is in scope and what is out of scope for the case. Note the observation window; a case without a period cannot be compared later. For candidate communication log, the working file keeps message log and candidate record beside the decision note.",
+      "## Map the source and the evidence trail",
+      "Map each candidate communication log value to its source: message log for the request, candidate record for the check, and the candidate record for the surviving destination value. The next reviewer should not have to ask which document is authoritative. Compare the source and the destination values before drawing a conclusion. If the team cannot reproduce the result from the record, the control is not finished. Record who supplied each document and when it arrived. A candidate communication log exception keeps review note attached and routes the question to the screening lead.",
+      "## Set the authority boundary",
+      "When candidate communication log changes a record in the candidate record, the the screening lead approves and the preparer records the action; the two roles stay separate. Do not let a deadline expand a role beyond its written limit. Preparation, comparison, and follow-up may sit with the assistant. Do not let a familiar requester bypass the approval boundary. The next reviewer should not have to ask which document is authoritative. Apply the same candidate communication log test to template used and to the value that survives in the candidate record.",
+      "## Run the daily handoff",
+      "Each morning the team reviews candidate communication log arrivals, items waiting on the the screening lead, and items ready for a verified close. If the team cannot reproduce the result from the record, the control is not finished. The next reviewer should not have to ask which document is authoritative. Leave the next shift a queue that needs no chat history. A clean-looking status is not evidence that the underlying work is correct. The candidate communication log close note cites the candidate record, the approver, and the time of the final check.",
+      "## Handle exceptions without rewriting history",
+      "When the log shows a rejection message never sent to the candidate, preserve both versions, record the observation times, and route one answerable question to the the screening lead. The record should show the source, the decision, and the surviving value in one place. Use the same definition across the queue and the review so the counts agree. Keep the original request so a later correction does not erase the reason for the work. Route one bounded question to the owner instead of negotiating in the queue. Every candidate communication log handoff names the screening lead and the field in the candidate record that will confirm the change.",
+      "## Close with a verified destination value",
+      "Record the candidate communication log close reason, the approver, and the surviving evidence reference in the same case note. Note the next review date before closing. Record the approximate value, the approver, and the final check time. Do not let a deadline expand a role beyond its written limit. Keep the original request so a later correction does not erase the reason for the work. In this candidate communication log case, the record points to the candidate record and names the screening lead as the decision owner.",
+      "## Review the pattern, not only the case",
+      "Report candidate communication log open cases by age and dependency, not only the total, because a stable total can hide an aging tail. The record should show the source, the decision, and the surviving value in one place. A short written rule is easier to test than an unwritten habit. Separate what was observed from what the team believes caused it. Include a routine case, a reopened case, and a cross-owner handoff. The candidate communication log record should let a second reviewer rebuild the decision from candidate record and template used.",
+      "## Keep the record ready for the next reviewer",
+      "The candidate communication log working paper should show the request, the source, the decision, the action, and the surviving value without a private inbox. Archive the extract with the study so it can be repeated. Name the owner and the date beside each decision. Link the evidence to the exact field it supports. Label the version of every file that can change. The candidate communication log case note should show what the candidate record held at the time and who reviewed it."
+    ]
+  }
+];
+
+export const november04ResearchPosts = [
+  {
+    "slug": "time-zone-availability-verification",
+    "title": "Time-zone availability verification",
+    "excerpt": "A bounded record review for time-zone availability verification in outsourced assistant placements.",
+    "body": [
+      "## Question and decision scope",
+      "Start time-zone availability verification with one bounded case, a named owner, and a written statement of what the reviewer is being asked to decide. Record the queue and the entity so the case cannot drift into another team's work. Use the same definition across the queue and the review so the counts agree. Distinguish a new request from a correction to an earlier one. Give the case a stable identifier before any document is attached. The time-zone availability verification record should let a second reviewer rebuild the decision from time-zone note and client schedule. Name the trigger that brought the case into the queue. The next reviewer should not have to ask which document is authoritative. State explicitly what is in scope and what is out of scope for the case. For time-zone availability verification, the working file keeps availability form and time-zone note beside the decision note.",
+      "## Population and unit",
+      "A reviewer should be able to rebuild time-zone availability verification from client schedule, confirmation, and the the placement record record without asking for a private screenshot. The next reviewer should not have to ask which document is authoritative. Compare the source and the destination values before drawing a conclusion. If the team cannot reproduce the result from the record, the control is not finished. Record who supplied each document and when it arrived. A time-zone availability verification exception keeps confirmation attached and routes the question to the placement lead. Preserve a conflicting value instead of overwriting the first one. Do not treat a screenshot as a substitute for the system record. Keep a version label on every file that can change. The time-zone availability verification case note should show what the placement record held at the time and who reviewed it.",
+      "## Definitions and measures",
+      "A standing instruction for time-zone availability verification needs a limit and an expiry, and the the placement lead should confirm it is still current. Preparation, comparison, and follow-up may sit with the assistant. Name the backup owner and the coverage window in advance. A delegation needs a scope, a limit, an end date, and a named backup. Approval, payment, records disposition, and policy exceptions stay with the named owner. In the time-zone availability verification queue, an item without a next action is treated as an exception. If the team cannot reproduce the result from the record, the control is not finished. The next reviewer should not have to ask which document is authoritative. Name the owner for every open item, including items waiting on someone else. Apply the same time-zone availability verification test to client schedule and to the value that survives in the placement record.",
+      "## Evidence dictionary",
+      "The daily time-zone availability verification pass starts with the oldest item, the unassigned handoff, and the case paused for more than two business days. Check that the owner is actually available before assigning. Compare arrivals and completions, not only the backlog total. A short written rule is easier to test than an unwritten habit. Do not let a deadline expand a role beyond its written limit. The time-zone availability verification close note cites the placement record, the approver, and the time of the final check. A clean-looking status is not evidence that the underlying work is correct. Log the handoff time when a case crosses a shift. Compare arrivals and completions, not only the backlog total. The time-zone availability verification reviewer records confirmation, the owner, and the next action in one place.",
+      "## Sampling and collection",
+      "The time-zone availability verification exception record should name the condition, the decision, the releaser, and the time the dependent action resumed. Do not let a deadline expand a role beyond its written limit. Use the same definition across the queue and the review so the counts agree. Route one bounded question to the owner instead of negotiating in the queue. Record who released the dependent action and when. A sample time-zone availability verification review checks availability form, time-zone note, and the surviving value in the placement record. Do not close a case just because the requester stopped asking. Record the stop reason and the release decision together. If the team cannot reproduce the result from the record, the control is not finished. Every time-zone availability verification handoff names the placement lead and the field in the placement record that will confirm the change.",
+      "## Analysis and reporting",
+      "If time-zone availability verification hands work to another team, keep it open until that team acknowledges receipt and the surviving record is confirmed. The record should show the source, the decision, and the surviving value in one place. Reopen the case when the destination value is disputed. If the team cannot reproduce the result from the record, the control is not finished. If the destination is another team, require an acknowledgment. In this time-zone availability verification case, the record points to the placement record and names the placement lead as the decision owner. Use the same definition across the queue and the review so the counts agree. The record should show the source, the decision, and the surviving value in one place. Verify that the surviving record is the one downstream teams will use. For time-zone availability verification, compare availability form with the destination value rather than relying on a status label.",
+      "## Limitations",
+      "A useful time-zone availability verification review ends with one testable change, one owner, and a date to measure whether the change moved the result. Report age and dependency, not only the total count. A short written rule is easier to test than an unwritten habit. If the team cannot reproduce the result from the record, the control is not finished. Set the next review date before the action begins. For time-zone availability verification, the working file keeps availability form and time-zone note beside the decision note. Report a null result as clearly as a positive one. A stable total can hide a growing tail. Set the next review date before the action begins. The time-zone availability verification record should let a second reviewer rebuild the decision from time-zone note and client schedule.",
+      "## Review and next action",
+      "Keep the time-zone availability verification record short enough to read during the day and specific enough to survive a later audit. Do not store credentials or unnecessary personal data in the case. Link the evidence to the exact field it supports. The next reviewer should not have to ask which document is authoritative. A clean-looking status is not evidence that the underlying work is correct. The time-zone availability verification case note should show what the placement record held at the time and who reviewed it. Keep the source reference and the coded value in the same row. Keep the note short enough to read with the case. Use the approved repository for sensitive content. A time-zone availability verification exception keeps confirmation attached and routes the question to the placement lead."
+    ],
+    "published": "2026-11-04",
+    "updated": "2026-11-04",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "U.S. Department of Labor",
+    "sources": [
+      {
+        "label": "U.S. Department of Labor",
+        "url": "https://www.dol.gov/"
+      }
+    ],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-04/time-zone-availability-verification.png"
+  },
+  {
+    "slug": "role-change-cycle-time",
+    "title": "Role change cycle time",
+    "excerpt": "A bounded record review for role change cycle time in outsourced assistant placements.",
+    "body": [
+      "## Question and decision scope",
+      "For role change cycle time, the first step is to write the open decision, the requesting role, and the queue owner before anyone touches the placement record. Separate the request from the decision, because a complete request is not an approval. The record should show the source, the decision, and the surviving value in one place. A clean-looking status is not evidence that the underlying work is correct. Name the owner for every open item, including items waiting on someone else. The role change cycle time case note should show what the placement record held at the time and who reviewed it. Record the queue and the entity so the case cannot drift into another team's work. Record the requester and the promised response time. Write the decision in one sentence so the reviewer knows what would count as an answer. A role change cycle time exception keeps approval attached and routes the question to the placement lead.",
+      "## Population and unit",
+      "Attach role brief and change request to the case, label their versions, and record the time each was observed. Compare the source and the destination values before drawing a conclusion. Use the same definition across the queue and the review so the counts agree. Name the owner for every open item, including items waiting on someone else. Keep a version label on every file that can change. Apply the same role change cycle time test to access note and to the value that survives in the placement record. Keep the original request so a later correction does not erase the reason for the work. Use the same definition across the queue and the review so the counts agree. A case that moves between owners should keep both owner periods visible. In the role change cycle time queue, an item without a next action is treated as an exception.",
+      "## Definitions and measures",
+      "When role change cycle time changes a record in the placement record, the the placement lead approves and the preparer records the action; the two roles stay separate. A delegation needs a scope, a limit, an end date, and a named backup. When urgency presses against the limit, pause and route the decision. Preparation, comparison, and follow-up may sit with the assistant. The record should show the source, the decision, and the surviving value in one place. The role change cycle time reviewer records approval, the owner, and the next action in one place. Record rejected and deferred requests as well as approvals. If two roles share a queue, mark which one decides each item. Use the same definition across the queue and the review so the counts agree. The role change cycle time close note cites the placement record, the approver, and the time of the final check.",
+      "## Evidence dictionary",
+      "End the role change cycle time shift with an owner, a next action, and a due time on every open case. Record one next action and one due time per open item. Open the day with a queue pass by age, owner, and missing evidence. A handoff is complete only when the receiver acknowledges it. A case with no next action is an exception even if it says in progress. Every role change cycle time handoff names the placement lead and the field in the placement record that will confirm the change. Do not let a deadline expand a role beyond its written limit. The record should show the source, the decision, and the surviving value in one place. Log the handoff time when a case crosses a shift. A sample role change cycle time review checks role brief, change request, and the surviving value in the placement record.",
+      "## Sampling and collection",
+      "When the record does not match the surviving value, preserve both versions, record the observation times, and route one answerable question to the the placement lead. An escalation that ends in silence remains open. Keep the original request so a later correction does not erase the reason for the work. Record the stop reason and the release decision together. A short written rule is easier to test than an unwritten habit. For role change cycle time, compare role brief with the destination value rather than relying on a status label. The next reviewer should not have to ask which document is authoritative. Route one bounded question to the owner instead of negotiating in the queue. If the team cannot reproduce the result from the record, the control is not finished. In this role change cycle time case, the record points to the placement record and names the placement lead as the decision owner.",
+      "## Analysis and reporting",
+      "The final role change cycle time check compares approval with the surviving value in the placement record; a status label alone is not a close. Record the close reason with the same codes used in the exception queue. If the team cannot reproduce the result from the record, the control is not finished. Compare the destination field, not only the activity log. Do not mark complete until the check is repeatable by another reviewer. The role change cycle time record should let a second reviewer rebuild the decision from change request and access note. Use the same definition across the queue and the review so the counts agree. A case that moves between owners should keep both owner periods visible. Compare the destination field, not only the activity log. For role change cycle time, the working file keeps role brief and change request beside the decision note.",
+      "## Limitations",
+      "Report role change cycle time open cases by age and dependency, not only the total, because a stable total can hide an aging tail. Record the sample frame, the reviewer, and the criteria. If the team cannot reproduce the result from the record, the control is not finished. End the review with one change and one measure. A clean-looking status is not evidence that the underlying work is correct. A role change cycle time exception keeps approval attached and routes the question to the placement lead. Include a routine case, a reopened case, and a cross-owner handoff. Set the next review date before the action begins. Do not let a deadline expand a role beyond its written limit. The role change cycle time case note should show what the placement record held at the time and who reviewed it.",
+      "## Review and next action",
+      "Store sensitive role change cycle time evidence in the approved repository and keep only the reference and access path in the analysis note. Archive the extract with the study so it can be repeated. Avoid a private second version in a personal document. Link the evidence to the exact field it supports. Name the owner for every open item, including items waiting on someone else. In the role change cycle time queue, an item without a next action is treated as an exception. Keep the note short enough to read with the case. Record event time separately from entry time. If the team cannot reproduce the result from the record, the control is not finished. Apply the same role change cycle time test to access note and to the value that survives in the placement record."
+    ],
+    "published": "2026-11-04",
+    "updated": "2026-11-04",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "GAO — internal control standards",
+    "sources": [
+      {
+        "label": "GAO — internal control standards",
+        "url": "https://www.gao.gov/greenbook"
+      }
+    ],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-04/role-change-cycle-time.png"
+  },
+  {
+    "slug": "background-check-delay-causes",
+    "title": "Background check delay causes",
+    "excerpt": "A bounded record review for background check delay in outsourced assistant placements.",
+    "body": [
+      "## Question and decision scope",
+      "Before work begins on background check delay, confirm which entity, period, and queue the case belongs to and who accepts the outcome. Keep the original request so a later correction does not erase the reason for the work. A short written rule is easier to test than an unwritten habit. Use the same definition across the queue and the review so the counts agree. Name the trigger that brought the case into the queue. In the background check delay queue, an item without a next action is treated as an exception. Distinguish a new request from a correction to an earlier one. Say which system of record governs if two sources disagree. A case that moves between owners should keep both owner periods visible. Apply the same background check delay test to candidate note and to the value that survives in the placement record.",
+      "## Population and unit",
+      "The evidence set for background check delay should join check request, vendor status, candidate note, and start date on one stable case reference. Keep a version label on every file that can change. Keep the original document and the working copy in separate states. Use the same case key in the queue and in the evidence extract. Link each value to the field or page that supports it. The background check delay close note cites the placement record, the approver, and the time of the final check. Keep the original request so a later correction does not erase the reason for the work. The record should show the source, the decision, and the surviving value in one place. If the team cannot reproduce the result from the record, the control is not finished. The background check delay reviewer records start date, the owner, and the next action in one place.",
+      "## Definitions and measures",
+      "Write the background check delay authority limit into the case template, including the amount, scope, and end date of any delegation. Do not let a deadline expand a role beyond its written limit. Record rejected and deferred requests as well as approvals. Preparation, comparison, and follow-up may sit with the assistant. If the team cannot reproduce the result from the record, the control is not finished. A sample background check delay review checks check request, vendor status, and the surviving value in the placement record. Name the backup owner and the coverage window in advance. If the team cannot reproduce the result from the record, the control is not finished. If two roles share a queue, mark which one decides each item. Every background check delay handoff names the placement lead and the field in the placement record that will confirm the change.",
+      "## Evidence dictionary",
+      "A background check delay status update should point to a verifiable event in the placement record, not to a feeling about progress. Check that the owner is actually available before assigning. Log the handoff time when a case crosses a shift. Do not let a deadline expand a role beyond its written limit. A case with no next action is an exception even if it says in progress. In this background check delay case, the record points to the placement record and names the placement lead as the decision owner. Check that the owner is actually available before assigning. Record one next action and one due time per open item. Leave the next shift a queue that needs no chat history. For background check delay, compare check request with the destination value rather than relying on a status label.",
+      "## Sampling and collection",
+      "A repeated background check delay exception becomes a reason code in the queue, not a story retold in each thread. Do not close a case just because the requester stopped asking. Do not let a deadline expand a role beyond its written limit. Keep the original request so a later correction does not erase the reason for the work. Do not rewrite the earlier record to match the later answer. For background check delay, the working file keeps check request and vendor status beside the decision note. Record who released the dependent action and when. Separate a data conflict from a policy conflict. Record the stop reason and the release decision together. The background check delay record should let a second reviewer rebuild the decision from vendor status and candidate note.",
+      "## Analysis and reporting",
+      "Close background check delay only when the destination value in the placement record, the approver, and the time of the final check are all visible. Reopen the case when the destination value is disputed. Keep the original request so a later correction does not erase the reason for the work. A closed status is not proof that the destination changed. A case that moves between owners should keep both owner periods visible. The background check delay case note should show what the placement record held at the time and who reviewed it. A short written rule is easier to test than an unwritten habit. Test one closed case by rebuilding it from the evidence map. Tie the close note to the original request and the final evidence. A background check delay exception keeps start date attached and routes the question to the placement lead.",
+      "## Limitations",
+      "The background check delay review should separate the ordinary case, the reopened case, the missing-evidence case, and the cross-owner handoff. A case that moves between owners should keep both owner periods visible. Report a null result as clearly as a positive one. A stable total can hide a growing tail. A clean-looking status is not evidence that the underlying work is correct. Apply the same background check delay test to candidate note and to the value that survives in the placement record. If the team cannot reproduce the result from the record, the control is not finished. Keep the prior procedure available for comparison. Report a null result as clearly as a positive one. In the background check delay queue, an item without a next action is treated as an exception.",
+      "## Review and next action",
+      "Label check request and vendor status with their versions so a later reviewer can tell a stale extract from a current one. The next reviewer should not have to ask which document is authoritative. Avoid a private second version in a personal document. Archive the extract with the study so it can be repeated. If the team cannot reproduce the result from the record, the control is not finished. The background check delay reviewer records start date, the owner, and the next action in one place. Name the owner for every open item, including items waiting on someone else. Do not let a deadline expand a role beyond its written limit. Keep the note short enough to read with the case. The background check delay close note cites the placement record, the approver, and the time of the final check."
+    ],
+    "published": "2026-11-04",
+    "updated": "2026-11-04",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "FTC — data security guidance",
+    "sources": [
+      {
+        "label": "FTC — data security guidance",
+        "url": "https://www.ftc.gov/business-guidance/privacy-security/data-security"
+      }
+    ],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-04/background-check-delay-causes.png"
+  },
+  {
+    "slug": "quality-check-in-coverage",
+    "title": "Quality check-in coverage",
+    "excerpt": "A bounded record review for check-in coverage in outsourced assistant placements.",
+    "body": [
+      "## Question and decision scope",
+      "The check-in coverage note should separate the request, the decision that is still open, and the person who can close it. Record the requester and the promised response time. State explicitly what is in scope and what is out of scope for the case. Name the owner for every open item, including items waiting on someone else. A short written rule is easier to test than an unwritten habit. The check-in coverage reviewer records action list, the owner, and the next action in one place. Confirm that the request belongs in this queue before assigning an owner. Name the owner for every open item, including items waiting on someone else. Give the case a stable identifier before any document is attached. The check-in coverage close note cites the placement record, the approver, and the time of the final check.",
+      "## Population and unit",
+      "Map each check-in coverage value to its source: check-in calendar for the request, client note for the check, and the placement record for the surviving destination value. Record the export time beside any value taken from a system. Name the repository where sensitive evidence is held. The next reviewer should not have to ask which document is authoritative. A case that moves between owners should keep both owner periods visible. Every check-in coverage handoff names the placement lead and the field in the placement record that will confirm the change. Use the same definition across the queue and the review so the counts agree. Preserve a conflicting value instead of overwriting the first one. Record the export time beside any value taken from a system. A sample check-in coverage review checks check-in calendar, client note, and the surviving value in the placement record.",
+      "## Definitions and measures",
+      "The the placement lead owns the decision in check-in coverage; the preparer may compare, label, and route but may not approve the outcome. Name the owner for every open item, including items waiting on someone else. A role change should trigger a review of queue access. Preparation, comparison, and follow-up may sit with the assistant. A short written rule is easier to test than an unwritten habit. For check-in coverage, compare check-in calendar with the destination value rather than relying on a status label. Keep the original request so a later correction does not erase the reason for the work. Name the owner for every open item, including items waiting on someone else. A clean-looking status is not evidence that the underlying work is correct. In this check-in coverage case, the record points to the placement record and names the placement lead as the decision owner.",
+      "## Evidence dictionary",
+      "Each morning the team reviews check-in coverage arrivals, items waiting on the the placement lead, and items ready for a verified close. Compare arrivals and completions, not only the backlog total. A case that moves between owners should keep both owner periods visible. Open the day with a queue pass by age, owner, and missing evidence. The next reviewer should not have to ask which document is authoritative. The check-in coverage record should let a second reviewer rebuild the decision from client note and candidate note. Do not let a status update stand in for a verified event. A short written rule is easier to test than an unwritten habit. A case with no next action is an exception even if it says in progress. For check-in coverage, the working file keeps check-in calendar and client note beside the decision note.",
+      "## Sampling and collection",
+      "If the record does not match the surviving value, stop the dependent action and log the conflict in the placement record rather than choosing the more convenient value. Preserve both values and the time each was observed. If the team cannot reproduce the result from the record, the control is not finished. Record who released the dependent action and when. An escalation that ends in silence remains open. A check-in coverage exception keeps action list attached and routes the question to the placement lead. Record who released the dependent action and when. The next reviewer should not have to ask which document is authoritative. If the team cannot reproduce the result from the record, the control is not finished. The check-in coverage case note should show what the placement record held at the time and who reviewed it.",
+      "## Analysis and reporting",
+      "Record the check-in coverage close reason, the approver, and the surviving evidence reference in the same case note. Test one closed case by rebuilding it from the evidence map. If the destination is another team, require an acknowledgment. If the team cannot reproduce the result from the record, the control is not finished. Do not mark complete until the check is repeatable by another reviewer. In the check-in coverage queue, an item without a next action is treated as an exception. Do not let a deadline expand a role beyond its written limit. Test one closed case by rebuilding it from the evidence map. Verify that the surviving record is the one downstream teams will use. Apply the same check-in coverage test to candidate note and to the value that survives in the placement record.",
+      "## Limitations",
+      "Review check-in coverage with a sample drawn from the queue export before the meeting, so the discussion cannot drift to memorable cases. Name the owner for every open item, including items waiting on someone else. Keep the original request so a later correction does not erase the reason for the work. Use case-level review to explain an outlier before calling it a trend. Separate what was observed from what the team believes caused it. The check-in coverage close note cites the placement record, the approver, and the time of the final check. A stable total can hide a growing tail. A clean-looking status is not evidence that the underlying work is correct. Set the next review date before the action begins. The check-in coverage reviewer records action list, the owner, and the next action in one place.",
+      "## Review and next action",
+      "The check-in coverage working paper should show the request, the source, the decision, the action, and the surviving value without a private inbox. A clean-looking status is not evidence that the underlying work is correct. Name the owner for every open item, including items waiting on someone else. The record should show the source, the decision, and the surviving value in one place. Archive the extract with the study so it can be repeated. A sample check-in coverage review checks check-in calendar, client note, and the surviving value in the placement record. The next reviewer should not have to ask which document is authoritative. Write the note so a reviewer can reconstruct the decision without a meeting. If the team cannot reproduce the result from the record, the control is not finished. Every check-in coverage handoff names the placement lead and the field in the placement record that will confirm the change."
+    ],
+    "published": "2026-11-04",
+    "updated": "2026-11-04",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "GAO — internal control standards",
+    "sources": [
+      {
+        "label": "GAO — internal control standards",
+        "url": "https://www.gao.gov/greenbook"
+      }
+    ],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-04/quality-check-in-coverage.png"
+  },
+  {
+    "slug": "client-offboarding-completeness",
+    "title": "Client offboarding completeness",
+    "excerpt": "A bounded record review for offboarding completeness in outsourced assistant placements.",
+    "body": [
+      "## Question and decision scope",
+      "Start offboarding completeness with one bounded case, a named owner, and a written statement of what the reviewer is being asked to decide. Use the same definition across the queue and the review so the counts agree. Separate the request from the decision, because a complete request is not an approval. Name the trigger that brought the case into the queue. Record the requester and the promised response time. A sample offboarding completeness review checks offboarding request, access removal, and the surviving value in the placement record. A short written rule is easier to test than an unwritten habit. Record the queue and the entity so the case cannot drift into another team's work. Say which system of record governs if two sources disagree. Every offboarding completeness handoff names the placement lead and the field in the placement record that will confirm the change.",
+      "## Population and unit",
+      "A reviewer should be able to rebuild offboarding completeness from final invoice, confirmation, and the the placement record record without asking for a private screenshot. Record who supplied each document and when it arrived. Keep a version label on every file that can change. A case that moves between owners should keep both owner periods visible. Keep the original document and the working copy in separate states. In this offboarding completeness case, the record points to the placement record and names the placement lead as the decision owner. The record should show the source, the decision, and the surviving value in one place. Use the same case key in the queue and in the evidence extract. Keep the original request so a later correction does not erase the reason for the work. For offboarding completeness, compare offboarding request with the destination value rather than relying on a status label.",
+      "## Definitions and measures",
+      "A standing instruction for offboarding completeness needs a limit and an expiry, and the the placement lead should confirm it is still current. The next reviewer should not have to ask which document is authoritative. Do not let a familiar requester bypass the approval boundary. Do not let a deadline expand a role beyond its written limit. If two roles share a queue, mark which one decides each item. For offboarding completeness, the working file keeps offboarding request and access removal beside the decision note. Record rejected and deferred requests as well as approvals. When urgency presses against the limit, pause and route the decision. Do not let a deadline expand a role beyond its written limit. The offboarding completeness record should let a second reviewer rebuild the decision from access removal and final invoice.",
+      "## Evidence dictionary",
+      "The daily offboarding completeness pass starts with the oldest item, the unassigned handoff, and the case paused for more than two business days. Compare arrivals and completions, not only the backlog total. The record should show the source, the decision, and the surviving value in one place. Do not let a deadline expand a role beyond its written limit. Leave the next shift a queue that needs no chat history. The offboarding completeness case note should show what the placement record held at the time and who reviewed it. If the team cannot reproduce the result from the record, the control is not finished. The record should show the source, the decision, and the surviving value in one place. Escalate an item that has waited past the written threshold. A offboarding completeness exception keeps confirmation attached and routes the question to the placement lead.",
+      "## Sampling and collection",
+      "The offboarding completeness exception record should name the condition, the decision, the releaser, and the time the dependent action resumed. A clean-looking status is not evidence that the underlying work is correct. An escalation that ends in silence remains open. If the team cannot reproduce the result from the record, the control is not finished. Keep the failed attempt and the correction in the same history. Apply the same offboarding completeness test to final invoice and to the value that survives in the placement record. Record who released the dependent action and when. A short written rule is easier to test than an unwritten habit. If the exception repeats, give it a reason code. In the offboarding completeness queue, an item without a next action is treated as an exception.",
+      "## Analysis and reporting",
+      "If offboarding completeness hands work to another team, keep it open until that team acknowledges receipt and the surviving record is confirmed. If the team cannot reproduce the result from the record, the control is not finished. A short written rule is easier to test than an unwritten habit. Use the same definition across the queue and the review so the counts agree. Reopen the case when the destination value is disputed. The offboarding completeness reviewer records confirmation, the owner, and the next action in one place. A short written rule is easier to test than an unwritten habit. The next reviewer should not have to ask which document is authoritative. Test one closed case by rebuilding it from the evidence map. The offboarding completeness close note cites the placement record, the approver, and the time of the final check.",
+      "## Limitations",
+      "A useful offboarding completeness review ends with one testable change, one owner, and a date to measure whether the change moved the result. Keep the original request so a later correction does not erase the reason for the work. Do not let a deadline expand a role beyond its written limit. Name the owner for every open item, including items waiting on someone else. Set the next review date before the action begins. Every offboarding completeness handoff names the placement lead and the field in the placement record that will confirm the change. Keep the prior procedure available for comparison. Report age and dependency, not only the total count. Record the sample frame, the reviewer, and the criteria. A sample offboarding completeness review checks offboarding request, access removal, and the surviving value in the placement record.",
+      "## Review and next action",
+      "Keep the offboarding completeness record short enough to read during the day and specific enough to survive a later audit. Use the approved repository for sensitive content. Archive the extract with the study so it can be repeated. Use the same definition across the queue and the review so the counts agree. Label the version of every file that can change. For offboarding completeness, compare offboarding request with the destination value rather than relying on a status label. If the team cannot reproduce the result from the record, the control is not finished. A clean-looking status is not evidence that the underlying work is correct. Name the owner and the date beside each decision. In this offboarding completeness case, the record points to the placement record and names the placement lead as the decision owner."
+    ],
+    "published": "2026-11-04",
+    "updated": "2026-11-04",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "NIST Cybersecurity Framework",
+    "sources": [
+      {
+        "label": "NIST Cybersecurity Framework",
+        "url": "https://www.nist.gov/cyberframework"
+      }
+    ],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-04/client-offboarding-completeness.png"
+  },
+  {
+    "slug": "skill-assessment-retake-accuracy",
+    "title": "Skill assessment retake accuracy",
+    "excerpt": "A bounded record review for retake accuracy in outsourced assistant placements.",
+    "body": [
+      "## Question and decision scope",
+      "For retake accuracy, the first step is to write the open decision, the requesting role, and the queue owner before anyone touches the placement record. Say which system of record governs if two sources disagree. Keep the original request so a later correction does not erase the reason for the work. Write the decision in one sentence so the reviewer knows what would count as an answer. State explicitly what is in scope and what is out of scope for the case. For retake accuracy, compare assessment record with the destination value rather than relying on a status label. Note the observation window; a case without a period cannot be compared later. A case that moves between owners should keep both owner periods visible. Distinguish a new request from a correction to an earlier one. In this retake accuracy case, the record points to the placement record and names the placement lead as the decision owner.",
+      "## Population and unit",
+      "Attach assessment record and retake request to the case, label their versions, and record the time each was observed. Use the same definition across the queue and the review so the counts agree. Keep the original request so a later correction does not erase the reason for the work. Preserve a conflicting value instead of overwriting the first one. Do not treat a screenshot as a substitute for the system record. The retake accuracy record should let a second reviewer rebuild the decision from retake request and reviewer note. Keep a version label on every file that can change. Name the owner for every open item, including items waiting on someone else. Keep the original request so a later correction does not erase the reason for the work. For retake accuracy, the working file keeps assessment record and retake request beside the decision note.",
+      "## Definitions and measures",
+      "When retake accuracy changes a record in the placement record, the the placement lead approves and the preparer records the action; the two roles stay separate. A delegation needs a scope, a limit, an end date, and a named backup. A complete packet is not an approval; the decision needs a person and a timestamp. Do not let a deadline expand a role beyond its written limit. A short written rule is easier to test than an unwritten habit. A retake accuracy exception keeps decision attached and routes the question to the placement lead. A short written rule is easier to test than an unwritten habit. Keep emergency authority narrow and followed by a review note. If two roles share a queue, mark which one decides each item. The retake accuracy case note should show what the placement record held at the time and who reviewed it.",
+      "## Evidence dictionary",
+      "End the retake accuracy shift with an owner, a next action, and a due time on every open case. A case with no next action is an exception even if it says in progress. Keep the original request so a later correction does not erase the reason for the work. A clean-looking status is not evidence that the underlying work is correct. Name the owner for every open item, including items waiting on someone else. In the retake accuracy queue, an item without a next action is treated as an exception. A case with no next action is an exception even if it says in progress. Keep the original request so a later correction does not erase the reason for the work. If the team cannot reproduce the result from the record, the control is not finished. Apply the same retake accuracy test to reviewer note and to the value that survives in the placement record.",
+      "## Sampling and collection",
+      "When the record does not match the surviving value, preserve both versions, record the observation times, and route one answerable question to the the placement lead. A clean-looking status is not evidence that the underlying work is correct. If the team cannot reproduce the result from the record, the control is not finished. If the exception repeats, give it a reason code. Check whether the exception came from a form, a rule, or a permission. The retake accuracy close note cites the placement record, the approver, and the time of the final check. Preserve both values and the time each was observed. An escalation that ends in silence remains open. The record should show the source, the decision, and the surviving value in one place. The retake accuracy reviewer records decision, the owner, and the next action in one place.",
+      "## Analysis and reporting",
+      "The final retake accuracy check compares decision with the surviving value in the placement record; a status label alone is not a close. The next reviewer should not have to ask which document is authoritative. A clean-looking status is not evidence that the underlying work is correct. Test one closed case by rebuilding it from the evidence map. Keep the prior value so the change can be explained. A sample retake accuracy review checks assessment record, retake request, and the surviving value in the placement record. Tie the close note to the original request and the final evidence. A closed status is not proof that the destination changed. Keep the prior value so the change can be explained. Every retake accuracy handoff names the placement lead and the field in the placement record that will confirm the change.",
+      "## Limitations",
+      "Report retake accuracy open cases by age and dependency, not only the total, because a stable total can hide an aging tail. The record should show the source, the decision, and the surviving value in one place. Report a null result as clearly as a positive one. Set the next review date before the action begins. Name the owner for every open item, including items waiting on someone else. In this retake accuracy case, the record points to the placement record and names the placement lead as the decision owner. Keep the original request so a later correction does not erase the reason for the work. A short written rule is easier to test than an unwritten habit. A clean-looking status is not evidence that the underlying work is correct. For retake accuracy, compare assessment record with the destination value rather than relying on a status label.",
+      "## Review and next action",
+      "Store sensitive retake accuracy evidence in the approved repository and keep only the reference and access path in the analysis note. Keep the original request so a later correction does not erase the reason for the work. Use the approved repository for sensitive content. A short written rule is easier to test than an unwritten habit. Use the same definition across the queue and the review so the counts agree. For retake accuracy, the working file keeps assessment record and retake request beside the decision note. The record should show the source, the decision, and the surviving value in one place. Use the approved repository for sensitive content. The next reviewer should not have to ask which document is authoritative. The retake accuracy record should let a second reviewer rebuild the decision from retake request and reviewer note."
+    ],
+    "published": "2026-11-04",
+    "updated": "2026-11-04",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "GAO — internal control standards",
+    "sources": [
+      {
+        "label": "GAO — internal control standards",
+        "url": "https://www.gao.gov/greenbook"
+      }
+    ],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-04/skill-assessment-retake-accuracy.png"
+  },
+  {
+    "slug": "placement-fee-credit-evidence",
+    "title": "Placement fee credit evidence",
+    "excerpt": "A bounded record review for fee credit evidence in outsourced assistant placements.",
+    "body": [
+      "## Question and decision scope",
+      "Before work begins on fee credit evidence, confirm which entity, period, and queue the case belongs to and who accepts the outcome. Separate the request from the decision, because a complete request is not an approval. If the team cannot reproduce the result from the record, the control is not finished. Name the owner for every open item, including items waiting on someone else. A case that moves between owners should keep both owner periods visible. For fee credit evidence, the working file keeps placement agreement and credit note beside the decision note. A clean-looking status is not evidence that the underlying work is correct. Name the trigger that brought the case into the queue. The record should show the source, the decision, and the surviving value in one place. The fee credit evidence record should let a second reviewer rebuild the decision from credit note and invoice.",
+      "## Population and unit",
+      "The evidence set for fee credit evidence should join placement agreement, credit note, invoice, and approval on one stable case reference. Preserve a conflicting value instead of overwriting the first one. State whether the evidence is confirmed, inferred, or unavailable. A clean-looking status is not evidence that the underlying work is correct. Record the export time beside any value taken from a system. The fee credit evidence case note should show what the placement record held at the time and who reviewed it. Record who supplied each document and when it arrived. A case that moves between owners should keep both owner periods visible. Mark missing evidence as missing, with a reason, rather than leaving a blank. A fee credit evidence exception keeps approval attached and routes the question to the placement lead.",
+      "## Definitions and measures",
+      "Write the fee credit evidence authority limit into the case template, including the amount, scope, and end date of any delegation. Write the authority limit into the case template. A delegation needs a scope, a limit, an end date, and a named backup. Use the same definition across the queue and the review so the counts agree. A role change should trigger a review of queue access. Apply the same fee credit evidence test to invoice and to the value that survives in the placement record. A delegation needs a scope, a limit, an end date, and a named backup. The next reviewer should not have to ask which document is authoritative. A clean-looking status is not evidence that the underlying work is correct. In the fee credit evidence queue, an item without a next action is treated as an exception.",
+      "## Evidence dictionary",
+      "A fee credit evidence status update should point to a verifiable event in the placement record, not to a feeling about progress. If the team cannot reproduce the result from the record, the control is not finished. Assign every unowned case before new work begins. Log the handoff time when a case crosses a shift. The record should show the source, the decision, and the surviving value in one place. The fee credit evidence reviewer records approval, the owner, and the next action in one place. Open the day with a queue pass by age, owner, and missing evidence. Name the owner for every open item, including items waiting on someone else. Keep the original request so a later correction does not erase the reason for the work. The fee credit evidence close note cites the placement record, the approver, and the time of the final check.",
+      "## Sampling and collection",
+      "A repeated fee credit evidence exception becomes a reason code in the queue, not a story retold in each thread. Keep the failed attempt and the correction in the same history. Do not rewrite the earlier record to match the later answer. Preserve both values and the time each was observed. Do not let a deadline expand a role beyond its written limit. Every fee credit evidence handoff names the placement lead and the field in the placement record that will confirm the change. An escalation that ends in silence remains open. A clean-looking status is not evidence that the underlying work is correct. When access blocks the work, name the system, role, and approver. A sample fee credit evidence review checks placement agreement, credit note, and the surviving value in the placement record.",
+      "## Analysis and reporting",
+      "Close fee credit evidence only when the destination value in the placement record, the approver, and the time of the final check are all visible. Keep the prior value so the change can be explained. Record the close reason with the same codes used in the exception queue. Record the approximate value, the approver, and the final check time. Reopen the case when the destination value is disputed. For fee credit evidence, compare placement agreement with the destination value rather than relying on a status label. The next reviewer should not have to ask which document is authoritative. Record the close reason with the same codes used in the exception queue. Keep the prior value so the change can be explained. In this fee credit evidence case, the record points to the placement record and names the placement lead as the decision owner.",
+      "## Limitations",
+      "The fee credit evidence review should separate the ordinary case, the reopened case, the missing-evidence case, and the cross-owner handoff. Use the same definition across the queue and the review so the counts agree. Keep the prior procedure available for comparison. Choose the sample from the export before the meeting. The next reviewer should not have to ask which document is authoritative. The fee credit evidence record should let a second reviewer rebuild the decision from credit note and invoice. Report age and dependency, not only the total count. End the review with one change and one measure. A case that moves between owners should keep both owner periods visible. For fee credit evidence, the working file keeps placement agreement and credit note beside the decision note.",
+      "## Review and next action",
+      "Label placement agreement and credit note with their versions so a later reviewer can tell a stale extract from a current one. A clean-looking status is not evidence that the underlying work is correct. Keep the source reference and the coded value in the same row. Do not let a deadline expand a role beyond its written limit. Link the evidence to the exact field it supports. A fee credit evidence exception keeps approval attached and routes the question to the placement lead. Do not let a deadline expand a role beyond its written limit. Do not store credentials or unnecessary personal data in the case. Avoid a private second version in a personal document. The fee credit evidence case note should show what the placement record held at the time and who reviewed it."
+    ],
+    "published": "2026-11-04",
+    "updated": "2026-11-04",
+    "statistic": "A bounded record review, not an industry rate.",
+    "statisticSource": "U.S. Small Business Administration",
+    "sources": [
+      {
+        "label": "U.S. Small Business Administration",
+        "url": "https://www.sba.gov/business-guide/manage-your-business"
+      }
+    ],
+    "related": [],
+    "faqs": [],
+    "image": "/images/november-04/placement-fee-credit-evidence.png"
+  }
+];
