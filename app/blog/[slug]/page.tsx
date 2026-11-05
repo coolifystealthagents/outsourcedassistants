@@ -31,7 +31,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const post = blogPosts.find((item) => item.slug === slug);
   if (!post) return { title: 'Guide not found' };
   const fallback = blogFallbacks[slug as FallbackSlug];
-  const modified = fallback && 'updated' in fallback ? fallback.updated : undefined;
+  const postUpdated = 'updated' in post ? post.updated : undefined;
+  const modified = postUpdated ?? (fallback && 'updated' in fallback ? fallback.updated : undefined);
   return {
     title: { absolute: post.title },
     description: post.excerpt,
@@ -59,8 +60,9 @@ function October27Article({post}:{post:any}){
     }
   }
   const published=new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(`${post.published}T00:00:00Z`));
+  const updated='updated' in post?new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(`${post.updated}T00:00:00Z`)):null;
   const sources:any[]=Array.isArray(post.sources)?post.sources:[];
-  return <><Header/><main className="section"><article className="container guide-article"><p className="eyebrow">Philippines staffing guide</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p><p className="article-date">Published <time dateTime={post.published}>{published}</time> · {post.minutes} minute read</p><img className="editorial-hero-image" src={post.image} alt={post.title}/>
+  return <><Header/><main className="section"><article className="container guide-article"><p className="eyebrow">Philippines staffing guide</p><h1>{post.title}</h1><p className="lead">{post.excerpt}</p><p className="article-date">Published <time dateTime={post.published}>{published}</time>{updated?<> · Updated <time dateTime={post.updated}>{updated}</time></>:null} · {post.minutes} minute read</p><img className="editorial-hero-image" src={post.image} alt={post.title}/>
   <details className="oct22-mobile-toc"><summary>On this page</summary><nav>{sections.map(section=><a key={section.id} href={`#${section.id}`}>{section.heading}</a>)}<a href="#sources">Sources</a></nav></details>
   <div className="oct22-layout"><div>{intro.map((paragraph,index)=><p key={`intro-${index}`}>{paragraph}</p>)}{sections.map(section=><section key={section.id}><h2 id={section.id}>{section.heading}</h2>{section.paragraphs.map((paragraph,index)=><p key={index}>{paragraph}</p>)}</section>)}<section><h2 id="sources">Sources</h2>{sources.length?<ol>{sources.map((source:any)=><li key={source.url}><a href={source.url} rel="noreferrer">{source.name}</a></li>)}</ol>:null}</section></div>
   <aside className="oct22-side" aria-label="Article sidebar"><nav aria-label="Table of contents"><p className="eyebrow">On this page</p>{sections.map(section=><a key={section.id} href={`#${section.id}`}>{section.heading}</a>)}<a href="#sources">Sources</a></nav></aside></div></article></main><Footer/></>;
@@ -85,7 +87,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
   const fallback = blogFallbacks[post.slug as FallbackSlug];
   if ((post as any).published >= '2026-10-27' && Array.isArray((post as any).body)) return <October27Article post={post} />;
   if (['2026-10-22','2026-10-26'].includes((post as any).published) && Array.isArray((post as any).body)) return <October22Article post={post} />;
-  const fallbackUpdated = fallback && 'updated' in fallback ? fallback.updated : undefined;
+  const fallbackUpdated = ('updated' in post ? post.updated : undefined) ?? (fallback && 'updated' in fallback ? fallback.updated : undefined);
   const relatedService = fallback && 'relatedService' in fallback ? fallback.relatedService : undefined;
   const august12Guide = august12BlogDetails[post.slug];
   const aug13Guide = aug13BlogDetails[post.slug];

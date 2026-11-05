@@ -1,30 +1,38 @@
 export const november03BlogPosts = [
   {
     "slug": "oa03-tool-evidence-screening",
-    "title": "Screen a candidate's tool evidence before the first client day",
-    "excerpt": "A written control for candidate tool evidence in outsourced assistant teams, with evidence, ownership, and a reviewable close.",
+    "title": "Check candidate tool evidence before a placement starts",
+    "excerpt": "A tool list is not proof that a candidate can use the tool for your work. Ask for one role-relevant sample, record what was checked, and keep the hiring decision with the placement lead.",
     "service": "assistant-operations",
-    "minutes": 8,
+    "minutes": 5,
     "published": "2026-11-03",
+    "updated": "2026-11-05",
     "image": "/images/november-03/oa03-tool-evidence-screening.svg",
-    "sources": [],
+    "sources": [
+      {
+        "name": "NIST SP 800-122: Guide to Protecting the Confidentiality of Personally Identifiable Information",
+        "url": "https://csrc.nist.gov/pubs/sp/800/122/final"
+      },
+      {
+        "name": "Philippines National Privacy Commission: Data Privacy Act of 2012",
+        "url": "https://privacy.gov.ph/data-privacy-act/"
+      }
+    ],
     "body": [
-      "## Name the decision and the queue owner",
-      "The candidate tool evidence note should separate the request, the decision that is still open, and the person who can close it. Name the person who can close the question and the date by which the answer is needed. Use the same definition across the queue and the review so the counts agree. A clean-looking status is not evidence that the underlying work is correct. Say which system of record governs if two sources disagree. A sample candidate tool evidence review checks candidate profile, tool test result, and the surviving value in the candidate record.",
-      "## Map the source and the evidence trail",
-      "Attach candidate profile and tool test result to the case, label their versions, and record the time each was observed. Keep the original request so a later correction does not erase the reason for the work. Mark missing evidence as missing, with a reason, rather than leaving a blank. Link each value to the field or page that supports it. A clean-looking status is not evidence that the underlying work is correct. For candidate tool evidence, compare candidate profile with the destination value rather than relying on a status label.",
-      "## Set the authority boundary",
-      "The the placement lead owns the decision in candidate tool evidence; the preparer may compare, label, and route but may not approve the outcome. The next reviewer should not have to ask which document is authoritative. A short written rule is easier to test than an unwritten habit. Keep emergency authority narrow and followed by a review note. Name the backup owner and the coverage window in advance. For candidate tool evidence, the working file keeps candidate profile and tool test result beside the decision note.",
-      "## Run the daily handoff",
-      "End the candidate tool evidence shift with an owner, a next action, and a due time on every open case. Assign every unowned case before new work begins. Keep the original request so a later correction does not erase the reason for the work. The record should show the source, the decision, and the surviving value in one place. Keep the queue view readable on one screen. A candidate tool evidence exception keeps review note attached and routes the question to the placement lead.",
-      "## Handle exceptions without rewriting history",
-      "If the candidate lists a tool on the profile but the test result is for a different version, stop the dependent action and log the conflict in the candidate record rather than choosing the more convenient value. Check whether the exception came from a form, a rule, or a permission. Keep the original request so a later correction does not erase the reason for the work. Preserve both values and the time each was observed. Do not close a case just because the requester stopped asking. Apply the same candidate tool evidence test to client requirement and to the value that survives in the candidate record.",
-      "## Close with a verified destination value",
-      "The final candidate tool evidence check compares review note with the surviving value in the candidate record; a status label alone is not a close. Use the same definition across the queue and the review so the counts agree. Do not mark complete until the check is repeatable by another reviewer. A case that moves between owners should keep both owner periods visible. The next reviewer should not have to ask which document is authoritative. The candidate tool evidence close note cites the candidate record, the approver, and the time of the final check.",
-      "## Review the pattern, not only the case",
-      "Review candidate tool evidence with a sample drawn from the queue export before the meeting, so the discussion cannot drift to memorable cases. Do not let a deadline expand a role beyond its written limit. Keep the original request so a later correction does not erase the reason for the work. Record the sample frame, the reviewer, and the criteria. Keep the prior procedure available for comparison. Every candidate tool evidence handoff names the placement lead and the field in the candidate record that will confirm the change.",
-      "## Keep the record ready for the next reviewer",
-      "Store sensitive candidate tool evidence evidence in the approved repository and keep only the reference and access path in the analysis note. Name the owner for every open item, including items waiting on someone else. Write the note so a reviewer can reconstruct the decision without a meeting. Use the same definition across the queue and the review so the counts agree. Make the handoff readable by the next shift and the next auditor. In this candidate tool evidence case, the record points to the candidate record and names the placement lead as the decision owner."
+      "## Start with the job, not the software list",
+      "Ask what the assistant must do in the role before you ask about tools. A candidate may know a platform well but still need a different workflow, permission level, or writing standard for your team.",
+      "## Ask for one safe work sample",
+      "Give the candidate a short example that resembles the real queue without using customer data or live access. Check the finished sample against a written brief, then save the reviewer’s notes with the hiring record.",
+      "## Keep the evidence small and private",
+      "Collect only the evidence needed for the role, keep it in the approved hiring record, and limit access to people who need it. NIST’s PII guidance and the Philippines Data Privacy Act support that privacy boundary; they do not prescribe this hiring workflow.",
+      "## Record what was checked",
+      "Write down the tool, the task, the date, and the reviewer’s observation. If the sample does not answer the role question, mark the gap and ask for a new sample instead of turning a guess into a pass.",
+      "## Separate preparation from the hiring decision",
+      "An assistant or coordinator can collect the sample, compare it with the brief, and flag missing evidence. The placement lead decides whether the evidence is enough to move forward, request another check, or stop the process.",
+      "## Close the check in one place",
+      "Keep the source, review note, and decision in the same approved record so another reviewer can follow the result. Do not keep credentials, copied personal data, or a second private version of the evidence.",
+      "## Review the process when the role changes",
+      "Revisit the work sample when the tool, task, data, or review rule changes. That keeps the check tied to the current placement instead of treating an old result as permanent proof."
     ]
   },
   {
