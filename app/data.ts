@@ -384,10 +384,12 @@ import {october27ResearchPosts} from './oct27-research';
 import {october28BlogPosts, october28ResearchPosts} from './oct28-batch';
 import {november03BlogPosts, november03ResearchPosts} from './nov03-batch';
 import {november04BlogPosts, november04ResearchPosts} from './nov04-batch';
+import {november05BlogPosts, november05ResearchPosts} from './nov05-batch';
 import {november02BlogPosts, november02ResearchPosts} from './nov02-batch';
 import {october22BlogPosts, october22ResearchPosts} from './oct22-batch';
 
 export const blogPosts = [
+  ...november05BlogPosts,
   ...november03BlogPosts,
   ...november02BlogPosts,
   ...october28BlogPosts,
@@ -1159,6 +1161,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...(november05ResearchPosts as unknown as ResearchPost[]),
   ...(november03ResearchPosts as unknown as ResearchPost[]),
   ...(november02ResearchPosts as unknown as ResearchPost[]),
   ...(october28ResearchPosts as unknown as ResearchPost[]),
