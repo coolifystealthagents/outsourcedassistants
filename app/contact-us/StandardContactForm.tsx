@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 
+import {submitAcrLead} from '../acr-submit';
 type Props = { endpoint?: string; encoding?: "json" | "form"; heading?: string };
 type TrackerWindow = Window & { acrTracker?: { trackLead?: (payload: Record<string, unknown>) => void } };
 
@@ -15,6 +16,7 @@ const countryCodes = [
 ];
 
 export default function StandardContactForm({ endpoint = "/api/submit-lead", encoding = "json", heading = "Tell Us About the Support You Need" }: Props) {
+  const submissionLock=useRef(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [countryCode, setCountryCode] = useState("+1");
@@ -50,6 +52,7 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
       preferredContact: String(data.get("preferredContact") || ""), preferredTime: String(data.get("preferredTime") || ""),
       source: "contact-form", formId: "contactPageForm",
     };
+    if(submissionLock.current)return;submissionLock.current=true;
     setSubmitting(true);
     setError("");
     try {
@@ -58,25 +61,25 @@ export default function StandardContactForm({ endpoint = "/api/submit-lead", enc
         : { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) };
       const response = await fetch(endpoint, request);
       if (!response.ok) throw new Error("Lead endpoint rejected the request");
-      try { /* ACR captures the native submit event once. */ } catch {}
+      submitAcrLead(payload, "contact-form");
       window.location.assign("/thank-you");
     } catch {
       setError("We could not submit your request. Please try again or email hello@outsourcedassistants.com.");
-      setSubmitting(false);
+      submissionLock.current=false;setSubmitting(false);
     }
   }
 
   return (
     <div className="sa-form-card">
       <h2>{heading}</h2>
-      <form data-acr-managed="react" action={endpoint} method="post" onSubmit={submit} id="contactPageForm">
+      <form data-acr-lead-mode="manual" data-acr-managed="react" action={endpoint} method="post" onSubmit={submit} id="contactPageForm">
         <input className="sa-hp" name="website_url" type="hidden" tabIndex={-1} autoComplete="off" aria-label="Leave this field empty" />
         <div className="sa-grid">
           <label>First Name *<input name="firstName" required autoComplete="given-name" /></label>
           <label>Last Name *<input name="lastName" required autoComplete="family-name" /></label>
         </div>
         <label>Business Email *<input name="email" type="email" required autoComplete="email" /><small>Not Accepting Personal Email</small></label>
-        <label>Phone Number *<span className="sa-phone"><select aria-label="Country code" value={countryCode} onChange={(e) => setCountryCode(e.target.value)}>{countryCodes.map(([flag, code], i) => <option value={code} key={`${code}-${i}`}>{flag} {code}</option>)}</select><input name="phoneLocal" type="tel" required autoComplete="tel-national" placeholder="Phone number" /></span></label>
+        <label>Phone Number *<span className="sa-phone"><select aria-label="Country code" name="countryCode" value={countryCode} onChange={(e) => setCountryCode(e.target.value)}>{countryCodes.map(([flag, code], i) => <option value={code} key={`${code}-${i}`}>{flag} {code}</option>)}</select><input name="phoneLocal" type="tel" required autoComplete="tel-national" placeholder="Phone number" /></span></label>
         <div className="sa-grid">
           <label>Company Name *<input name="companyName" required autoComplete="organization" /></label>
           <label>Website / URL<input name="website" placeholder="example.com" autoComplete="url" /></label>

@@ -1,4 +1,6 @@
-import {Header,Footer} from '../components';import {blogPostsNewestFirst,site} from '../data';
-export const metadata={title:`Blog | ${site.brand}`,description:'Practical Philippines staffing guides.'};
-const fmt=(d?:string)=>d?new Intl.DateTimeFormat('en-US',{month:'long',day:'numeric',year:'numeric',timeZone:'UTC'}).format(new Date(`${d}T00:00:00Z`)):'';
-export default function Blog(){const posts=blogPostsNewestFirst.slice(0,20);const pages=Math.max(1,Math.ceil(blogPostsNewestFirst.length/20));return <><Header/><main className="section"><div className="container"><p className="eyebrow">Philippines staffing blog</p><h1>Practical role and handoff guides.</h1><p className="lead">Read concise guidance for scoping and managing Filipino support roles. Existing article addresses remain available.</p><div className="cards">{posts.map(p=><a className="card" href={`/blog/${p.slug}`} key={p.slug}>{'image' in p&&p.image?<img src={p.image} alt="" width={1200} height={630}/>:null}<h2>{p.title}</h2><p>{p.excerpt}</p><span>{'published' in p&&p.published?<><time dateTime={p.published}>Published: {fmt(p.published)}</time> · </>:null}{p.minutes} min read</span></a>)}</div><nav className="pagination" aria-label="Blog pages">{Array.from({length:pages},(_,i)=><a aria-current={i===0?'page':undefined} href={i===0?'/blog':`/blog/page/${i+1}`} key={i}>{i+1}</a>)}</nav></div></main><Footer/></>}
+import {Library} from '../library';
+import {normalizePosts} from '../library-normalize';
+import {blogPostsNewestFirst} from '../data';
+import {Header,Footer} from '../components';
+export const metadata={title:'Blog',alternates:{canonical:'/blog'}};
+export default function Page(){return <><Header/><main id="main-content"><Library kind="blog" posts={normalizePosts(blogPostsNewestFirst,"blog")} pageSize={20} archive/></main><Footer/></>}

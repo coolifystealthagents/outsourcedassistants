@@ -1,0 +1,55 @@
+{
+  "theme": "assistants",
+  "shortBrand": "Outsourced Assistants",
+  "ctaText": "Thoughtful remote assistance for the calendar, inbox, projects, and details that compete for your attention. Build a working relationship around your priorities, your tools, and your way of doing business.",
+  "blog": {
+    "title": "A better way to get through the day.",
+    "intro": "Practical guides for leaders building thoughtful assistant roles and productive working relationships.",
+    "image": "/refresh-20261113/blog.webp",
+    "alt": "Professional wearing headphones and writing notes at a desk with a city view.",
+    "caption": "Your attention, well spent.",
+    "ribbon": "Support that understands your day",
+    "search": "Search by topic or workflow",
+    "guideTitle": "Take the idea into your own operation.",
+    "guides": [
+      {
+        "title": "Start with your context",
+        "text": "Compare the workflow with your team\u2019s actual systems, responsibilities, and source records."
+      },
+      {
+        "title": "Keep the evidence close",
+        "text": "Follow the source links and check the scope and date before using a conclusion."
+      },
+      {
+        "title": "Define a useful next step",
+        "text": "Turn the idea into a clear input, an expected output, and a named reviewer."
+      }
+    ],
+    "cta": "Tell us what would make your day easier."
+  },
+  "research": {
+    "title": "Good support starts with good questions.",
+    "intro": "Source-led research with clear questions, visible evidence, and practical context for your next staffing conversation.",
+    "image": "/refresh-20261113/research.webp",
+    "alt": "Laptop and printed reports arranged on a work desk.",
+    "caption": "Your attention, well spent.",
+    "ribbon": "Support that understands your day",
+    "search": "Search by topic or workflow",
+    "guideTitle": "Take the idea into your own operation.",
+    "guides": [
+      {
+        "title": "Start with your context",
+        "text": "Compare the workflow with your team\u2019s actual systems, responsibilities, and source records."
+      },
+      {
+        "title": "Keep the evidence close",
+        "text": "Follow the source links and check the scope and date before using a conclusion."
+      },
+      {
+        "title": "Define a useful next step",
+        "text": "Turn the idea into a clear input, an expected output, and a named reviewer."
+      }
+    ],
+    "cta": "Tell us what would make your day easier."
+  }
+}

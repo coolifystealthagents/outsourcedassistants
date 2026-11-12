@@ -1,21 +1,5 @@
-import type { Metadata } from 'next';
-import { Footer, Header, JsonLd, ReviewsMarquee } from '../components';
+import {ContactExperience} from '../inner-pages';
+import {Header,Footer} from '../components';
 import StandardContactForm from './StandardContactForm';
-import './contact-v3.css';
-
-const pageUrl = "https://outsourcedassistants.com/contact-us";
-const description = 'Plan an outsourced assistant role around clear work, safe access, accountable handoffs, and owner review.';
-export const metadata: Metadata = {
-  title: 'Contact Us', description, alternates: { canonical: pageUrl },
-  openGraph: { title: 'Plan Your Outsourced Assistant Role', description, url: pageUrl, type: 'website', images: [{ url: '/brand/stealth-agents-team-bacolod.jpg', width: 1906, height: 1080, alt: 'Official Stealth Agents team in Bacolod' }] },
-  twitter: { card: 'summary_large_image', title: 'Plan Your Outsourced Assistant Role', description, images: ['/brand/stealth-agents-team-bacolod.jpg'] },
-};
-export default function ContactUsPage() {
-  const schema = { "@context": "https://schema.org", "@type": "ContactPage", name: 'Contact Outsourced Assistants', description, url: pageUrl };
-  return <><Header /><main className="contact-v3"><JsonLd data={schema} />
-    <section className="contact-opening"><div className="contact-shell contact-opening-grid"><div className="contact-copy"><p className="contact-kicker">Assistant role intake</p><h1 id="contact-title">A capable outsourced assistant starts with a clear role.</h1><p className="contact-lead">Tell us which tasks keep returning, where handoffs break, and what your team must approve. We will prepare a focused staffing conversation around the real workflow.</p><div className="contact-labels"><span>Role scope</span><span>Safe access</span><span>Owner review</span><span>Philippines-based talent</span></div><ReviewsMarquee /></div><div className="contact-form" id="consultation-form"><StandardContactForm endpoint="/api/contact" encoding="form" heading="Plan your assistant role" /></div></div></section>
-    <section className="contact-team"><div className="contact-shell contact-team-grid"><figure><img src="/brand/stealth-agents-team-bacolod.jpg" width="1906" height="1080" alt="Official Stealth Agents team together in Bacolod, Philippines" /><figcaption><img src="/brand/stealth-agents-logo.png" width="149" height="50" alt="Stealth Agents" /><strong>Official team, Bacolod</strong></figcaption></figure><div><p className="contact-kicker">The staffing partner</p><h2>Real people behind the handoff.</h2><p>Outsourced Assistants helps buyers define the workload, systems, outputs, and decisions that remain internal. Staffing requests may be routed to StealthAgents, which recruits and hires talent in the Philippines and supports the managed service.</p><p>Your team remains responsible for priorities, permissions, review standards, and consequential decisions. The staffing conversation starts with those controls, not a generic job title.</p><a className="contact-partner" href="https://stealthagents.com/" target="_blank" rel="noopener noreferrer"><img src="/brand/stealth-agents-logo.png" width="149" height="50" alt="Stealth Agents" /><span>Visit Stealth Agents</span></a></div></div></section>
-    <section className="contact-prepare"><div className="contact-shell"><p className="contact-kicker">Prepare the brief</p><h2>Bring enough context to test the role.</h2><div className="contact-prep-grid"><article><h3>The work</h3><p>List recurring tasks, current owners, backlogs, and one useful completed example.</p></article><article><h3>The systems</h3><p>Name the inboxes, calendars, trackers, documents, or records the assistant would use.</p></article><article><h3>The boundaries</h3><p>Identify approvals, sensitive actions, and unusual requests that need an internal owner.</p></article><article><h3>The review</h3><p>Choose who checks early work, answers exceptions, and decides when scope can expand.</p></article></div></div></section>
-    <section className="contact-next"><div className="contact-shell"><div><p className="contact-kicker">What happens next</p><h2>A clear sequence from intake to booking.</h2></div><div><p>After the form is accepted, you will continue to the booking page and choose a time with the Stealth Agents team. The scheduler is intentionally kept off this page so the role brief remains the first step.</p><a href="#consultation-form">Return to the form</a></div></div></section>
-  </main><Footer /></>;
-}
+export const metadata={title:'Contact Us',description:"Tell us what would make your day easier.",alternates:{canonical:'/contact-us'}};
+export default function Contact(){return <><Header/><main id="main-content"><ContactExperience><StandardContactForm endpoint="/api/contact" encoding="form"/></ContactExperience></main><Footer/></>}

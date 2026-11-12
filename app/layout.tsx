@@ -1,9 +1,8 @@
 import './globals.css';
+import './refresh.css';
 import type { Metadata } from 'next';
-import { Inter, Fraunces } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' });
-const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces', display: 'swap' });
+
 const siteUrl = 'https://outsourcedassistants.com';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -17,5 +16,5 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', title: 'Outsourced Assistants for Accountable Operations', description: 'Plan outsourced assistant roles around clear scope, controlled access, documented handoffs, and measurable review.', images: ['/brand/stealth-agents-team-bacolod.jpg'] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 } },
 };
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" className={`${inter.variable} ${fraunces.variable}`}><body>{children}        <script defer data-website-id="dc_lomhbdtxw9hnfj" data-domain="outsourcedassistants.com" src="https://databull.stealthagents.us/js/script.js"></script>
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) { return <html lang="en" ><body>{children}        <script defer data-website-id="dc_lomhbdtxw9hnfj" data-domain="outsourcedassistants.com" src="https://databull.stealthagents.us/js/script.js"></script>
 </body></html>; }
