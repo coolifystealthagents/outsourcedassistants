@@ -2,7 +2,7 @@ export const november23ResearchPosts = [
  {
   "slug": "task-handback-coverage",
   "title": "Task handback coverage",
-  "excerpt": "A measurement protocol for task handback coverage, with a frozen population, an evidence sample, and a dated review.",
+  "excerpt": "An outsourced-assistant review of task handback coverage, with a defined sample, named evidence, and a dated review.",
   "body": [
    "For task handback coverage, the first step is to write the open decision, the requesting role, and the queue owner before anyone touches the assistant workforce record. The record should show the source, the decision, and the surviving value in one place. Record the requester and the promised response time. Name the trigger that brought the case into the queue. The task handback coverage close note cites the assistant workforce record, the approver, and the time of the final check. For this assistant placement review, the desk keeps the request with the named client queue, the approving manager, the tool access record, and the dated handoff.",
    "In this review, the decision scope is logged on the assistant placement so the client operations manager can rebuild the measured rate from the assignment and workforce record.",
@@ -73,7 +73,7 @@ export const november23ResearchPosts = [
  {
   "slug": "approval-queue-aging-coverage",
   "title": "Approval queue aging coverage",
-  "excerpt": "A measurement protocol for approval queue aging coverage, with a frozen population, an evidence sample, and a dated review.",
+  "excerpt": "An outsourced-assistant review of approval queue aging coverage, with a defined sample, named evidence, and a dated review.",
   "body": [
    "Start approval queue aging coverage with one bounded case, a named owner, and a written statement of what the reviewer is being asked to decide. Write the decision in one sentence so the reviewer knows what would count as an answer. Use the same definition across the queue and the review so the counts agree. If the team cannot reproduce the result from the record, the control is not finished. A sample approval queue aging coverage review checks the approval queue, the request list, and the surviving value in the assistant workforce record. For this assistant placement review, the desk keeps the request with the named client queue, the approving manager, the tool access record, and the dated handoff.",
    "In this review, the decision scope is logged on the assistant placement so the client operations manager can rebuild the measured rate from the assignment and workforce record.",
@@ -145,7 +145,7 @@ export const november23ResearchPosts = [
  {
   "slug": "calendar-conflict-coverage",
   "title": "Calendar conflict coverage",
-  "excerpt": "A measurement protocol for calendar conflict coverage, with a frozen population, an evidence sample, and a dated review.",
+  "excerpt": "An outsourced-assistant review of calendar conflict coverage, with a defined sample, named evidence, and a dated review.",
   "body": [
    "The calendar conflict coverage note should separate the request, the decision that is still open, and the person who can close it. A clean-looking status is not evidence that the underlying work is correct. Note the observation window; a case without a period cannot be compared later. Keep the original request so a later correction does not erase the reason for the work. In this calendar conflict coverage case, the record points to the assistant workforce record and names the operations lead as the decision owner. For this assistant placement review, the desk keeps the request with the named client queue, the approving manager, the tool access record, and the dated handoff.",
    "In this review, the decision scope is logged on the assistant placement so the client operations manager can rebuild the measured rate from the assignment and workforce record.",
@@ -216,7 +216,7 @@ export const november23ResearchPosts = [
  {
   "slug": "meeting-attendance-coverage",
   "title": "Meeting attendance coverage",
-  "excerpt": "A measurement protocol for meeting attendance coverage, with a frozen population, an evidence sample, and a dated review.",
+  "excerpt": "An outsourced-assistant review of meeting attendance coverage, with a defined sample, named evidence, and a dated review.",
   "body": [
    "Before work begins on meeting attendance coverage, confirm which entity, period, and queue the case belongs to and who accepts the outcome. Use the same definition across the queue and the review so the counts agree. Record the requester and the promised response time. Distinguish a new request from a correction to an earlier one. For meeting attendance coverage, the working file keeps the attendance log and the attendee list beside the decision note. In this review, the decision scope is logged on the assistant placement so the client operations manager can rebuild the measured rate from the assignment and workforce record. For this assistant placement review, the desk keeps the request with the named client queue, the approving manager, the tool access record, and the dated handoff.",
    "A clean-looking status is not evidence that the underlying work is correct. Name the owner for every open item, including items waiting on someone else. Give the case a stable identifier before any document is attached. Name the person who can close the question and the date by which the answer is needed. Every meeting attendance coverage handoff names the operations lead and the field in the assistant workforce record that will confirm the change. In this review, the research question is logged on the assistant placement so the client operations manager can rebuild the measured rate from the assignment and workforce record. For this assistant placement review, the desk keeps the request with the named client queue, the approving manager, the tool access record, and the dated handoff.",
@@ -284,7 +284,7 @@ export const november23ResearchPosts = [
  {
   "slug": "redline-version-coverage",
   "title": "Redline version coverage",
-  "excerpt": "A measurement protocol for redline version coverage, with a frozen population, an evidence sample, and a dated review.",
+  "excerpt": "An outsourced-assistant review of redline version coverage, with a defined sample, named evidence, and a dated review.",
   "body": [
    "For redline version coverage, the first step is to write the open decision, the requesting role, and the queue owner before anyone touches the assistant workforce record. Record the queue and the entity so the case cannot drift into another team's work. A clean-looking status is not evidence that the underlying work is correct. Confirm that the request belongs in this queue before assigning an owner. The redline version coverage case note should show what the assistant workforce record held at the time and who reviewed it. For this assistant placement review, the desk keeps the request with the named client queue, the approving manager, the tool access record, and the dated handoff.",
    "In this review, the decision scope is logged on the assistant placement so the client operations manager can rebuild the measured rate from the assignment and workforce record.",
@@ -353,7 +353,7 @@ export const november23ResearchPosts = [
  {
   "slug": "contact-preference-coverage",
   "title": "Contact preference coverage",
-  "excerpt": "A measurement protocol for contact preference coverage, with a frozen population, an evidence sample, and a dated review.",
+  "excerpt": "An outsourced-assistant review of contact preference coverage, with a defined sample, named evidence, and a dated review.",
   "body": [
    "Start contact preference coverage with one bounded case, a named owner, and a written statement of what the reviewer is being asked to decide. State explicitly what is in scope and what is out of scope for the case. Confirm that the request belongs in this queue before assigning an owner. Keep the original request so a later correction does not erase the reason for the work. Apply the same contact preference coverage test to the update note and to the value that survives in the assistant workforce record. For this assistant placement review, the desk keeps the request with the named client queue, the approving manager, the tool access record, and the dated handoff.",
    "In this review, the decision scope is logged on the assistant placement so the client operations manager can rebuild the measured rate from the assignment and workforce record.",
@@ -422,7 +422,7 @@ export const november23ResearchPosts = [
  {
   "slug": "onboarding-schedule-coverage",
   "title": "Onboarding schedule coverage",
-  "excerpt": "A measurement protocol for onboarding schedule coverage, with a frozen population, an evidence sample, and a dated review.",
+  "excerpt": "An outsourced-assistant review of onboarding schedule coverage, with a defined sample, named evidence, and a dated review.",
   "body": [
    "The onboarding schedule coverage note should separate the request, the decision that is still open, and the person who can close it. Distinguish a new request from a correction to an earlier one. Keep the original request so a later correction does not erase the reason for the work. A short written rule is easier to test than an unwritten habit. The onboarding schedule coverage reviewer records the completion date, the owner, and the next action in one place. For this assistant placement review, the desk keeps the request with the named client queue, the approving manager, the tool access record, and the dated handoff.",
    "In this review, the decision scope is logged on the assistant placement so the client operations manager can rebuild the measured rate from the assignment and workforce record.",
