@@ -91,7 +91,7 @@ main>.section>.container.cards>.card li{margin-bottom:9px;line-height:1.55;color
 @media(max-width:900px){
  .oct22-layout{grid-template-columns:1fr}
  .oct22-side{display:none}
- .oct22-mobile-toc{display:block;position:sticky;top:100px;left:auto;right:auto;z-index:60;margin:16px 12px 0;background:#fff;border:1px solid rgba(0,0,0,.18);box-shadow:0 12px 24px rgba(0,0,0,.16)}
+ .oct22-mobile-toc{display:block;position:static;z-index:auto;margin:16px 12px 0;background:#fff;border:1px solid rgba(0,0,0,.18);box-shadow:0 12px 24px rgba(0,0,0,.16)}
  .oct22-mobile-toc:not([open]){height:52px;overflow:hidden}
  .oct22-mobile-toc summary{display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 18px;list-style:none;font-weight:700;cursor:pointer}
  .oct22-mobile-toc summary::-webkit-details-marker{display:none}
