@@ -32,11 +32,11 @@ export const november23ResearchPosts = [
   "published": "2026-11-23",
   "updated": "2026-11-23",
   "statistic": "A bounded record review, not an industry rate.",
-  "statisticSource": "G",
+  "statisticSource": "GAO Green Book",
   "sources": [
     {
-      "title": "G",
-      "url": "A"
+      "title": "GAO Green Book",
+      "url": "https://www.gao.gov/greenbook"
     },
     {
       "title": "GAO Green Book",
@@ -97,11 +97,11 @@ export const november23ResearchPosts = [
   "published": "2026-11-23",
   "updated": "2026-11-23",
   "statistic": "A bounded record review, not an industry rate.",
-  "statisticSource": "S",
+  "statisticSource": "U.S. Small Business Administration",
   "sources": [
     {
-      "title": "S",
-      "url": "B"
+      "title": "U.S. Small Business Administration",
+      "url": "https://www.sba.gov/business-guide/manage-your-business"
     },
     {
       "title": "GAO Green Book",
@@ -162,11 +162,11 @@ export const november23ResearchPosts = [
   "published": "2026-11-23",
   "updated": "2026-11-23",
   "statistic": "A bounded record review, not an industry rate.",
-  "statisticSource": "N",
+  "statisticSource": "NIST Cybersecurity Framework",
   "sources": [
     {
-      "title": "N",
-      "url": "I"
+      "title": "NIST Cybersecurity Framework",
+      "url": "https://www.nist.gov/cyberframework"
     },
     {
       "title": "GAO Green Book",
@@ -227,11 +227,11 @@ export const november23ResearchPosts = [
   "published": "2026-11-23",
   "updated": "2026-11-23",
   "statistic": "A bounded record review, not an industry rate.",
-  "statisticSource": "S",
+  "statisticSource": "U.S. Small Business Administration",
   "sources": [
     {
-      "title": "S",
-      "url": "B"
+      "title": "U.S. Small Business Administration",
+      "url": "https://www.sba.gov/business-guide/manage-your-business"
     },
     {
       "title": "GAO Green Book",
@@ -292,11 +292,11 @@ export const november23ResearchPosts = [
   "published": "2026-11-23",
   "updated": "2026-11-23",
   "statistic": "A bounded record review, not an industry rate.",
-  "statisticSource": "N",
+  "statisticSource": "NIST Telework Security Guide",
   "sources": [
     {
-      "title": "N",
-      "url": "I"
+      "title": "NIST Telework Security Guide",
+      "url": "https://www.nist.gov/publications/guide-enterprise-telework-remote-access-and-bring-your-own-device-byod-security"
     },
     {
       "title": "GAO Green Book",
@@ -357,11 +357,11 @@ export const november23ResearchPosts = [
   "published": "2026-11-23",
   "updated": "2026-11-23",
   "statistic": "A bounded record review, not an industry rate.",
-  "statisticSource": "F",
+  "statisticSource": "FTC data security guidance",
   "sources": [
     {
-      "title": "F",
-      "url": "T"
+      "title": "FTC data security guidance",
+      "url": "https://www.ftc.gov/business-guidance/privacy-security/data-security"
     },
     {
       "title": "GAO Green Book",
@@ -422,11 +422,11 @@ export const november23ResearchPosts = [
   "published": "2026-11-23",
   "updated": "2026-11-23",
   "statistic": "A bounded record review, not an industry rate.",
-  "statisticSource": "S",
+  "statisticSource": "U.S. Small Business Administration",
   "sources": [
     {
-      "title": "S",
-      "url": "B"
+      "title": "U.S. Small Business Administration",
+      "url": "https://www.sba.gov/business-guide/manage-your-business"
     },
     {
       "title": "GAO Green Book",
