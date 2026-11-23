@@ -390,12 +390,14 @@ import {november07BlogPosts, november07ResearchPosts} from './nov07-batch';
 import {november08BlogPosts, november08ResearchPosts} from './nov08-batch';
 import {november09BlogPosts, november09ResearchPosts} from './nov09-batch';
 import {november11BlogPosts, november11ResearchPosts} from './nov11-batch';
+import {november22BlogPosts} from './nov22-blog';
 import {november21BlogPosts} from './nov21-blog';
 import {november20BlogPosts} from './nov20-blog';
 import {november19BlogPosts} from './nov19-blog';
 import {november18BlogPosts} from './nov18-blog';
 import {november17BlogPosts} from './nov17-blog';
 import {november16BlogPosts} from './nov16-blog';
+import {november22ResearchPosts} from './nov22-research';
 import {november21ResearchPosts} from './nov21-research';
 import {november20ResearchPosts} from './nov20-research';
 import {november19ResearchPosts} from './nov19-research';
@@ -407,6 +409,7 @@ import {november02BlogPosts, november02ResearchPosts} from './nov02-batch';
 import {october22BlogPosts, october22ResearchPosts} from './oct22-batch';
 
 export const blogPosts = [
+  ...november22BlogPosts,
   ...november21BlogPosts,
   ...november20BlogPosts,
   ...november19BlogPosts,
@@ -1191,6 +1194,7 @@ const makeAug17Depth = (slug: string, title: string): string[] => {
 };
 
 export const researchPosts: ResearchPost[] = [
+  ...(november22ResearchPosts as unknown as ResearchPost[]),
   ...(november21ResearchPosts as unknown as ResearchPost[]),
   ...(november20ResearchPosts as unknown as ResearchPost[]),
   ...(november19ResearchPosts as unknown as ResearchPost[]),
