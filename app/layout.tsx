@@ -3,6 +3,8 @@ import './refresh.css';
 import type { Metadata } from 'next';
 
 
+import "./site-chrome-fixes.css";
+
 const siteUrl = 'https://outsourcedassistants.com';
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
